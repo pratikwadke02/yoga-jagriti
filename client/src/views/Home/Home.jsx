@@ -1,7 +1,7 @@
 import React from 'react'
 import BottomBanner from '../../components/BottomBanner/BottomBanner'
 import Header from '../../components/Header/Header'
-import MidBanner from '../../components/MidBanner/MidBanner'
+import MidBannerOne from '../../components/MidBannerOne/MidBannerOne'
 import MidBannerFive from '../../components/MidBannerFive/MidBannerFive'
 import MidBannerFour from '../../components/MidBannerFour/MidBannerFour'
 import MidBannerThree from '../../components/MidBannerThree/MidBannerThree'
@@ -13,7 +13,7 @@ const Home = () => {
     <>
     <div className="header">
       <Header />
-      <MidBanner />
+      <MidBannerOne />
       <MidBannerTwo />
       <MidBannerThree />
       <MidBannerFour />

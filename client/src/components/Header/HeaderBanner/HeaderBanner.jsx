@@ -1,6 +1,5 @@
 import React from "react";
-import "./HeaderBanner.css";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import {images} from '../../../constants'
 import {theme} from '../../../theme'
 
@@ -29,8 +28,9 @@ const HeaderBanner = () => {
 
   return (
     <>
-      <Box
+      <Container
         sx={{
+          maxWidth: {xs:'100%'},
           minHeight: "373px",
           display: "flex",
           flexDirection: {xs:"column", md:"row"},
@@ -41,20 +41,20 @@ const HeaderBanner = () => {
           color: theme.palette.text.default,
         }}
       >
-        <Box sx={{display:'flex'}}>
+        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
         {headBannerDataOne.map((item, index) => {
           return (
-            <Box sx={{}} key={index}>
+            <Box sx={{mr:4}} key={index}>
               <Typography variant="h3">{item.name}</Typography>
               <Typography variant="h6">{item.desc}</Typography>
             </Box>
           );
         })}
         </Box>
-        <Box sx={{display:'flex'}}>
+        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
         {headBannerDataTwo.map((item, index) => {
             return (
-                <Box sx={{}} key={index}>
+                <Box sx={{mr:4}} key={index}>
                     <Typography variant="h3">{item.name}</Typography>
                     <Typography variant="h6">{item.desc}</Typography>
                 </Box>
@@ -62,7 +62,7 @@ const HeaderBanner = () => {
         }
         )}
         </Box>
-      </Box>
+      </Container>
     </>
   );
 };
