@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import ProgressComponent from "../utils/ProgressComponent/ProgressComponent";
 
 const MidBanner = () => {
   const ListData = [
@@ -55,8 +56,7 @@ const MidBanner = () => {
         <Box></Box>
         <Box>
           <Box>
-            <Typography sx={{ fontSize: "22px" }}>Happy Students</Typography>
-            <LinearProgress variant="determinate" value={80} />
+            <ProgressComponent title="Happy Students" value="80" />
           </Box>
           <Box>
             <Typography sx={{ fontSize: "15px" }}>

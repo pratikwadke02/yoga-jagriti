@@ -12,11 +12,11 @@ const Programs = () => {
         </Typography>
       </Box>
       <Box sx={{display:'flex', flexDirection:'column'}}>
-        <Box sx={{display:'flex', flexDirection:{xs:"column", md:"row"}}}>
+        <Box sx={{display:'flex', flexDirection:{xs:"column", sm:"row"}}}>
         <ProgramCard />
         <ProgramCard />
         </Box>
-        <Box sx={{display:'flex',  flexDirection:{xs:"column", md:"row"}}}>
+        <Box sx={{display:'flex',  flexDirection:{xs:"column", sm:"row"}}}>
         <ProgramCard />
         <ProgramCard />
         </Box>
