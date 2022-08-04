@@ -8,6 +8,8 @@ import mid_banner_one from '../assets/mid_banner_one.jpeg';
 import service_one from '../assets/service_1.jpeg';
 import service_two from '../assets/service_2.jpeg';
 import service_three from '../assets/service_3.jpeg';
+import mid_banner_two from '../assets/mid_banner_two.png';
+import mid_banner_two_bg from '../assets/mid_banner_two_bg.png';
 
 export default {
     slider_1,
@@ -20,4 +22,6 @@ export default {
     service_one,
     service_two,
     service_three,
+    mid_banner_two,
+    mid_banner_two_bg,
 }
