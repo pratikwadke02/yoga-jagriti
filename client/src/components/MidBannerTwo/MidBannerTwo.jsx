@@ -31,6 +31,7 @@ const MidBannerTwo = () => {
     <>
     <Container
         sx={{
+            pb:3,
             mt:10,
             display: "flex",
             flexDirection: "column",
