@@ -22,7 +22,7 @@ function App() {
 // function App() {
 //   return (
 //     <>
-//     <Programs />
+//     {/* <Programs /> */}
 //     <Scaler />
 //     </>
 //   )

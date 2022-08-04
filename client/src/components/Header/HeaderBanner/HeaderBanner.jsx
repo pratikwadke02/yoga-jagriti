@@ -1,6 +1,8 @@
 import React from "react";
 import "./HeaderBanner.css";
 import { Box, Typography } from "@mui/material";
+import {images} from '../../../constants'
+import {theme} from '../../../theme'
 
 const HeaderBanner = () => {
   const headBannerDataOne = [
@@ -34,15 +36,17 @@ const HeaderBanner = () => {
           flexDirection: {xs:"column", md:"row"},
           justifyContent: "space-between",
           alignItems: "center",
+          backgroundImage: `url(${images.pattern})`,
+          backgroundColor: theme.palette.primary.main,
+          color: theme.palette.text.default,
         }}
-        className="header_banner"
       >
         <Box sx={{display:'flex'}}>
         {headBannerDataOne.map((item, index) => {
           return (
-            <Box sx={{}} className="header_banner_item" key={index}>
-              <Typography sx={{ fontSize: "24px" }}>{item.name}</Typography>
-              <Typography sx={{ fontSize: "15px" }}>{item.desc}</Typography>
+            <Box sx={{}} key={index}>
+              <Typography variant="h3">{item.name}</Typography>
+              <Typography variant="h6">{item.desc}</Typography>
             </Box>
           );
         })}
@@ -50,9 +54,9 @@ const HeaderBanner = () => {
         <Box sx={{display:'flex'}}>
         {headBannerDataTwo.map((item, index) => {
             return (
-                <Box sx={{}} className="header_banner_item" key={index}>
-                    <Typography sx={{ fontSize: "24px" }}>{item.name}</Typography>
-                    <Typography sx={{ fontSize: "15px" }}>{item.desc}</Typography>
+                <Box sx={{}} key={index}>
+                    <Typography variant="h3">{item.name}</Typography>
+                    <Typography variant="h6">{item.desc}</Typography>
                 </Box>
             );
         }
