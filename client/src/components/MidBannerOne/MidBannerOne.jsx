@@ -50,6 +50,7 @@ const MidBannerOne = () => {
             justifyContent: "center",
             alignItems: "flex-start",
             width: "100%",
+            mr: 3,
           }}
         >
           <Typography
@@ -90,7 +91,7 @@ const MidBannerOne = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              width: "100%",
+              width: "80%",
             }}
           >
             <Button variant="contained" sx={{ width: "150px", height: "40px" }}>

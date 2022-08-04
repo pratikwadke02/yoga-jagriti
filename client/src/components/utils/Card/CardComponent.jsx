@@ -1,6 +1,8 @@
 import { IconButton, Box,CardContent, Typography, CardActions, CardMedia, Card } from '@mui/material'
 import EastIcon from '@mui/icons-material/East';
 import React from 'react'
+import {images} from '../../../constants'
+import {theme} from '../../../theme'
 
 const CardComponent = (props) => {
 
@@ -8,13 +10,12 @@ const CardComponent = (props) => {
 
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
-      
+      <Card sx={{ maxWidth: '100%' }}>
       <CardContent>
-        <Typography gutterBottom sx={{fontSize: '16px'}} component="div">
+        <Typography gutterBottom variant='h6' sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
           {title}
         </Typography>
-        <Typography sx={{fontSize: '26px'}} color="text.secondary">
+        <Typography variant='h2'>
           {desc}
         </Typography>
       </CardContent>
@@ -31,7 +32,7 @@ const CardComponent = (props) => {
       <CardMedia
         component="img"
         alt="green iguana"
-        height="140"
+        height="200"
         image={image}
       />
     </Card>

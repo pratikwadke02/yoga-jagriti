@@ -5,6 +5,9 @@ import software from '../assets/software.png';
 import google from '../assets/google.png';
 import pattern from '../assets/pattern.png';
 import mid_banner_one from '../assets/mid_banner_one.jpeg';
+import service_one from '../assets/service_1.jpeg';
+import service_two from '../assets/service_2.jpeg';
+import service_three from '../assets/service_3.jpeg';
 
 export default {
     slider_1,
@@ -14,4 +17,7 @@ export default {
     google,
     pattern,
     mid_banner_one,
+    service_one,
+    service_two,
+    service_three,
 }
