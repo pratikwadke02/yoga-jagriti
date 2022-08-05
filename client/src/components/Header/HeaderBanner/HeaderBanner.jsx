@@ -1,7 +1,9 @@
 import React from "react";
+import './HeaderBanner.css'
 import { Box, Typography, Container } from "@mui/material";
 import {images} from '../../../constants'
 import {theme} from '../../../theme'
+import ProgramCard from "../../../components/utils/ProgramCard/ProgramCard";
 
 const HeaderBanner = () => {
   const headBannerDataOne = [
@@ -26,6 +28,8 @@ const HeaderBanner = () => {
     },
   ];
 
+  const card = 4;
+
   return (
     <>
       <Container
@@ -33,7 +37,7 @@ const HeaderBanner = () => {
           maxWidth: {xs:'100%'},
           minHeight: "373px",
           display: "flex",
-          flexDirection: {xs:"column", md:"row"},
+          flexDirection: {xs:"column"},
           justifyContent: "space-between",
           alignItems: "center",
           backgroundImage: `url(${images.pattern})`,
@@ -41,7 +45,24 @@ const HeaderBanner = () => {
           color: theme.palette.text.default,
         }}
       >
-        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
+        <Box className="marquee" sx={{mt:4}}>
+          <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,  }}>
+            Our Natural Products
+          </Typography>
+          <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold,}}>
+            See All
+          </Typography>
+          </Box>
+        <Box className="track" sx={{display:'flex', flexDirection:'row', p:5}}>
+          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
+          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
+          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
+          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
+        </Box>
+        </Box>
+        <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, p:5, textAlign:'center'}}>
+        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-around', mb:{xs:5, md:0}}}>
         {headBannerDataOne.map((item, index) => {
           return (
             <Box sx={{mr:4}} key={index}>
@@ -61,6 +82,7 @@ const HeaderBanner = () => {
             );
         }
         )}
+        </Box>
         </Box>
       </Container>
     </>

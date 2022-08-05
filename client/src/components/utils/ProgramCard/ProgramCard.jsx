@@ -1,12 +1,18 @@
 import { images } from "../../../constants";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography, IconButton } from "@mui/material";
 import React from "react";
+import {theme} from '../../../theme'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const ProgramCard = () => {
+const ProgramCard = (props) => {
+
+  const {name, image, desc, price} = props;
+
   return (
     <>
       <Box
         sx={{
+          maxWidth:'350px',
           backgroundColor: "#fff",
           width: "100%",
           boxShadow: 1,
@@ -18,18 +24,6 @@ const ProgramCard = () => {
           position: "relative",
         }}
       >
-        <Box sx={{ display: "flex", overflow: "hidden",
-              display: "inline-block",m:-1 }}>
-          <Box
-            sx={{
-              width: "100px",
-              height:'100px',
-              transform: "rotate(-45deg)",
-            }}
-          >
-              <Typography sx={{p:1, textAlign:'center', fontSize: "7px",backgroundColor: "#56c68e", fontWeight:800}}>Intake Ongoing</Typography>
-          </Box>
-        </Box>
         <Box
           sx={{
             display: "flex",
@@ -38,41 +32,52 @@ const ProgramCard = () => {
             justifyContent: "center",
           }}
         >
-          <img src={images.software} alt="software" height={170} width={170} />
+          <img src={images.software} alt="software" height={140} width={140} />
         </Box>
         <Box
           sx={{
-            mt:1,
             mb:1,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-start",
+            pl:3,
+            textAlign: "center",
           }}
         >
-          <Typography sx={{ fontSize: "13px", fontWeight:800 }}>
-            Software Engineering for Working Professionals
+          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}>
+            {name}
           </Typography>
-          <Typography sx={{ fontSize: "11px", color: "#5a6273" }}>
-            1+ years of experience
+          <Typography sx={{ fontSize: "11px", color: "#5a6273", }}>
+            {desc}
           </Typography>
         </Box>
         <Box
           sx={{
+            pl:3,
+            pr:6,
             mt:1,
             mb:1,
             display: "flex",
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
           }}
         >
+          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
+            INR {price}
+          </Typography>
+          <Box>
+          <IconButton>
+            <ShoppingCartOutlinedIcon fontSize="mdeium" sx={{color:theme.palette.primary.main, mr:1}} />
+          </IconButton>
           <Button
             variant="contained"
-            sx={{ backgroundColor: "#e21032", color: "#fff", maxWidth:'120px', width:'100%' }}
+            sx={{ backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'120px', width:'100%' }}
           >
-            <Typography sx={{ fontSize: "11px" }}>KNOW MORE</Typography>
+            <Typography variant="h6" sx={{ }}>BUY NOW</Typography>
           </Button>
+          </Box>
         </Box>
       </Box>
     </>

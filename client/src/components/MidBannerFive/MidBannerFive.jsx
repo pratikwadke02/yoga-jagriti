@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Box, Typography, Avatar } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import { theme } from "../../theme";
 import CommentCard from "../utils/CommentCard/CommentCard";
 
 const MidBannerFive = () => {
@@ -23,16 +24,16 @@ const MidBannerFive = () => {
 
   return (
     <>
-      <Container>
-        <Box>
-          <Typography sx={{ fontSize: "15px" }}>
+      <Container sx={{mt:10,backgroundColor:theme.palette.background.light, p:2}}>
+        <Box  sx={{display:'flex', flexDirection:'column'}}>
+          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
             _ASKING FOR TESTIMONIALS_
           </Typography>
-          <Typography sx={{ fontSize: "46px" }}>
+          <Typography variant="h1" sx={{mt:0.5}}>
             What our clients say about us
           </Typography>
         </Box>
-        <Box>
+        <Box sx={{witdh:'100%', mt:7, display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
           {
             testimonials.map((testimonial, index) => {
                 return (

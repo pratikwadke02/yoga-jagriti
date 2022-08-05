@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Box, Typography, Avatar } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import {theme} from '../../../theme'
 
 
 const CommentCard = (props) => {
@@ -9,12 +10,12 @@ const CommentCard = (props) => {
 
   return (
     <>
-      <Box>
-        <Box>
-          <Typography sx={{ fontSize: "16px" }}>
+      <Box sx={{display:'flex', flexDirection:'column', mr:5}}>
+        <Box sx={{backgroundColor:theme.palette.background.default, p:4}}>
+          <Typography variant="h6" sx={{color:theme.palette.text.light}}>
             {comment}
           </Typography>
-          <Box>
+          <Box sx={{mt:1}}>
             {Array(rating)
               .fill(0)
               .map((_, index) => {
@@ -22,13 +23,13 @@ const CommentCard = (props) => {
               })}
           </Box>
         </Box>
-        <Box>
-          <Box>
-            <Avatar alt="Remy Sharp" src="" />
+        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center',p:2}}>
+          <Box sx={{mr:3}}>
+            <Avatar alt="Remy Sharp" src="" height={100} width={100}/>
           </Box>
           <Box>
-            <Typography sx={{ fontSize: "24px" }}>{name}</Typography>
-            <Typography sx={{ fontSize: "15px" }}>{role}</Typography>
+            <Typography variant="h3" sx={{  }}>{name}</Typography>
+            <Typography  variant="h6" sx={{color:theme.palette.primary.main  }}>{role}</Typography>
           </Box>
         </Box>
       </Box>
