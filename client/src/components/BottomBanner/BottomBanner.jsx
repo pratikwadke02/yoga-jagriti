@@ -38,7 +38,7 @@ const BottomBanner = () => {
         <Box>
           <LogoContainer />
         </Box>
-        <Box>
+        {/* <Box>
           <Box>
             <Typography sx={{ fontSize: "16px" }}>
               _LATEST NEWS_
@@ -65,7 +65,7 @@ const BottomBanner = () => {
               )
             }
           </Box>
-        </Box>
+        </Box> */}
     </Container>
     </>
   )

@@ -25,7 +25,7 @@ const MidBannerFive = () => {
   return (
     <>
       <Container sx={{mt:10,backgroundColor:theme.palette.background.light, p:2}}>
-        <Box  sx={{display:'flex', flexDirection:'column'}}>
+        <Box  sx={{mt:5,display:'flex', flexDirection:'column'}}>
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
             _ASKING FOR TESTIMONIALS_
           </Typography>

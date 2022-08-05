@@ -46,8 +46,10 @@ const TeamMemberBanner = () => {
             );
           })}
         </Box>
-        <Box sx={{mt:8}}>
-          <Box></Box>
+        <Box sx={{mt:8, display:'flex', flexDirection:'row', alignItems:'center'}}>
+          <Box sx={{mr:2}}>
+            <img src={images.adv} alt="" />
+          </Box>
           <Box>
             <Typography variant="h4" sx={{ mb:.25 }}>
             24 Hours Service Available

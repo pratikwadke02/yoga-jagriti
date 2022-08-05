@@ -12,7 +12,8 @@ const ProgramCard = (props) => {
     <>
       <Box
         sx={{
-          maxWidth:'250px',
+          mb:{xs:4, md:0},
+          maxWidth:'400px',
           backgroundColor: "#fff",
           width: "100%",
           height:'fit-content',
@@ -21,7 +22,7 @@ const ProgramCard = (props) => {
           flexDirection: "column",
           borderRadius: "4px",
           p:2,
-          m: 1,
+          mr:6,
           position: "relative",
         }}
       >
@@ -33,7 +34,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.product} alt="software" style={{height:'200px', width:'100%'}} />
+          <img src={images.product} alt="software" style={{height:'300px', width:'100%'}} />
         </Box>
         <Box
           sx={{
@@ -66,13 +67,13 @@ const ProgramCard = (props) => {
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
             INR {price}
           </Typography>
-          <Box>
+          <Box sx={{display:'flex'}}>
           <IconButton>
             <ShoppingCartOutlinedIcon fontSize="mdeium" sx={{color:theme.palette.primary.main, mr:1}} />
           </IconButton>
           <Button
             variant="contained"
-            sx={{ backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'100px', width:'100%' }}
+            sx={{ backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'120px', width:'100%' }}
           >
             <Typography variant="h6" sx={{ }}>BUY NOW</Typography>
           </Button>

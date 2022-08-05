@@ -45,7 +45,7 @@ const HeaderBanner = () => {
           color: theme.palette.text.default,
         }}
       >
-        <Box className="marquee" sx={{mt:4}}>
+        <Box  sx={{mt:4}}>
           <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,  }}>
             Our Natural Products
@@ -54,11 +54,17 @@ const HeaderBanner = () => {
             See All
           </Typography>
           </Box>
-        <Box className="track" sx={{display:'flex', flexDirection:'row', p:5}}>
+        <Box  sx={{display:'flex', flexDirection:'row', p:5}}>
+          <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>
+
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
+        </Box>
+        <Box sx={{display:{xs:'none', md:'flex'}, flexDirection:{xs:'column', md:'row'}}}>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
+        </Box>
+          {/* <ProgramCard name="Product Name" desc="Product details" price="9.99"/> */}
         </Box>
         </Box>
         {/* <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, p:5, textAlign:'center'}}> */}

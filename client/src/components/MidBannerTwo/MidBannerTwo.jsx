@@ -40,7 +40,7 @@ const MidBannerTwo = () => {
             backgroundImage: `url(${images.pattern})`,
         }}
     >
-        <Box sx={{display:'flex', flexDirection:'column', alignItems:'center', p:2}}>
+        <Box sx={{mt:10, display:'flex', flexDirection:'column', alignItems:'center', p:2}}>
             <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 _HEALTHY LIFESTYLE_
             </Typography>

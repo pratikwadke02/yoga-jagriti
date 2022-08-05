@@ -46,10 +46,11 @@ const MidBannerOne = () => {
         <Box sx={{display:'flex', flexDirection:{xs:'column', sm:'row'}, width:'100%'}}>
         <Box
           sx={{
+            mb:{xs:3, md:0},
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "flex-start",
+            alignItems: {xs:'center' ,md:"flex-start"},
             width: "100%",
             mr: 3,
           }}
@@ -63,7 +64,7 @@ const MidBannerOne = () => {
           >
             _WHY CHOOSE US_
           </Typography>
-          <Typography variant="h1" sx={{ mt: 2 }}>
+          <Typography variant="h1" sx={{ mt: 2, textAlign:{xs:'center', md:'initial'} }}>
             Peace to Your body and mind
           </Typography>
           <Typography variant="h6"></Typography>
@@ -106,7 +107,8 @@ const MidBannerOne = () => {
         </Box>
         <Box 
           sx={{ 
-            ml: 4, display: "flex",
+            mt:{xs:4, md:0},
+            ml: {md:4}, display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",

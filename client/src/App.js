@@ -13,7 +13,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Home />
-      <Footer />
+      {/* <Footer /> */}
     </ThemeProvider>
     </>
   );

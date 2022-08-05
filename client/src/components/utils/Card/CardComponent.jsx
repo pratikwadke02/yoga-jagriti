@@ -10,7 +10,7 @@ const CardComponent = (props) => {
 
   return (
     <>
-      <Card sx={{ maxWidth: '100%' }}>
+      <Card sx={{ maxWidth: '100%', mb:{xs:3, md:0} }}>
       <CardContent>
         <Typography gutterBottom variant='h6' sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
           {title}
