@@ -13,7 +13,7 @@ const MidBannerThree = () => {
             width:'100%',
             mt:10,
             display: "flex",
-            flexDirection: "row",
+            flexDirection: {xs:'column', md:"row"},
             alignItems: "center",
         }}>
         <Box sx={{
@@ -23,9 +23,9 @@ const MidBannerThree = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat', 
             }}>
-            <img src={images.mid_banner_two} alt="" />
+            <img src={images.mid_banner_two} alt="" sx={{width:'100%', height:'auto'}} />
         </Box>
-        <Box sx={{ml:3,display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
+        <Box sx={{ml:{md:3}, mt:{xs:5, md:0},display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
             <Typography variant='h6' sx={{ fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 _OUR BENEFITS_
             </Typography>
@@ -35,7 +35,7 @@ const MidBannerThree = () => {
             <Typography variant='h6' sx={{fontWeight:theme.typography.fontWeightMedium}}>
             Consectetur adipisicing elit, sed do eiusmod Tempor incididunt Labore et dolore magna aliqua ut enim. Veniam quis nostrud exercitation ullamco ut aliquip. Duis aute irure dolor.
             </Typography>
-            <Box>
+            <Box sx={{width:'100%'}}>
                 <PurchaseCard title="Standard Pricing Plan" price="$35 / week" />
                 <PurchaseCard title="Professional Pricing Plan" price="$35 / week" />
                 <PurchaseCard title="Private Pricing Plan" price="$35 / week" /> 

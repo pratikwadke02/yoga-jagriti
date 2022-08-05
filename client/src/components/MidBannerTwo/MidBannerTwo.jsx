@@ -48,7 +48,7 @@ const MidBannerTwo = () => {
                 A joyfull investment in your body mind and spirit
             </Typography>
         </Box>
-        <Box sx={{display:'flex', flexDirection:'row',justifyContent:'space-around', width:'100%', mt:2}}>
+        <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'},justifyContent:'space-around', width:'100%', mt:2}}>
             {
                 cardDetails.map((item, index) => {
                     return (

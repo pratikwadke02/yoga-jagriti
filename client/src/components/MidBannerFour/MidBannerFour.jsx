@@ -19,8 +19,8 @@ const MidBannerFour = () => {
         backgroundImage: `url(${images.pattern})`,
         color:theme.palette.text.default,
     }}>
-        <Box sx={{width:'100%', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-around'}}>
-        <Box sx={{width:'25vw'}}>
+        <Box sx={{width:'100%', display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:'space-around'}}>
+        <Box sx={{width:{xs:'100%', md:'25vw'}}}>
             <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold, mb:2}}>
                 _CONNECT WITH NATURE_
             </Typography>
@@ -28,7 +28,10 @@ const MidBannerFour = () => {
                 The natural way to get your mind & body together
             </Typography>
         </Box>
-        <Box sx={{width:'25vw', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center', backgroundColor:'#22263133', p:3, }}>
+        <Box sx={{width:{xs:'100%', md:'25vw'}, display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center', backgroundColor:'#22263133', p:3,
+        mt:{xs:4, md:0},
+        mb:{xs:4, md:0}
+     }}>
             <Box>
 
             </Box>
@@ -41,7 +44,7 @@ const MidBannerFour = () => {
                 </Typography>
             </Box>
         </Box>
-        <Box sx={{width:'25vw'}}>
+        <Box sx={{width:{xs:'100%', md:'25vw'}}}>
             <Box sx={{mb:5}}>
                 <ProgressComponent title="Personal Trainers" value="80" color="white" />
             </Box>

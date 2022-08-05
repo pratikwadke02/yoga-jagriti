@@ -36,13 +36,14 @@ const MidBannerOne = () => {
       <Container
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: {xs:'column', md:"row"},
           alignItems: "center",
           justifyContent: "space-between",
           maxWidth: { xs: "100%", lg: "1300px" },
           mt: 10,
         }}
       >
+        <Box sx={{display:'flex', flexDirection:{xs:'column', sm:'row'}, width:'100%'}}>
         <Box
           sx={{
             display: "flex",
@@ -99,8 +100,9 @@ const MidBannerOne = () => {
             </Button>
           </Box>
         </Box>
-        <Box>
-          <img src={images.mid_banner_one} alt="" />
+        <Box sx={{width:'100%'}}>
+          <img src={images.mid_banner_one} alt="" sx={{width:'100%', height:'auto'}} />
+        </Box>
         </Box>
         <Box 
           sx={{ 
