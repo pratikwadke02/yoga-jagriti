@@ -14,6 +14,7 @@ import team_one from '../assets/team_one.jpeg';
 import team_two from '../assets/team_two.jpeg';
 import team_three from '../assets/team_three.jpeg';
 import team_four from '../assets/team_four.jpeg';
+import product from '../assets/product.png';
 
 export default {
     slider_1,
@@ -31,5 +32,6 @@ export default {
     team_one,
     team_two,
     team_three,
-    team_four
+    team_four,
+    product
 }

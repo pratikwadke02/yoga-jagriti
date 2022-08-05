@@ -12,14 +12,15 @@ const ProgramCard = (props) => {
     <>
       <Box
         sx={{
-          maxWidth:'350px',
+          maxWidth:'250px',
           backgroundColor: "#fff",
           width: "100%",
+          height:'fit-content',
           boxShadow: 1,
           display: "flex",
           flexDirection: "column",
           borderRadius: "4px",
-          p: 1,
+          p:2,
           m: 1,
           position: "relative",
         }}
@@ -32,16 +33,17 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.software} alt="software" height={140} width={140} />
+          <img src={images.product} alt="software" style={{height:'200px', width:'100%'}} />
         </Box>
         <Box
           sx={{
+            mt:1,
             mb:1,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
-            pl:3,
+
             textAlign: "center",
           }}
         >
@@ -54,9 +56,6 @@ const ProgramCard = (props) => {
         </Box>
         <Box
           sx={{
-            pl:3,
-            pr:6,
-            mt:1,
             mb:1,
             display: "flex",
             flexDirection: "row",
@@ -73,7 +72,7 @@ const ProgramCard = (props) => {
           </IconButton>
           <Button
             variant="contained"
-            sx={{ backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'120px', width:'100%' }}
+            sx={{ backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'100px', width:'100%' }}
           >
             <Typography variant="h6" sx={{ }}>BUY NOW</Typography>
           </Button>

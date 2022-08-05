@@ -61,8 +61,8 @@ const HeaderBanner = () => {
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
         </Box>
         </Box>
-        <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, p:5, textAlign:'center'}}>
-        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-around', mb:{xs:5, md:0}}}>
+        {/* <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, p:5, textAlign:'center'}}> */}
+        {/* <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-around', mb:{xs:5, md:0}}}>
         {headBannerDataOne.map((item, index) => {
           return (
             <Box sx={{mr:4}} key={index}>
@@ -71,8 +71,8 @@ const HeaderBanner = () => {
             </Box>
           );
         })}
-        </Box>
-        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
+        </Box> */}
+        {/* <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
         {headBannerDataTwo.map((item, index) => {
             return (
                 <Box sx={{mr:4}} key={index}>
@@ -82,8 +82,8 @@ const HeaderBanner = () => {
             );
         }
         )}
-        </Box>
-        </Box>
+        </Box> 
+      </Box> */}
       </Container>
     </>
   );

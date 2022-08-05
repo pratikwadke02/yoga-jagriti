@@ -19,7 +19,7 @@ const Home = () => {
       <MidBannerFour />
       <TeamMemberBanner />
       <MidBannerFive />
-      <BottomBanner />
+      {/* <BottomBanner /> */}
     </div>
     </>
   )

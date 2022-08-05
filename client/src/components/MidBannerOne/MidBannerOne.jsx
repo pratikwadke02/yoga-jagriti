@@ -101,7 +101,7 @@ const MidBannerOne = () => {
           </Box>
         </Box>
         <Box sx={{width:'100%'}}>
-          <img src={images.mid_banner_one} alt="" sx={{width:'100%', height:'auto'}} />
+          <img src={images.mid_banner_one} alt="" style={{width:'100%', height:'auto'}} />
         </Box>
         </Box>
         <Box 

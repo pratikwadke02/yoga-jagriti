@@ -23,7 +23,7 @@ const MidBannerThree = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat', 
             }}>
-            <img src={images.mid_banner_two} alt="" sx={{width:'100%', height:'auto'}} />
+            <img src={images.mid_banner_two} alt="" style={{width:'100%', height:'auto'}} />
         </Box>
         <Box sx={{ml:{md:3}, mt:{xs:5, md:0},display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
             <Typography variant='h6' sx={{ fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>

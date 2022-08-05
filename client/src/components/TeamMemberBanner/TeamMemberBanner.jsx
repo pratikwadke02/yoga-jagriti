@@ -39,7 +39,7 @@ const TeamMemberBanner = () => {
             The concise narration about the way of yoga practice
           </Typography>
         </Box>
-        <Box sx={{width:'100%', mt:4, display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+        <Box sx={{width:'100%', mt:4, display:'flex', flexDirection:{xs:'column', md:'row'}, justifyContent:'space-between'}}>
           {teamMembers.map((member, index) => {
             return (
               <TeamCard key={index} name={member.name} role={member.role} image={images.team_one}/>

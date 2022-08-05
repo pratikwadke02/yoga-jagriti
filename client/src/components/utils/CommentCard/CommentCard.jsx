@@ -10,7 +10,7 @@ const CommentCard = (props) => {
 
   return (
     <>
-      <Box sx={{display:'flex', flexDirection:'column', mr:5}}>
+      <Box sx={{display:'flex', flexDirection:'column', mr:{md:5}, mb:{xs:5, md:0}}}>
         <Box sx={{backgroundColor:theme.palette.background.default, p:4}}>
           <Typography variant="h6" sx={{color:theme.palette.text.light}}>
             {comment}

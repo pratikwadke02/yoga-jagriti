@@ -33,7 +33,7 @@ const MidBannerFive = () => {
             What our clients say about us
           </Typography>
         </Box>
-        <Box sx={{witdh:'100%', mt:7, display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
+        <Box sx={{witdh:'100%', mt:7, display:'flex', flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'space-around'}, alignItems:'center'}}>
           {
             testimonials.map((testimonial, index) => {
                 return (
