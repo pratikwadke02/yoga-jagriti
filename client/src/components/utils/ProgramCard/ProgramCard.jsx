@@ -14,7 +14,7 @@ const ProgramCard = (props) => {
         sx={{
           mb:{xs:4, md:0},
           maxWidth:'400px',
-          backgroundColor: "#fff",
+          backgroundColor:theme.palette.background.default,
           width: "100%",
           height:'fit-content',
           boxShadow: 1,
@@ -22,7 +22,8 @@ const ProgramCard = (props) => {
           flexDirection: "column",
           borderRadius: "4px",
           p:2,
-          mr:6,
+          ml:2,
+          mr:2,
           position: "relative",
         }}
       >
@@ -34,7 +35,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.product} alt="software" style={{height:'300px', width:'100%'}} />
+          <img src={images.product} alt="software" style={{height:'auto', width:'100%'}} />
         </Box>
         <Box
           sx={{

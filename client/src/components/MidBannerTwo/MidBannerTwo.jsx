@@ -37,7 +37,7 @@ const MidBannerTwo = () => {
             flexDirection: "column",
             alignItems: "center",
             backgroundColor: theme.palette.background.light,
-            backgroundImage: `url(${images.pattern})`,
+            backgroundImage: `url(${images.pattern_two})`,
         }}
     >
         <Box sx={{mt:10, display:'flex', flexDirection:'column', alignItems:'center', p:2}}>

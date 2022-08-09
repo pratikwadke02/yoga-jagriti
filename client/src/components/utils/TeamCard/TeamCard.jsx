@@ -10,7 +10,7 @@ const TeamCard = (props) => {
   return (
     <>
     <Box sx={{width:'100%', mr:2, mb:{xs:4, md:0}}}>
-          <img src= {image} alt="" style={{width:'100%'}} />
+          <img src= {image} alt="" style={{width:'100%', height:'auto'}} />
         <Box sx={{width:'100%', backgroundColor:theme.palette.background.light, p:2, textAlign:'center'}}>
             <Typography variant='h6' sx={{color:theme.palette.primary.main }}>
                 {role}

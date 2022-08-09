@@ -22,6 +22,10 @@ import logo_three from '../assets/logo_three.png';
 import logo_four from '../assets/logo_four.png';
 import logo_five from '../assets/logo_five.png';
 import logo_six from '../assets/logo_six.png';
+import logo from '../assets/logo.png';
+import pattern_two from '../assets/pattern_two.png';
+import bg_product from '../assets/bg_product.png';
+import bg_pattern from '../assets/bg_pattern.png';
 
 export default {
     slider_1,
@@ -47,5 +51,9 @@ export default {
     logo_three,
     logo_four,
     logo_five,
-    logo_six
+    logo_six,
+    logo,
+    pattern_two,
+    bg_product,
+    bg_pattern,
 }

@@ -3,6 +3,7 @@ import { Container, Box, Typography, Avatar } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import { theme } from "../../theme";
 import CommentCard from "../utils/CommentCard/CommentCard";
+import {images} from '../../constants';
 
 const MidBannerFive = () => {
   const testimonials = [
@@ -24,7 +25,9 @@ const MidBannerFive = () => {
 
   return (
     <>
-      <Container sx={{mt:10,backgroundColor:theme.palette.background.light, p:2}}>
+      <Container sx={{mt:10,backgroundColor:theme.palette.background.light,
+      backgroundImage: `url(${images.pattern_two})`,
+         p:2}}>
         <Box  sx={{mt:5,display:'flex', flexDirection:'column'}}>
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
             _ASKING FOR TESTIMONIALS_

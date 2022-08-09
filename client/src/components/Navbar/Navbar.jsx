@@ -3,9 +3,11 @@ import {AppBar, Box, Divider,Drawer, Typography, List, ListItem, ListItemButton,
 import PropTypes from 'prop-types';
 import MenuIcon from '@mui/icons-material/Menu';
 import {theme} from '../../theme'
+import { images } from '../../constants';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Pages', 'Services', 'Projects', 'Blog', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -16,18 +18,23 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'start' }}>
+      <Typography variant="h5" sx={{pl:3, my: 2 }}>
+        <img src={images.logo} alt="" height={25}/>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
+          <>
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+            <ListItemButton sx={{pl:3, textAlign: 'start' }}>
+              <ListItemText>
+                <Typography variant="h6">{item}</Typography>
+              </ListItemText>
             </ListItemButton>
           </ListItem>
+          <Divider sx={{width:'100%'}} />
+          </>
         ))}
       </List>
     </Box>
@@ -39,6 +46,7 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav">
         <Toolbar>
+          <Box sx={{ml:{xs:0, md:6},flexGrow:1, display:"flex", flexDirection:'row', aligntItems:'center'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -48,18 +56,29 @@ function DrawerAppBar(props) {
           >
             <MenuIcon color="primary" />
           </IconButton>
-          <Typography
-            variant="h6"
-            sx={{ flexGrow: 1, display: { xs: 'none', md: 'block', color:'#ae1555' } }}
-          >
-            MUI
-          </Typography>
-          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <img src={images.logo} alt="" height={30} />
+            <Box sx={{ml:2, display:{xs:'none',md:'flex'}}}>
             {navItems.map((item) => (
               <Button key={item} sx={{}}>
+                <Typography variant="h6" sx={{ color: theme.palette.text.main, fontWeight: theme.typography.fontWeightBold }}>
                 {item}
+                </Typography>
               </Button>
             ))}
+          </Box>
+          </Box>
+          <Box sx={{mr:{xs:0, md:6}, flexGrow:0, display:{
+            xs:'flex'
+          }, flexDirection:'row', alignItems:'center'}}>
+            <Button variant="contained" sx={{height:'30px'}}>
+              <Typography variant="h6" sx={{ color: theme.palette.text.default, fontWeight: theme.typography.fontWeightBold }}>
+                Login
+              </Typography>
+            </Button>
+            <IconButton sx={{ ml: 2 }}>
+              <ShoppingCartOutlinedIcon fontSize="large" sx={{color:theme.palette.primary.main, display:{xs:'none', md:'block'}}} />
+              <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />
+            </IconButton>
           </Box>
         </Toolbar>
       </AppBar>

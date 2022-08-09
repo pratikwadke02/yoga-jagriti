@@ -7,6 +7,7 @@ import MidBannerFour from '../../components/MidBannerFour/MidBannerFour'
 import MidBannerThree from '../../components/MidBannerThree/MidBannerThree'
 import MidBannerTwo from '../../components/MidBannerTwo/MidBannerTwo'
 import TeamMemberBanner from '../../components/TeamMemberBanner/TeamMemberBanner'
+import CoursesComponnent from '../../components/CoursesComponent/CoursesComponnent'
 
 const Home = () => {
   return (
@@ -15,11 +16,12 @@ const Home = () => {
       <Header />
       <MidBannerOne />
       <MidBannerTwo />
+      <CoursesComponnent />
       <MidBannerThree />
       <MidBannerFour />
       <TeamMemberBanner />
       <MidBannerFive />
-      {/* <BottomBanner /> */}
+      <BottomBanner />
     </div>
     </>
   )
