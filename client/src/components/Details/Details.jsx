@@ -97,13 +97,33 @@ const Details = () => {
           </Button>
         </Box>
         <Box sx={{width:'100%', mt:2, display: "flex", flexDirection:'row', position:{xs:'fixed', sm:'relative'}, bottom:0, left:0 , p:{xs:0, sm:0} }}>
-          <Button variant="contained" sx={{backgroundColor:{xs:theme.palette.background.default, sm:theme.palette.primary.main}, height: "40px", width: {xs:"100%", md:"200px"},borderRadius:{xs:'0px', sm:'4px'}, mr:{xs:0, sm:2} }}>
+          <Button variant="contained" sx={{
+            display:{xs:'none', sm:'block'},
+            backgroundColor:{xs:theme.palette.background.default, sm:theme.palette.primary.main}, height: "40px", width: {xs:"100%", md:"200px"},borderRadius:{xs:'0px', sm:'4px'}, mr:{xs:0, sm:2} }}>
             <Typography
               variant="h6"
               sx={{color:{xs:theme.palette.primary.main, sm:theme.palette.background.default }, fontWeight: theme.typography.fontWeightBold }}
             >
               Add to Cart
             </Typography>
+          </Button>
+          <Button variant="contained" color="secondary" sx={{
+            display: {xs:'block', sm:'none'},
+            height: "40px",
+            width: '100%',
+            borderRadius: {xs:'0px', sm:'4px'},
+
+          }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                color:theme.palette.primary.main,
+                fontWeight: theme.typography.fontWeightBold,
+              }}
+              >
+                Add to Cart
+              </Typography>
           </Button>
           <Button
             variant="contained"

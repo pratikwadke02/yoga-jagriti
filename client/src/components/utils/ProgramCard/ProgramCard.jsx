@@ -16,7 +16,7 @@ const ProgramCard = (props) => {
           maxWidth:'400px',
           backgroundColor:theme.palette.background.default,
           width: "100%",
-          height:'fit-content',
+          height:'auto',
           boxShadow: 1,
           display: "flex",
           flexDirection: "column",

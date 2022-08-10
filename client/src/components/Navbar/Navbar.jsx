@@ -5,9 +5,35 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {theme} from '../../theme'
 import { images } from '../../constants';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Pages', 'Services', 'Projects', 'Blog', 'Contact'];
+const navItems = [
+  {
+    name: 'Home',
+    path: 'yoga-jagriti',
+  },
+  {
+    name: 'About',
+    path: 'about',
+  },
+  {
+    name: 'Know Yoga',
+    path: 'know-yoga',
+  },
+  {
+    name: 'Career',
+    path: 'career',
+  },
+  {
+    name: 'Contact',
+    path: 'contact',
+  },
+  {
+    name: 'News',
+    path: 'news',
+  },
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -24,7 +50,7 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {/* {navItems.map((item) => (
           <>
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{pl:3, textAlign: 'start' }}>
@@ -35,7 +61,23 @@ function DrawerAppBar(props) {
           </ListItem>
           <Divider sx={{width:'100%'}} />
           </>
-        ))}
+        ))} */}
+        {
+          navItems.map((item) => (
+            <>
+            <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
+              <ListItem key={item} disablePadding>
+                <ListItemButton sx={{pl:3, textAlign: 'start' }}>
+                  <ListItemText>
+                    <Typography variant="h6" sx={{color:theme.palette.text.primary}}>{item.name}</Typography>
+                  </ListItemText>
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Divider sx={{width:'100%'}} />
+            </>
+          ))
+        }
       </List>
     </Box>
   );
@@ -58,24 +100,30 @@ function DrawerAppBar(props) {
           </IconButton>
             <img src={images.logo} alt="" height={30} />
             <Box sx={{ml:2, display:{xs:'none',md:'flex'}}}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{}}>
-                <Typography variant="h6" sx={{ color: theme.palette.text.main, fontWeight: theme.typography.fontWeightBold }}>
-                {item}
-                </Typography>
-              </Button>
-            ))}
+            {
+              navItems.map((item) => (
+                <>
+                <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
+                  <Button key={item} sx={{}}>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.main, fontWeight: theme.typography.fontWeightBold }}>
+                      {item.name}
+                    </Typography>
+                  </Button>
+                </Link>
+                </>
+              ))
+            }
           </Box>
           </Box>
           <Box sx={{mr:{xs:0, md:6}, flexGrow:0, display:{
             xs:'flex'
-          }, flexDirection:'row', alignItems:'center'}}>
+          }, flexDirection:'row-reverse', alignItems:'center'}}>
             <Button variant="contained" sx={{height:'30px'}}>
               <Typography variant="h6" sx={{ color: theme.palette.text.default, fontWeight: theme.typography.fontWeightBold }}>
                 Login
               </Typography>
             </Button>
-            <IconButton sx={{ ml: 2 }}>
+            <IconButton sx={{ mr: 2 }}>
               <ShoppingCartOutlinedIcon fontSize="large" sx={{color:theme.palette.primary.main, display:{xs:'none', md:'block'}}} />
               <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />
             </IconButton>

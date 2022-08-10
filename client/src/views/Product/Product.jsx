@@ -17,7 +17,7 @@ const Product = () => {
         //   backgroundSize: "800px",
         //   backgroundRepeat: "no-repeat",
         //   backgroundPosition: "center",
-          maxWidth: { xs: "100%" },
+          maxWidth: { xs: "1600px" },
           height: "100%",
           pb:3,
           pt: 5,

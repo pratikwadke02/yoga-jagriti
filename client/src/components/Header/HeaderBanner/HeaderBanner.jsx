@@ -35,8 +35,9 @@ const HeaderBanner = () => {
     <>
       <Container
         sx={{
+          pb:4,
           maxWidth: {xs:'100%'},
-          minHeight: "373px",
+          minHeight: "393px",
           display: "flex",
           flexDirection: {xs:"column"},
           justifyContent: "space-between",
@@ -55,7 +56,7 @@ const HeaderBanner = () => {
             See All
           </Typography>
           </Box>
-        <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center'}}>
+        <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center',}}>
           <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
