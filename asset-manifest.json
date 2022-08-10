@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yoga-jagriti/static/css/main.a2e376be.css",
-    "main.js": "/yoga-jagriti/static/js/main.d3839ffa.js",
+    "main.css": "/yoga-jagriti/static/css/main.4ba4c4e0.css",
+    "main.js": "/yoga-jagriti/static/js/main.d45382e7.js",
     "static/media/mid_banner_two.png": "/yoga-jagriti/static/media/mid_banner_two.d64e45cb9d7a86e96b6c.png",
     "static/media/slider_1.jpg": "/yoga-jagriti/static/media/slider_1.dc56ddfcc0b6a50fd9c0.jpg",
     "static/media/slider_2.jpg": "/yoga-jagriti/static/media/slider_2.50bb08fa269c4422fda8.jpg",
@@ -23,11 +23,11 @@
     "static/media/google.png": "/yoga-jagriti/static/media/google.ae7dc6763dcbc4bc8c4c.png",
     "static/media/scalar_logo.png": "/yoga-jagriti/static/media/scalar_logo.4250a299dab7bed37c9c.png",
     "index.html": "/yoga-jagriti/index.html",
-    "main.a2e376be.css.map": "/yoga-jagriti/static/css/main.a2e376be.css.map",
-    "main.d3839ffa.js.map": "/yoga-jagriti/static/js/main.d3839ffa.js.map"
+    "main.4ba4c4e0.css.map": "/yoga-jagriti/static/css/main.4ba4c4e0.css.map",
+    "main.d45382e7.js.map": "/yoga-jagriti/static/js/main.d45382e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2e376be.css",
-    "static/js/main.d3839ffa.js"
+    "static/css/main.4ba4c4e0.css",
+    "static/js/main.d45382e7.js"
   ]
 }
