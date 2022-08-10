@@ -10,6 +10,7 @@ const About = () => {
     <>
       <Container
         sx={{
+          pb:2,
           maxWidth: { xs: "100%" },
           pt: 5,
           backgroundColor: theme.palette.background.light,
