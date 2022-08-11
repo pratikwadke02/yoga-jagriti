@@ -1,32 +1,32 @@
 .track {
-    animation: marquee 10s linear infinite;
-    width: 550%;
-  }
+  animation: marquee 10s linear infinite;
+  width: 550%;
+}
 
-  .marquee-text{
-    font-size: 29px;
-    font-weight: 600;
-    margin: 60px 0px;
-    color: #f02d34;
-  }
-  .marquee {
-    position: relative;
-    height: 470px;
-    width: 100%;
-    overflow-x: hidden;
-  }
+.marquee-text{
+  font-size: 29px;
+  font-weight: 600;
+  margin: 60px 0px;
+  color: #f02d34;
+}
+.marquee {
+  position: relative;
+  height: 420px;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-  .track {
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 15s linear infinite;
-    width: 180%;
-  }
-  .track:hover {
-    animation-play-state: paused;
-  }
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+  width: 180%;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
