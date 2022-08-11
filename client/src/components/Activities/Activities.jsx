@@ -26,7 +26,7 @@ const Activities = () => {
   return (
     <>
     <Box sx={{pt:8,zIndex:2, m:'auto',display:'flex', flexDirection:{xs:'column'}, width:{xs:'100%'}}}>
-        <Box sx={{m:'auto'}}>
+        <Box sx={{m:'auto', display:{xs:'block', md:'none'}}}>
         <Typography variant='h2' sx={{color:theme. palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
             Activities
         </Typography>

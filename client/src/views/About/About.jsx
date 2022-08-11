@@ -88,7 +88,7 @@ Centre by MSME New Delhi.
         <Box sx={{mt:8}}>
             <Objectives />
         </Box>
-        <Box sx={{mt:4}}>
+        <Box sx={{mt:8}}>
           <Aims />
         </Box>
         <Box>
