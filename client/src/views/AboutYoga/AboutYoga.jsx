@@ -3,9 +3,9 @@ import { Container, Box, Typography } from '@mui/material'
 import {images} from '../../constants'
 import PictureComponent from '../../components/utils/Picture/PictureComponent'
 import { theme } from '../../theme'
-import Pranayam from '../Pranayam/Pranayam'
-import AccuPressure from '../AccuPressure/AccuPressure'
-import Naturopathy from '../Naturopathy/Naturopathy'
+import Pranayam from '../../components/Pranayam/Pranayam'
+import AccuPressure from '../../components/AccuPressure/AccuPressure'
+import Naturopathy from '../../components/Naturopathy/Naturopathy'
 import './AboutYoga.css'
 
 const AboutYoga = () => {
@@ -16,14 +16,13 @@ const AboutYoga = () => {
           maxWidth: { xs: "100%" },
           pt: 5,
           backgroundColor: theme.palette.background.light,
+          backgroundImage: `url(${images.pattern_three})`,
           height: "100%",
           minHeight: "95vh",
           pb:10,
         }}
-
-        className="container"
       >
-        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:'80%'}}>
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 About Yoga
@@ -53,13 +52,13 @@ Hinduism, Buddhism, and Jainism.
             <PictureComponent image={images.team_three} size="big" color="dark" />
         </Box>
         </Box>
-        <Box sx={{mt:2}}>
+        <Box sx={{mt:4}}>
             <Pranayam />
         </Box>
-        <Box sx={{mt:2}}>
+        <Box sx={{mt:4}}>
             <Naturopathy />
         </Box>
-        <Box sx={{mt:2}}>
+        <Box sx={{mt:4}}>
             <AccuPressure />
         </Box>
       </Container>

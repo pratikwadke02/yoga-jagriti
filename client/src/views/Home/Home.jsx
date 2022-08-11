@@ -19,7 +19,6 @@ const Home = () => {
       <CoursesComponnent />
       <MidBannerThree />
       <MidBannerFour />
-      <TeamMemberBanner />
       <MidBannerFive />
       <BottomBanner />
     </div>

@@ -4,23 +4,24 @@ import { theme } from "../../theme";
 import { images } from "../../constants";
 import PictureComponent from "../../components/utils/Picture/PictureComponent";
 import './About.css';
+import Objectives from "../../components/Objectives/Objectives";
+import TeamMemberBanner from "../../components/TeamMemberBanner/TeamMemberBanner";
 
 const About = () => {
   return (
     <>
       <Container
         sx={{
-          pb:2,
+          pb:8,
           maxWidth: { xs: "100%" },
           pt: 5,
           backgroundColor: theme.palette.background.light,
+          backgroundImage: `url(${images.pattern_three})`,
           height: "100%",
           minHeight: "95vh",
         }}
-
-        className="container"
       >
-        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:'80%'}}>
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 About
@@ -81,6 +82,12 @@ Centre by MSME New Delhi.
         <Box sx={{pl:5,display:{xs:'none', md:'flex'}, zIndex:2,width:'100%', flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
             <PictureComponent image={images.team_three} size="big" color="dark" />
         </Box>
+        </Box>
+        <Box sx={{mt:8}}>
+            <Objectives />
+        </Box>
+        <Box>
+            <TeamMemberBanner />
         </Box>
       </Container>
     </>

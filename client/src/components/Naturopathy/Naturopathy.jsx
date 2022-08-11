@@ -1,26 +1,18 @@
 import React from 'react'
 import { Container, Box, Typography } from '@mui/material'
 import {images} from '../../constants'
-import PictureComponent from '../../components/utils/Picture/PictureComponent'
+import PictureComponent from '../utils/Picture/PictureComponent'
 import { theme } from '../../theme'
 
 const Naturopathy = () => {
   return (
     <>
-    <Container
-        sx={{
-          maxWidth: { xs: "100%" },
-          pt: 5,
-          backgroundColor: theme.palette.background.light,
-          height: "100%",
-        }}
-      >
-        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:'80%'}}>
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 Naturopathy
             </Typography>
-            <Typography variant="h4" sx={{mt:4}}>
+            <Typography variant="h4" sx={{mt:2}}>
             What is Naturopathic Medicine?
             </Typography>
             <Typography variant="h6" sx={{mt:2, textAlign: 'justify', textJustify:'inter-word'}}>
@@ -62,7 +54,6 @@ purpose of Naturopathic Medicine.
             <PictureComponent image={images.team_three} size="big" color="dark" />
         </Box>
         </Box>
-      </Container>
     </>
   )
 }

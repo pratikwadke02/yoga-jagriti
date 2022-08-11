@@ -10,9 +10,9 @@ import {theme} from './theme';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Career from './views/Career/Career';
 import About from './views/About/About';
-import Naturopathy from './views/Naturopathy/Naturopathy';
-import AccuPressure from './views/AccuPressure/AccuPressure';
-import Pranayam from './views/Pranayam/Pranayam';
+import Naturopathy from './components/Naturopathy/Naturopathy';
+import AccuPressure from './components/AccuPressure/AccuPressure';
+import Pranayam from './components/Pranayam/Pranayam';
 import AboutYoga from './views/AboutYoga/AboutYoga';
 
 function App() {
@@ -26,27 +26,14 @@ function App() {
         <Route path="/products" element={<Product />} />
         <Route path="/career" element={<Career/>} />
         <Route path="/about" element={<About />} />
-        <Route path="/naturopathy" element={<Naturopathy />}/>
-        <Route path="/accupressure" element={<AccuPressure />} />
-        <Route path ="/pranayam" element={<Pranayam /> }/>
         <Route path="/know-yoga" element={<AboutYoga />} />
-      {/* <Home /> */}
-      {/* <Product /> */}
-      {/* <Footer /> */}
       </Routes>
+      {/* <Footer /> */}
       </BrowserRouter>
     </ThemeProvider>
     </>
   );
 }
 
-// function App() {
-//   return (
-//     <>
-//     {/* <Programs /> */}
-//     <Scaler />
-//     </>
-//   )
-// }
 
 export default App;

@@ -32,10 +32,10 @@ const TeamMemberBanner = () => {
     <>
       <Container sx={{mt:10,display:'flex', flexDirection:'column', alignItems:'center',width:'100%'}}>
         <Box sx={{width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
-          <Typography  variant="h6" sx={{ color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
-            _TEAM MEMBER_
+          <Typography  variant="h2" sx={{ color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
+            TEAM MEMBER
           </Typography>
-          <Typography variant="h1" sx={{mt:2,width:'70vw', textAlign:'center'}}>
+          <Typography variant="h3" sx={{mt:2,width:'70vw', textAlign:'center'}}>
             The concise narration about the way of yoga practice
           </Typography>
         </Box>
@@ -54,7 +54,7 @@ const TeamMemberBanner = () => {
             <Typography variant="h4" sx={{ mb:.25 }}>
             24 Hours Service Available
             </Typography>
-            <Typography  variant="h6" sx={{ fontWeight: theme.typography.fontWeightBold, color:theme.palette.text.light }}>
+            <Typography  variant="h6" sx={{ fontWeight: theme.typography.fontWeightBold, color:theme.palette.text.dark }}>
               Begin your journey to a better life with peace and happiness.
             </Typography>
           </Box>

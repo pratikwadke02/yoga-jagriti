@@ -239,8 +239,7 @@ const Career = () => {
                           <CheckIcon
                             sx={{ color: theme.palette.background.default }}
                           />
-                        </ListItemIcon>{" "}
-                        ,
+                        </ListItemIcon>
                         <ListItemText>
                           <Typography
                             variant="h6"

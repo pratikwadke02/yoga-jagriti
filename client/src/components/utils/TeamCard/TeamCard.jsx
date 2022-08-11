@@ -11,11 +11,11 @@ const TeamCard = (props) => {
     <>
     <Box sx={{width:'100%', mr:2, mb:{xs:4, md:0}}}>
           <img src= {image} alt="" style={{width:'100%', height:'auto'}} />
-        <Box sx={{width:'100%', backgroundColor:theme.palette.background.light, p:2, textAlign:'center'}}>
-            <Typography variant='h6' sx={{color:theme.palette.primary.main }}>
+        <Box sx={{width:'100%', backgroundColor:theme.palette.background.main, p:2, textAlign:'center'}}>
+            <Typography variant='h6' sx={{color:theme.palette.text.light }}>
                 {role}
             </Typography>
-            <Typography variant='h4' sx={{mt:.5}}>{name}</Typography>
+            <Typography variant='h4' sx={{mt:.5, color:theme.palette.background.default}}>{name}</Typography>
         </Box>
     </Box>
     </>
