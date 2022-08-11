@@ -7,6 +7,7 @@ import './About.css';
 import Objectives from "../../components/Objectives/Objectives";
 import TeamMemberBanner from "../../components/TeamMemberBanner/TeamMemberBanner";
 import Aims from "../../components/Aims/Aims";
+import Activities from "../../components/Activities/Activities";
 
 const About = () => {
   return (
@@ -89,6 +90,9 @@ Centre by MSME New Delhi.
         </Box>
         <Box sx={{mt:4}}>
           <Aims />
+        </Box>
+        <Box>
+          <Activities />
         </Box>
         <Box>
             <TeamMemberBanner />
