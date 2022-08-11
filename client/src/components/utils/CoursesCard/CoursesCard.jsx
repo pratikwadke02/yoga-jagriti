@@ -1,5 +1,5 @@
 import { images } from "../../../constants";
-import { Box, Button, Container, Typography, IconButton } from "@mui/material";
+import { Box, Button, Container, Typography, IconButton, Card } from "@mui/material";
 import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -10,7 +10,7 @@ const ProgramCard = (props) => {
 
   return (
     <>
-      <Box
+      <Card
         sx={{
           mb:{xs:4, md:0},
           maxWidth:'400px',
@@ -34,7 +34,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.product} alt="software" style={{height:'auto', width:'100%'}} />
+          <img src={images.product} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'200px', minWidth:{xs:'220px',lg:'200px',xl:'220px'}}} />
         </Box>
         <Box
           sx={{
@@ -73,12 +73,12 @@ const ProgramCard = (props) => {
           </Typography>
           <Button
             variant="contained"
-            sx={{mt:1, backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'200px', width:'100%' }}
+            sx={{mt:1, backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'220px', width:'100%' }}
           >
             <Typography variant="h6" sx={{ }}>Enroll Now</Typography>
           </Button>
         </Box>
-      </Box>
+      </Card>
     </>
   );
 };

@@ -85,9 +85,9 @@ export const theme = createTheme({
       margin: "0 0 0 0",
     },
     h6: {
-        fontSize: "15px",
+        fontSize: "14px",
         fontWeight: 400,
-        lineHeight: "20px",
+        lineHeight: "28px",
         margin: "0 0 0 0",
     },
     h7: {

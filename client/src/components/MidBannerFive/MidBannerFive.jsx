@@ -36,10 +36,11 @@ const MidBannerFive = () => {
             What our clients say about us
           </Typography>
         </Box>
-        <Box sx={{witdh:'100%', mt:7, display:'flex', flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'space-around'}, alignItems:'center'}}>
+        <Box sx={{witdh:'100%', mt:7, display:'flex', flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'center'}, alignItems:'center'}}>
           {
             testimonials.map((testimonial, index) => {
                 return (
+                  <Box sx={{mr:{md:index === 0 ? 2 : 0}}}>
                     <CommentCard
                     key={index}
                     name={testimonial.name}
@@ -47,6 +48,7 @@ const MidBannerFive = () => {
                     comment={testimonial.comment}
                     rating={testimonial.rating}
                     />
+                  </Box>
                 );
                 }
             )

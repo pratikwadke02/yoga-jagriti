@@ -26,9 +26,9 @@ const CoursesComponnent = () => {
         }}
       >
         <Box  sx={{width:'100%', mt:4, mb:2}}>
-          <Box sx={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <Box sx={{maxWidth:'1325px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main  }}>
-            Our Natural Products
+            Our Yoga Courses
           </Typography>
           <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main}}>
             See All

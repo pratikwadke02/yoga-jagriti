@@ -48,7 +48,7 @@ const HeaderBanner = () => {
         }}
       >
         <Box  sx={{width:'100%', mt:4, mb:2}}>
-          <Box sx={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <Box sx={{m:'auto', maxWidth:'1500px', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,  }}>
             Our Natural Products
           </Typography>

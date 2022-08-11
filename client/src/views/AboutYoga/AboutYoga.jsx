@@ -27,8 +27,30 @@ const AboutYoga = () => {
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 About Yoga
             </Typography>
+            <Typography variant="h4" sx={{mt:2}}>
+              What is Yoga?
+            </Typography>
             <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'  }}>
-            The word "yoga" comes from the Sanskrit root yuj, ... Yoga is an ancient art based on
+            The word Yoga comes from the Sanskrit word "Yuj" meaning to yoke, join or unite. This
+implies joining or integrating all aspects of the individual - body with mind and mind with
+soul - to achieve a happy, balanced and useful life, and spiritually, uniting the individual with
+the supreme.
+            </Typography>
+            <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'  }}>
+            Yoga, in general, is a spiritual practice or discipline that helps the individual unify his/her
+body, mind, and heart.
+Yoga is a direct experience of the vast interrelatedness of all life and of all things. You will
+feel at peace at the end of a yoga class because there is a natural realignment of your body
+which leads to a natural realignment of your perception of life and of who you are.
+            </Typography>
+            <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'  }}>
+            You will need to develop discipline and there is hard work involved especially when you first
+begin.
+Hatha Yoga is the study and practice of physical alignments and breath.
+Yoga is much more that postural alignment and breathing.
+            </Typography>
+            <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'  }}>
+            Yoga is an ancient art based on
 a harmonizing system of development for the body, mind, and spirit. The continued
 practice of yoga will lead you to a sense of peace and well-being, and also a feeling of
 being at one with their environment.
