@@ -124,7 +124,7 @@ function DrawerAppBar(props) {
             </Box>
             <IconButton sx={{ mr: 2 }}>
               <ShoppingCartOutlinedIcon fontSize="small" sx={{color:theme.palette.text.main, display:{xs:'none', md:'block'}}} />
-              <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />
+              <ShoppingCartOutlinedIcon fontSize='small' sx={{color:theme.palette.text.main, display:{xs:'block', md:'none'}}} />
             </IconButton>
             <Link to="/login" style={{textDecoration:'none'}}>
             <Button variant="contained" sx={{height:'30px'}}>
