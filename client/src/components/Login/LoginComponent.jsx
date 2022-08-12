@@ -8,7 +8,7 @@ import { Facebook, Mail, Twitter } from "react-feather";
 const LoginComponent = () => {
   return (
     <>
-      <Box>
+      <Box sx={{}}>
         <div class="ptb-80">
           <Box sx={{ width: "100%", m: "auto", textAlign: "center", mb: 5 }}>
             <Typography
@@ -21,8 +21,8 @@ const LoginComponent = () => {
               Login
             </Typography>
           </Box>
-          <div class="container">
-            <div class="auth-form">
+          <div class="container" >
+            <div class="auth-form" style={{backgroundColor:theme.palette.background.default}}>
               <div class="auth-head">
                 {/* <a href="index.html">
                             <img src="assets/img/logo.png">

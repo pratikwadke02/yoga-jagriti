@@ -15,7 +15,7 @@ const RegisterComponent = () => {
           </Typography>
             </Box>
             <div class="container">
-                <div class="auth-form">
+                <div class="auth-form" style={{backgroundColor:theme.palette.background.default}}>
                     <div class="auth-head">
                         <a href="index.html">
                             {/* <img src="assets/img/logo.png"> */}

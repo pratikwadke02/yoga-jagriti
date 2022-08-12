@@ -1,0 +1,94 @@
+.contact-info-box {
+    text-align: center;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    padding: 30px;
+  }
+  
+  .contact-info-box .icon {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    line-height: 62px;
+    background: #f7fafd;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #ae1555;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .contact-info-box h3 {
+    font-size: 18px;
+    margin: 25px 0 15px;
+  }
+  
+  .contact-info-box p {
+    margin-bottom: 0;
+  }
+  
+  .contact-info-box p a {
+    color: #6084a4;
+  }
+  
+  .contact-info-box p a:hover {
+    color: #ae1555;
+  }
+  
+  .contact-info-box:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  
+  .contact-info-box:hover .icon {
+    color: #ffffff;
+    background: #ae1555;
+  }
+/*   
+  #map iframe {
+    height: 500px;
+    width: 100%;
+    border: none;
+    margin-bottom: -5px;
+  }
+  
+  #contactForm .help-block ul {
+    margin: 0;
+  }
+  
+  #contactForm .help-block ul li {
+    color: red;
+  }
+  
+  #contactForm .btn {
+    margin-top: 10px;
+  }
+  
+  #contactForm #msgSubmit.text-danger, #contactForm #msgSubmit.text-success {
+    margin: 20px 0 0;
+  }
+  
+  #contactForm textarea.form-control {
+    height: auto;
+    min-height: auto;
+  }
+   */
+
+   @media only screen and (max-width: 768px) {
+    .contact-info-box {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+      }
+      .contact-info-box h3 {
+        font-size: 17px;
+      }
+   }
+
+   @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact-info-box {
+        margin-bottom: 30px;
+      }
+   }
