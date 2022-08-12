@@ -14,6 +14,8 @@ import Naturopathy from './components/Naturopathy/Naturopathy';
 import AccuPressure from './components/AccuPressure/AccuPressure';
 import Pranayam from './components/Pranayam/Pranayam';
 import AboutYoga from './views/AboutYoga/AboutYoga';
+import Faq from './views/Faq/Faq';
+import Login from './views/Auth/Login';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/career" element={<Career/>} />
         <Route path="/about" element={<About />} />
         <Route path="/know-yoga" element={<AboutYoga />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       {/* <Footer /> */}
       </BrowserRouter>

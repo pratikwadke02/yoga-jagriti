@@ -33,6 +33,10 @@ const navItems = [
     name: 'News',
     path: 'news',
   },
+  {
+    name: 'faq',
+    path: 'faq',
+  }
 ];
 
 function DrawerAppBar(props) {
@@ -118,11 +122,13 @@ function DrawerAppBar(props) {
           <Box sx={{mr:{xs:0, md:6}, flexGrow:0, display:{
             xs:'flex'
           }, flexDirection:'row-reverse', alignItems:'center'}}>
+            <Link to="/login" style={{textDecoration:'none'}}>
             <Button variant="contained" sx={{height:'30px'}}>
               <Typography variant="h6" sx={{ color: theme.palette.text.default, fontWeight: theme.typography.fontWeightBold }}>
                 Login
               </Typography>
             </Button>
+            </Link>
             <IconButton sx={{ mr: 2 }}>
               <ShoppingCartOutlinedIcon fontSize="large" sx={{color:theme.palette.primary.main, display:{xs:'none', md:'block'}}} />
               <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />

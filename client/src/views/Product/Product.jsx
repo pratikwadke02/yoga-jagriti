@@ -26,7 +26,7 @@ const Product = () => {
           justifyContent: "center",
         }}
 
-        className="container"
+        className="product-container"
       >
         <Box sx={{position: "relative", display: "flex", flexDirection:{xs:'column', md:'row'}, zIndex:2,  }}>
           <Box sx={{ mr: { xs: 0, md: 2 }, width: { xs: "100%", md: "80%" } }}>

@@ -1,9 +1,14 @@
 import React from 'react'
+import './FaqComponent.css'
+
 
 const FaqComponent = () => {
+
+	//faq-area css 
+	//
   return (
     <>
-    <div class="faq-area ptb-80">
+    <div class="faq-area ptb-80">   
 			<div class="container">
 				<div class="faq-accordion">
 					<ul class="accordion">
