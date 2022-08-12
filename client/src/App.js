@@ -16,6 +16,7 @@ import Pranayam from './components/Pranayam/Pranayam';
 import AboutYoga from './views/AboutYoga/AboutYoga';
 import Faq from './views/Faq/Faq';
 import Login from './views/Auth/Login';
+import Register from './views/Auth/Register';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/know-yoga" element={<AboutYoga />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       {/* <Footer /> */}
       </BrowserRouter>

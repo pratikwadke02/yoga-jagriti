@@ -2,19 +2,28 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import './Login.css';
 import {theme} from '../../theme'
+import { Link } from 'react-router-dom';
+import {Facebook, Mail, Twitter} from 'react-feather';
 
 const LoginComponent = () => {
   return (
     <>
     <Box>
         <div class="ptb-80">
+            <Box sx={{width:'100%', m:'auto', textAlign:'center', mb:5}}>
+            <Typography variant='h2' sx={{fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
+            Login
+          </Typography>
+            </Box>
             <div class="container">
                 <div class="auth-form">
                     <div class="auth-head">
                         {/* <a href="index.html">
                             <img src="assets/img/logo.png">
                         </a> */}
-                        <p>Don't have an account yet? <a href="register.html" style={{textDecoration:'none', color:theme.palette.primary.main}}>Sign Up</a></p>
+                        <p>Don't have an account yet? 
+                            <Link to="/register" style={{textDecoration:'none'}}>
+                            <a style={{textDecoration:'none', color:theme.palette.primary.main, marginLeft:5}}>Sign Up</a></Link></p>
                     </div>
                     <form>
                         <div class="mb-3">
@@ -37,9 +46,16 @@ const LoginComponent = () => {
                     <div class="foot">
                         <p>Or connect with</p>
                         <ul>
-                            <li><a href="#" class="linkedin" target="_blank"><i data-feather="mail"></i></a></li>
-                            <li><a href="#" class="facebook" target="_blank"><i data-feather="facebook"></i></a></li>
-                            <li><a href="#" class="twitter" target="_blank"><i data-feather="twitter"></i></a></li>
+                            <li><a href="#" class="linkedin" target="_blank">
+                                <Mail />
+                                </a></li>
+                            <li><a href="#" class="facebook" target="_blank">
+                                {/* <i data-feather="facebook"></i> */}
+                                <Facebook />
+                                </a></li>
+                            <li><a href="#" class="twitter" target="_blank">
+                                <Twitter/>
+                                </a></li>
                         </ul>
                     </div>
                 </div>
