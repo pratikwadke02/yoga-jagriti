@@ -73,12 +73,12 @@ function DrawerAppBar(props) {
               <ListItem key={item} disablePadding>
                 <ListItemButton sx={{pl:3, textAlign: 'start' }}>
                   <ListItemText>
-                    <Typography variant="h6" sx={{color:theme.palette.text.primary}}>{item.name}</Typography>
+                    <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightMedium ,color:theme.palette.text.dark}}>{item.name}</Typography>
                   </ListItemText>
                 </ListItemButton>
               </ListItem>
             </Link>
-            <Divider sx={{width:'100%'}} />
+            <Divider sx={{width:'100%', backgroundColor:theme.palette.text.main}} />
             </>
           ))
         }
@@ -107,6 +107,7 @@ function DrawerAppBar(props) {
           <Box sx={{mr:{xs:0}, flexGrow:0, display:{
             xs:'flex'
           }, flexDirection:'row', alignItems:'center'}}>
+            <Box sx={{display:{xs:'none', md:'block'}}}>
             {
               navItems.map((item) => (
                 <>
@@ -120,6 +121,7 @@ function DrawerAppBar(props) {
                 </>
               ))
             }
+            </Box>
             <IconButton sx={{ mr: 2 }}>
               <ShoppingCartOutlinedIcon fontSize="small" sx={{color:theme.palette.text.main, display:{xs:'none', md:'block'}}} />
               <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />
