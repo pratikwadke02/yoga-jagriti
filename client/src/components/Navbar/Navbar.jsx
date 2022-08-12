@@ -91,8 +91,8 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav">
-        <Toolbar>
-          <Box sx={{ml:{xs:0, md:6},flexGrow:1, display:"flex", flexDirection:'row', aligntItems:'center'}}>
+        <Toolbar sx={{ maxWidth:{xs:'100%', md:'1000px'},width:'100%', m:'auto'}}>
+          <Box sx={{ml:{xs:0},flexGrow:1, display:"flex", flexDirection:'row', aligntItems:'center'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -103,13 +103,16 @@ function DrawerAppBar(props) {
             <MenuIcon color="primary" />
           </IconButton>
             <img src={images.logo} alt="" height={30} />
-            <Box sx={{ml:2, display:{xs:'none',md:'flex'}}}>
+          </Box>
+          <Box sx={{mr:{xs:0}, flexGrow:0, display:{
+            xs:'flex'
+          }, flexDirection:'row', alignItems:'center'}}>
             {
               navItems.map((item) => (
                 <>
                 <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
                   <Button key={item} sx={{}}>
-                    <Typography variant="h6" sx={{ color: theme.palette.text.main, fontWeight: theme.typography.fontWeightBold }}>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.dark, fontWeight:theme.typography.fontWeightMedium }}>
                       {item.name}
                     </Typography>
                   </Button>
@@ -117,11 +120,10 @@ function DrawerAppBar(props) {
                 </>
               ))
             }
-          </Box>
-          </Box>
-          <Box sx={{mr:{xs:0, md:6}, flexGrow:0, display:{
-            xs:'flex'
-          }, flexDirection:'row-reverse', alignItems:'center'}}>
+            <IconButton sx={{ mr: 2 }}>
+              <ShoppingCartOutlinedIcon fontSize="small" sx={{color:theme.palette.text.main, display:{xs:'none', md:'block'}}} />
+              <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />
+            </IconButton>
             <Link to="/login" style={{textDecoration:'none'}}>
             <Button variant="contained" sx={{height:'30px'}}>
               <Typography variant="h6" sx={{ color: theme.palette.text.default, fontWeight: theme.typography.fontWeightBold }}>
@@ -129,10 +131,6 @@ function DrawerAppBar(props) {
               </Typography>
             </Button>
             </Link>
-            <IconButton sx={{ mr: 2 }}>
-              <ShoppingCartOutlinedIcon fontSize="large" sx={{color:theme.palette.primary.main, display:{xs:'none', md:'block'}}} />
-              <ShoppingCartOutlinedIcon sx={{color:theme.palette.primary.main, display:{xs:'block', md:'none'}}} />
-            </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
