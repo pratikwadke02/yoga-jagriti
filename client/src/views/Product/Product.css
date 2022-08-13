@@ -2,7 +2,7 @@
     content: "";
     position: absolute;
     z-index: 1;
-    background-image: url(../../assets/images/bg_pattern.png);
+    background-image: url(../../assets/images/bg_product.png);
     background-repeat: no-repeat;
     background-position: center;
     top: 0;
@@ -10,6 +10,6 @@
     bottom: 0;
     right: 0;
     background-size: 1000px;
-    opacity: 0.5;
+    opacity: 0.15;
 
 }

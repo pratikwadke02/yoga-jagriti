@@ -14,13 +14,13 @@ const Details = () => {
     >
       <Box>
       <Typography
-          variant="h2"
+          variant="h4"
           sx={{display:{xs:'none', md:'block'}, mb: 1, color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}
         >
           Product Name
         </Typography>
         <Typography
-          variant="h4"
+          variant="h6"
           sx={{display:{xs:'block', md:'none'}, mb: 1, color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}
         >
           Product Name

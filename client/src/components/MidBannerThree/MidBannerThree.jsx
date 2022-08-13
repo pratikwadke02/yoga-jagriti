@@ -36,9 +36,9 @@ const MidBannerThree = () => {
             Consectetur adipisicing elit, sed do eiusmod Tempor incididunt Labore et dolore magna aliqua ut enim. Veniam quis nostrud exercitation ullamco ut aliquip. Duis aute irure dolor.
             </Typography>
             <Box sx={{width:'100%'}}>
-                <PurchaseCard title="Standard Pricing Plan" price="$35 / week" />
-                <PurchaseCard title="Professional Pricing Plan" price="$35 / week" />
-                <PurchaseCard title="Private Pricing Plan" price="$35 / week" /> 
+                <PurchaseCard title="Standard Pricing Plan" price="INR 35/week" />
+                <PurchaseCard title="Professional Pricing Plan" price="INR 35/week" />
+                <PurchaseCard title="Private Pricing Plan" price="INR 35/week" /> 
             </Box>
         </Box>
     </Container> 

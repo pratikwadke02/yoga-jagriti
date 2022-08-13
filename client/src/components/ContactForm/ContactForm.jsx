@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { theme } from "../../theme";
 import { useState } from "react";
 import axios from "axios";
-import './ContactForm.css';
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const state = [
@@ -924,11 +924,43 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       console.log(data);
-      await axios.post('http://localhost:8080/api/student/addStudent', data).then(res => {
-        console.log(res);
-      }).catch(err => {
-        console.log(err);
+      await axios
+        .post("http://localhost:8080/api/student/addStudent", data)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      setData({
+        country: "",
+        title: "",
+        firstName: "",
+        middleName: "",
+        lastName: "",
+        gender: "",
+        dob: "",
+        nationality: "",
+        fatherName: "",
+        motherName: "",
+        spouseName: "",
+        category: "",
+        pwdCertificate: "",
+        idType: "",
+        idNumber: "",
+        phone: "",
+        address: "",
+        state: "",
+        district: "",
+        pincode: "",
+        permanentAddress: "",
+        permanentState: "",
+        permanentDistrict: "",
+        permanentPincode: "",
+        permanentCountry: "",
+        email: "",
       });
+      alert("Enrolled Successfully");
     } catch (error) {
       console.log(error);
     }
@@ -936,12 +968,30 @@ const ContactForm = () => {
 
   return (
     <>
-      <Box sx={{mt:2,backgroundColor:theme.palette.background.default, p:{xs:1, md:2}, borderRadius:'5px'}}>
-      <Typography variant='h2' sx={{fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main, textAlign:'center', mb:{md:4},}}>
-                Course Enrollment
-      </Typography>
+      <Box
+        sx={{
+          mt: 2,
+          backgroundColor: theme.palette.background.default,
+          p: { xs: 1, md: 2 },
+          borderRadius: "5px",
+        }}
+      >
         <form id="contactForm" onSubmit={handleSubmit}>
           <div class="row justify-content-center align-items-center">
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: theme.typography.fontWeightBold,
+                color: theme.palette.primary.main,
+                textAlign: "center",
+                mb: { md: 4 },
+              }}
+            >
+              Course Enrollment
+            </Typography>
+            <Typography variant="h6" sx={{ mb: 1 }}>
+              Personal Details
+            </Typography>
             <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <select
@@ -1005,7 +1055,6 @@ const ContactForm = () => {
                   name="middleName"
                   id="middle-name"
                   class="form-control"
-                  
                   data-error="Please enter your name"
                   placeholder="Middle Name"
                   value={data.middleName}
@@ -1021,7 +1070,6 @@ const ContactForm = () => {
                   name="lastName"
                   id="last-name"
                   class="form-control"
-                  
                   data-error="Please enter your name"
                   placeholder="Last Name"
                   value={data.lastName}
@@ -1054,6 +1102,23 @@ const ContactForm = () => {
             <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <input
+                  type="date"
+                  name="dob"
+                  id="dob"
+                  class="form-select form-select-lg mb-3"
+                  required
+                  data-error="Select a gender"
+                  placeholder="Date of Birth"
+                  aria-label="Default select example"
+                  value={data.dob}
+                  onChange={handleChange}
+                ></input>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="form-group">
+                <input
                   type="text"
                   name="nationality"
                   id="nationality"
@@ -1074,7 +1139,6 @@ const ContactForm = () => {
                   name="fatherName"
                   id="father-name"
                   class="form-control"
-                
                   data-error="Please enter your father name"
                   placeholder="Father's Name"
                   value={data.fatherName}
@@ -1106,7 +1170,6 @@ const ContactForm = () => {
                   name="spouseName"
                   id="spouse-name"
                   class="form-control"
-                  
                   data-error="Please enter your spouse name"
                   placeholder="Spouse's Name"
                   value={data.spouseName}
@@ -1146,7 +1209,6 @@ const ContactForm = () => {
                   name="pwdCertificate"
                   id="pwd-certficate"
                   class="form-control"
-                  
                   data-error="Please enter your pwd certificate"
                   placeholder="PwD Certificate"
                   value={data.pwdCertificate}
@@ -1223,10 +1285,28 @@ const ContactForm = () => {
                   value={data.phone}
                   onChange={handleChange}
                 />
+                <Typography variant="h7" color="error">
+                  Note: Please enter phone number with country code.
+                </Typography>
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-
+            <div class="col-lg-12 col-md-12">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                  data-error="Please enter your email"
+                  placeholder="Email"
+                  value={data.email}
+                  onChange={handleChange}
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
             {/* <div class="col-lg-12 col-md-6">
                 <div class="form-group">
                   <input
@@ -1255,6 +1335,9 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div> */}
+            <Typography variant="h6" sx={{ mb: 1 }}>
+              Correspondence Address
+            </Typography>
             <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <textarea
@@ -1278,7 +1361,6 @@ const ContactForm = () => {
                   name="state"
                   id="state"
                   class="form-select form-select-lg mb-3"
-                  
                   data-error="Select a state"
                   placeholder="State"
                   aria-label="Default select example"
@@ -1299,7 +1381,6 @@ const ContactForm = () => {
                   name="district"
                   id="district"
                   class="form-select form-select-lg mb-3"
-                  
                   data-error="Select a district"
                   placeholder="District"
                   aria-label="Default select example"
@@ -1334,6 +1415,9 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
+            <Typography variant="h6" sx={{ mb: 1 }}>
+              Permanent Address
+            </Typography>
             <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <textarea
@@ -1357,7 +1441,6 @@ const ContactForm = () => {
                   name="permanentState"
                   id="state"
                   class="form-select form-select-lg mb-3"
-                  
                   data-error="Select a state"
                   placeholder="State"
                   aria-label="Default select example"
@@ -1378,7 +1461,6 @@ const ContactForm = () => {
                   name="permanentDistrict"
                   id="district"
                   class="form-select form-select-lg mb-3"
-                  
                   data-error="Select a district"
                   placeholder="District"
                   aria-label="Default select example"
@@ -1429,22 +1511,6 @@ const ContactForm = () => {
                   <option value="India">India</option>
                   <option value="USA">USA</option>
                 </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12">
-              <div class="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="form-control"
-                  required
-                  data-error="Please enter your email"
-                  placeholder="Email"
-                  value={data.email}
-                  onChange={handleChange}
-                />
                 <div class="help-block with-errors"></div>
               </div>
             </div>
