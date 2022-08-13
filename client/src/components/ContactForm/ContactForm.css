@@ -35,6 +35,7 @@
   .form-group {
     margin-bottom: 18px;
   }
+
   
   .form-control {
     height: 45px;
@@ -47,7 +48,18 @@
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  
+
+  .form-select{
+    height: 45px;
+    padding: 10px;
+    font-size: 12px;
+    color:#6c757d;
+  }
+
+  .form-select:focus{
+    border:1px solid #ae1555;
+    box-shadow: 0 0 0 0.2rem rgba(230,57,95,.25);
+  }
   .form-control:focus {
     outline: 0;
     background: #ffffff;
@@ -56,6 +68,7 @@
     border-color: #ae1555;
   }
   
+
   .form-control {
       display: block;
       width: 100%;
