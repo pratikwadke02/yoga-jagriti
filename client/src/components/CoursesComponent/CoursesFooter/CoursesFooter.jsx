@@ -7,11 +7,11 @@ import { theme } from '../../../theme'
 const CoursesFooter = () => {
   return (
     <>
-    <Box sx={{display:'flex', flexDirection:{xs:'column' , md:'row'}}}>
+    <Box sx={{width:'100%',display:'flex', flexDirection:{xs:'column' , md:'row'}}}>
       <Box sx={{mr:{xs:0, md:4}, p:1, mt:2}}>
         <img src={images.certificate} alt="" style={{height:'auto', width:'100%', maxHeight:'390px'}} />
       </Box>
-      <Box x={{ml:{xs:0, md:4},}}>
+      <Box x={{width:'100%', ml:{xs:0, md:4},}}>
         <Typography variant="h6" sx={{color: 'primary.main', fontWeight:theme.typography.fontWeightBold, textAlign:{xs:'center', md:'initial'}, mt:2 }}>
         GET PROOF FOR YOUR NEWLY LEARNT SKILLS
         </Typography>
@@ -19,13 +19,21 @@ const CoursesFooter = () => {
         Get Job ready with
 NSDC Skill India Certificate
         </Typography>
-        <Box sx={{mt:4, width:'100%', display:'flex', justifyContent:{xs:'center', md:'flex-start'}}}>
-          <img src={images.ycb_logo} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
+        <Box sx={{mt:4, width:'100%', display:{xs:'none', md:'flex'}, justifyContent:{xs:'center', md:'flex-start'}, flexDirection:{xs:'column', sm:'row'}, alignItems:'flex-end'}}>
+          <img src={images.ycb_logo} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginRight:20}}/>
           <Divider orientation="vertical" color="primary"/>
-          <img src={images.fit_india_logo} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
-          <img src={images.spai_logo} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
-          <img src={images.msme} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
-          <img src={images.ncvt} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.fit_india_logo} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.spai_logo} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.msme} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.ncvt} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginRight:20}}/>
+        </Box>
+        <Box sx={{mt:4, width:'100%', display:{xs:'flex', md:'none'}, justifyContent:{xs:'center', md:'flex-start'}, flexDirection:{xs:'column', sm:'row'}, alignItems:'center'}}>
+          <img src={images.ycb_logo} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginTop:20}}/>
+          <Divider orientation="vertical" color="primary"/>
+          <img src={images.fit_india_logo} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginTop:20}}/>
+          <img src={images.spai_logo} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginTop:20}}/>
+          <img src={images.msme} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginTop:20}}/>
+          <img src={images.ncvt} alt="" style={{height:'auto', width:'80px', maxHeight:'80px', marginTop:20}}/>
         </Box>
         <Box sx={{mt:2,width:'100%', display:'flex', justifyContent:{xs:'center', md:'flex-start'}}}>
             <Link to={'/course'} style={{
