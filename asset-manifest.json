@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/yoga-jagriti/static/css/main.8b3cc566.css",
-    "main.js": "/yoga-jagriti/static/js/main.f647e5ad.js",
+    "main.css": "/yoga-jagriti/static/css/main.de7a372c.css",
+    "main.js": "/yoga-jagriti/static/js/main.0bfdd695.js",
     "static/media/mid_banner_two.png": "/yoga-jagriti/static/media/mid_banner_two.d64e45cb9d7a86e96b6c.png",
+    "static/media/ncvt.png": "/yoga-jagriti/static/media/ncvt.cfc17c230851e31950e9.png",
     "static/media/slider_1.jpg": "/yoga-jagriti/static/media/slider_1.dc56ddfcc0b6a50fd9c0.jpg",
     "static/media/slider_2.jpg": "/yoga-jagriti/static/media/slider_2.50bb08fa269c4422fda8.jpg",
     "static/media/bg_product.png": "/yoga-jagriti/static/media/bg_product.5d77daf331e1d8fd5f4c.png",
     "static/media/bg_pattern.png": "/yoga-jagriti/static/media/bg_pattern.575d64ca31f49131673a.png",
     "static/media/mid_banner_two_bg.png": "/yoga-jagriti/static/media/mid_banner_two_bg.575d64ca31f49131673a.png",
+    "static/media/certificate.jpeg": "/yoga-jagriti/static/media/certificate.8425a402a058b9514dd4.jpeg",
     "static/media/product.png": "/yoga-jagriti/static/media/product.8c7a32d47fd9bcf88132.png",
     "static/media/pattern.png": "/yoga-jagriti/static/media/pattern.d7dc44dddf16db25aac7.png",
     "static/media/team_three.jpeg": "/yoga-jagriti/static/media/team_three.7102fac3001d070516ee.jpeg",
@@ -19,15 +21,21 @@
     "static/media/team_four.jpeg": "/yoga-jagriti/static/media/team_four.27d8510ea03a25bdb4ff.jpeg",
     "static/media/team_one.jpeg": "/yoga-jagriti/static/media/team_one.f84ef1f245e11d59194f.jpeg",
     "static/media/pattern_two.png": "/yoga-jagriti/static/media/pattern_two.c93d55774de3c863ccbe.png",
+    "static/media/nav_logo.jpg": "/yoga-jagriti/static/media/nav_logo.9fd805263ec5be525782.jpg",
     "static/media/software.png": "/yoga-jagriti/static/media/software.33cb2cb0755811887d98.png",
+    "static/media/skills_logo.png": "/yoga-jagriti/static/media/skills_logo.c874bdf7e8e230e24b63.png",
+    "static/media/msme.png": "/yoga-jagriti/static/media/msme.fbdb950881618e85d9a2.png",
+    "static/media/ycb_logo.png": "/yoga-jagriti/static/media/ycb_logo.33e10421bf97cafc5854.png",
     "static/media/google.png": "/yoga-jagriti/static/media/google.ae7dc6763dcbc4bc8c4c.png",
+    "static/media/yoga_jagriti_logo.png": "/yoga-jagriti/static/media/yoga_jagriti_logo.d2ed0c29ceaa8556136a.png",
     "static/media/scalar_logo.png": "/yoga-jagriti/static/media/scalar_logo.4250a299dab7bed37c9c.png",
+    "static/media/spai_logo.svg": "/yoga-jagriti/static/media/spai_logo.ac64ad5401ac9c43092362f11c7db0df.svg",
     "index.html": "/yoga-jagriti/index.html",
-    "main.8b3cc566.css.map": "/yoga-jagriti/static/css/main.8b3cc566.css.map",
-    "main.f647e5ad.js.map": "/yoga-jagriti/static/js/main.f647e5ad.js.map"
+    "main.de7a372c.css.map": "/yoga-jagriti/static/css/main.de7a372c.css.map",
+    "main.0bfdd695.js.map": "/yoga-jagriti/static/js/main.0bfdd695.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b3cc566.css",
-    "static/js/main.f647e5ad.js"
+    "static/css/main.de7a372c.css",
+    "static/js/main.0bfdd695.js"
   ]
 }
