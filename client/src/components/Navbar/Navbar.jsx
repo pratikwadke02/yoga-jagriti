@@ -71,14 +71,14 @@ function DrawerAppBar(props) {
             <>
             <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
               <ListItem key={item} disablePadding>
-                <ListItemButton sx={{pl:3, textAlign: 'start' }}>
+                <Button sx={{pl:3, textAlign: 'start', width:'100%' }}>
                   <ListItemText>
-                    <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightMedium ,color:theme.palette.text.dark}}>{item.name}</Typography>
+                    <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightMedium ,color:theme.palette.text.main}}>{item.name}</Typography>
                   </ListItemText>
-                </ListItemButton>
+                </Button>
               </ListItem>
             </Link>
-            <Divider sx={{width:'100%', backgroundColor:theme.palette.text.main}} />
+            <Divider sx={{width:'100%', backgroundColor:theme.palette.text.dark}} />
             </>
           ))
         }
@@ -113,7 +113,7 @@ function DrawerAppBar(props) {
                 <>
                 <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
                   <Button key={item} sx={{}}>
-                    <Typography variant="h6" sx={{ color: theme.palette.text.dark, fontWeight:theme.typography.fontWeightMedium }}>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium }}>
                       {item.name}
                     </Typography>
                   </Button>

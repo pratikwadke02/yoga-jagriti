@@ -6,11 +6,13 @@ import { images } from "../../constants";
 import '../Header/HeaderBanner/HeaderBanner.css'
 import CoursesCard from "../utils/CoursesCard/CoursesCard";
 import { Link } from "react-router-dom";
+import CoursesHeader from "./CoursesHeader/CoursesHeader";
 
 const CoursesComponnent = () => {
   return (
     <>
       <Container
+        disableGutters
         sx={{
           mt:10,
           pb:4,
@@ -25,6 +27,7 @@ const CoursesComponnent = () => {
           color: theme.palette.text.default,
         }}
       >
+        <CoursesHeader />
         <Box  sx={{width:'100%', mt:4, mb:2}}>
           <Box sx={{maxWidth:'1325px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main  }}>
@@ -37,43 +40,40 @@ const CoursesComponnent = () => {
         <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center',}}>
           <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
         </Box>
         <Box sx={{display:{xs:'none', lg:'flex'}, flexDirection:{xs:'column', md:'row'}}}>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
-          </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
         </Box>
-          {/* <CoursesCard name="Course Name" desc="Course Details" price="9.99"/> */}
+          {/* <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/> */}
         </Box>
         </Box>
         <Box className="marquee" sx={{display:{xs:'flex', md:'none'}}}>
           <Box className="track" sx={{display:'flex'}}>
-            {/* <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
-            <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
-            <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
-            <CoursesCard name="Course Name" desc="Course Details" price="9.99"/> */}
+            {/* <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
+            <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
+            <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
+            <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/> */}
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99"/>
+          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           </Box>
         </Box>

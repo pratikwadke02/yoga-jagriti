@@ -3,10 +3,12 @@ import { Box, Button, Container, Typography, IconButton, Card } from "@mui/mater
 import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
 const ProgramCard = (props) => {
 
-  const {name, image, desc, price} = props;
+  const {name, image, desc, price, enrolled, favourites} = props;
 
   return (
     <>
@@ -71,12 +73,26 @@ const ProgramCard = (props) => {
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
             INR {price}
           </Typography>
+          <Box sx={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
+            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+              <PeopleOutlineIcon fontSize="small" color="primary" />
+              <Typography variant="h6" sx={{ml:1}}>
+                {enrolled}
+              </Typography>
+            </Box>
+            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+              <StarOutlineIcon fontSize="small" color="primary" />
+              <Typography variant="h6" sx={{ml:1}}>
+                {favourites}
+              </Typography>
+            </Box>
           <Button
             variant="contained"
-            sx={{mt:1, backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'220px', width:'100%' }}
+            sx={{mt:1, backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'120px', width:'100%' }}
           >
             <Typography variant="h6" sx={{ }}>Enroll Now</Typography>
           </Button>
+          </Box>    
         </Box>
       </Card>
     </>
