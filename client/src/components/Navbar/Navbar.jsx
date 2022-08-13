@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {theme} from '../../theme'
 import { images } from '../../constants';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = [
@@ -40,6 +40,25 @@ const navItems = [
 ];
 
 function DrawerAppBar(props) {
+
+  const navLinkStyles = ({isActive}) => {
+    return {
+      marginLeft:'7px',
+      marginRight:'7px',
+      textDecoration:'none',
+      paddingBottom: '0.5rem',
+      borderBottom: isActive ? '1px solid '+theme.palette.primary.main : 'none',
+      color: isActive ? theme.palette.primary.main : theme.palette.text.main,
+    }
+  }
+
+  const respNavLinkStyles = ({isActive}) => {
+    return {
+      textDecoration:'none',
+      color: isActive ? theme.palette.primary.main : theme.palette.text.main,
+    }
+  }
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -69,15 +88,13 @@ function DrawerAppBar(props) {
         {
           navItems.map((item) => (
             <>
-            <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
-              <ListItem key={item} disablePadding>
-                <Button sx={{pl:3, textAlign: 'start', width:'100%' }}>
+            <NavLink to={`/${item.path}`} style={respNavLinkStyles}>
+              <ListItem key={item}>
                   <ListItemText>
-                    <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightMedium ,color:theme.palette.text.main}}>{item.name}</Typography>
+                    <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightMedium}}>{item.name}</Typography>
                   </ListItemText>
-                </Button>
               </ListItem>
-            </Link>
+            </NavLink>
             <Divider sx={{width:'100%', backgroundColor:theme.palette.text.dark}} />
             </>
           ))
@@ -110,17 +127,15 @@ function DrawerAppBar(props) {
           <Box sx={{mr:{xs:0}, flexGrow:0, display:{
             xs:'flex'
           }, flexDirection:'row', alignItems:'center'}}>
-            <Box sx={{display:{xs:'none', md:'block'}}}>
+            <Box sx={{display:{xs:'none', md:'flex'}, alignItems:'center'}}>
             {
               navItems.map((item) => (
                 <>
-                <Link to={`/${item.path}`} style={{textDecoration:'none'}}>
-                  <Button key={item} sx={{}}>
-                    <Typography variant="h6" sx={{ color: theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium }}>
+                <NavLink to={`/${item.path}`} style={navLinkStyles}>
+                    <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightMedium }}>
                       {item.name}
                     </Typography>
-                  </Button>
-                </Link>
+                </NavLink>
                 </>
               ))
             }
