@@ -43,7 +43,7 @@ International level. The specific objectives of the JYNS are :-
                 {aims.map((item, index) => (
                     <ListItem key={index} disablePadding>
                         <ListItemIcon sx={{border:'1px solid'+theme.palette.primary.main, borderRadius:'50%'}}>
-                            <CheckIcon sx={{color:theme.palette.primary.main}}/>
+                            <CheckIcon sx={{color:theme.palette.primary.main}} fontSize="small" />
                         </ListItemIcon>
                         <ListItemText sx={{ml:1}}>
                             <Typography variant="h6" >

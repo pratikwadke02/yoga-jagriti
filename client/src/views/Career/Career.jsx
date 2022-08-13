@@ -207,6 +207,7 @@ const Career = () => {
                         >
                           <CheckIcon
                             sx={{ color: theme.palette.background.default }}
+                            fontSize="small"
                           />
                         </ListItemIcon>
                         <ListItemText>
@@ -238,6 +239,7 @@ const Career = () => {
                         >
                           <CheckIcon
                             sx={{ color: theme.palette.background.default }}
+                            fontSize="small"
                           />
                         </ListItemIcon>
                         <ListItemText>
@@ -276,7 +278,19 @@ const Career = () => {
         }}
       >
         <Box sx={{ mr: { xs: 0, md: 2 } }}>
-          <Typography
+          <Box
+            sx={{
+              borderRadius: "10px",
+              height: "100%",
+              maxWidth: { xs: "100%", md: "750px" },
+              maxHeight: { md: "400px" },
+              mt: 2,
+              backgroundColor: theme.palette.background.default,
+              boxShadow: 1,
+              p: 2,
+            }}
+          >
+            <Typography
             variant="h3"
             sx={{
               fontWeight: theme.typography.fontWeightBold,
@@ -285,20 +299,9 @@ const Career = () => {
           >
             Career Scope
           </Typography>
-          <Box
-            sx={{
-              borderRadius: "10px",
-              maxWidth: { xs: "100%", md: "750px" },
-              minHeight: { xs: "fit-content", md: "180px" },
-              mt: 2,
-              backgroundColor: theme.palette.background.default,
-              boxShadow: 1,
-              p: 2,
-            }}
-          >
             <Typography
               variant="h6"
-              sx={{ textAlign: "justify", textJustify: "inter-word" }}
+              sx={{ textAlign: "justify", textJustify: "inter-word", mt:2 }}
             >
               Based on the Yoga training you have received, you can opt for the
               field of research, training or works as a Yoga therapist. You can
@@ -314,7 +317,19 @@ const Career = () => {
           </Box>
         </Box>
         <Box sx={{ ml: { xs: 0, md: 2 }, mt: { xs: 4, md: 0 } }}>
-          <Typography
+          <Box
+            sx={{
+              borderRadius: "10px",
+              maxWidth: { xs: "100%", md: "750px" },
+              mt: 2,
+              height: "100%",
+              maxHeight: { md: "400px" },
+              backgroundColor: theme.palette.background.default,
+              boxShadow: 1,
+              p: 2,
+            }}
+          >
+            <Typography
             variant="h3"
             sx={{
               fontWeight: theme.typography.fontWeightBold,
@@ -322,21 +337,10 @@ const Career = () => {
             }}
           >
             Salary in Yoga Field
-          </Typography>
-          <Box
-            sx={{
-              borderRadius: "10px",
-              maxWidth: { xs: "100%", md: "750px" },
-              mt: 2,
-              minHeight: { xs: "fit-content", md: "180px" },
-              backgroundColor: theme.palette.background.default,
-              boxShadow: 1,
-              p: 2,
-            }}
-          >
+            </Typography>
             <Typography
               variant="h6"
-              sx={{ textAlign: "justify", textJustify: "inter-word" }}
+              sx={{ textAlign: "justify", textJustify: "inter-word", mt:2 }}
             >
               A fresher can earn Rs 10,000 to Rs 25,000 a month. With
               experience, the salary climbs higher at a faster pace. However,

@@ -56,7 +56,7 @@ under:-
                               "1px solid" + theme.palette.background.main,
                             borderRadius: "50%",
                           }}>
-                            <CheckIcon sx={{color:theme.palette.primary.main}} />
+                            <CheckIcon sx={{color:theme.palette.primary.main}} fontSize="small" />
                         </ListItemIcon>
                         <Typography variant="h6" sx={{ml:1, textAlign: 'justify', textJustify:'inter-word'}}>
                             {item.item}

@@ -29,10 +29,10 @@ const navItems = [
     name: 'Contact',
     path: 'contact',
   },
-  {
-    name: 'News',
-    path: 'news',
-  },
+  // {
+  //   name: 'News',
+  //   path: 'news',
+  // },
   {
     name: 'faq',
     path: 'faq',
@@ -102,7 +102,10 @@ function DrawerAppBar(props) {
           >
             <MenuIcon color="primary" />
           </IconButton>
+            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
             <img src={images.logo} alt="" height={30} />
+            <img src={images.nav_logo} alt="" height={35} style={{marginLeft:'10px'}} />
+            </Box>
           </Box>
           <Box sx={{mr:{xs:0}, flexGrow:0, display:{
             xs:'flex'
