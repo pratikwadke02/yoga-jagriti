@@ -5,7 +5,7 @@ import './ContactComponent.css';
 
 const ContactComponent = () => {
   return (
-    <Box sx={{wdith:'100%', backgroundColor:theme.palette.background.default, borderRadius:'10px', p:2  }}>
+    <Box sx={{wdith:'100%', backgroundColor:theme.palette.background.default, borderRadius:'5px', p:2  }}>
         <Box>
         <div class="section-title">
             <h2>Get In Touch With Us</h2>
