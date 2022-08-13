@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 
-// require('./routes/routes.js')(app);
+require('./routes/routes.js')(app);
 app.use(express.static(__dirname + "/public"));
 
 

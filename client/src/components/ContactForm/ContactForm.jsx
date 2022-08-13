@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { theme } from "../../theme";
 import { useState } from "react";
+import axios from "axios";
 
 const ContactForm = () => {
   const state = [
@@ -922,7 +923,11 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       console.log(data);
-      
+      await axios.post('http://localhost:8080/api/student/addStudent', data).then(res => {
+        console.log(res);
+      }).catch(err => {
+        console.log(err);
+      });
     } catch (error) {
       console.log(error);
     }
