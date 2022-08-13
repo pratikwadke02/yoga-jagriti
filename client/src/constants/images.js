@@ -33,6 +33,9 @@ import skills_logo from '../assets/images/skills_logo.png';
 import yoga_jagriti_logo from '../assets/images/yoga_jagriti_logo.png';
 import ycb_logo from '../assets/images/ycb_logo.png';
 import fit_india_logo from '../assets/images/fit_india.png';
+import spai_logo from '../assets/images/spai_logo.svg';
+import msme from '../assets/images/msme.png';
+import ncvt from '../assets/images/ncvt.png';
 
 export default {
     slider_1,
@@ -69,5 +72,8 @@ export default {
     skills_logo,
     yoga_jagriti_logo,
     ycb_logo,
-    fit_india_logo
+    fit_india_logo,
+    spai_logo,
+    msme,
+    ncvt
 }

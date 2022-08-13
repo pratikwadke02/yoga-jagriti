@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { images } from '../../../constants'
@@ -20,7 +20,12 @@ const CoursesFooter = () => {
 NSDC Skill India Certificate
         </Typography>
         <Box sx={{mt:4, width:'100%', display:'flex', justifyContent:{xs:'center', md:'flex-start'}}}>
-          <img src={images.skills_logo} alt="" style={{height:'auto', width:'auto'}}/>
+          <img src={images.ycb_logo} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
+          <Divider orientation="vertical" color="primary"/>
+          <img src={images.fit_india_logo} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.spai_logo} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.msme} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
+          <img src={images.ncvt} alt="" style={{height:'auto', width:'auto', maxHeight:'80px', marginRight:20}}/>
         </Box>
         <Box sx={{mt:2,width:'100%', display:'flex', justifyContent:{xs:'center', md:'flex-start'}}}>
             <Link to={'/course'} style={{

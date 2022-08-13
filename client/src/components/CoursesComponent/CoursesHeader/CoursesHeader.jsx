@@ -37,8 +37,8 @@ const CoursesHeader = () => {
 
   return (
     <>
-    <Box sx={{width:'100%',height:'100%', display:'flex', flexDirection:'row', justifyContent:{xs:'center', md:'space-around'}, alignItems:{xs:'flex-start', md:'center'}, backgroundColor:theme.palette.primary.main, p:2}}>
-    <Box sx={{width:'100%',height:'100%', display:'flex',flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'space-around'}, alignItems:{xs:'flex-start', md:'center'} }}>
+    <Box sx={{width:'100%',height:'100%', display:'flex', flexDirection:'row', justifyContent:{xs:'center'}, alignItems:{xs:'flex-start', md:'center'}, backgroundColor:theme.palette.primary.main, p:2}}>
+    <Box sx={{width:'100%',height:'100%', display:'flex',flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center'}, alignItems:{xs:'flex-start', md:'center'} }}>
         {headerDataOne.map((item, index) => (
             <Box key={index} sx={{ display: 'flex',flexDirection:'row', alignItems: 'center', justifyContent: {xs:'flex-start', md:'center'}, width: '100%', py: 2 }}>
                 <Box sx={{border:'1px solid'+theme.palette.background.default, p:2, borderRadius:'50%', backgroundColor:theme.palette.background.default}}>
@@ -51,7 +51,7 @@ const CoursesHeader = () => {
             </Box>
         ))}
         </Box>
-        <Box sx={{width:'100%',height:'100%', display:'flex',flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'space-around'}, alignItems:{xs:'flex-start', md:'center'} }}>
+        <Box sx={{width:'100%',height:'100%', display:'flex',flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'center'}, alignItems:{xs:'flex-start', md:'center'} }}>
         {headerDataTwo.map((item, index) => (
             <Box key={index} sx={{ display: 'flex',flexDirection:'row', alignItems: 'center', justifyContent: {xs:'flex-start', md:'center'}, width: '100%', py: 2 }}>
                 <Box sx={{border:'1px solid'+theme.palette.background.default, p:2, borderRadius:'50%', backgroundColor:theme.palette.background.default}}>
