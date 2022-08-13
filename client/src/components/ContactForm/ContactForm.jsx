@@ -935,7 +935,10 @@ const ContactForm = () => {
 
   return (
     <>
-      <Box>
+      <Box sx={{mt:2,backgroundColor:theme.palette.background.default, p:{xs:1, md:2}, borderRadius:'5px'}}>
+      <Typography variant='h2' sx={{fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main, textAlign:'center', mb:{md:4},}}>
+                Course Enrollment
+      </Typography>
         <form id="contactForm" onSubmit={handleSubmit}>
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-12 col-md-12">
@@ -943,7 +946,7 @@ const ContactForm = () => {
                 <select
                   name="country"
                   id="country"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   required
                   data-error="Select a country"
                   placeholder="Country"
@@ -962,7 +965,7 @@ const ContactForm = () => {
                 <select
                   name="title"
                   id="title"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   required
                   data-error="Select a title"
                   placeholder="Title"
@@ -1031,7 +1034,7 @@ const ContactForm = () => {
                 <select
                   name="gender"
                   id="gender"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   required
                   data-error="Select a gender"
                   placeholder="Gender"
@@ -1116,7 +1119,7 @@ const ContactForm = () => {
                 <select
                   name="category"
                   id="category"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   required
                   data-error="Select a category"
                   placeholder="Category"
@@ -1156,7 +1159,7 @@ const ContactForm = () => {
                 <select
                   name="idType"
                   id="photo-id"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   required
                   data-error="Select a photo id"
                   placeholder="Photo Id"
@@ -1192,7 +1195,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            {/* <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <input
                   type="file"
@@ -1205,7 +1208,7 @@ const ContactForm = () => {
                 />
                 <div class="help-block with-errors"></div>
               </div>
-            </div>
+            </div> */}
             <div class="col-lg-12 col-md-6">
               <div class="form-group">
                 <input
@@ -1237,7 +1240,7 @@ const ContactForm = () => {
                   <div class="help-block with-errors"></div>
                 </div>
               </div> */}
-            <div class="col-lg-12 col-md-12">
+            {/* <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <input
                   type="file"
@@ -1250,7 +1253,7 @@ const ContactForm = () => {
                 />
                 <div class="help-block with-errors"></div>
               </div>
-            </div>
+            </div> */}
             <div class="col-lg-12 col-md-12">
               <div class="form-group">
                 <textarea
@@ -1273,7 +1276,7 @@ const ContactForm = () => {
                 <select
                   name="state"
                   id="state"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   
                   data-error="Select a state"
                   placeholder="State"
@@ -1294,7 +1297,7 @@ const ContactForm = () => {
                 <select
                   name="district"
                   id="district"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   
                   data-error="Select a district"
                   placeholder="District"
@@ -1352,7 +1355,7 @@ const ContactForm = () => {
                 <select
                   name="permanentState"
                   id="state"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   
                   data-error="Select a state"
                   placeholder="State"
@@ -1373,7 +1376,7 @@ const ContactForm = () => {
                 <select
                   name="permanentDistrict"
                   id="district"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   
                   data-error="Select a district"
                   placeholder="District"
@@ -1414,7 +1417,7 @@ const ContactForm = () => {
                 <select
                   name="permanentCountry"
                   id="country"
-                  class="form-select form-select-lg mb-3"
+                  class="form-control form-control-lg mb-3"
                   required
                   data-error="Select a country"
                   placeholder="Country"

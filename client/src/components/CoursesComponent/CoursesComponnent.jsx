@@ -7,6 +7,7 @@ import '../Header/HeaderBanner/HeaderBanner.css'
 import CoursesCard from "../utils/CoursesCard/CoursesCard";
 import { Link } from "react-router-dom";
 import CoursesHeader from "./CoursesHeader/CoursesHeader";
+import CoursesFooter from "./CoursesFooter/CoursesFooter";
 
 const CoursesComponnent = () => {
   return (
@@ -29,7 +30,7 @@ const CoursesComponnent = () => {
       >
         <CoursesHeader />
         <Box  sx={{width:'100%', mt:4, mb:2}}>
-          <Box sx={{maxWidth:'1325px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <Box sx={{maxWidth:'1275px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main  }}>
             Our Yoga Courses
           </Typography>
@@ -39,18 +40,18 @@ const CoursesComponnent = () => {
           </Box>
         <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center',}}>
           <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
         </Box>
         <Box sx={{display:{xs:'none', lg:'flex'}, flexDirection:{xs:'column', md:'row'}}}>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
         </Box>
@@ -63,20 +64,21 @@ const CoursesComponnent = () => {
             <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
             <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
             <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/> */}
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
           </Link>
           </Box>
         </Box>
+        <CoursesFooter />
       </Container>
     </>
   );

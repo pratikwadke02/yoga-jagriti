@@ -45,8 +45,8 @@ const CoursesHeader = () => {
                 {item.icon}
                 </Box>
                 <Box sx={{ pl: 3 }}>
-                    <Typography variant="h6">{item.title}</Typography>
-                    <Typography variant="body2">{item.subtitle}</Typography>
+                    <Typography variant="h5" sx={{fontWeight:theme.typography.fontWeightMedium}}>{item.title}</Typography>
+                    <Typography variant="h6">{item.subtitle}</Typography>
                 </Box>
             </Box>
         ))}
@@ -58,8 +58,8 @@ const CoursesHeader = () => {
                 {item.icon}
                 </Box>
                 <Box sx={{ pl: 3 }}>
-                    <Typography variant="h6">{item.title}</Typography>
-                    <Typography variant="body2">{item.subtitle}</Typography>
+                    <Typography variant="h5" sx={{fontWeight:theme.typography.fontWeightMedium}}>{item.title}</Typography>
+                    <Typography variant="h6">{item.subtitle}</Typography>
                 </Box>
             </Box>
         ))}

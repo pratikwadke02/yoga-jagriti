@@ -28,6 +28,11 @@ import bg_product from '../assets/images/bg_product.png';
 import bg_pattern from '../assets/images/bg_pattern.png';
 import pattern_three from '../assets/images/pattern_three.jpeg';
 import nav_logo from '../assets/images/nav_logo.jpg';
+import certificate from '../assets/images/certificate.jpeg';
+import skills_logo from '../assets/images/skills_logo.png';
+import yoga_jagriti_logo from '../assets/images/yoga_jagriti_logo.png';
+import ycb_logo from '../assets/images/ycb_logo.png';
+import fit_india_logo from '../assets/images/fit_india.png';
 
 export default {
     slider_1,
@@ -60,4 +65,9 @@ export default {
     bg_pattern,
     pattern_three,
     nav_logo,
+    certificate,
+    skills_logo,
+    yoga_jagriti_logo,
+    ycb_logo,
+    fit_india_logo
 }

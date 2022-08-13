@@ -76,13 +76,13 @@ const ProgramCard = (props) => {
           <Box sx={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
             <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
               <PeopleOutlineIcon fontSize="small" color="primary" />
-              <Typography variant="h6" sx={{ml:1}}>
+              <Typography variant="h6" sx={{}}>
                 {enrolled}
               </Typography>
             </Box>
             <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
               <StarOutlineIcon fontSize="small" color="primary" />
-              <Typography variant="h6" sx={{ml:1}}>
+              <Typography variant="h6" sx={{}}>
                 {favourites}
               </Typography>
             </Box>

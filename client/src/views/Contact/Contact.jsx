@@ -46,7 +46,6 @@ const Contact = () => {
             <ContactComponent />
         </Box>
         </Box>
-        <ContactForm />
       </Container>
     </>
   )

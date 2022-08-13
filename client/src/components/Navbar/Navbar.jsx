@@ -33,10 +33,10 @@ const navItems = [
   //   name: 'News',
   //   path: 'news',
   // },
-  {
-    name: 'faq',
-    path: 'faq',
-  }
+  // {
+  //   name: 'faq',
+  //   path: 'faq',
+  // }
 ];
 
 function DrawerAppBar(props) {
@@ -103,7 +103,7 @@ function DrawerAppBar(props) {
             <MenuIcon color="primary" />
           </IconButton>
             <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-            <img src={images.logo} alt="" height={30} />
+            <img src={images.yoga_jagriti_logo} alt="" height={45} />
             <img src={images.nav_logo} alt="" height={35} style={{marginLeft:'10px'}} />
             </Box>
           </Box>

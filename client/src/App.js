@@ -8,14 +8,12 @@ import {theme} from './theme';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Career from './views/Career/Career';
 import About from './views/About/About';
-import Naturopathy from './components/Naturopathy/Naturopathy';
-import AccuPressure from './components/AccuPressure/AccuPressure';
-import Pranayam from './components/Pranayam/Pranayam';
 import AboutYoga from './views/AboutYoga/AboutYoga';
 import Faq from './views/Faq/Faq';
 import Login from './views/Auth/Login';
 import Register from './views/Auth/Register';
 import Contact from './views/Contact/Contact';
+import Course from './views/Course/Course';
 
 function App() {
   return (
@@ -33,6 +31,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/course" element={<Course />} />
       </Routes>
       {/* <Footer /> */}
       </BrowserRouter>
