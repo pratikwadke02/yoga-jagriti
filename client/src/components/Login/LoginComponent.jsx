@@ -18,7 +18,7 @@ const LoginComponent = () => {
                 color: theme.palette.primary.main,
               }}
             >
-              Login
+              LOGIN
             </Typography>
           </Box>
           <div class="container" >

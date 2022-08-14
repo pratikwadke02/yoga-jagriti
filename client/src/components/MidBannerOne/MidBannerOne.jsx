@@ -62,16 +62,16 @@ const MidBannerOne = () => {
             }}
           >
             <Typography
-              variant="h6"
+              variant="h2"
               sx={{
                 color: theme.palette.primary.main,
                 fontWeight: theme.typography.fontWeightBold,
               }}
             >
-              _WHY CHOOSE US_
+              WHY CHOOSE US
             </Typography>
             <Typography
-              variant="h1"
+              variant="h4"
               sx={{ mt: 2, textAlign: { xs: "center", md: "initial" } }}
             >
               Peace to Your body and mind
@@ -84,6 +84,7 @@ const MidBannerOne = () => {
                     <ListItem key={index} disableGutters>
                       <ListItemIcon>
                         <CheckIcon
+                         fontSize="small"
                           sx={{
                             color: theme.palette.primary.main,
                             border: "1px solid" + theme.palette.primary.main,
@@ -91,7 +92,11 @@ const MidBannerOne = () => {
                           }}
                         />
                       </ListItemIcon>
-                      <ListItemText>{item.item}</ListItemText>
+                      <ListItemText>
+                        <Typography variant="h6">
+                          {item.item}
+                        </Typography>
+                        </ListItemText>
                     </ListItem>
                   );
                 })}
@@ -136,7 +141,7 @@ const MidBannerOne = () => {
             <ProgressComponent title="Happy Students" value="80" />
           </Box>
           <Box sx={{ p: 1, mt: 1, mb: 1 }}>
-            <Typography variant="h6">
+            <Typography variant="h5">
               Liusmod tempor incididunt labore et dolore magna aliqua ut enim
               sed do eiusmod usmod tempor incididunt labore et dolore magna
               aliqua ut enim sed do eiusmod tempor incididunt kabore.
@@ -149,7 +154,7 @@ const MidBannerOne = () => {
               mt: 2,
             }}
           >
-            <Typography variant="h4">
+            <Typography variant="h6">
               “Lorem ipsum dolor sit consectetur adipiscing elit, sed eiusmod
               tempor incididunt ut labore et dolore”
             </Typography>

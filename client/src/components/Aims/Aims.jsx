@@ -31,7 +31,7 @@ const Aims = () => {
         <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:{xs:'column', md:'row'}, width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'100%', md:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                Aims
+                AIMS
             </Typography>
             <Typography variant="h6" sx={{m:'auto'}}>
             Jagriti yog & Naturopathy (JYANS) is launched as a moment to develop, promote

@@ -30,7 +30,7 @@ const Product = () => {
       >
         <Box sx={{ width: { xs: "100%" }, display: "flex", flexDirection: "column", maxWidth:'1100px' , justifyContent:'flex-start', m:'auto', mb:2,}}>
         <Typography variant="h2" sx={{fontWeight: "bold", color: theme.palette.primary.main}}>
-            Shop Now
+            SHOP NOW
           </Typography>
           </Box>
         <Box sx={{position: "relative", display: "flex", flexDirection:{xs:'column', md:'row'}, zIndex:2,  }}>

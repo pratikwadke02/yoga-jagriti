@@ -8,7 +8,7 @@ const RelatedProducts = () => {
   return (
     <Container sx={{mt:5}}>
         <Box sx={{mb:{xs:2, md:0},display:'flex', justifyContent:'space-between'}}>
-            <Typography variant='h6' sx={{fontWeight:theme.typography.fontWeightBold }}>
+            <Typography variant='h5' sx={{fontWeight:theme.typography.fontWeightBold }}>
                 Related Products
             </Typography>
             <Typography variant='h6' sx={{fontWeight:theme.typography.fontWeightBold }}>

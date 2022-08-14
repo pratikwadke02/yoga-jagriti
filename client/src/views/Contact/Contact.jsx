@@ -23,7 +23,7 @@ const Contact = () => {
       >
         <Box sx={{display: "flex", mb:3, width:'100%',  textAlign:'center', justifyContent:'center' }}>
             <Typography variant="h2" sx={{fontWeight: "bold", color: theme.palette.primary.main}}>
-                Contact Us
+                CONTACT US
             </Typography>
         </Box>
         <Box sx={{display: "flex", flexDirection: {xs:'column', md:"row"}, justifyContent: "center", alignItems: "center", mr:{md:2}}}>

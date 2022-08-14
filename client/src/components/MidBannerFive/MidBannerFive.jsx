@@ -29,14 +29,14 @@ const MidBannerFive = () => {
       backgroundImage: `url(${images.pattern_two})`,
          p:2}}>
         <Box  sx={{mt:5,display:'flex', flexDirection:'column'}}>
-          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
-            _ASKING FOR TESTIMONIALS_
+          <Typography variant="h2" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
+            ASKING FOR TESTIMONIALS
           </Typography>
-          <Typography variant="h1" sx={{mt:0.5}}>
+          <Typography variant="h4" sx={{mt:1}}>
             What our clients say about us
           </Typography>
         </Box>
-        <Box sx={{witdh:'100%', mt:7, display:'flex', flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'center'}, alignItems:'center'}}>
+        <Box sx={{witdh:'100%', mt:3, display:'flex', flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'center'}, alignItems:'center'}}>
           {
             testimonials.map((testimonial, index) => {
                 return (

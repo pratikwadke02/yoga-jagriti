@@ -111,7 +111,7 @@ const Career = () => {
               fontWeight: theme.typography.fontWeightBold,
             }}
           >
-            Career in Yoga
+            CAREER IN YOGA
           </Typography>
         </Box>
       </Container>
@@ -370,7 +370,7 @@ const Career = () => {
               color: theme.palette.primary.main,
             }}
           >
-            Jobs in Yoga
+            JOBS IN YOGA
           </Typography>
           <Typography
             variant="h6"

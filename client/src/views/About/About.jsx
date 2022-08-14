@@ -25,7 +25,7 @@ const About = () => {
       >
         <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'column', width:{xs:'100%', md:'80%'}}}>
         <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                About Us
+                ABOUT US
             </Typography>
           <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
             JAGRITI YOGA AND NATUROPATHY SANSTHAN (JYANS) ESTABLISTED IN THE

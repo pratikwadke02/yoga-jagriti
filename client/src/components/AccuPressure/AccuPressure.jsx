@@ -10,7 +10,7 @@ const AccuPressure = () => {
         <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row-reverse', width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                Accu - Pressure
+                ACCU - PRESSURE
             </Typography>
             <Typography variant="h6" sx={{mt:2, textAlign: 'justify', textJustify:'inter-word'}}>
             Acupressure is an ancient Chinese healing method that involves applying pressure to

@@ -19,8 +19,8 @@ const ProgressComponent = (props) => {
         color === "white" ?
         <Box sx={{width:'100%', borderBottom:'1px solid'+theme.palette.text.default, pb:'3px'}}>
           <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-between', mb:1}}>
-          <Typography variant="h4">{title}</Typography>
-          <Typography variant="h4">{value}%</Typography>
+          <Typography variant="h5">{title}</Typography>
+          <Typography variant="h5">{value}%</Typography>
           </Box>
           <LinearProgress variant="determinate" value={value} sx={{
             '& .MuiLinearProgress-barColorPrimary': {

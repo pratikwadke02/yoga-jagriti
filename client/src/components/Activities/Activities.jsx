@@ -28,7 +28,7 @@ const Activities = () => {
     <Box sx={{pt:8,zIndex:2, m:'auto',display:'flex', flexDirection:{xs:'column'}, width:{xs:'100%'}}}>
         <Box sx={{m:'auto', display:{xs:'block', md:'none'}}}>
         <Typography variant='h2' sx={{color:theme. palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
-            Activities
+            ACTIVITIES
         </Typography>
         </Box>
         <Box sx={{width:'100%', mt:3 }}>
@@ -38,7 +38,7 @@ const Activities = () => {
             <ActivitiesComponent activity={activity[1].item} />
             <Box sx={{display:{xs:'none', lg:'flex'}}}>
             <Typography variant='h2' sx={{color:theme. palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
-            Activities
+            ACTIVITIES
         </Typography>
             </Box>
             <Box sx={{display:{xs:'block', md:'none'}, mt:2}}/>

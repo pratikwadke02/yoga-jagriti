@@ -12,7 +12,7 @@ const CommentCard = (props) => {
     <>
       <Box sx={{display:'flex', flexDirection:'column', mr:{md:0}, mb:{xs:5, md:0}}}>
         <Box sx={{backgroundColor:theme.palette.background.default, p:4}}>
-          <Typography variant="h6" sx={{color:theme.palette.text.light}}>
+          <Typography variant="h6" sx={{color:theme.palette.text.dark}}>
             {comment}
           </Typography>
           <Box sx={{mt:1}}>
@@ -28,7 +28,7 @@ const CommentCard = (props) => {
             <Avatar alt="Remy Sharp" src="" height={100} width={100}/>
           </Box>
           <Box>
-            <Typography variant="h3" sx={{  }}>{name}</Typography>
+            <Typography variant="h5" sx={{  }}>{name}</Typography>
             <Typography  variant="h6" sx={{color:theme.palette.primary.main  }}>{role}</Typography>
           </Box>
         </Box>

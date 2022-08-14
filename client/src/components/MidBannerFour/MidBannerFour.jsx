@@ -21,10 +21,10 @@ const MidBannerFour = () => {
     }}>
         <Box sx={{width:'100%', display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:'space-around'}}>
         <Box sx={{width:{xs:'100%', md:'25vw'}}}>
-            <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold, mb:2}}>
-                _CONNECT WITH NATURE_
+            <Typography variant="h2" sx={{fontWeight:theme.typography.fontWeightBold, mb:2}}>
+                CONNECT WITH NATURE
             </Typography>
-            <Typography variant='h1'>
+            <Typography variant='h4'>
                 The natural way to get your mind & body together
             </Typography>
         </Box>

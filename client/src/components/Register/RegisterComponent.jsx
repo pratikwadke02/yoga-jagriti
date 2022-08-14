@@ -11,7 +11,7 @@ const RegisterComponent = () => {
     <div class="ptb-80">
     <Box sx={{width:'100%', m:'auto', textAlign:'center', mb:5}}>
             <Typography variant='h2' sx={{fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-            Register
+            REGISTER
           </Typography>
             </Box>
             <div class="container">

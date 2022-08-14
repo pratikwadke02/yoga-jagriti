@@ -39,7 +39,7 @@ const Objectives = () => {
     <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:{xs:'column', md:'row-reverse'}, width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'100%', md:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                Objectives
+                OBJECTIVES
             </Typography>
             <Typography variant="h6" sx={{mt:2, textAlign: 'justify', textJustify:'inter-word'}}>
             JAGRITI Yoga & Naturopathy (JYANS) is an autonomous institution for Research and

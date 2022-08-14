@@ -25,7 +25,7 @@ const AboutYoga = () => {
         <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
         <Box sx={{zIndex:2,width:{xs:'160%'}}}>
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                About Yoga
+                ABOUT YOGA
             </Typography>
             <Typography variant="h4" sx={{mt:2}}>
               What is Yoga?

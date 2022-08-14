@@ -993,7 +993,7 @@ const ContactForm = () => {
                 mb: { md: 4 },
               }}
             >
-              Course Enrollment
+              COURSE ENROLLMENT
             </Typography>
             <Typography variant="h6" sx={{ mb: 1 }}>
               Personal Details

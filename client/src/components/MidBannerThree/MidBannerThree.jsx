@@ -26,10 +26,10 @@ const MidBannerThree = () => {
             <img src={images.mid_banner_two} alt="" style={{width:'100%', height:'auto'}} />
         </Box>
         <Box sx={{ml:{md:3}, mt:{xs:5, md:0},display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
-            <Typography variant='h6' sx={{ fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                _OUR BENEFITS_
+            <Typography variant='h2' sx={{ fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
+                OUR BENEFITS
             </Typography>
-            <Typography variant="h1" sx={{mt:2,mb:2}}>
+            <Typography variant="h4" sx={{mt:2,mb:2}}>
                 Easy steps for healthier life
             </Typography>
             <Typography variant='h6' sx={{fontWeight:theme.typography.fontWeightMedium}}>
