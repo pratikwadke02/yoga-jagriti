@@ -40,7 +40,7 @@
   .form-control {
     height: 45px;
     padding: 10px;
-    font-size: 14px;
+    font-size: 12px;
     color: #0e314c;
     border: 1px solid #eeeeee;
     border-radius: 0;
@@ -74,7 +74,7 @@
       display: block;
       width: 100%;
       padding: 0.375rem 0.75rem;
-      font-size: 1rem;
+      font-size: 12px;
       font-weight: 400;
       line-height: 1.5;
       color: #212529;
@@ -218,7 +218,7 @@
     .form-control-sm {
       min-height: calc(1.5em + 0.5rem + 2px);
       padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
+      font-size: 12px;
       border-radius: 0.2rem;
     }
     .form-control-sm::-webkit-file-upload-button {
@@ -242,7 +242,7 @@
     .form-control-lg {
       min-height: calc(1.5em + 1rem + 2px);
       padding: 0.5rem 1rem;
-      font-size: 1.25rem;
+      font-size: 12px;
       border-radius: 0.3rem;
     }
     .form-control-lg::-webkit-file-upload-button {
