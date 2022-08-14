@@ -37,6 +37,10 @@ import spai_logo from '../assets/images/spai_logo.svg';
 import msme from '../assets/images/msme.png';
 import ncvt from '../assets/images/ncvt.png';
 import course_one from '../assets/images/course_one.png';
+import course_two from '../assets/images/course_two.png';
+import course_three from '../assets/images/course_three.png';
+import course_four from '../assets/images/course_four.png';
+import course_five from '../assets/images/course_five.png';
 
 export default {
     slider_1,
@@ -78,4 +82,8 @@ export default {
     msme,
     ncvt,
     course_one,
+    course_two,
+    course_three,
+    course_four,
+    course_five,
 }

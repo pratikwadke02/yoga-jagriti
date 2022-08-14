@@ -3,19 +3,19 @@ import { Box, Button, Container, Typography, IconButton, Card } from "@mui/mater
 import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
 const ProgramCard = (props) => {
 
-  const {name, image, desc, price, enrolled, favourites} = props;
+  const {name, image, eligibility, age , fee, seats, duration, } = props;
 
   return (
     <>
       <Card
         sx={{
-          mb:{xs:4, md:0},
-          minWidth: {xl:'300px'},
+          mb:{xs:0, md:0},
+          minWidth: {xs:'300px',md:'230px', xl:'300px'},
           maxWidth:'400px',
           backgroundColor:theme.palette.background.default,
           width: "100%",
@@ -37,7 +37,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.course_one} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
+          <img src={image} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
         </Box>
         <Box
           sx={{
@@ -57,7 +57,7 @@ const ProgramCard = (props) => {
             {name}
           </Typography>
           <Typography sx={{ fontSize: "11px", color: "#5a6273", }}>
-            {desc}
+            
           </Typography>
         </Box>
         <Box
@@ -71,30 +71,46 @@ const ProgramCard = (props) => {
             justifyContent: "space-between",
           }}
         >
-          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
-            INR {price}
+          <Typography variant="h6" sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium }}>
+            ₹ {fee}
           </Typography>
-          <Box sx={{display:'flex', flexDirection:'row', alignItems:'flex-end', justifyContent:'space-between'}}>
-            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center',}}>
-              <PeopleOutlineIcon fontSize="small" color="primary" />
+          <Box sx={{display:'flex', flexDirection:'column'}}>
+            <Box sx={{display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
+              <Box sx={{width:'100%'}}>
+              <Typography variant="h6" sx={{color:theme.palette.text.main }}>
+              Eligibility: {eligibility}
+            </Typography>
+              </Box>
+              <Box sx={{width:'100%'}}>
+              <Typography variant="h6" sx={{color:theme.palette.text.main }}>
+              Age: {age}
+            </Typography>
+              </Box>
+            </Box>
+            <Box sx={{display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
+            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center',width:'100%'}}>
+              <AccessTimeIcon fontSize="small" color="text" />
               <Typography variant="h6" sx={{ml:1}}>
-                {enrolled}
+                {duration}
               </Typography>
+              </Box>
+            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center',width:'100%'}}>
+              <PeopleOutlineIcon fontSize="small" color="text" />
+              <Typography variant="h6" sx={{ml:1}}>
+                {seats}
+              </Typography>
+              </Box>
             </Box>
-            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-              {/* <StarOutlineIcon fontSize="small" color="primary" /> */}
-              {/* <Typography variant="h6" sx={{}}>
-                {favourites}
-              </Typography> */}
-            </Box>
-          <Button
-            variant="contained"
-            sx={{mt:1, backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'120px', width:'100%' }}
-          >
-            <Typography variant="h6" sx={{ }}>Enroll Now</Typography>
-          </Button>
-          </Box>    
-        </Box>
+            
+            <Box sx={{display:'flex', flexDirection:'row', justifyContent:'flex-start', width:'100%'}}>
+<Box sx={{width:'100%', mt:1}}>
+              <Button variant="contained" color="primary" sx={{width:'100%'}}>
+                Enroll Now
+              </Button>
+              </Box>
+            </Box>  
+          </Box>
+          </Box>
       </Card>
     </>
   );

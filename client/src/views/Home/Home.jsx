@@ -18,7 +18,7 @@ const Home = () => {
       <CoursesComponnent />
       <MidBannerOne />
       <HeaderBanner />
-      <MidBannerTwo />
+      {/* <MidBannerTwo /> */}
       <MidBannerThree />
       <MidBannerFour />
       <MidBannerFive />

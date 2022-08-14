@@ -1,0 +1,16 @@
+const db = require('../models');
+const Response = db.response;
+
+exports.create = async (req, res) => {
+    console.log(req.body);
+    Response.create(req.body).then(data => {
+        res.send(
+            {
+                message: "Response created successfully",
+            }
+        );
+    }).catch(err => {
+        res.send(err);
+        console.log(err);
+    });
+}

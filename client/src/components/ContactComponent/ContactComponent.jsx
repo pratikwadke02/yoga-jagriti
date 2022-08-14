@@ -26,7 +26,7 @@ const ContactComponent = () => {
     e.preventDefault();
     try{
       await axios
-        .post('http://localhost:5000/api/contact/enquiry', contactData)
+        .post('http://localhost:8080/api/yoga/addResponse', contactData)
         .then((res) => {
           console.log(res)
           }).catch((err) => {
@@ -57,7 +57,7 @@ const ContactComponent = () => {
           </div>
         </Box>
         <Box sx={{wdith:'100%'}}>
-        <form id="contactForm">
+        <form id="contactForm" onSubmit={handleSubmit}>
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-12 col-md-12">
                     <div class="form-group">
