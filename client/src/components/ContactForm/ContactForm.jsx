@@ -1130,7 +1130,7 @@ const ContactForm = () => {
                   class="form-control"
                   required
                   data-error="Please enter your nationality"
-                  placeholder="nationality"
+                  placeholder="Nationality"
                   value={data.nationality}
                   onChange={handleChange}
                 />
@@ -1250,7 +1250,7 @@ const ContactForm = () => {
             <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
-                  type="text"
+                  type="number"
                   name="idNumber"
                   id="id-number"
                   class="form-control"
@@ -1296,7 +1296,7 @@ const ContactForm = () => {
             <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
-                  type="text"
+                  type="number"
                   name="phone"
                   id="contact-number"
                   required
@@ -1409,7 +1409,7 @@ const ContactForm = () => {
                 <div class="col-lg-12 col-md-12">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="number"
                       name="pincode"
                       id="pincode"
                       class="form-control"
@@ -1505,7 +1505,7 @@ const ContactForm = () => {
                 <div class="col-lg-12 col-md-12">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="number"
                       name="permanentPincode"
                       id="pincode"
                       class="form-control"
