@@ -68,9 +68,12 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'start' }}>
-      <Typography variant="h5" sx={{pl:3, my: 2 }}>
-        <img src={images.logo} alt="" height={25}/>
+      <Box sx={{mt:1,display:'flex', flexDirection:'row', alignItems:'center'}}>
+       <img src={images.yoga_jagriti_logo} alt="" height={40} style={{marginLeft:'5px'}} />
+      <Typography variant="h6" sx={{pl:1 }}>
+        Yoga Jagriti & Naturopathy Sansthan 
       </Typography>
+      </Box>
       <Divider />
       <List>
         {/* {navItems.map((item) => (
@@ -120,8 +123,8 @@ function DrawerAppBar(props) {
             <MenuIcon color="primary" />
           </IconButton>
             <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-            <img src={images.yoga_jagriti_logo} alt="" height={45} />
-            <img src={images.nav_logo} alt="" height={35} style={{marginLeft:'15px'}} />
+            <img src={images.yoga_jagriti_logo} alt="" height={55} />
+            <img src={images.nav_logo} alt="" height={40} style={{marginLeft:'15px'}} />
             </Box>
           </Box>
           <Box sx={{mr:{xs:0}, flexGrow:0, display:{

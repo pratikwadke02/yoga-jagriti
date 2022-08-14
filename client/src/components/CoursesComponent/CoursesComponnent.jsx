@@ -15,7 +15,6 @@ const CoursesComponnent = () => {
       <Container
         disableGutters
         sx={{
-          mt:10,
           pb:4,
           maxWidth: {xs:'100%'},
           minHeight: "393px",
@@ -30,7 +29,7 @@ const CoursesComponnent = () => {
       >
         <CoursesHeader />
         <Box  sx={{width:'100%', mt:4, mb:2}}>
-          <Box sx={{maxWidth:'1275px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <Box sx={{maxWidth:'1100px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main  }}>
             Our Yoga Courses
           </Typography>
@@ -51,9 +50,9 @@ const CoursesComponnent = () => {
           </Link>
         </Box>
         <Box sx={{display:{xs:'none', lg:'flex'}, flexDirection:{xs:'column', md:'row'}}}>
-          <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
+          {/* <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
           <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
-          </Link>
+          </Link> */}
         </Box>
           {/* <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/> */}
         </Box>

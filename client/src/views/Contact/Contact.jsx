@@ -21,12 +21,12 @@ const Contact = () => {
           minHeight: "95vh",
         }}
       >
-        <Box sx={{display: "flex", mb:5 }}>
+        <Box sx={{display: "flex", mb:3, width:'100%',  textAlign:'center', justifyContent:'center' }}>
             <Typography variant="h2" sx={{fontWeight: "bold", color: theme.palette.primary.main}}>
                 Contact Us
             </Typography>
         </Box>
-        <Box sx={{display: "flex", flexDirection: {xs:'column', md:"row"}, justifyContent: "center", alignItems: "flex-start", mr:{md:2}}}>
+        <Box sx={{display: "flex", flexDirection: {xs:'column', md:"row"}, justifyContent: "center", alignItems: "center", mr:{md:2}}}>
         <Box sx={{width:'100%', display:'flex', flexDirection:'column'}}>
             <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, justifyContent:'center'}}>
             <Box sx={{width:'100%', mr:{xs:0, md:2}}}>

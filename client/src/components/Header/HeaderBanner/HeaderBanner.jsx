@@ -35,6 +35,7 @@ const HeaderBanner = () => {
     <>
       <Container
         sx={{
+          mt:10,
           pb:4,
           maxWidth: {xs:'100%'},
           minHeight: "393px",

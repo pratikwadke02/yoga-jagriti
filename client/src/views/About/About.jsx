@@ -23,25 +23,23 @@ const About = () => {
           minHeight: "95vh",
         }}
       >
-        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
-        <Box sx={{zIndex:2,width:{xs:'160%'}}}>
-            <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
-                About
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'column', width:{xs:'100%', md:'80%'}}}>
+        <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
+                About Us
             </Typography>
           <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
             JAGRITI YOGA AND NATUROPATHY SANSTHAN (JYANS) ESTABLISTED IN THE
             YEAR 2015 UNDER S.R.ACT. 1860. A MASTER FRANCHISEE OF THE ‘INDIAN
             FOUNDATION OF YOGA AND NATUROPATHY’ UNDER THE ‘INDIAN BOARD OF YOGA
             AND NATUROPATHIC MEDICINE, NEW DELHI.
-          </Typography>
-          <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
             JYANS IS A UNIT of MKAGS NGO ESTED IN MAY 2002.it has its own Vocational training centres, ITI,
 AFFILIATED TO NCVT, GOVT OF INDIA, NEW DELHI and Naturopathy and yoga clinics at many places in
-Delhi and in UP
-            </Typography>
-            <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
-            It is registered under income tax act 80G and 12 A.
-            </Typography>
+Delhi and in UP.
+It is registered under income tax act 80G and 12 A.
+          </Typography>
+        </Box>
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
+        <Box sx={{zIndex:2,width:{xs:'160%'}}}>
             <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
             The Organisation is a non-profitable, non-political and non- religious body, set-up with
 the sole and bona-fide aim to develop and promote the knowledge, education and

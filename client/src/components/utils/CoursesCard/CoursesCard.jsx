@@ -15,6 +15,7 @@ const ProgramCard = (props) => {
       <Card
         sx={{
           mb:{xs:4, md:0},
+          minWidth: '300px',
           maxWidth:'400px',
           backgroundColor:theme.palette.background.default,
           width: "100%",
@@ -36,7 +37,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.product} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'200px', minWidth:{xs:'220px',lg:'200px',xl:'220px'}}} />
+          <img src={images.product} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
         </Box>
         <Box
           sx={{
@@ -73,18 +74,18 @@ const ProgramCard = (props) => {
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
             INR {price}
           </Typography>
-          <Box sx={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
-            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+          <Box sx={{display:'flex', flexDirection:'row', alignItems:'flex-end', justifyContent:'space-between'}}>
+            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center',}}>
               <PeopleOutlineIcon fontSize="small" color="primary" />
-              <Typography variant="h6" sx={{}}>
+              <Typography variant="h6" sx={{ml:1}}>
                 {enrolled}
               </Typography>
             </Box>
             <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-              <StarOutlineIcon fontSize="small" color="primary" />
-              <Typography variant="h6" sx={{}}>
+              {/* <StarOutlineIcon fontSize="small" color="primary" /> */}
+              {/* <Typography variant="h6" sx={{}}>
                 {favourites}
-              </Typography>
+              </Typography> */}
             </Box>
           <Button
             variant="contained"

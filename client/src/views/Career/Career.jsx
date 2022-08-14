@@ -291,7 +291,7 @@ const Career = () => {
             }}
           >
             <Typography
-            variant="h3"
+            variant="h5"
             sx={{
               fontWeight: theme.typography.fontWeightBold,
               color: theme.palette.primary.main,
@@ -301,7 +301,7 @@ const Career = () => {
           </Typography>
             <Typography
               variant="h6"
-              sx={{ textAlign: "justify", textJustify: "inter-word", mt:2 }}
+              sx={{ textAlign: "justify", textJustify: "inter-word", mt:1 }}
             >
               Based on the Yoga training you have received, you can opt for the
               field of research, training or works as a Yoga therapist. You can
@@ -330,7 +330,7 @@ const Career = () => {
             }}
           >
             <Typography
-            variant="h3"
+            variant="h5"
             sx={{
               fontWeight: theme.typography.fontWeightBold,
               color: theme.palette.primary.main,
@@ -340,7 +340,7 @@ const Career = () => {
             </Typography>
             <Typography
               variant="h6"
-              sx={{ textAlign: "justify", textJustify: "inter-word", mt:2 }}
+              sx={{ textAlign: "justify", textJustify: "inter-word", mt:1 }}
             >
               A fresher can earn Rs 10,000 to Rs 25,000 a month. With
               experience, the salary climbs higher at a faster pace. However,
@@ -422,7 +422,7 @@ const Career = () => {
                     }}
                   >
                     <Typography
-                      variant="h3"
+                      variant="h5"
                       sx={{
                         fontWeight: theme.typography.fontWeightBold,
                         color: theme.palette.primary.main,
@@ -433,7 +433,7 @@ const Career = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        mt: 2,
+                        mt: 1,
                         textAlign: "justify",
                         textJustify: "inter-word",
                       }}
@@ -443,7 +443,7 @@ const Career = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        mt: 2,
+                        mt: 1,
                         textAlign: "justify",
                         textJustify: "inter-word",
                       }}
@@ -480,7 +480,7 @@ const Career = () => {
                     }}
                   >
                     <Typography
-                      variant="h3"
+                      variant="h5"
                       sx={{
                         fontWeight: theme.typography.fontWeightBold,
                         color: theme.palette.primary.main,
@@ -491,7 +491,7 @@ const Career = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        mt: 2,
+                        mt: 1,
                         textAlign: "justify",
                         textJustify: "inter-word",
                       }}
@@ -501,7 +501,7 @@ const Career = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        mt: 2,
+                        mt: 1,
                         textAlign: "justify",
                         textJustify: "inter-word",
                       }}
@@ -538,7 +538,7 @@ const Career = () => {
                     }}
                   >
                     <Typography
-                      variant="h3"
+                      variant="h5"
                       sx={{
                         fontWeight: theme.typography.fontWeightBold,
                         color: theme.palette.primary.main,
@@ -549,7 +549,7 @@ const Career = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        mt: 2,
+                        mt: 1,
                         textAlign: "justify",
                         textJustify: "inter-word",
                       }}
@@ -559,7 +559,7 @@ const Career = () => {
                     <Typography
                       variant="h6"
                       sx={{
-                        mt: 2,
+                        mt: 1,
                         textAlign: "justify",
                         textJustify: "inter-word",
                       }}

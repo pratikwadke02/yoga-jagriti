@@ -7,7 +7,7 @@ const Header = () => {
     <>
     <Carousal />
     <div>
-      <HeaderBanner />
+      {/* <HeaderBanner /> */}
     </div>
     </>
   )

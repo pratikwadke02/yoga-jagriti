@@ -49,6 +49,7 @@ const CoursesHeader = () => {
       >
         <Box
           sx={{
+            maxWidth:'600px',
             width: "100%",
             height: "100%",
             display: "flex",
@@ -93,6 +94,7 @@ const CoursesHeader = () => {
         </Box>
         <Box
           sx={{
+            maxWidth:'600px',
             width: "100%",
             height: "100%",
             display: "flex",

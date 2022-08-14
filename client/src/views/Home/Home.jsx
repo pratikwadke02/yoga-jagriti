@@ -8,15 +8,17 @@ import MidBannerThree from '../../components/MidBannerThree/MidBannerThree'
 import MidBannerTwo from '../../components/MidBannerTwo/MidBannerTwo'
 import TeamMemberBanner from '../../components/TeamMemberBanner/TeamMemberBanner'
 import CoursesComponnent from '../../components/CoursesComponent/CoursesComponnent'
+import HeaderBanner from '../../components/Header/HeaderBanner/HeaderBanner'
 
 const Home = () => {
   return (
     <>
     <div className="header">
       <Header />
-      <MidBannerOne />
-      <MidBannerTwo />
       <CoursesComponnent />
+      <MidBannerOne />
+      <HeaderBanner />
+      <MidBannerTwo />
       <MidBannerThree />
       <MidBannerFour />
       <MidBannerFive />

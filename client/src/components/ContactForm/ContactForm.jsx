@@ -992,26 +992,7 @@ const ContactForm = () => {
             <Typography variant="h6" sx={{ mb: 1 }}>
               Personal Details
             </Typography>
-            <div class="col-lg-12 col-md-12">
-              <div class="form-group">
-                <select
-                  name="country"
-                  id="country"
-                  class="form-select form-select-lg mb-3"
-                  required
-                  data-error="Select a country"
-                  placeholder="Country"
-                  value={data.country}
-                  onChange={handleChange}
-                >
-                  <option selected>Select a country</option>
-                  <option value="India">India</option>
-                  <option value="USA">USA</option>
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="title"
@@ -1032,7 +1013,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1048,7 +1029,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1063,7 +1044,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1078,7 +1059,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="gender"
@@ -1099,7 +1080,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="date"
@@ -1116,7 +1097,26 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
+              <div class="form-group">
+                <select
+                  name="country"
+                  id="country"
+                  class="form-select form-select-lg mb-3"
+                  required
+                  data-error="Select a country"
+                  placeholder="Country"
+                  value={data.country}
+                  onChange={handleChange}
+                >
+                  <option selected>Select a country</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                </select>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1132,7 +1132,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1147,7 +1147,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1163,7 +1163,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1178,7 +1178,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="category"
@@ -1202,7 +1202,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1217,7 +1217,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="idType"
@@ -1242,7 +1242,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1253,6 +1253,22 @@ const ContactForm = () => {
                   data-error="Please enter your id number"
                   placeholder="ID Number"
                   value={data.idNumber}
+                  onChange={handleChange}
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                  data-error="Please enter your email"
+                  placeholder="Email"
+                  value={data.email}
                   onChange={handleChange}
                 />
                 <div class="help-block with-errors"></div>
@@ -1272,7 +1288,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div> */}
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1288,22 +1304,6 @@ const ContactForm = () => {
                 <Typography variant="h7" color="error">
                   Note: Please enter phone number with country code.
                 </Typography>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12">
-              <div class="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="form-control"
-                  required
-                  data-error="Please enter your email"
-                  placeholder="Email"
-                  value={data.email}
-                  onChange={handleChange}
-                />
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -1355,7 +1355,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="state"
@@ -1375,7 +1375,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="district"
@@ -1399,7 +1399,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1435,7 +1435,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="permanentState"
@@ -1455,7 +1455,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="permanentDistrict"
@@ -1479,7 +1479,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <input
                   type="text"
@@ -1495,7 +1495,7 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="form-group">
                 <select
                   name="permanentCountry"
