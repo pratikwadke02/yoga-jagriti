@@ -2,7 +2,7 @@ import { Container, Box, Typography } from '@mui/material'
 import React from 'react'
 import { theme } from '../../theme'
 import ProgramCard from '../utils/ProgramCard/ProgramCard'
-import '../Header/HeaderBanner/HeaderBanner.css'
+import '../HeaderBanner/HeaderBanner.css'
 
 const RelatedProducts = () => {
   return (

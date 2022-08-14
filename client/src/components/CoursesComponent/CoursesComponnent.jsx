@@ -3,7 +3,7 @@ import React from "react";
 import BioCard from "../utils/BioCard/BioCard";
 import { theme } from "../../theme";
 import { images } from "../../constants";
-import '../Header/HeaderBanner/HeaderBanner.css'
+import './CoursesComponent.css'
 import CoursesCard from "../utils/CoursesCard/CoursesCard";
 import { Link } from "react-router-dom";
 import CoursesHeader from "./CoursesHeader/CoursesHeader";
