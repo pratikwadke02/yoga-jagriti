@@ -29,7 +29,7 @@ const CoursesComponnent = () => {
       >
         <CoursesHeader />
         <Box  sx={{width:'100%', mt:4, mb:2}}>
-          <Box sx={{maxWidth:'1100px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <Box sx={{maxWidth:'1175px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main  }}>
             Our Yoga Courses
           </Typography>

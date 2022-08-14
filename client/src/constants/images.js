@@ -36,6 +36,7 @@ import fit_india_logo from '../assets/images/fit_india.png';
 import spai_logo from '../assets/images/spai_logo.svg';
 import msme from '../assets/images/msme.png';
 import ncvt from '../assets/images/ncvt.png';
+import course_one from '../assets/images/course_one.png';
 
 export default {
     slider_1,
@@ -75,5 +76,6 @@ export default {
     fit_india_logo,
     spai_logo,
     msme,
-    ncvt
+    ncvt,
+    course_one,
 }

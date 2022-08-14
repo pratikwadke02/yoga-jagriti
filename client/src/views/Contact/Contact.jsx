@@ -5,7 +5,7 @@ import {theme} from '../../theme'
 import {images} from '../../constants'
 import ContactCard from '../../components/utils/ContactCard/ContactCard'
 import ContactComponent from '../../components/ContactComponent/ContactComponent'
-import ContactForm from '../../components/ContactForm/ContactForm'
+
 
 const Contact = () => {
   return (

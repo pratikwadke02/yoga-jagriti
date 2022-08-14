@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Typography, Box } from '@mui/material'
 import {theme} from '../../theme'
 import {images} from '../../constants'
-import ContactForm from '../../components/ContactForm/ContactForm'
+import ContactForm from '../../components/EnrollForm/EnrollForm'
 
 const Course = () => {
   return (

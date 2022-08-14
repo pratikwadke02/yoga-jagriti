@@ -2,8 +2,22 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 import './ContactComponent.css';
+import { useState } from "react";
 
 const ContactComponent = () => {
+
+  const [contactData, setcontactData] = useState(
+    {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    }
+  )
+
+  
+
   return (
     <Box sx={{wdith:'100%', backgroundColor:theme.palette.background.default, borderRadius:'5px', p:2  }}>
         <Box>
@@ -49,8 +63,8 @@ const ContactComponent = () => {
                   <div class="col-lg-12 col-md-6">
                     <div class="form-group">
                       <input
-                        type="text"
-                        name="phone_number"
+                        type="number"
+                        name="phone"
                         id="phone_number"
                         required
                         data-error="Please enter your number"
@@ -65,7 +79,7 @@ const ContactComponent = () => {
                     <div class="form-group">
                       <input
                         type="text"
-                        name="msg_subject"
+                        name="subject"
                         id="msg_subject"
                         class="form-control"
                         required

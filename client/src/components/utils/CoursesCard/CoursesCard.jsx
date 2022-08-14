@@ -15,7 +15,7 @@ const ProgramCard = (props) => {
       <Card
         sx={{
           mb:{xs:4, md:0},
-          minWidth: '300px',
+          minWidth: {xl:'300px'},
           maxWidth:'400px',
           backgroundColor:theme.palette.background.default,
           width: "100%",
@@ -37,7 +37,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.product} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
+          <img src={images.course_one} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
         </Box>
         <Box
           sx={{
