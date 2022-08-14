@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/yoga-jagriti/static/css/main.ba9a1a27.css",
+    "main.css": "/yoga-jagriti/static/css/main.31dd0780.css",
     "main.js": "/yoga-jagriti/static/js/main.d68ebb9d.js",
     "static/media/mid_banner_two.png": "/yoga-jagriti/static/media/mid_banner_two.d64e45cb9d7a86e96b6c.png",
     "static/media/ncvt.png": "/yoga-jagriti/static/media/ncvt.cfc17c230851e31950e9.png",
@@ -36,11 +36,11 @@
     "static/media/scalar_logo.png": "/yoga-jagriti/static/media/scalar_logo.4250a299dab7bed37c9c.png",
     "static/media/spai_logo.svg": "/yoga-jagriti/static/media/spai_logo.ac64ad5401ac9c43092362f11c7db0df.svg",
     "index.html": "/yoga-jagriti/index.html",
-    "main.ba9a1a27.css.map": "/yoga-jagriti/static/css/main.ba9a1a27.css.map",
+    "main.31dd0780.css.map": "/yoga-jagriti/static/css/main.31dd0780.css.map",
     "main.d68ebb9d.js.map": "/yoga-jagriti/static/js/main.d68ebb9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba9a1a27.css",
+    "static/css/main.31dd0780.css",
     "static/js/main.d68ebb9d.js"
   ]
 }
