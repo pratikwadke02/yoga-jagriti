@@ -915,10 +915,16 @@ const ContactForm = () => {
     email: "",
   });
 
+  const [sameAddress, setSameAddress] = useState(false);
+
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
     console.log(data);
   };
+
+  const handleAddressChange = ({ currentTarget: input }) => {
+    setSameAddress(!sameAddress);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -1111,7 +1117,6 @@ const ContactForm = () => {
                 >
                   <option selected>Select a country</option>
                   <option value="India">India</option>
-                  <option value="USA">USA</option>
                 </select>
                 <div class="help-block with-errors"></div>
               </div>
@@ -1335,185 +1340,204 @@ const ContactForm = () => {
                 <div class="help-block with-errors"></div>
               </div>
             </div> */}
-            <Typography variant="h6" sx={{ mb: 1 }}>
-              Correspondence Address
-            </Typography>
-            <div class="col-lg-12 col-md-12">
-              <div class="form-group">
-                <textarea
-                  name="address"
-                  class="form-control"
-                  id="address"
-                  cols="30"
-                  rows="5"
-                  required
-                  data-error="Write your address"
-                  placeholder="Address"
-                  value={data.address}
-                  onChange={handleChange}
-                ></textarea>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <select
-                  name="state"
-                  id="state"
-                  class="form-select form-select-lg mb-3"
-                  data-error="Select a state"
-                  placeholder="State"
-                  aria-label="Default select example"
-                  value={data.state}
-                  onChange={handleChange}
-                >
-                  <option selected>Select State</option>
-                  {state.map((item, index) => {
-                    return <option value={item.state}>{item.state}</option>;
-                  })}
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <select
-                  name="district"
-                  id="district"
-                  class="form-select form-select-lg mb-3"
-                  data-error="Select a district"
-                  placeholder="District"
-                  aria-label="Default select example"
-                  value={data.district}
-                  onChange={handleChange}
-                >
-                  <option selected>Select District</option>
-                  {state
-                    .filter((item) => item.state === data.state)
-                    .map((item, index) => {
-                      return item.districts.map((x, index) => {
-                        return <option value={x}>{x}</option>;
-                      });
-                    })}
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <input
-                  type="text"
-                  name="pincode"
-                  id="pincode"
-                  class="form-control"
-                  required
-                  data-error="Please enter your pincode"
-                  placeholder="Pincode"
-                  value={data.pincode}
-                  onChange={handleChange}
-                />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <Typography variant="h6" sx={{ mb: 1 }}>
-              Permanent Address
-            </Typography>
-            <div class="col-lg-12 col-md-12">
-              <div class="form-group">
-                <textarea
-                  name="permanentAddress"
-                  class="form-control"
-                  id="address"
-                  cols="30"
-                  rows="5"
-                  required
-                  data-error="Write your address"
-                  placeholder="Address"
-                  value={data.permanentAddress}
-                  onChange={handleChange}
-                ></textarea>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <select
-                  name="permanentState"
-                  id="state"
-                  class="form-select form-select-lg mb-3"
-                  data-error="Select a state"
-                  placeholder="State"
-                  aria-label="Default select example"
-                  value={data.permanentState}
-                  onChange={handleChange}
-                >
-                  <option selected>Select State</option>
-                  {state.map((item, index) => {
-                    return <option value={item.state}>{item.state}</option>;
-                  })}
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <select
-                  name="permanentDistrict"
-                  id="district"
-                  class="form-select form-select-lg mb-3"
-                  data-error="Select a district"
-                  placeholder="District"
-                  aria-label="Default select example"
-                  value={data.permanentDistrict}
-                  onChange={handleChange}
-                >
-                  <option selected>Select District</option>
-                  {state
-                    .filter((item) => item.state === data.state)
-                    .map((item, index) => {
-                      return item.districts.map((x, index) => {
-                        return <option value={x}>{x}</option>;
-                      });
-                    })}
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <input
-                  type="text"
-                  name="permanentPincode"
-                  id="pincode"
-                  class="form-control"
-                  required
-                  data-error="Please enter your pincode"
-                  placeholder="Pincode"
-                  value={data.permanentPincode}
-                  onChange={handleChange}
-                />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
-                <select
-                  name="permanentCountry"
-                  id="country"
-                  class="form-select form-select-lg mb-3"
-                  required
-                  data-error="Select a country"
-                  placeholder="Country"
-                  value={data.permanentCountry}
-                  onChange={handleChange}
-                >
-                  <option selected>Select a country</option>
-                  <option value="India">India</option>
-                  <option value="USA">USA</option>
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
+            <Box sx={{ display: "flex",flexDirection:{xs:'column', md:'row'}, width: "100%" }}>
+              <Box sx={{ width: "100%", mr: {xs:0, md:1.25} }}>
+                <Typography variant="h6" sx={{ mb: 1 }}>
+                  Correspondence Address
+                </Typography>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      name="address"
+                      class="form-control"
+                      id="address"
+                      cols="30"
+                      rows="5"
+                      required
+                      data-error="Write your address"
+                      placeholder="Address"
+                      value={data.address}
+                      onChange={handleChange}
+                    ></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <select
+                      name="state"
+                      id="state"
+                      class="form-select form-select-lg mb-3"
+                      data-error="Select a state"
+                      placeholder="State"
+                      aria-label="Default select example"
+                      value={data.state}
+                      onChange={handleChange}
+                    >
+                      <option selected>Select State</option>
+                      {state.map((item, index) => {
+                        return <option value={item.state}>{item.state}</option>;
+                      })}
+                    </select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <select
+                      name="district"
+                      id="district"
+                      class="form-select form-select-lg mb-3"
+                      data-error="Select a district"
+                      placeholder="District"
+                      aria-label="Default select example"
+                      value={data.district}
+                      onChange={handleChange}
+                    >
+                      <option selected>Select District</option>
+                      {state
+                        .filter((item) => item.state === data.state)
+                        .map((item, index) => {
+                          return item.districts.map((x, index) => {
+                            return <option value={x}>{x}</option>;
+                          });
+                        })}
+                    </select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="pincode"
+                      id="pincode"
+                      class="form-control"
+                      required
+                      data-error="Please enter your pincode"
+                      placeholder="Pincode"
+                      value={data.pincode}
+                      onChange={handleChange}
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <Box class="form-group" sx={{display:'flex', mt:4}}>
+                    <input 
+                      type="checkbox" 
+                      name="addressCheck" 
+                      id="addressCheck" 
+                      label="Same as permanent address"
+                      checked={sameAddress}
+                      onChange={handleAddressChange}
+                      />
+                      <label for="addressCheck" style={{fontSize:'12px', marginLeft:'10px'}}>Same as permanent address</label>
+                    <div class="help-block with-errors"></div>
+                  </Box>
+                </div>
+              </Box>
+              <Box sx={{ width: "100%", ml: {xs:0, md:1.25} }}>
+                <Typography variant="h6" sx={{ mb: 1 }}>
+                  Permanent Address
+                </Typography>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      name="permanentAddress"
+                      class="form-control"
+                      id="address"
+                      cols="30"
+                      rows="5"
+                      required
+                      data-error="Write your address"
+                      placeholder="Address"
+                      value={sameAddress ? data.address : data.permanentAddress}
+                      onChange={handleChange}
+                    ></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <select
+                      name="permanentState"
+                      id="state"
+                      class="form-select form-select-lg mb-3"
+                      data-error="Select a state"
+                      placeholder="State"
+                      aria-label="Default select example"
+                      value={sameAddress ? data.state : data.permanentState}
+                      onChange={handleChange}
+                    >
+                      <option selected>Select State</option>
+                      {state.map((item, index) => {
+                        return <option value={item.state}>{item.state}</option>;
+                      })}
+                    </select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <select
+                      name="permanentDistrict"
+                      id="district"
+                      class="form-select form-select-lg mb-3"
+                      data-error="Select a district"
+                      placeholder="District"
+                      aria-label="Default select example"
+                      value={sameAddress ? data.district : data.permanentDistrict}
+                      onChange={handleChange}
+                    >
+                      <option selected>Select District</option>
+                      {state
+                        .filter((item) => item.state === data.state)
+                        .map((item, index) => {
+                          return item.districts.map((x, index) => {
+                            return <option value={x}>{x}</option>;
+                          });
+                        })}
+                    </select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="permanentPincode"
+                      id="pincode"
+                      class="form-control"
+                      required
+                      data-error="Please enter your pincode"
+                      placeholder="Pincode"
+                      value={sameAddress ? data.pincode : data.permanentPincode}
+                      onChange={handleChange}
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <select
+                      name="permanentCountry"
+                      id="country"
+                      class="form-select form-select-lg mb-3"
+                      required
+                      data-error="Select a country"
+                      placeholder="Country"
+                      value={sameAddress ? data.country : data.permanentCountry}
+                      onChange={handleChange}
+                    >
+                      <option selected>Select a country</option>
+                      <option value="India">India</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </Box>
+            </Box>
             <div class="col-lg-12 col-md-12">
               <button
                 type="submit"
