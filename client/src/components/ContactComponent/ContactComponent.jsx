@@ -3,6 +3,7 @@ import React from "react";
 import { theme } from "../../theme";
 import './ContactComponent.css';
 import { useState } from "react";
+import axios from "axios";
 
 const ContactComponent = () => {
 
@@ -16,7 +17,35 @@ const ContactComponent = () => {
     }
   )
 
-  
+  const handleChange = ({currentTarget: input}) => {
+    setcontactData({ ...contactData, [input.name]: input.value })
+    console.log(contactData)
+  }
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    try{
+      await axios
+        .post('http://localhost:5000/api/contact/enquiry', contactData)
+        .then((res) => {
+          console.log(res)
+          }).catch((err) => {
+            console.log(err)
+          });
+      setcontactData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+      alert("Response sent successfully");
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+
 
   return (
     <Box sx={{wdith:'100%', backgroundColor:theme.palette.background.default, borderRadius:'5px', p:2  }}>
@@ -40,6 +69,8 @@ const ContactComponent = () => {
                         required
                         data-error="Please enter your name"
                         placeholder="Name"
+                        onChange={handleChange}
+                        value={contactData.name}
                       />
                       <div class="help-block with-errors"></div>
                     </div>
@@ -55,6 +86,8 @@ const ContactComponent = () => {
                         required
                         data-error="Please enter your email"
                         placeholder="Email"
+                        onChange={handleChange}
+                        value={contactData.email}
                       />
                       <div class="help-block with-errors"></div>
                     </div>
@@ -70,6 +103,8 @@ const ContactComponent = () => {
                         data-error="Please enter your number"
                         class="form-control"
                         placeholder="Phone"
+                        onChange={handleChange}
+                        value={contactData.phone}
                       />
                       <div class="help-block with-errors"></div>
                     </div>
@@ -85,6 +120,8 @@ const ContactComponent = () => {
                         required
                         data-error="Please enter your subject"
                         placeholder="Subject"
+                        onChange={handleChange}
+                        value={contactData.subject}
                       />
                       <div class="help-block with-errors"></div>
                     </div>
@@ -101,6 +138,8 @@ const ContactComponent = () => {
                         required
                         data-error="Write your message"
                         placeholder="Your Message"
+                        onChange={handleChange}
+                        value={contactData.message}
                       ></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -118,18 +157,6 @@ const ContactComponent = () => {
                 </div>
               </form>
         </Box>
-      {/* <div class="contact-area ptb-80">
-        <div class="container">
-
-          <div class="row h-100 justify-content-center align-items-center">
-            {/* <div class="col-lg-6 col-md-12">
-              {/* <img src="assets/img/1.png" alt="image">
-            </div> 
-            <div class="col-lg-6 col-md-12">
-            </div>
-          </div>
-        </div>
-      </div> */}
     </Box>
   );
 };
