@@ -107,7 +107,9 @@ const ProgramCard = (props) => {
 <Box sx={{width:'100%', mt:1}}>
               <Link to="/course" style={{textDecoration:'none'}}>
               <Button variant="contained" color="primary" sx={{width:'100%'}}>
+                <Typography variant="h6" sx={{color:theme.palette.text.default }}>
                 Enroll Now
+                </Typography>
               </Button>
               </Link>
               </Box>

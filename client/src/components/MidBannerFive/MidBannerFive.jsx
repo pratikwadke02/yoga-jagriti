@@ -3,7 +3,9 @@ import { Container, Box, Typography, Avatar } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import { theme } from "../../theme";
 import CommentCard from "../utils/CommentCard/CommentCard";
-import {images} from '../../constants';
+import { images } from "../../constants";
+import { videos } from '../../constants'
+import VideoCarousel from "../utils/VideoCarousel/VideoCarousel";
 
 const MidBannerFive = () => {
   const testimonials = [
@@ -23,38 +25,81 @@ const MidBannerFive = () => {
     },
   ];
 
+  const videoProps = [
+    {
+        id: 1,
+        title: "Video 1",
+        src: videos.vid_one,
+    },
+    {
+        id: 2,
+        title: "Video 2",
+        src: videos.vid_two,
+    }
+]
+
   return (
     <>
-      <Container sx={{mt:10,backgroundColor:theme.palette.background.light,
-      backgroundImage: `url(${images.pattern_two})`,
-         p:2}}>
-        <Box  sx={{mt:5,display:'flex', flexDirection:'column'}}>
-          <Typography variant="h2" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
-            ASKING FOR TESTIMONIALS
+      <Container
+        sx={{
+          maxWidth: { xs: "100%" },
+          mt: 10,
+          backgroundColor: theme.palette.background.light,
+          backgroundImage: `url(${images.pattern_two})`,
+          p: 2,
+          pb: 4,
+          pt: 4,
+          display:'flex',
+          flexDirection:{xs:'column'},
+          justifyContent:'center',
+          alignItems:'center',
+
+        }}
+      >
+        <Box sx={{textAlign:'center'}}>
+        <Typography
+            variant="h2"
+            sx={{
+              color: theme.palette.primary.main,
+              fontWeight: theme.typography.fontWeightBold,
+            }}
+          >
+            TESTIMONIALS
           </Typography>
-          
-          <div className="darkbar"></div>
-          <Typography variant="h4" sx={{mt:1}}>
+
+          <div className="darkbar" style={{margin:'auto', marginTop:'10px'}}></div>
+          <Typography variant="h4" sx={{ mt: 1 }}>
             What our clients say about us
           </Typography>
         </Box>
-        <Box sx={{witdh:'100%', mt:3, display:'flex', flexDirection:{xs:'column',md:'row'}, justifyContent:{xs:'center', md:'center'}, alignItems:'center'}}>
-          {
-            testimonials.map((testimonial, index) => {
-                return (
-                  <Box sx={{mr:{md:index === 0 ? 2 : 0}}}>
-                    <CommentCard
-                    key={index}
-                    name={testimonial.name}
-                    role={testimonial.role}
-                    comment={testimonial.comment}
-                    rating={testimonial.rating}
-                    />
-                  </Box>
-                );
-                }
-            )
-          }
+        <Box sx={{ mt: 5, display: "flex", flexDirection: {xs:'column', lg:"row"}, width:'100%' , mr:{lg:2}, textAlign:'center'}}>
+        <Box
+          sx={{
+            witdh: "100%",
+            mt: 3,
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: { xs: "center", md: "center" },
+            alignItems: "center",
+          }}
+        >
+          {testimonials.map((testimonial, index) => {
+            return (
+              <Box sx={{ mr: { md: index === 0 ? 2 : 0 } }}>
+                <CommentCard
+                  key={index}
+                  name={testimonial.name}
+                  role={testimonial.role}
+                  comment={testimonial.comment}
+                  rating={testimonial.rating}
+                />
+              </Box>
+            );
+          })}
+        </Box>
+        <Box sx={{width:'100%', ml:{xs:0, lg:2}, mt:{xs:4, lg:0}}}>
+            <VideoCarousel videoData = {videoProps} />
+        </Box>
         </Box>
       </Container>
     </>

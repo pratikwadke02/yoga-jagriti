@@ -16,7 +16,7 @@ const ProgramCard = (props) => {
       <Card
         sx={{
           margin:'auto',
-          minWidth: {md:'400px'},
+          minWidth: {xs:'400px'},
           maxWidth:'400px',
           backgroundColor:theme.palette.background.default,
           // width: "100%",
