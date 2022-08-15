@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from '@mui/material'
 import { theme } from '../../theme'
 import { images } from '../../constants'
+import AllCoursesComponent from '../../components/AllCoursesComponent/AllCoursesComponent'
 
 const AllCourses = () => {
   return (
@@ -17,6 +18,7 @@ const AllCourses = () => {
           pb:10,
         }}
       >
+        <AllCoursesComponent />
       </Container>
     </>
   )
