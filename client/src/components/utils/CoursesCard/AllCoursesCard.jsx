@@ -5,6 +5,7 @@ import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import { Link } from "react-router-dom";
 
 const ProgramCard = (props) => {
 
@@ -18,7 +19,7 @@ const ProgramCard = (props) => {
           minWidth: {md:'400px'},
           maxWidth:'400px',
           backgroundColor:theme.palette.background.default,
-          width: "100%",
+          // width: "100%",
           height:'auto',
           boxShadow: 1,
           display: "flex",
@@ -104,9 +105,13 @@ const ProgramCard = (props) => {
             
             <Box sx={{display:'flex', flexDirection:'row', justifyContent:'flex-start', width:'100%'}}>
 <Box sx={{width:'100%', mt:1}}>
+              <Link to="/course" style={{textDecoration:'none'}}>
               <Button variant="contained" color="primary" sx={{width:'100%'}}>
+                <Typography variant="h6" sx={{color:theme.palette.text.default }}>
                 Enroll Now
+                </Typography>
               </Button>
+              </Link>
               </Box>
             </Box>  
           </Box>

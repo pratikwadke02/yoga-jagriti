@@ -12,13 +12,14 @@ const CoursesMenu = (props) => {
     <>
       <Box
         sx={{
+          minWidth:'300px',
           p: 2,
           width: "100%",
         }}
       >
         <Box>
           <Typography
-            variant="h5"
+            variant="h4"
             sx={{
               color: theme.palette.primary.main,
               fontWeight: theme.typography.fontWeightBold,
@@ -29,22 +30,23 @@ const CoursesMenu = (props) => {
         </Box>
         <Box>
           <Typography
-            variant="h6"
+            variant="h5"
             sx={{
               color: theme.palette.text.main,
               fontWeight: theme.typography.fontWeightMedium,
+              mt:1,
             }}
           >
            Fee: ₹{fee}
           </Typography>
         </Box>
-        <Box>
-          <Typography variant="h6" sx={{ color: theme.palette.text.main }}>
+        <Box sx={{mt:2}}>
+          <Typography variant="h5" sx={{ color: theme.palette.text.main }}>
             Eligibility: {eligibility}
           </Typography>
         </Box>
-        <Box>
-          <Typography variant="h6" sx={{ color: theme.palette.text.main }}>
+        <Box sx={{mt:1}}>
+          <Typography variant="h5" sx={{ color: theme.palette.text.main, }}>
             Age: {age}
           </Typography>
         </Box>
@@ -54,9 +56,10 @@ const CoursesMenu = (props) => {
             flexDirection: "row",
             alignItems: "center",
             width: "100%",
+            mt:1,
           }}
         >
-          <Typography variant="h6" sx={{ }}>
+          <Typography variant="h5" sx={{ }}>
             Duration: {duration}
           </Typography>
         </Box>
@@ -66,9 +69,10 @@ const CoursesMenu = (props) => {
             flexDirection: "row",
             alignItems: "center",
             width: "100%",
+            mt:1,
           }}
         >
-          <Typography variant="h6" sx={{}}>
+          <Typography variant="h5" sx={{}}>
             Number of Seats: {seats}
           </Typography>
         </Box>
@@ -80,14 +84,16 @@ const CoursesMenu = (props) => {
             width: "100%",
           }}
         >
-          <Box sx={{ width: "100%", mt: 1 }}>
+          <Box sx={{ width: "100%", mt: 2 }}>
             <Link to="/course" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 color="primary"
                 sx={{ width: "100%" }}
               >
+                <Typography variant="h5" sx={{ color: "white" }}>
                 Enroll Now
+                </Typography>
               </Button>
             </Link>
           </Box>

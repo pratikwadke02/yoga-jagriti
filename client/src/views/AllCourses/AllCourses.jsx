@@ -14,7 +14,8 @@ const AllCourses = () => {
           backgroundColor: theme.palette.background.light,
           backgroundImage: `url(${images.pattern_three})`,
           height: "100%",
-          minHeight: "95vh",
+          minHeight: {lg:"95vh"},
+          maxHeight: {xs:'100%', lg:'90vh'},
           pb:10,
         }}
       >

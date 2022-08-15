@@ -4,6 +4,7 @@ import {theme} from '../../theme'
 import {images} from '../../constants'
 import AllCoursesCard from '../utils/CoursesCard/AllCoursesCard'
 import { Link } from 'react-router-dom'
+import CoursesMenu from '../utils/CoursesMenu/CoursesMenu'
 
 const AllCoursesComponent = () => {
 
@@ -75,9 +76,16 @@ const AllCoursesComponent = () => {
         {
             coursesData.map((course, index) => {
               return (
-                <Link to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px',width:'100%'}} key={index}>
+                <Box to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px'}} key={index}>
+                  <div className="dropend">
+                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
-                </Link>
+                  </div>
+                  <div className="dropdown-menu">
+                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image}/>
+                  </div>
+                  </div>
+                </Box>
               )
             }
             )
@@ -87,9 +95,16 @@ const AllCoursesComponent = () => {
         {
             coursesData1.map((course, index) => {
               return (
-                <Link to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px',width:'100%',m:'auto'}} key={index}>
+                <Box to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px',m:'auto'}} key={index}>
+                  <div className="dropend">
+                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
-                </Link>
+                  </div>
+                  <div className="dropdown-menu">
+                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image}/>
+                  </div>
+                  </div>
+                </Box>
               )
             }
             )
