@@ -8,19 +8,20 @@ import CoursesCard from "../utils/CoursesCard/CoursesCard";
 import { Link } from "react-router-dom";
 import CoursesHeader from "./CoursesHeader/CoursesHeader";
 import CoursesFooter from "./CoursesFooter/CoursesFooter";
+import CoursesMenu from "../utils/CoursesMenu/CoursesMenu";
 
 const CoursesComponnent = () => {
 
   const coursesData  = [
     {
-      title: "Higher Sec. School Yoga Teacher Course",
-      fee: "25000",
-      eligibility: "Graduation",
-      duration: "Six months",
-      age: "18 or above",
-      noOfSeats: "50",
-      image: images.course_one,
-    },
+      title: "Yoga Volunteer Course",
+      fee: "1500",
+      eligibility: "8th Pass",
+      duration: "One month",
+      age: "No age limit",
+      noOfSeats: "100",
+      image: images.course_five,
+  },
     {
       title: "Yoga Protocol Instructor",
       fee: "7000",
@@ -28,7 +29,7 @@ const CoursesComponnent = () => {
       duration: "Three months",
       age: "18 or above",
       noOfSeats: "20",
-      image: images.course_two,
+      image: images.course_four,
     },
     {
       title: "Yoga Wellness Instructor",
@@ -40,6 +41,7 @@ const CoursesComponnent = () => {
       image: images.course_three,
     },
   ]
+
 
   return (
     <>
@@ -79,9 +81,16 @@ const CoursesComponnent = () => {
           {
             coursesData.map((course, index) => {
               return (
-                <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}} key={index}>
+                <Box style={{textDecoration:'none', marginRight:'40px'}} key={index}>
+                  <div className="dropend">
+                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
-                </Link>
+                  </div>
+                  <div className="dropdown-menu">
+                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image}/>
+                  </div>
+                  </div>
+                </Box>
               )
             }
             )

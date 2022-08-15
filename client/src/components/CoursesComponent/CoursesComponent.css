@@ -30,3 +30,21 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+.dropend:hover .dropdown-menu {
+  display: block;
+  float: right;
+  top:0;
+  right:0;
+  margin-right: -200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .dropend:hover .dropdown-menu {
+    display: block;
+    float: right;
+    top:0;
+    right:0;
+    margin-right: -200px;
+  }
+}
