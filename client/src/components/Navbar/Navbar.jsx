@@ -33,10 +33,10 @@ const navItems = [
   //   name: 'News',
   //   path: 'news',
   // },
-  // {
-  //   name: 'faq',
-  //   path: 'faq',
-  // }
+  {
+    name: 'FAQ',
+    path: 'faq',
+  }
 ];
 
 function DrawerAppBar(props) {

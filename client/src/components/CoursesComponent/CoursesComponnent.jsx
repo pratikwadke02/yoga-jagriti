@@ -1,4 +1,4 @@
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Button } from "@mui/material";
 import React from "react";
 import BioCard from "../utils/BioCard/BioCard";
 import { theme } from "../../theme";
@@ -66,9 +66,13 @@ const CoursesComponnent = () => {
             
             <div className="darkbar"></div>
           </Typography>
+          <Link to="/all-courses" style={{textDecoration:'none'}}>
+            <Button sx={{textTransform:'none'}}>
           <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main}}>
             See All
           </Typography>
+          </Button>
+          </Link>
           </Box>
         <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center',}}>
           <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>

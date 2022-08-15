@@ -14,6 +14,7 @@ import Login from './views/Auth/Login';
 import Register from './views/Auth/Register';
 import Contact from './views/Contact/Contact';
 import Course from './views/Course/Course';
+import AllCourses from './views/AllCourses/AllCourses';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/course" element={<Course />} />
+        <Route path="/all-courses" element={<AllCourses />} />
       </Routes>
       {/* <Footer /> */}
       </BrowserRouter>
