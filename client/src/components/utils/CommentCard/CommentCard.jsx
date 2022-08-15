@@ -1,21 +1,27 @@
 import React from "react";
 import { Container, Box, Typography, Avatar } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
-import {theme} from '../../../theme'
-
+import { theme } from "../../../theme";
 
 const CommentCard = (props) => {
-
-    const {comment, avatar, name, role, rating} = props;
+  const { comment, avatar, name, role, rating } = props;
 
   return (
     <>
-      <Box sx={{display:'flex', flexDirection:'column', mr:{md:0}, mb:{xs:5, md:0}}}>
-        <Box sx={{backgroundColor:theme.palette.background.default, p:4}}>
-          <Typography variant="h6" sx={{color:theme.palette.text.dark}}>
+      <Box
+        sx={{
+          maxWidth: {xs : "100%", },
+          display: "flex",
+          flexDirection: "column",
+          mr: { md: 0 },
+          mb: { md: 0 },
+        }}
+      >
+        <Box sx={{ backgroundColor: theme.palette.background.default, p: 4 }}>
+          <Typography variant="h6" sx={{ color: theme.palette.text.dark }}>
             {comment}
           </Typography>
-          <Box sx={{mt:1}}>
+          <Box sx={{ mt: 1 }}>
             {Array(rating)
               .fill(0)
               .map((_, index) => {
@@ -23,13 +29,25 @@ const CommentCard = (props) => {
               })}
           </Box>
         </Box>
-        <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center',p:2}}>
-          <Box sx={{mr:3}}>
-            <Avatar alt="Remy Sharp" src="" height={100} width={100}/>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            p: 2,
+          }}
+        >
+          <Box sx={{ mr: 3 }}>
+            <Avatar alt="Remy Sharp" src="" height={100} width={100} />
           </Box>
           <Box>
-            <Typography variant="h5" sx={{  }}>{name}</Typography>
-            <Typography  variant="h6" sx={{color:theme.palette.primary.main  }}>{role}</Typography>
+            <Typography variant="h5" sx={{}}>
+              {name}
+            </Typography>
+            <Typography variant="h6" sx={{ color: theme.palette.primary.main }}>
+              {role}
+            </Typography>
           </Box>
         </Box>
       </Box>

@@ -6,6 +6,7 @@ import CommentCard from "../utils/CommentCard/CommentCard";
 import { images } from "../../constants";
 import { videos } from '../../constants'
 import VideoCarousel from "../utils/VideoCarousel/VideoCarousel";
+import TestimonyCarousel from "../utils/TestimonyCorousel/TestimonyCarousel";
 
 const MidBannerFive = () => {
   const testimonials = [
@@ -23,6 +24,13 @@ const MidBannerFive = () => {
         "I appreciate your coaching center really good environment and excellent student training. You are continously handle student training wonderfully. Thanks for your great service.",
       rating: 4,
     },
+    {
+      name: "Amanda Kinedy",
+      role: "FINANCIAL ADVISOR",
+      comment:
+        " I appreciate your coaching center really good environment and excellent student training. You are continously handle student training wonderfully. Thanks for your great service.",
+      rating: 5,
+    }
   ];
 
   const videoProps = [
@@ -75,7 +83,7 @@ const MidBannerFive = () => {
         <Box sx={{ mt: 5, display: "flex", flexDirection: {xs:'column', lg:"row"}, width:'100%' , mr:{lg:2}, textAlign:'center'}}>
         <Box
           sx={{
-            witdh: "100%",
+            width: "100%",
             mt: 3,
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
@@ -83,19 +91,7 @@ const MidBannerFive = () => {
             alignItems: "center",
           }}
         >
-          {testimonials.map((testimonial, index) => {
-            return (
-              <Box sx={{ mr: { md: index === 0 ? 2 : 0 } }}>
-                <CommentCard
-                  key={index}
-                  name={testimonial.name}
-                  role={testimonial.role}
-                  comment={testimonial.comment}
-                  rating={testimonial.rating}
-                />
-              </Box>
-            );
-          })}
+          <TestimonyCarousel testimonials={testimonials} />
         </Box>
         <Box sx={{width:'100%', ml:{xs:0, lg:2}, mt:{xs:4, lg:0}}}>
             <VideoCarousel videoData = {videoProps} />
