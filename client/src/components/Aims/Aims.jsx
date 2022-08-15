@@ -33,6 +33,7 @@ const Aims = () => {
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 AIMS
             </Typography>
+            <div className="darkbar"></div>
             <Typography variant="h6" sx={{m:'auto'}}>
             Jagriti yog & Naturopathy (JYANS) is launched as a moment to develop, promote
 & propagate yoga & naturopathy as a system of Medical Science. The aim of JYANS is to

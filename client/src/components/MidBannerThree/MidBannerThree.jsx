@@ -29,6 +29,7 @@ const MidBannerThree = () => {
             <Typography variant='h2' sx={{ fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 OUR BENEFITS
             </Typography>
+          <div className="darkbar"></div>
             <Typography variant="h4" sx={{mt:2,mb:2}}>
                 Easy steps for healthier life
             </Typography>

@@ -52,7 +52,7 @@ const ContactComponent = () => {
         <Box>
         <div class="section-title">
             <h2>Get In Touch With Us</h2>
-            {/* <div class="bar"></div> */}
+            <div class="darkbar" style={{margin:'auto', marginTop:'20px', marginBottom:'20px'}}></div>
             <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
           </div>
         </Box>

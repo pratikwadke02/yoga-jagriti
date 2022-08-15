@@ -63,6 +63,8 @@ const CoursesComponnent = () => {
           <Box sx={{maxWidth:'1175px',m:'auto', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main  }}>
             Our Yoga Courses
+            
+            <div className="darkbar"></div>
           </Typography>
           <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main}}>
             See All

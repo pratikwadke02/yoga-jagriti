@@ -11,6 +11,7 @@ const Pranayam = () => {
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 PRANAYAM
             </Typography>
+            <div className="darkbar"></div>
             <Typography variant="h4" sx={{mt:2}}>
                 What is Pranayam?
             </Typography>

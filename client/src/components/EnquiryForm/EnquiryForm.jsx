@@ -64,7 +64,8 @@ const EnquiryForm = () => {
       >
         <Typography variant="h2" sx={{ textAlign: "center", color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold, mb:2 }}>
         ENQUIRE NOW
-        </Typography>
+        </Typography> 
+        <div className="darkbar" style={{margin:'auto', marginTop:'20px', marginBottom:'20px'}}></div>
         <form id="enquiryForm" onSubmit={handleSubmit}>
             <Box
               sx={{

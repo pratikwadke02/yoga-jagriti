@@ -32,6 +32,8 @@ const MidBannerFive = () => {
           <Typography variant="h2" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
             ASKING FOR TESTIMONIALS
           </Typography>
+          
+          <div className="darkbar"></div>
           <Typography variant="h4" sx={{mt:1}}>
             What our clients say about us
           </Typography>

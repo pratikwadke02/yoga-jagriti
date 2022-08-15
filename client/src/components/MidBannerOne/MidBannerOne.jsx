@@ -70,6 +70,8 @@ const MidBannerOne = () => {
             >
               WHY CHOOSE US
             </Typography>
+            
+            <div className="darkbar"></div>
             <Typography
               variant="h4"
               sx={{ mt: 2, textAlign: { xs: "center", md: "initial" } }}

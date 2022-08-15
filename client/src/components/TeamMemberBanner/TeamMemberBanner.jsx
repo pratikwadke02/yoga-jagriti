@@ -35,6 +35,7 @@ const TeamMemberBanner = () => {
           <Typography  variant="h2" sx={{ color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
             TEAM MEMBER
           </Typography>
+          <div className="darkbar"></div>
           <Typography variant="h3" sx={{mt:2,width:'70vw', textAlign:'center'}}>
             The concise narration about the way of yoga practice
           </Typography>

@@ -12,6 +12,7 @@ const AccuPressure = () => {
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 ACCU - PRESSURE
             </Typography>
+            <div className="darkbar"></div>
             <Typography variant="h6" sx={{mt:2, textAlign: 'justify', textJustify:'inter-word'}}>
             Acupressure is an ancient Chinese healing method that involves applying pressure to
 certain meridian points on the body to relieve pain. The human body has fourteen

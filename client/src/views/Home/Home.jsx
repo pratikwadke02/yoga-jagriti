@@ -21,7 +21,7 @@ const Home = () => {
       <HeaderBanner />
       {/* <MidBannerTwo /> */}
       <MidBannerThree />
-      <MidBannerFour />
+      {/* <MidBannerFour /> */}
       <MidBannerFive />
       <EnquiryForm />
       <BottomBanner />

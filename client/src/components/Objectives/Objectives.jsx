@@ -41,6 +41,8 @@ const Objectives = () => {
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 OBJECTIVES
             </Typography>
+            <div className="darkbar"></div>
+            
             <Typography variant="h6" sx={{mt:2, textAlign: 'justify', textJustify:'inter-word'}}>
             JAGRITI Yoga & Naturopathy (JYANS) is an autonomous institution for Research and
 Development in Yoga & Naturopathy, established in 2015 under the Societies

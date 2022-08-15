@@ -20,6 +20,7 @@ const LoginComponent = () => {
             >
               LOGIN
             </Typography>
+          <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
           </Box>
           <div class="container" >
             <div class="auth-form" style={{backgroundColor:theme.palette.background.default}}>

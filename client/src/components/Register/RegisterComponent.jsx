@@ -13,6 +13,7 @@ const RegisterComponent = () => {
             <Typography variant='h2' sx={{fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
             REGISTER
           </Typography>
+          <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
             </Box>
             <div class="container">
                 <div class="auth-form" style={{backgroundColor:theme.palette.background.default}}>

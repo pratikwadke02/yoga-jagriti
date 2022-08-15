@@ -27,6 +27,7 @@ const AboutYoga = () => {
             <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 ABOUT YOGA
             </Typography>
+            {/* <div className="darkbar"></div> */}
             <Typography variant="h4" sx={{mt:2}}>
               What is Yoga?
             </Typography>

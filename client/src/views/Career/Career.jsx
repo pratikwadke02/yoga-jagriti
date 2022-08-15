@@ -113,6 +113,7 @@ const Career = () => {
           >
             CAREER IN YOGA
           </Typography>
+          {/* <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div> */}
         </Box>
       </Container>
       <Container
@@ -372,6 +373,8 @@ const Career = () => {
           >
             JOBS IN YOGA
           </Typography>
+          
+          <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
           <Typography
             variant="h6"
             sx={{ mt: 2, textAlign: "justify", textJustify: "inter-word" }}
