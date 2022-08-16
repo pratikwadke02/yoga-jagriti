@@ -43,6 +43,12 @@ import course_four from '../assets/images/course_four.png';
 import course_five from '../assets/images/course_five.png';
 import ycb_nav_logo_one from '../assets/images/ycb_nav_logo_one.png';
 import ycb_nav_logo_two from '../assets/images/ycb_nav_logo_two.png';
+import bottom_logo_one from '../assets/images/bottom_logo_one.jpg';
+import bottom_logo_two from '../assets/images/bottom_logo_two.jpg';
+import bottom_logo_three from '../assets/images/bottom_logo_three.jpg';
+import bottom_logo_four from '../assets/images/bottom_logo_four.jpg';
+import bottom_logo_five from '../assets/images/bottom_logo_five.jpg';
+import bottom_logo_six from '../assets/images/bottom_logo_six.jpg';
 
 export default {
     slider_1,
@@ -90,4 +96,10 @@ export default {
     course_five,
     ycb_nav_logo_one,
     ycb_nav_logo_two,
+    bottom_logo_one,
+    bottom_logo_two,
+    bottom_logo_three,
+    bottom_logo_four,
+    bottom_logo_five,
+    bottom_logo_six,
 }
