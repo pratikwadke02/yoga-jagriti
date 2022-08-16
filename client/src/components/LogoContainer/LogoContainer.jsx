@@ -6,24 +6,62 @@ import { images } from "../../constants";
 const LogoContainer = () => {
   return (
     <>
-      <Box sx={{mt:8,p:2, mb:4, display:{xs:'none', md:'flex'}, flexDirection:'row', justifyContent:'space-between'}}>
+     <Box className='notif-marquee' sx={{width:'calc(100%)', display:'flex', alignItems:'center',justifyContent:'center',height:'100px'}}>
+          <Box className='notif-track' sx={{width:'calc(100%)', display:'flex', alignItems:'center',justifyContent:'center',height:'40px'}}>
         <Box>
-          <img src={images.logo_one} alt="" />
+          <img src={images.bottom_logo_one} alt="" />
         </Box>
         <Box>
-          <img src={images.logo_two} alt="" />
+          <img src={images.bottom_logo_two} alt="" />
         </Box>
         <Box>
-          <img src={images.logo_three} alt="" />
+          <img src={images.bottom_logo_three} alt="" />
         </Box>
         <Box>
-          <img src={images.logo_four} alt="" />
+          <img src={images.bottom_logo_four} alt="" />
         </Box>
         <Box>
-          <img src={images.logo_five} alt="" />
+          <img src={images.bottom_logo_five} alt="" />
         </Box>
         <Box>
-          <img src={images.logo_six} alt="" />
+          <img src={images.bottom_logo_six} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_one} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_two} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_three} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_four} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_five} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_six} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_one} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_two} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_three} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_four} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_five} alt="" />
+        </Box>
+        <Box>
+          <img src={images.bottom_logo_six} alt="" />
+        </Box>
         </Box>
       </Box>
     </>
