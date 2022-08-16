@@ -12,6 +12,8 @@ const Product = () => {
     <>
       <Container
         sx={{
+          
+          mt: 28,
           position: "relative",
         //   background: `url(${images.bg_pattern})`,
         //   backgroundSize: "800px",

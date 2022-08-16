@@ -6,6 +6,8 @@ import {theme} from '../../theme'
 import { images } from '../../constants';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link, NavLink } from 'react-router-dom';
+import NavbarHeader from './NavbarHeader/NavbarHeader';
+import NavbarLogoSection from './NavbarLogoSection/NavbarLogoSection';
 
 const drawerWidth = 240;
 const navItems = [
@@ -22,17 +24,25 @@ const navItems = [
     path: 'know-yoga',
   },
   {
+    name: 'Syllabus',
+    path: 'syllabus',
+  },
+  {
+    name: 'Gallery',
+    path: 'gallery',
+  },
+  {
     name: 'Career',
     path: 'career',
+  },
+  {
+    name:'NoticeBoard',
+    path:'notice-board',
   },
   {
     name: 'Contact',
     path: 'contact',
   },
-  // {
-  //   name: 'News',
-  //   path: 'news',
-  // },
   {
     name: 'FAQ',
     path: 'faq',
@@ -76,18 +86,6 @@ function DrawerAppBar(props) {
       </Box>
       <Divider />
       <List>
-        {/* {navItems.map((item) => (
-          <>
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{pl:3, textAlign: 'start' }}>
-              <ListItemText>
-                <Typography variant="h6">{item}</Typography>
-              </ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <Divider sx={{width:'100%'}} />
-          </>
-        ))} */}
         {
           navItems.map((item) => (
             <>
@@ -111,8 +109,14 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav">
-        <Toolbar sx={{ maxWidth:{xs:'100%', md:'1000px'},width:'100%', m:'auto'}}>
-          <Box sx={{ml:{xs:0},flexGrow:1, display:"flex", flexDirection:'row', aligntItems:'center'}}>
+        <Toolbar sx={{ maxWidth:{xs:'100%', md:'1400px'},width:'100%', m:'auto', display:'flex', flexDirection:'column', pb:2}}>
+          <Box sx={{width:'100%'}}>
+          <NavbarHeader />
+          </Box>
+          <Box>
+            <NavbarLogoSection />
+          </Box>
+          <Box sx={{mt:2, display:"flex", flexDirection:'row', aligntItems:'center', width:'100%', justifyContent:'space-between'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -122,10 +126,9 @@ function DrawerAppBar(props) {
           >
             <MenuIcon color="primary" />
           </IconButton>
-            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-            <img src={images.yoga_jagriti_logo} alt="" height={55} />
-            {/* <img src={images.nav_logo} alt="" height={40} style={{marginLeft:'15px'}} /> */}
-            </Box>
+          <IconButton sx={{}}>
+              <ShoppingCartOutlinedIcon fontSize='small' sx={{color:theme.palette.text.main, display:{xs:'block', md:'none'}}} />
+            </IconButton>
           </Box>
           <Box sx={{mr:{xs:0}, flexGrow:0, display:{
             xs:'flex'
@@ -145,15 +148,7 @@ function DrawerAppBar(props) {
             </Box>
             <IconButton sx={{ mr: 2 }}>
               <ShoppingCartOutlinedIcon fontSize="small" sx={{color:theme.palette.text.main, display:{xs:'none', md:'block'}}} />
-              <ShoppingCartOutlinedIcon fontSize='small' sx={{color:theme.palette.text.main, display:{xs:'block', md:'none'}}} />
             </IconButton>
-            <Link to="/login" style={{textDecoration:'none'}}>
-            <Button variant="contained" sx={{height:'30px'}}>
-              <Typography variant="h6" sx={{ color: theme.palette.text.default, fontWeight: theme.typography.fontWeightBold }}>
-                Login
-              </Typography>
-            </Button>
-            </Link>
           </Box>
         </Toolbar>
       </AppBar>

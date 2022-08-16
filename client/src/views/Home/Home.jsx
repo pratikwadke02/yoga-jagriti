@@ -10,11 +10,12 @@ import TeamMemberBanner from '../../components/TeamMemberBanner/TeamMemberBanner
 import CoursesComponnent from '../../components/CoursesComponent/CoursesComponnent'
 import HeaderBanner from '../../components/HeaderBanner/HeaderBanner'
 import EnquiryForm from '../../components/EnquiryForm/EnquiryForm'
+import { Box } from '@mui/material'
 
 const Home = () => {
   return (
     <>
-    <div className="header">
+    <Box sx={{mt:28}}>
       <Header />
       <CoursesComponnent />
       <MidBannerOne />
@@ -25,7 +26,7 @@ const Home = () => {
       <MidBannerFive />
       <EnquiryForm />
       <BottomBanner />
-    </div>
+    </Box>
     </>
   )
 }

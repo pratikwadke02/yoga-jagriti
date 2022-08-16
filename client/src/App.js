@@ -15,6 +15,7 @@ import Register from './views/Auth/Register';
 import Contact from './views/Contact/Contact';
 import Course from './views/Course/Course';
 import AllCourses from './views/AllCourses/AllCourses';
+import Syllabus from './views/Syllabus/Syllabus';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/course" element={<Course />} />
         <Route path="/all-courses" element={<AllCourses />} />
+        <Route path="/syllabus" element={<Syllabus />} />
       </Routes>
       {/* <Footer /> */}
       </BrowserRouter>
