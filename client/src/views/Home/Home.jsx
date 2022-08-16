@@ -11,11 +11,13 @@ import CoursesComponnent from '../../components/CoursesComponent/CoursesComponne
 import HeaderBanner from '../../components/HeaderBanner/HeaderBanner'
 import EnquiryForm from '../../components/EnquiryForm/EnquiryForm'
 import { Box } from '@mui/material'
+import Notification from '../../components/Notification/Notification'
 
 const Home = () => {
   return (
     <>
     <Box sx={{mt:28}}>
+      <Notification />
       <Header />
       <CoursesComponnent />
       <MidBannerOne />

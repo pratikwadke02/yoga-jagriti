@@ -1,0 +1,31 @@
+.notif-track {
+    animation: marquee 10s linear infinite;
+    width: 550%;
+  }
+
+  .notif-marquee-text{
+    font-size: 29px;
+    font-weight: 600;
+    margin: 60px 0px;
+    color: #f02d34;
+  }
+  .notif-marquee {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .notif-track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 20s linear infinite;
+    width: 180%;
+  }
+  .notif-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
