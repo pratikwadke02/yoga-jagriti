@@ -124,7 +124,7 @@ function DrawerAppBar(props) {
           </IconButton>
             <Box sx={{display:'flex', flexDirection:'row', alignItems:'center'}}>
             <img src={images.yoga_jagriti_logo} alt="" height={55} />
-            <img src={images.nav_logo} alt="" height={40} style={{marginLeft:'15px'}} />
+            {/* <img src={images.nav_logo} alt="" height={40} style={{marginLeft:'15px'}} /> */}
             </Box>
           </Box>
           <Box sx={{mr:{xs:0}, flexGrow:0, display:{

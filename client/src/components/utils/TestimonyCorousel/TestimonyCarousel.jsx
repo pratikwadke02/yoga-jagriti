@@ -1,6 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import CommentCard from '../CommentCard/CommentCard'
+import {Box} from '@mui/material';
 
 const TestimonyCorousel = (props) => {
 
@@ -20,6 +21,8 @@ const TestimonyCorousel = (props) => {
       {testimonials.map((testimony, index) => {
         return (
           <Carousel.Item key={index}>
+            <Box sx={{display:'flex'}}>
+              <Box sx={{mr:1}}>
             <CommentCard
               key={index}
               name={testimony.name}
@@ -27,6 +30,17 @@ const TestimonyCorousel = (props) => {
               comment={testimony.comment}
               rating={testimony.rating}
             />
+            </Box>
+            <Box sx={{ml:1}}>
+            <CommentCard
+              key={index}
+              name={testimony.name}
+              role={testimony.role}
+              comment={testimony.comment}
+              rating={testimony.rating}
+            />
+            </Box>
+            </Box>
           </Carousel.Item>
         );
       }

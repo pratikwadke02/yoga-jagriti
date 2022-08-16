@@ -18,16 +18,16 @@ import CheckIcon from "@mui/icons-material/Check";
 const MidBannerOne = () => {
   const ListData = [
     {
-      item: "20+ Styles of Yoga Sed do",
+      item: "We are govt affiliated institution",
     },
     {
-      item: "Professional Yoga Instructors",
+      item: "Training by renowned  yoga  Professional",
     },
     {
-      item: "Quis nostrud exercitation ullamco",
+      item: "400+ student placed in govt or private organisations",
     },
     {
-      item: "All Our Classes Well Planned",
+      item: "5000+ Students trained by yoga professional",
     },
   ];
 
@@ -35,11 +35,12 @@ const MidBannerOne = () => {
     <>
       <Container
         sx={{
+          m:'auto',
           display: "flex",
           flexDirection: { xs: "column", lg: "row" },
           alignItems: "center",
-          justifyContent: "space-between",
-          maxWidth: { xs: "100%", lg: "1300px" },
+          justifyContent: "center",
+          maxWidth: { xs: "100%", lg: "1000px" },
           mt: 10,
         }}
       >
@@ -47,7 +48,8 @@ const MidBannerOne = () => {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
-            width: {xs:"100%", lg:'150%'},
+            width: {xs:"100%"},
+
           }}
         >
           <Box
@@ -58,7 +60,7 @@ const MidBannerOne = () => {
               justifyContent: "center",
               alignItems: { xs: "center", md: "flex-start" },
               width: "100%",
-              mr: 3,
+              // mr: 3,
             }}
           >
             <Typography
@@ -76,7 +78,6 @@ const MidBannerOne = () => {
               variant="h4"
               sx={{ mt: 2, textAlign: { xs: "center", md: "initial" } }}
             >
-              Peace to Your body and mind
             </Typography>
             <Typography variant="h6"></Typography>
             <Box>
@@ -112,23 +113,23 @@ const MidBannerOne = () => {
                 width: "100%",
               }}
             >
-              <Button
+              {/* <Button
                 variant="contained"
                 sx={{ width: "150px", height: "40px" }}
               >
                 <Typography variant="h6">- OUR STORY</Typography>
-              </Button>
+              </Button> */}
             </Box>
           </Box>
-          <Box sx={{ width: "100%" }}>
+          <Box sx={{ width: "100%", display:'flex', justifyContent:'center', alignItems:'center' }}>
             <img
-              src={images.mid_banner_one}
+              src={images.yoga_jagriti_logo}
               alt=""
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", height: "auto", maxHeight:'300px', maxWidth:'300px' }}
             />
           </Box>
         </Box>
-        <Box
+        {/* <Box
           sx={{
             mt: { xs: 4, md: 0 },
             ml: { lg: 4 },
@@ -161,7 +162,7 @@ const MidBannerOne = () => {
               tempor incididunt ut labore et dolore”
             </Typography>
           </Box>
-        </Box>
+        </Box> */}
       </Container>
     </>
   );

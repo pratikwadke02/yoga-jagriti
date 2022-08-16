@@ -64,6 +64,7 @@ const MidBannerFive = () => {
 
         }}
       >
+        <Box sx={{maxWidth:'1600px'}}>
         <Box sx={{textAlign:'center'}}>
         <Typography
             variant="h2"
@@ -80,7 +81,7 @@ const MidBannerFive = () => {
             What our clients say about us
           </Typography>
         </Box>
-        <Box sx={{ mt: 5, display: "flex", flexDirection: {xs:'column', lg:"row"}, width:'100%' , mr:{lg:2}, textAlign:'center'}}>
+        <Box sx={{ mt: 5, display: "flex", flexDirection: {xs:'column', lg:"row"}, width:'100%' , mr:{lg:4}, textAlign:'center'}}>
         <Box
           sx={{
             width: "100%",
@@ -93,8 +94,9 @@ const MidBannerFive = () => {
         >
           <TestimonyCarousel testimonials={testimonials} />
         </Box>
-        <Box sx={{width:'100%', ml:{xs:0, lg:2}, mt:{xs:4, lg:0}}}>
+        <Box sx={{width:'100%', ml:{xs:0, lg:4}, mt:{xs:4, lg:0}}}>
             <VideoCarousel videoData = {videoProps} />
+        </Box>
         </Box>
         </Box>
       </Container>
