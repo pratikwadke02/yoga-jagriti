@@ -1,9 +1,12 @@
 import React from 'react'
 import { Container, Box, Typography } from '@mui/material'
 import {theme} from '../../theme'
-import {images} from '../../constants'
+import {images, pdfs} from '../../constants'
+import SyllabusComponent from '../../components/SyllabusComponent/SyllabusComponent'
 
 const Syllabus = () => {
+
+
   return (
     <>
     <Container
@@ -18,24 +21,13 @@ const Syllabus = () => {
           minHeight: "95vh",
         }}
       >
-        <Box sx={{maxWidth:'1400px', m:'auto', textAlign:'center'}}>
+        <Box sx={{maxWidth:'1400px', m:'auto', textAlign:'center', mb:4}}>
             <Typography variant="h2" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold}}>
                 Syllabus
             </Typography>
             <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
         </Box>
-        <Box sx={{pt:4, maxWidth:'1400px', m:'auto',display:'flex', justifyContent:'center', alignItems:'center'}}>
-            <Box sx={{mr:1}}>
-                <Typography variant="h5" sx={{}}>
-                    Yoga Instructor
-                </Typography>
-            </Box>
-            <Box sx={{ml:1}}>
-                <Typography variant="h6" sx={{}}>
-                    Click here to download the syllabus
-                </Typography>
-            </Box>
-        </Box>
+        <SyllabusComponent />
       </Container>
     </>
   )
