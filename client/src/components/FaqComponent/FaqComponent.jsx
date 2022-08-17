@@ -112,20 +112,20 @@ const FaqComponent = () => {
   //
   return (
     <>
-      <div class="faq-area ptb-80">
-        <div class="container">
+      <div className="faq-area ptb-80">
+        <div className="container">
           <div
-            class="accordion accordion-flush"
+            className="accordion accordion-flush"
             id="accordionFlushExample"
           >
             {faqData.map((faq, index) => {
               return (
                 <Box className="accordion-item" sx={{marginBottom:'10px', border:'none', boxShadow:1, borderRadius:'5px' }}>
-                  <h2 class="accordion-header" 
+                  <h2 className="accordion-header" 
 				  id={`flush-heading-${index}`}
 				  >
                     <button
-                      class="accordion-button collapsed"
+                      className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target={`#flush-collapse-${index}`}
@@ -143,11 +143,11 @@ const FaqComponent = () => {
                   </h2>
                   <div
                     id={`flush-collapse-${index}`}
-                    class="accordion-collapse collapse"
+                    className="accordion-collapse collapse"
                     aria-labelledby={`flush-heading-${index}`}
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div class="accordion-body">
+                    <div className="accordion-body">
                       <Typography
                         variant="h6"
                         sx={{ color: theme.palette.text.dark }}
@@ -161,54 +161,54 @@ const FaqComponent = () => {
             })}
           </div>
 
-          {/* <div class="faq-contact">
+          {/* <div className="faq-contact">
             <h3>Ask Your Question</h3>
             <form>
-              <div class="row">
-                <div class="col-lg-6 col-md-6">
-                  <div class="form-group">
+              <div className="row">
+                <div className="col-lg-6 col-md-6">
+                  <div className="form-group">
                     <input
                       type="text"
                       placeholder="Name"
-                      class="form-control"
+                      className="form-control"
                     />
                   </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6">
-                  <div class="form-group">
+                <div className="col-lg-6 col-md-6">
+                  <div className="form-group">
                     <input
                       type="email"
                       placeholder="Email"
-                      class="form-control"
+                      className="form-control"
                     />
                   </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <input
                       type="text"
                       placeholder="Subject"
-                      class="form-control"
+                      className="form-control"
                     />
                   </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <textarea
                       name="message"
                       cols="30"
                       rows="6"
                       placeholder="Message"
-                      class="form-control"
+                      className="form-control"
                     ></textarea>
                   </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12">
-                  <button class="btn btn-primary" type="submit">
+                <div className="col-lg-12 col-md-12">
+                  <button className="btn btn-primary" type="submit">
                     Submit Now!
                   </button>
                 </div>

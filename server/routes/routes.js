@@ -6,7 +6,10 @@ module.exports = (app) => {
     const router = require('express').Router();
 
     router.post("/addStudent", student.create);
+    router.get("/getAllStudents", student.findAll);
+
     router.post("/addResponse", response.create);
+
     router.post("/addEnquiry", enquiry.create);
 
     app.use("/api/yoga", router);
