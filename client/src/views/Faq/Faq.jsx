@@ -9,7 +9,6 @@ const Faq = () => {
     <>
     <Box sx={{
       
-      mt: 28,
       backgroundColor: theme.palette.background.light,
       backgroundImage: `url(${images.pattern_three})`,
       height: "100%",

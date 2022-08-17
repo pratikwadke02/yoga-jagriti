@@ -49,7 +49,7 @@ const Notification = () => {
 
   return (
     <>
-    <Box sx={{minHeight:'40px', display:'flex', alignItems:'center'}}>
+    <Box sx={{minHeight:'40px', display:'flex', alignItems:'center', borderBottom:'1px solid'+theme.palette.primary.main, borderTop:'1px solid'+theme.palette.primary.main}}>
         <Box sx={{width:'150px',display:'flex', alignItems:'center',justifyContent:'center', backgroundColor:theme.palette.primary.main, height:'40px'}}>
             <Typography variant='h5' sx={{color:theme.palette.text.default}}
             >Notifications

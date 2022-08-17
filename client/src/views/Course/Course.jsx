@@ -9,8 +9,6 @@ const Course = () => {
     <>
     <Container
         sx={{
-          
-          mt: 28,
           pb:8,
           maxWidth: { xs: "100%" },
           pt: 5,

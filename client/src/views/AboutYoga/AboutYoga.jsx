@@ -13,8 +13,6 @@ const AboutYoga = () => {
     <>
         <Container
         sx={{
-          
-          mt: 28,
           maxWidth: { xs: "100%" },
           pt: 5,
           backgroundColor: theme.palette.background.light,

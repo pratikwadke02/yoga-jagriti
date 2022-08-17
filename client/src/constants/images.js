@@ -49,6 +49,7 @@ import bottom_logo_three from '../assets/images/bottom_logo_three.jpg';
 import bottom_logo_four from '../assets/images/bottom_logo_four.jpg';
 import bottom_logo_five from '../assets/images/bottom_logo_five.jpg';
 import bottom_logo_six from '../assets/images/bottom_logo_six.jpg';
+import yoga_jagriti_logo_two from '../assets/images/yoga_jagriti_logo_two.png';
 
 export default {
     slider_1,
@@ -102,4 +103,5 @@ export default {
     bottom_logo_four,
     bottom_logo_five,
     bottom_logo_six,
+    yoga_jagriti_logo_two,
 }

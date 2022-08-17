@@ -16,7 +16,7 @@ import Notification from '../../components/Notification/Notification'
 const Home = () => {
   return (
     <>
-    <Box sx={{mt:28}}>
+    <Box sx={{}}>
       <Notification />
       <Header />
       <CoursesComponnent />

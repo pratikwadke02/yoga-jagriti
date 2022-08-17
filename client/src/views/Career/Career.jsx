@@ -100,7 +100,6 @@ const Career = () => {
         disableGutters
         sx={{
           
-          mt: 28,
           pt: 5,
           maxWidth: { xs: "100%" },
         }}

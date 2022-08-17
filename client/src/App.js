@@ -37,7 +37,7 @@ function App() {
         <Route path="/all-courses" element={<AllCourses />} />
         <Route path="/syllabus" element={<Syllabus />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
       </BrowserRouter>
     </ThemeProvider>
     </>

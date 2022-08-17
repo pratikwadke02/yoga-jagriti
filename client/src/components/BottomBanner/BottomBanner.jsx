@@ -34,7 +34,7 @@ const BottomBanner = () => {
 
   return (
     <>
-    <Container>
+    <Container sx={{mt:5, mb:5}}>
         <Box>
           <LogoContainer />
         </Box>
