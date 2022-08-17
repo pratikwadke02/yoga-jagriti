@@ -38,6 +38,9 @@ module.exports = (sequelize, Sequelize) => {
     spouseName: {
       type: Sequelize.STRING,
     },
+    courseName: {
+      type: Sequelize.STRING,
+    },
     category: {
       type: Sequelize.STRING,
     },

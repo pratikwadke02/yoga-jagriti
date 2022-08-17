@@ -2,10 +2,15 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { theme } from "../../theme";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./ContactForm.css";
 
 const ContactForm = () => {
+
+  const {name} = useParams();
+  console.log(name);
+
   const state = [
     {
       state: "Andhra Pradesh",
@@ -887,6 +892,7 @@ const ContactForm = () => {
   ];
 
   const [data, setData] = useState({
+    courseName: name,
     country: "",
     title: "",
     firstName: "",
@@ -1179,6 +1185,21 @@ const ContactForm = () => {
                   placeholder="Spouse's Name"
                   value={data.spouseName}
                   onChange={handleChange}
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="spouseName"
+                  id="spouse-name"
+                  class="form-control"
+                  data-error="Please enter your spouse name"
+                  placeholder="Spouse's Name"
+                  value={data.courseName}
+                  disabled
                 />
                 <div class="help-block with-errors"></div>
               </div>

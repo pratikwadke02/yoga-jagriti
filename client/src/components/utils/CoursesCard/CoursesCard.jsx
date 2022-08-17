@@ -1,5 +1,5 @@
 import { images } from "../../../constants";
-import { Box, Button, Container, Typography, IconButton, Card } from "@mui/material";
+import { Box, Button, Container, Typography, IconButton, Card, dialogTitleClasses } from "@mui/material";
 import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -105,7 +105,7 @@ const ProgramCard = (props) => {
             
             <Box sx={{display:'flex', flexDirection:'row', justifyContent:'flex-start', width:'100%'}}>
 <Box sx={{width:'100%', mt:1}}>
-              <Link to="/course" style={{textDecoration:'none'}}>
+              <Link to={`/course/${name}`} style={{textDecoration:'none'}}>
               <Button variant="contained" color="primary" sx={{width:'100%'}}>
                 <Typography variant="h6" sx={{color:theme.palette.text.default }}>
                 Enroll Now

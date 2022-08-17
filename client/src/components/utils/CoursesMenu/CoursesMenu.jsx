@@ -85,7 +85,7 @@ const CoursesMenu = (props) => {
           }}
         >
           <Box sx={{ width: "100%", mt: 2 }}>
-            <Link to="/course" style={{ textDecoration: "none" }}>
+            <Link to={`/course/${name}`} style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 color="primary"
