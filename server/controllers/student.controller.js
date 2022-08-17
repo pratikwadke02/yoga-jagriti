@@ -25,3 +25,17 @@ exports.findAll = async (req, res) => {
     }
     );
 }
+
+exports.findOne = async (req, res) => {
+    Student.findOne({
+        where: {
+            id: req.params.id
+        }
+    }).then(data => {
+        res.send(data);
+    }).catch(err => {
+        res.send(err);
+        console.log(err);
+    }
+    );
+}

@@ -7,6 +7,7 @@ module.exports = (app) => {
 
     router.post("/addStudent", student.create);
     router.get("/getAllStudents", student.findAll);
+    router.get("/getStudent/:id", student.findOne);
 
     router.post("/addResponse", response.create);
 
