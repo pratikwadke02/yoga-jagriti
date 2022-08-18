@@ -2,8 +2,15 @@ import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "./Register.css";
 import { theme } from "../../theme";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { register } from "../../actions/auth";
+import { useDispatch } from "react-redux";
+
+const initialState = {
+  email: "",
+  password: "",
+  confirmPassword: "",
+};
 
 const RegisterComponent = () => {
   const [authInfo, setAuthInfo] = useState({
@@ -11,6 +18,10 @@ const RegisterComponent = () => {
     password: "",
     confirmPassword: "",
   });
+
+  const [error, setError] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = ({ currentTarget: input }) => {
     setAuthInfo({ ...authInfo, [input.name]: input.value });
@@ -21,22 +32,10 @@ const RegisterComponent = () => {
     e.preventDefault();
     try {
         console.log(authInfo);
-        await axios
-          .post("http://localhost:8080/api/yoga/register", authInfo)
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-          setAuthInfo({
-            email: "",
-            password: "",
-            confirmPassword: "",
-            });
-        } catch (error) {
-            console.log(error);
-            }
+        dispatch(register(authInfo, navigate));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -70,15 +69,33 @@ const RegisterComponent = () => {
               <form onSubmit={submitHandler}>
                 <div class="mb-3">
                   <label class="form-label">E-mail</label>
-                  <input name="email" type="email" class="form-control" value={authInfo.email} onChange={handleChange} />
+                  <input
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    value={authInfo.email}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Password</label>
-                  <input name="password" type="password" class="form-control" value={authInfo.password} onChange={handleChange} />
+                  <input
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    value={authInfo.password}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Confirm Password</label>
-                  <input name="confirmPassword" type="password" class="form-control" value={authInfo.confirmPassword} onChange={handleChange} />
+                  <input
+                    name="confirmPassword"
+                    type="password"
+                    class="form-control"
+                    value={authInfo.confirmPassword}
+                    onChange={handleChange}
+                  />
                 </div>
                 <button
                   type="submit"

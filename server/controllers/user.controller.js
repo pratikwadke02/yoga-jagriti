@@ -1,54 +1,69 @@
 const db = require('../models');
 const User = db.user;
 
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
+const register = require('../middleware/register.js');
+const loginValidate = require('../middleware/login');
+
+
+const SALT = 10;
+
 exports.register = async (req, res) => {
+    try{
     console.log(req.body);
-    if (req.body.password != req.body.confirmPassword) {
-        res.send(
-            {
-                message: "Password and Confirm Password do not match",
-            }
-        );
-    } else {   
-        User.create(req.body).then(data => {
-            res.send(
-                {
-                    message: "User created successfully",
-                }
-            );
-        }).catch(err => {
-            res.send(err);
-            console.log(err);
-        }
-        );
+    const { error } = register.registerValidate(req.body);
+    if (error) {
+        console.log(error);
+        return res.status(400).send(error.details[0].message);
     }
+    const user = await User.findOne({
+        where: {
+            email: req.body.email,
+        }
+    });
+    if (user) {
+        return res.status(400).send('User already registered.');
+    }
+    const salt = await bcrypt.genSalt(SALT);
+    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+    await User.create({
+        ...req.body,
+        password: hashedPassword,
+    });
+    res.send({data: req.body});
+}catch(err){
+    console.log(err);
+    res.status(500).send(err);
+}
+    
 }
 
 exports.login = async (req, res) => {
-    console.log(req.body);
-    User.findOne({
-        where: {
-            email: req.body.email,
-            password: req.body.password,
+    try{
+        const {error} = loginValidate(req.body);
+        if(error){
+            console.log(error);
+            return res.status(400).send(error.details[0].message);
         }
-    }).then(data => {
-        if (data) {
-            res.send(
-                {
-                    message: "User found",
-                    data: data,
-                }
-            );
-        } else if (!data) {
-            res.send(
-                {
-                    message: "Invalid credentials",
-                }
-            );
+        const user = await User.findOne({
+            where: {
+                email: req.body.email,
+            }
+        });
+        if(!user){
+            return res.status(400).send('Invalid email or password.');
         }
-    }).catch(err => {
-        res.send(err);
-        console.log(err);
+        const validPassword = await bcrypt.compare(req.body.password, user.password);
+        if(!validPassword){
+            return res.status(400).send('Invalid email or password.');
+        }
+        res.send({
+            data: user,
+        });
+    }catch(error){
+        console.log(error);
+        res.status(500).send(error);
     }
-    );
 }
