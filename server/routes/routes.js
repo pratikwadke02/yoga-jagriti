@@ -10,8 +10,10 @@ module.exports = (app) => {
     router.get("/getStudent/:id", student.findOne);
 
     router.post("/addResponse", response.create);
+    router.get("/getAllResponses", response.findAll );
 
     router.post("/addEnquiry", enquiry.create);
+    router.get("/getAllEnquiries", enquiry.findAll);
 
     app.use("/api/yoga", router);
 }

@@ -14,3 +14,14 @@ exports.create = async (req, res) => {
         console.log(err);
     });
 }
+
+exports.findAll = async (req, res) => {
+    Enquiry.findAll().then(data => {
+        console.log(data);
+        res.send(data);
+    }).catch(err => {
+        res.send(err);
+        console.log(err);
+    }
+    );
+}

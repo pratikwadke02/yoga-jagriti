@@ -1085,9 +1085,9 @@ const ContactForm = () => {
                   onChange={handleChange}
                 >
                   <option selected>Select Gender</option>
-                  <option value="Shri">Male</option>
-                  <option value="Smt">Female</option>
-                  <option value="Ms">Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
                 <div class="help-block with-errors"></div>
               </div>
