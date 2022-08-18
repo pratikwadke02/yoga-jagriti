@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 const register = require('../middleware/register.js');
-const loginValidate = require('../middleware/login');
+const login = require('../middleware/login.js');
 
 
 const SALT = 10;
@@ -42,7 +42,7 @@ exports.register = async (req, res) => {
 
 exports.login = async (req, res) => {
     try{
-        const {error} = loginValidate(req.body);
+        const {error} = login.loginValidate(req.body);
         if(error){
             console.log(error);
             return res.status(400).send(error.details[0].message);

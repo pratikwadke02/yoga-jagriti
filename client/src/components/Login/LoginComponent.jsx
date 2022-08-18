@@ -2,9 +2,15 @@ import React, {useState} from "react";
 import { Box, Typography } from "@mui/material";
 import "./Login.css";
 import { theme } from "../../theme";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Facebook, Mail, Twitter } from "react-feather";
-import axios from "axios";
+import { login } from "../../actions/auth";
+import {useDispatch} from 'react-redux';
+
+const initialState = {
+  email: "",
+  password: "",
+};
 
 const LoginComponent = () => {
 
@@ -12,6 +18,9 @@ const LoginComponent = () => {
     email: "",
     password: "",
   });
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = ({ currentTarget: input }) => {
     setAuthInfo({ ...authInfo, [input.name]: input.value });
@@ -21,23 +30,10 @@ const LoginComponent = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try{
-      console.log(authInfo);
-        const { user } = await axios
-          .post("http://localhost:8080/api/yoga/login", authInfo)
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-          console.log(user);
-          setAuthInfo({
-            email: "",
-            password: "",
-            });
-        } catch (error) {
-            console.log(error);
-            }
+      dispatch(login(authInfo, navigate));
+    }catch(error){
+      console.log(error);
+    }
   }
 
   return (
