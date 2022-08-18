@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Box, Typography } from "@mui/material";
 import "./Login.css";
 import { theme } from "../../theme";
@@ -6,6 +6,16 @@ import { Link } from "react-router-dom";
 import { Facebook, Mail, Twitter } from "react-feather";
 
 const LoginComponent = () => {
+
+  const [ authInfo, setAuthInfo] = useState({
+    email: "",
+    password: "",
+  });
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <>
       <Box sx={{}}>
@@ -43,7 +53,7 @@ const LoginComponent = () => {
                   </Link>
                 </p>
               </div>
-              <form>
+              <form onSubmit={submitHandler}>
                 <div class="mb-3">
                   <label class="form-label">E-mail</label>
                   <input type="email" class="form-control" />

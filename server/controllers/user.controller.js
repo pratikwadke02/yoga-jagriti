@@ -9,16 +9,6 @@ exports.create = async (req, res) => {
                 message: "Password and Confirm Password do not match",
             }
         );
-    } else if ( User.findOne({
-        where: {
-            email: req.body.email
-        }
-    })) {
-        res.send(
-            {
-                message: "Email already exists",
-            }
-        );
     } else {   
         User.create(req.body).then(data => {
             res.send(
