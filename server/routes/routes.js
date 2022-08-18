@@ -16,7 +16,7 @@ module.exports = (app) => {
     router.post("/addEnquiry", enquiry.create);
     router.get("/getAllEnquiries", enquiry.findAll);
 
-    router.post("/addUser", user.create);
+    router.post("/addUser", user.register);
 
     app.use("/api/yoga", router);
 }
