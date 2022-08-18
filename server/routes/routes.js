@@ -2,6 +2,7 @@ module.exports = (app) => {
     const student = require('../controllers/student.controller.js');
     const response = require('../controllers/response.controller.js');
     const enquiry = require('../controllers/enquiry.controller.js');
+    const user = require('../controllers/user.controller.js');
 
     const router = require('express').Router();
 
@@ -14,6 +15,8 @@ module.exports = (app) => {
 
     router.post("/addEnquiry", enquiry.create);
     router.get("/getAllEnquiries", enquiry.findAll);
+
+    router.post("/addUser", user.create);
 
     app.use("/api/yoga", router);
 }
