@@ -22,7 +22,7 @@ const RegisterComponent = () => {
     try {
         console.log(authInfo);
         await axios
-          .post("http://localhost:8080/api/yoga/addUser", authInfo)
+          .post("http://localhost:8080/api/yoga/register", authInfo)
           .then((res) => {
             console.log(res);
           })

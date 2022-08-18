@@ -4,6 +4,7 @@ import "./Login.css";
 import { theme } from "../../theme";
 import { Link } from "react-router-dom";
 import { Facebook, Mail, Twitter } from "react-feather";
+import axios from "axios";
 
 const LoginComponent = () => {
 
@@ -12,8 +13,31 @@ const LoginComponent = () => {
     password: "",
   });
 
-  const submitHandler = (e) => {
+  const handleChange = ({ currentTarget: input }) => {
+    setAuthInfo({ ...authInfo, [input.name]: input.value });
+    console.log(authInfo);
+  }
+
+  const submitHandler = async (e) => {
     e.preventDefault();
+    try{
+      console.log(authInfo);
+        const { user } = await axios
+          .post("http://localhost:8080/api/yoga/login", authInfo)
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+          console.log(user);
+          setAuthInfo({
+            email: "",
+            password: "",
+            });
+        } catch (error) {
+            console.log(error);
+            }
   }
 
   return (
@@ -56,11 +80,11 @@ const LoginComponent = () => {
               <form onSubmit={submitHandler}>
                 <div class="mb-3">
                   <label class="form-label">E-mail</label>
-                  <input type="email" class="form-control" />
+                  <input name="email" type="email" class="form-control" value={authInfo.email} onChange={handleChange} />
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Password</label>
-                  <input type="password" class="form-control" />
+                  <input name="password" type="password" class="form-control" value={authInfo.password} onChange={handleChange} />
                 </div>
                 <div class="mb-3">
                   <a
