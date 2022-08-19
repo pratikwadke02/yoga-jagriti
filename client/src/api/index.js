@@ -14,3 +14,5 @@ API.interceptors.request.use((req) => {
 export const login = (authInfo) => API.post('/login', authInfo);
 export const register = (authInfo) => API.post('/register', authInfo);
 
+
+export const getAllProducts = () => API.get('/getAllProducts');

@@ -1,12 +1,23 @@
-import React from "react";
-import { Container, Box, Typography } from "@mui/material";
+import React, {useState, useEffect} from "react";
+import axios from 'axios';
+import { Container, Box, Typography, Grid } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
 import ProductCard from "../../components/utils/ProductCard/ProductCard";
 
 const Shop = () => {
 
-  const products = 3;
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProductsData = async () => {
+      const { data } = await axios.get('http://localhost:8080/api/yoga/getAllProducts');
+      setProducts(data);
+      console.log(products);
+    };
+    getProductsData();
+  }, []);
+
 
   return (
     <>
@@ -75,37 +86,20 @@ const Shop = () => {
             </Typography>
           </Box>
           <Box
-            sx={{ width: "100%", maxWidth: "1100px", display: "flex",flexDirection:'column', p: 1 }}
+            sx={{ width: "100%", maxWidth: "1100px", display: "flex",flexDirection:'column', p: 2}}
           >
-            {
-              Array.from({ length: products }, (v, k) => k).map((product) => {
-                return (
-                  <Box sx={{display:'flex', width:'100%'}}>
-              <Box sx={{ width: "100%", mr: 1, ml: 1, mb:2 }}>
-                <ProductCard
-                  name="Product Name"
-                  desc="Product details"
-                  price="9.99"
-                />
-              </Box>
-              <Box sx={{ width: "100%", mr: 1, ml: 1,mb:2}}>
-                <ProductCard
-                  name="Product Name"
-                  desc="Product details"
-                  price="9.99"
-                />
-              </Box>
-              <Box sx={{ width: "100%", mr: 1, ml: 1, mb:2 }}>
-                <ProductCard
-                  name="Product Name"
-                  desc="Product details"
-                  price="9.99"
-                />
-              </Box>
-            </Box>
+            <Grid container spacing={3} >
+              {
+                products.map((product, index) => {
+                  return (
+                    <Grid item xs={12} md={6} lg={4} key={index}>
+                      <ProductCard name={product.name} price={product.price} desc={product.description} quantity={product.quantity} discountPrice={product.discountPrice} />
+                    </Grid>
+                  );
+                }
                 )
-                })
-            }
+              }
+            </Grid>
           </Box>
         </Box>
       </Container>

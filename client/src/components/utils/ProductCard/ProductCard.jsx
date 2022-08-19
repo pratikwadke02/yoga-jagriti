@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const ProgramCard = (props) => {
 
-  const {name, image, desc, price} = props;
+  const {name, image, desc, price, quantity, discountPrice} = props;
 
   return (
     <>
@@ -65,8 +65,8 @@ const ProgramCard = (props) => {
             alignItems: "center",
           }}
         >
-          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
-          ₹ {price}
+          <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightMedium }}>
+          ₹{discountPrice} <Typography variant="h7" sx={{color:theme.palette.text.dark,}}><s>₹{price}</s> </Typography>
           </Typography>
           <Box sx={{display:'flex'}}>
           <IconButton>
