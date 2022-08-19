@@ -18,6 +18,7 @@ module.exports = (app) => {
 
     router.post("/register", user.register);
     router.post("/login", user.login);
+    router.get("/getAllUsers", user.findAll);
 
     app.use("/api/yoga", router);
 }

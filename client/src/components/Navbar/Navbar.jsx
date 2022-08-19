@@ -75,8 +75,8 @@ function DrawerAppBar(props) {
     return {
       height: "37px",
       border: "1px solid"+theme.palette.background.default,
-      paddingLeft: "20px",
-      paddingRight: "20px",
+      paddingLeft: "10px",
+      paddingRight: "10px",
       alignItems: "center",
       textDecoration: "none",
       color: isActive ? theme.palette.primary.main : theme.palette.text.default,

@@ -3,7 +3,7 @@ import './HeaderBanner.css'
 import { Box, Typography, Container } from "@mui/material";
 import {images} from '../../constants'
 import {theme} from '../../theme'
-import ProgramCard from "../../components/utils/ProgramCard/ProgramCard";
+import ProgramCard from "../utils/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
 
 const HeaderBanner = () => {

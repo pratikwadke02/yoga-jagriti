@@ -67,3 +67,13 @@ exports.login = async (req, res) => {
         res.status(500).send(error);
     }
 }
+
+exports.findAll = async (req, res) => {
+    try{
+        const users = await User.findAll();
+        res.send(users);
+    }catch(error){
+        console.log(error);
+        res.status(500).send(error);
+    }
+}

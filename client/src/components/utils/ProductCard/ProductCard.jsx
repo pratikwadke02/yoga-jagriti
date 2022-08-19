@@ -66,7 +66,7 @@ const ProgramCard = (props) => {
           }}
         >
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold }}>
-            INR {price}
+          ₹ {price}
           </Typography>
           <Box sx={{display:'flex'}}>
           <IconButton>
