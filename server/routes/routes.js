@@ -3,6 +3,7 @@ module.exports = (app) => {
     const response = require('../controllers/response.controller.js');
     const enquiry = require('../controllers/enquiry.controller.js');
     const user = require('../controllers/user.controller.js');
+    const product = require('../controllers/product.controller.js');
 
     const router = require('express').Router();
 
@@ -19,6 +20,9 @@ module.exports = (app) => {
     router.post("/register", user.register);
     router.post("/login", user.login);
     router.get("/getAllUsers", user.findAll);
+
+    router.post("/addProduct", product.create);
+    router.get("/getAllProducts", product.findAll );
 
     app.use("/api/yoga", router);
 }
