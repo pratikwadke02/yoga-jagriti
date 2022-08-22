@@ -16,3 +16,4 @@ export const register = (authInfo) => API.post('/register', authInfo);
 
 
 export const getAllProducts = () => API.get('/getAllProducts');
+export const getProductById = (id) => API.get(`/getProduct/${id}`);

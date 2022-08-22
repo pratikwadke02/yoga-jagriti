@@ -11,3 +11,11 @@ export const getAllProducts = () => async(dispatch) => {
     }
 }
 
+export const getProductById = (id) => async(dispatch) => {
+    try{
+        const {data} = await api.getProductById(id);
+        dispatch({ type : GET_ALL_PRODUCTS, data });
+    }catch(error){
+        console.log(error);
+    }
+}

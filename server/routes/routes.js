@@ -23,6 +23,7 @@ module.exports = (app) => {
 
     router.post("/addProduct", product.create);
     router.get("/getAllProducts", product.findAll );
+    router.post("/getProduct", product.findProductById);
 
     app.use("/api/yoga", router);
 }
