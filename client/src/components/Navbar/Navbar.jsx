@@ -68,6 +68,10 @@ const navItems = [
     name: "FAQ",
     path: "faq",
   },
+  {
+    name: "Cart",
+    path: "cart",
+  }
 ];
 
 function DrawerAppBar(props) {
@@ -237,7 +241,10 @@ function DrawerAppBar(props) {
                   </NavLink>
                 </>
               ))}
-              <Box sx={{ border: '1px solid'+theme.palette.background.default, pr:'10px', pl:'10px', height:'37px'}}>
+              <Box sx={{ 
+                // border: '1px solid'+theme.palette.background.default, height:'37px'
+                }}>
+              {/* <NavLink to='/cart' style={navLinkStyles}>
             <IconButton>
               <ShoppingCartOutlinedIcon
                 fontSize="small"
@@ -247,6 +254,7 @@ function DrawerAppBar(props) {
                 }}
               />
             </IconButton>
+            </NavLink> */}
             </Box>
             </Box>
           </Box>

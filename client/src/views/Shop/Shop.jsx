@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Container, Box, Typography, Grid } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
-import ProductCard from "../../components/utils/ProductCard/ProductCard";
+import ShopCard from "../../components/utils/ProductCard/ShopCard";
 
 const Shop = () => {
 
@@ -70,14 +70,14 @@ const Shop = () => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            alignItems: "flex-start",
+            alignItems: {xs:'center', md:"flex-start"},
             justifyContent: "space-between",
             maxWidth: "1400px",
             m: "auto",
             mt: 3,
           }}
         >
-          <Box sx={{ width: "100%", maxWidth: "300px" }}>
+          <Box sx={{width: "100%", height:'100%',minHeight:'95vh', maxWidth: "300px", backgroundColor:theme.palette.background.default, boxShadow:1, borderRadius:'5px',display:{xs:'none', md:'flex'}, mr:1 }}>
             <Typography
               variant="h5"
               sx={{ m: "auto", color: theme.palette.text.main }}
@@ -86,14 +86,14 @@ const Shop = () => {
             </Typography>
           </Box>
           <Box
-            sx={{ width: "100%", maxWidth: "1100px", display: "flex",flexDirection:'column', p: 2}}
+            sx={{ width: "100%", maxWidth: "1100px", display: "flex",flexDirection:'column',ml:1, alignItems:'center'}}
           >
             <Grid container spacing={3} >
               {
                 products.map((product, index) => {
                   return (
-                    <Grid item xs={12} md={6} lg={4} key={index}>
-                      <ProductCard name={product.name} price={product.price} desc={product.description} quantity={product.quantity} discountPrice={product.discountPrice} />
+                    <Grid item xs={12} sm={6} lg={4} key={index}>
+                      <ShopCard id={product.id} name={product.name} price={product.price} desc={product.description} quantity={product.quantity} discountPrice={product.discountPrice} />
                     </Grid>
                   );
                 }

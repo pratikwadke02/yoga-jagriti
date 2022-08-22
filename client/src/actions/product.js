@@ -1,4 +1,4 @@
-import {GET_ALL_PRODUCTS} from '../constants/actionTypes';
+import {GET_ALL_PRODUCTS, ADD_TO_CART} from '../constants/actionTypes';
 
 import * as api from '../api/index.js';
 
@@ -10,3 +10,4 @@ export const getAllProducts = () => async(dispatch) => {
         console.log(error);
     }
 }
+

@@ -17,6 +17,7 @@ import Course from './views/Course/Course';
 import AllCourses from './views/AllCourses/AllCourses';
 import Syllabus from './views/Syllabus/Syllabus';
 import Shop from './views/Shop/Shop';
+import Cart from './views/Cart/Cart';
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         <Route path="/course/:name" element={<Course />} />
         <Route path="/all-courses" element={<AllCourses />} />
         <Route path="/syllabus" element={<Syllabus />} />
-        <Route path='/shop' element={<Shop />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
       </BrowserRouter>
