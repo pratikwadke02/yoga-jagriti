@@ -5,6 +5,8 @@ import {images} from '../../constants'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import CartCard from '../../components/utils/CartCard/CartCard'
+import OrderComponent from '../../components/OrderComponent/OrderComponent'
+import PaymentDetails from '../../components/PaymentSummary/PaymentSummary'
 
 const Cart = () => {
 
@@ -58,55 +60,25 @@ const Cart = () => {
           minHeight: "50vh",
         }}
       >
-        <Box sx={{maxWidth:'800px', display:'flex', flexDirection:'column', m:'auto', backgroundColor:theme.palette.background.default, borderRadius:'5px', p:2}}>
+        
           <Box sx={{width:'100%', m:'auto', textAlign:'center', pb:2}}>
             <Typography variant="h2" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}>
               CART
             </Typography>
             <div className="darkbar" style={{margin:'auto', marginTop:'20px' }}></div>
           </Box>
-          
-          {cartData ? (
-            cartData.map((item, index) => {
-              return (
-                <>
-                <Box sx={{m:'auto', width:'100%', maxWidth:'500px'}}>
-                  <CartCard id={item.id} name={item.name} image={item.image} desc={item.description} price={item.price} quantity={item.quantity} discountPrice={item.discountPrice} /> 
-                  <Divider sx={{backgroundColor:theme.palette.text.main}} />
-                </Box>
-                </>
-              )
-            } )
 
-          ) : (
-            <Box sx={{p:4, maxWidth:'400px', m:'auto'}}>
-              <Typography variant="h4" sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium,  }}>
-                No Items in Cart
-              </Typography>
-            </Box>
-          )
-          }
-              <Box sx={{ textAlign:'left', maxWidth:'530px',width:'100%', m:'auto', p:2}}>
-            <Box>
-              <Typography variant="h6" sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium,  }}>
-                Total: {getTotalPrice().totalPrice}
-              </Typography>
-              <Typography variant="h6" sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium,  }}>
-                Discount: {calculateDiscount(getTotalPrice().totalPrice, getTotalPrice().totalDiscountPrice)}%
-              </Typography>
-              <Typography variant="h6" sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium,  }}>
-                Discounted Price: {getTotalPrice().totalDiscountPrice}
-              </Typography>
-            </Box>
-            <Box sx={{width:'100%', display:'flex', justifyContent:'center', mt:2}}>
-              <Button variant="contained" color="primary" sx={{width:'100%', maxWidth:'200px'}}>
-                <Typography variant="h6" sx={{color:theme.palette.text.default  }}>
-                Checkout
-                </Typography>
-              </Button>
-            </Box>
+
+          <Box sx={{maxWidth:'1300px', display:'flex', flexDirection:{xs:'column', md:'row'},alignItems:'flex-start',justifyContent:'center', width:'100%', m:'auto'}}>
+          <Box sx={{maxWidth:'800px',height:'100%', display:'flex', flexDirection:'column', backgroundColor:theme.palette.background.default, borderRadius:'5px', p:2, width:'100%', boxShadow:1, mr:{xs:0, md:2}}}>
+          <OrderComponent />
           </Box>
+          <Box sx={{maxWidth:'400px',height:'100%', display:'flex', flexDirection:'column', backgroundColor:theme.palette.background.default, borderRadius:'5px', p:2, width:'100%', boxShadow:1, ml:{xs:0, md:2}, m:{xs:'auto', md:0}, mt:{xs:4, md:0}}}>
+          <PaymentDetails totalDiscountPrice={getTotalPrice().totalDiscountPrice } totalPrice={getTotalPrice().totalPrice} totalDiscount={calculateDiscount( getTotalPrice().totalPrice, getTotalPrice().totalDiscountPrice )} />
         </Box>
+        </Box>
+
+
       </Container>
     </>
   )
