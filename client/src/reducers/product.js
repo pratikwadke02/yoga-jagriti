@@ -1,6 +1,6 @@
 import * as actionType from '../constants/actionTypes';
 
-const productReducer = (state = { products: null }, action) => {
+const productReducer = (state = { products: [] }, action) => {
     switch (action.type) {
         case actionType.GET_ALL_PRODUCTS:
             return { ...state, products: action.data };

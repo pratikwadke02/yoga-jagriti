@@ -1,12 +1,18 @@
 import React from "react";
-import './HeaderBanner.css'
+import "./HeaderBanner.css";
 import { Box, Typography, Container } from "@mui/material";
-import {images} from '../../constants'
-import {theme} from '../../theme'
-import ProgramCard from "../utils/ProductCard/ProductCard";
+import { images } from "../../constants";
+import { theme } from "../../theme";
+import ProductCard from "../utils/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const HeaderBanner = () => {
+  const productsData = useSelector((state) => state.product.products);
+
+  const productDataOne = productsData.slice(0,3);
+  const productDataTwo = productsData.slice(3,5);
+
   const headBannerDataOne = [
     {
       name: "Support & Motivation",
@@ -35,12 +41,12 @@ const HeaderBanner = () => {
     <>
       <Container
         sx={{
-          mt:10,
-          pb:4,
-          maxWidth: {xs:'100%'},
+          mt: 10,
+          pb: 4,
+          maxWidth: { xs: "100%" },
           minHeight: "393px",
           display: "flex",
-          flexDirection: {xs:"column"},
+          flexDirection: { xs: "column" },
           justifyContent: "space-between",
           alignItems: "center",
           backgroundImage: `url(${images.pattern})`,
@@ -48,46 +54,152 @@ const HeaderBanner = () => {
           color: theme.palette.text.default,
         }}
       >
-        <Box  sx={{width:'100%', mt:4, mb:2}}>
-          <Box sx={{m:'auto', maxWidth:'1500px', width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
-          <Typography variant="h4" sx={{ fontWeight:theme.typography.fontWeightBold,  }}>
-            Our Natural Products   
-          <div className="lightbar"></div>
-          </Typography>
-          <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold,}}>
-            See All
-          </Typography>
+        <Box sx={{ width: "100%", mt: 4, mb: 2 }}>
+          <Box
+            sx={{
+              m: "auto",
+              maxWidth: "1500px",
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: theme.typography.fontWeightBold }}
+            >
+              Our Natural Products
+              <div className="lightbar"></div>
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: theme.typography.fontWeightBold }}
+            >
+              See All
+            </Typography>
           </Box>
-        <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center',}}>
-          <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
-          </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
-          </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
-          </Link>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              flexDirection: "row",
+              p: 5,
+              justifyContent: "center",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+              }}
+            >
+              {
+                productDataOne.map((product, index) => {
+                  return (
+                    <>
+                    <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProductCard
+                  name={product.name}
+                  desc={product.description}
+                  price={product.price}
+                  discountPrice={product.discountPrice}
+                />
+              </Link>
+                    </>
+                  )
+                })
+              }
+              {/* <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProgramCard
+                  name="Product Name"
+                  desc="Product details"
+                  price="9.99"
+                />
+              </Link>
+              <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProgramCard
+                  name="Product Name"
+                  desc="Product details"
+                  price="9.99"
+                />
+              </Link>
+              <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProgramCard
+                  name="Product Name"
+                  desc="Product details"
+                  price="9.99"
+                />
+              </Link> */}
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "none", lg: "flex" },
+                flexDirection: { xs: "column", md: "row" },
+              }}
+            >
+              {
+                productDataTwo.map((product, index) => {
+                  return (
+                    <>
+                    <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProductCard
+                  name={product.name}
+                  desc={product.description}
+                  price={product.price}
+                  discountPrice={product.discountPrice}
+                />
+              </Link>
+                    </>
+                  )
+                })
+              }
+              {/* <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProgramCard
+                  name="Product Name"
+                  desc="Product details"
+                  price="9.99"
+                />
+              </Link>
+              <Link
+                to="/products"
+                style={{ textDecoration: "none", marginRight: "40px" }}
+              >
+                <ProgramCard
+                  name="Product Name"
+                  desc="Product details"
+                  price="9.99"
+                />
+              </Link> */}
+            </Box>
+            {/* <ProgramCard name="Product Name" desc="Product details" price="9.99"/> */}
+          </Box>
         </Box>
-        <Box sx={{display:{xs:'none', lg:'flex'}, flexDirection:{xs:'column', md:'row'}}}>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
-          </Link>
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
-          <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
-          </Link>
-        </Box>
-          {/* <ProgramCard name="Product Name" desc="Product details" price="9.99"/> */}
-        </Box>
-        </Box>
-        <Box className="marquee" sx={{display:{xs:'flex', md:'none'}}}>
-          <Box className="track" sx={{display:'flex'}}>
+        <Box className="marquee" sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box className="track" sx={{ display: "flex" }}>
             {/* <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
             <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
             <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
             <ProgramCard name="Product Name" desc="Product details" price="9.99"/> */}
-          <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
+            {/* <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
@@ -98,7 +210,24 @@ const HeaderBanner = () => {
           </Link>
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
-          </Link>
+          </Link> */}
+            {productsData.map((product, index) => {
+              return (
+                <>
+                  <Link
+                    to="/products"
+                    style={{ textDecoration: "none", marginRight: "40px" }}
+                  >
+                    <ProductCard
+                      name={product.name}
+                      desc={product.description}
+                      price={product.price}
+                      discountPrice={product.discountPrice}
+                    />
+                  </Link>
+                </>
+              );
+            })}
           </Box>
         </Box>
       </Container>

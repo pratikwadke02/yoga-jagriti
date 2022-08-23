@@ -4,7 +4,7 @@ import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const ProgramCard = (props) => {
+const ProductCard = (props) => {
 
   const {name, image, desc, price, quantity, discountPrice} = props;
 
@@ -85,4 +85,4 @@ const ProgramCard = (props) => {
   );
 };
 
-export default ProgramCard;
+export default ProductCard;
