@@ -12,6 +12,7 @@ import HeaderBanner from '../../components/HeaderBanner/HeaderBanner'
 import EnquiryForm from '../../components/EnquiryForm/EnquiryForm'
 import { Box } from '@mui/material'
 import Notification from '../../components/Notification/Notification'
+import LocationBanner from '../../components/LocationBanner/LocationBanner'
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       {/* <MidBannerFour /> */}
       <MidBannerFive />
       <EnquiryForm />
+      <LocationBanner />
       <BottomBanner />
     </Box>
     </>
