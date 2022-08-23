@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { theme } from "../../theme";
+import {Link} from 'react-router-dom'
 
 const PaymentSummary = (props) => {
   const { totalPrice, totalDiscountPrice, totalDiscount } = props;
@@ -49,7 +50,7 @@ const PaymentSummary = (props) => {
                 mt:1
               }}
             >
-              {totalPrice}
+              ₹{totalPrice}
             </Typography>
             <Typography
               variant="h6"
@@ -67,7 +68,7 @@ const PaymentSummary = (props) => {
                 mt:1
               }}
             >
-              {totalDiscountPrice}
+              ₹{totalDiscountPrice}
             </Typography>
           </Box>
         </Box>
@@ -79,6 +80,7 @@ const PaymentSummary = (props) => {
             mt: 2,
           }}
         >
+          <Link to="/checkout" style={{textDecoration:'none'}}>
           <Button
             variant="contained"
             color="primary"
@@ -88,6 +90,7 @@ const PaymentSummary = (props) => {
               Checkout
             </Typography>
           </Button>
+          </Link>
         </Box>
       </Box>
     </>
