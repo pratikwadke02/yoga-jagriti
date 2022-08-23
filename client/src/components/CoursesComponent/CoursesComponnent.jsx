@@ -68,7 +68,7 @@ const CoursesComponnent = () => {
             
             <div className="darkbar"></div>
           </Typography>
-          <Link to="/all-courses" style={{textDecoration:'none'}}>
+          <Link to="/allcourses" style={{textDecoration:'none'}}>
             <Button sx={{textTransform:'none'}}>
           <Typography variant="h6" sx={{fontWeight:theme.typography.fontWeightBold,color:theme.palette.primary.main}}>
             See All

@@ -159,6 +159,7 @@ const Footer = () => {
             </Typography>
             <Box
               sx={{
+                mt:1,
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "flex-start",
@@ -218,7 +219,9 @@ const Footer = () => {
               }}
             >
               More
+              
             </Typography>
+            <Box sx={{mt:1}}>
             {moreData.map((item, index) => {
               return (
                 <Typography
@@ -229,6 +232,7 @@ const Footer = () => {
                 </Typography>
               );
             })}
+            </Box>
           </Box>
           <Box
             sx={{
@@ -246,6 +250,7 @@ const Footer = () => {
             >
               Social Media
             </Typography>
+            <Box sx={{mt:1}}>
             {SocialMedia.map((item, index) => {
               return (
                 <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -259,6 +264,7 @@ const Footer = () => {
                 </Box>
               );
             })}
+            </Box>
           </Box>
         </Box>
         <Box

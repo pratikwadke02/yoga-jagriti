@@ -19,14 +19,15 @@ const AllCoursesComponent = () => {
           image: images.course_one,
         },
         {
-          title: "Yoga Protocol Instructor",
-          fee: "7000",
-          eligibility: "10th",
+          title: "Primary/Elementary School Yoga Teacher Course",
+          fee: "20000",
+          eligibility: "10 + 2",
           duration: "Three months",
           age: "18 or above",
-          noOfSeats: "20",
-          image: images.course_four,
-        },
+          noOfSeats: "50",
+          image: images.course_two,
+      },
+        
         {
           title: "Yoga Wellness Instructor",
           fee: "15000",
@@ -40,6 +41,15 @@ const AllCoursesComponent = () => {
 
       const coursesData1  = [
         {
+          title: "Yoga Protocol Instructor",
+          fee: "7000",
+          eligibility: "10th",
+          duration: "Three months",
+          age: "18 or above",
+          noOfSeats: "20",
+          image: images.course_four,
+        },
+        {
             title: "Yoga Volunteer Course",
             fee: "1500",
             eligibility: "8th Pass",
@@ -48,15 +58,7 @@ const AllCoursesComponent = () => {
             noOfSeats: "100",
             image: images.course_five,
         },
-        {
-            title: "Primary/Elementary School Yoga Teacher Course",
-            fee: "20000",
-            eligibility: "10 + 2",
-            duration: "Three months",
-            age: "18 or above",
-            noOfSeats: "50",
-            image: images.course_two,
-        },
+        
     ];
 
   return (

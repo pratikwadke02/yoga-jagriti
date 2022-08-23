@@ -30,10 +30,10 @@ const NavbarHeader = () => {
         <Box sx={{ display:'flex', flexDirection:'row', alignItems:'center', border:'1px solid'+theme.palette.background.default, pr:2, pl:2, mr:{xs:0, md:'80px'}, height:'33px'}}>
             <CallIcon fontSize="small" sx={{ color: theme.palette.background.default }} />
             <Typography variant="h6" sx={{ color: theme.palette.text.default, ml:1, display:{xs:'none', md:'block'} }}>
-                +91-11-42765248
+            +919310247223
             </Typography>
             <Typography variant="h7" sx={{ color: theme.palette.text.default, ml:1, display: {md:'none'} }}>
-                +91-11-42765248
+            +919310247223
             </Typography>
         </Box>
     </Box>

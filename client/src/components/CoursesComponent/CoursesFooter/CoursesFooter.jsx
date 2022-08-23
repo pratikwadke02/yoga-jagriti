@@ -20,18 +20,38 @@ const CoursesFooter = () => {
  
         </Typography>
         <Box sx={{mt:4, width:'100%', display:{xs:'none', sm:'flex'}, justifyContent:{xs:'center', md:'flex-start'}, flexDirection:{xs:'column', sm:'row'}, alignItems:'flex-end'}}>
+          <a href="https://yogacertificationboard.nic.in/">
           <img src={images.ycb_logo} alt="" style={{height:'80px', width:'80px', marginRight:25}}/>
+          </a>
+          <a href="https://fitindia.gov.in/">
           <img src={images.fit_india_logo} alt="" style={{height:'80px', width:'80px', marginRight:25}}/>
+          </a>
+          <a href="https://sportsauthorityofindia.gov.in/sai/">
           <img src={images.spai_logo} alt="" style={{height:'80px', width:'80px',  marginRight:25}}/>
+          </a>
+          <a href="https://msme.gov.in/">
           <img src={images.msme} alt="" style={{height:'80px', width:'80px', marginRight:25}}/>
+          </a>
+          <a href="https://www.ncvtmis.gov.in/">
           <img src={images.ncvt} alt="" style={{height:'80px', width:'80px',  marginRight:25}}/>
+          </a>
         </Box>
         <Box sx={{mt:4, width:'100%', display:{xs:'flex', sm:'none'}, justifyContent:{xs:'center', md:'flex-start'}, flexDirection:{xs:'row', sm:'row'}, alignItems:'center'}}>
+        <a href="https://yogacertificationboard.nic.in/">
           <img src={images.ycb_logo} alt="" style={{height:'auto', width:'60px', maxHeight:'60px', marginRight:10}}/>
+          </a>
+          <a href="https://fitindia.gov.in/">
           <img src={images.fit_india_logo} alt="" style={{height:'auto', width:'60px', maxHeight:'60px', marginRight:10}}/>
+          </a>
+          <a href="https://sportsauthorityofindia.gov.in/sai/">
           <img src={images.spai_logo} alt="" style={{height:'auto', width:'60px', maxHeight:'60px', marginRight:10}}/>
+          </a>
+          <a href="https://msme.gov.in/">
           <img src={images.msme} alt="" style={{height:'auto', width:'60px', maxHeight:'60px', marginRight:10}}/>
+          </a>
+          <a href="https://www.ncvtmis.gov.in/">
           <img src={images.ncvt} alt="" style={{height:'auto', width:'60px', maxHeight:'60px', marginRight:10}}/>
+          </a>
         </Box>
         <Box sx={{mt:2,width:'100%', display:'flex', justifyContent:{xs:'center', md:'flex-start'}}}>
             <Link to={'/course'} style={{

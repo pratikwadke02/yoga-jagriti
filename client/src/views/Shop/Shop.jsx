@@ -53,6 +53,7 @@ const Shop = () => {
             >
               SHOP
             </Typography>
+            <div className="darkbar"></div>
           </Box>
           <Box sx={{ width: "100%", maxWidth: "200px" }}>
             <input

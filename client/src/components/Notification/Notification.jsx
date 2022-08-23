@@ -8,40 +8,54 @@ const Notification = () => {
 
   const notificationData = [
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Higher Sec. School Yoga Teacher Course',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Primary/Elementary School Yoga Teacher Course',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Yoga Wellness Instructor',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Yoga Protocol Instructor',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Yoga Volunteer Course',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Higher Sec. School Yoga Teacher Course',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Primary/Elementary School Yoga Teacher Course',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Yoga Wellness Instructor',
+      description: 'Enroll Now',
     },
     {
-      title: 'New Course Added',
-      description: 'Course Details',
+      title: 'New Batch Started',
+      course: 'Yoga Protocol Instructor',
+      description: 'Enroll Now',
+    },
+    {
+      title: 'New Batch Started',
+      course: 'Yoga Volunteer Course',
+      description: 'Enroll Now',
     },
   ]
 
@@ -62,7 +76,7 @@ const Notification = () => {
               return (
                 <Box sx={{display:'flex', alignItems:'center', mr:10}}>
                   <Typography variant='h6' sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium}}>
-                    {item.title}
+                    {item.title} For {item.course}
                   </Typography>
                   <KeyboardDoubleArrowRightIcon fontSize='small' sx={{color:theme.palette.text.main}} />
                   <Typography variant='h6' sx={{color:theme.palette.text.main}}>
