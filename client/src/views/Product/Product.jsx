@@ -6,8 +6,18 @@ import { Box, Container, Typography } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
 import './Product.css'
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Product = () => {
+
+  const productId = (useParams()).id;
+  const productsData = useSelector(state => state.product.products);
+  // console.log(productsData)
+  const productData = (productsData.filter((item) => item.id == productId))[0];
+  console.log(productData)
+
+
   return (
     <>
       <Container
@@ -40,7 +50,7 @@ const Product = () => {
           <Box
             sx={{ mt: { xs: 2, md: 0 }, ml: { xs: 0, md: 2 }, width: "100%" }}
           >
-            <Details />
+            <Details name={productData.name} desc={productData.description} price={productData.price} discountPrice={productData.discountPrice} />
           </Box>
         </Box>
         <Box sx={{zIndex:1, position: "relative", width: "100%", m: "auto" }}>

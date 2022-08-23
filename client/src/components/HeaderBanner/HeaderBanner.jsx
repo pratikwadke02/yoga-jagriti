@@ -11,7 +11,7 @@ const HeaderBanner = () => {
   const productsData = useSelector((state) => state.product.products);
 
   const productDataOne = productsData.slice(0,3);
-  const productDataTwo = productsData.slice(3,5);
+  const productDataTwo = productsData.slice(3,4);
 
   const headBannerDataOne = [
     {
@@ -99,7 +99,7 @@ const HeaderBanner = () => {
                   return (
                     <>
                     <Link
-                to="/products"
+                to={`/product/${product.id}`}
                 style={{ textDecoration: "none", marginRight: "40px" }}
               >
                 <ProductCard
@@ -155,7 +155,7 @@ const HeaderBanner = () => {
                   return (
                     <>
                     <Link
-                to="/products"
+                to={`/product/${product.id}`}
                 style={{ textDecoration: "none", marginRight: "40px" }}
               >
                 <ProductCard
@@ -215,7 +215,7 @@ const HeaderBanner = () => {
               return (
                 <>
                   <Link
-                    to="/products"
+                    to={`/product/${product.id}`}
                     style={{ textDecoration: "none", marginRight: "40px" }}
                   >
                     <ProductCard

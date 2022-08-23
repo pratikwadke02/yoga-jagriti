@@ -2,7 +2,10 @@ import { Container, Box, Typography, Button } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
 
-const Details = () => {
+const Details = (props) => {
+
+  const {name, desc, price, discountPrice} = props
+
   return (
     <Container
       sx={{
@@ -17,35 +20,31 @@ const Details = () => {
           variant="h4"
           sx={{display:{xs:'none', md:'block'}, mb: 1, color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}
         >
-          Product Name
+          {name}
         </Typography>
         <Typography
           variant="h6"
           sx={{display:{xs:'block', md:'none'}, mb: 1, color: theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}
         >
-          Product Name
+          {name}
         </Typography>
         <Typography variant="h7" sx={{display:{xs:'block', md:'none'}, mt: 1, mb: 1, textAlign:'justify', textJustify:'inter-word' }}>
-          Product Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Velit reiciendis cupiditate laborum quia aperiam sit nesciunt
-          voluptates dolorum neque odio.
+          {desc}
         </Typography>
         <Typography variant="h6" sx={{display:{xs:'none', md:'block'},width:'80%', mt: 1, mb: 1, textAlign:'justify', textJustify:'inter-word' }}>
-          Product Desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Velit reiciendis cupiditate laborum quia aperiam sit nesciunt
-          voluptates dolorum neque odio.
+        {desc}
         </Typography>
         <Typography
           variant="h5"
-          sx={{display:{xs:'none', md:'block'}, fontWeight: theme.typography.fontWeightBold, mt:1 }}
+          sx={{display:{xs:'none', md:'flex'}, fontWeight: theme.typography.fontWeightBold, mt:1, alignItems:'center' }}
         >
-          ₹ 999
+          ₹{discountPrice} <s><Typography variant="h6" sx={{ml:1}}>₹{price}</Typography></s>
         </Typography>
         <Typography
           variant="h6"
-          sx={{display:{xs:'block', md:'none'}, fontWeight: theme.typography.fontWeightBold, mt:1 }}
+          sx={{display:{xs:'flex', md:'none'}, fontWeight: theme.typography.fontWeightBold, mt:1, alignItems:'center' }}
         >
-          ₹ 999
+          ₹{discountPrice} <s><Typography variant="h6" sx={{ml:1}}>₹{price}</Typography></s>
         </Typography>
       </Box>
       <Box

@@ -28,7 +28,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/yoga-jagriti" element={<Home />} />
-        <Route path="/products" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/career" element={<Career/>} />
         <Route path="/about" element={<About />} />
         <Route path="/know-yoga" element={<AboutYoga />} />
