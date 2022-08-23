@@ -9,7 +9,7 @@ const LocationCard = (props) => {
 
   return (
     <>
-    <Box sx={{width:'100%', maxWidth:{xs:'100%', sm:'400px'}, backgroundColor:theme.palette.background.default, p:2, boxShadow:1, borderRadius:'5px'}}>
+    <Box sx={{width:'100%', maxWidth:{xs:'100%', md:'400px'}, backgroundColor:theme.palette.background.default, p:2, boxShadow:1, borderRadius:'5px'}}>
         <Box sx={{textAlign:'center'}}>
             <Typography variant='h4'>
                 {head}
