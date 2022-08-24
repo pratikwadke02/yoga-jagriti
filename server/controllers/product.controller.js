@@ -27,21 +27,12 @@ exports.findAll = async (req, res) => {
 };
 
 exports.findProductById = async (req, res) => {
-  try {
-    console.log(req.body);
-    const data = [];
-    for (let key in req.body) {
-      console.log(req.body[key]);
-      const product = await Product.findOne({
-        where: {
-          id: req.body[key],
-        },
-      });
-      data.push(product);
-    }
-    res.send(data);
-  } catch (err) {
-    res.send(err);
-    console.log(err);
-  }
+  Product.findByPk(req.params.id)
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      res.send(err);
+      console.log(err);
+    });
 };

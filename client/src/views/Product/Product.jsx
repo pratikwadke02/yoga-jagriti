@@ -15,7 +15,7 @@ const Product = () => {
   const productsData = useSelector(state => state.product.products);
   // console.log(productsData)
   const productData = (productsData.filter((item) => item.id == productId))[0];
-  console.log(productData)
+  // console.log(productData)
 
 
   return (

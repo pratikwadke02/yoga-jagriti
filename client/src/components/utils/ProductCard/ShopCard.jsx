@@ -13,7 +13,11 @@ const ProgramCard = (props) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = (id) => {
-    dispatch(addToCart(id));
+    try{
+      dispatch(addToCart(id));
+    }catch(error){
+      console.log(error);
+    }
   }
 
 
