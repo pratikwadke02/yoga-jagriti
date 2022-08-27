@@ -31,7 +31,7 @@ const TestimonyCorousel = (props) => {
               rating={testimony.rating}
             />
             </Box>
-            <Box sx={{ml:1}}>
+            <Box sx={{ml:1, display:{xs:'none', md:'flex'}}}>
             <CommentCard
               key={index}
               name={testimony.name}
