@@ -25,7 +25,9 @@ const CommentCard = (props) => {
             {Array(rating)
               .fill(0)
               .map((_, index) => {
-                return <StarIcon fontSize="small" sx={{ color: "#e8bf00" }} />;
+                return <StarIcon 
+                key={index}
+                fontSize="small" sx={{ color: "#e8bf00" }} />;
               })}
           </Box>
         </Box>

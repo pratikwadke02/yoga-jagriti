@@ -124,10 +124,13 @@ function DrawerAppBar(props) {
       </Box>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <>
-            <NavLink to={`/${item.path}`} style={respNavLinkStyles}>
-              <ListItem key={item}>
+        {navItems.map((item, index) => (
+          <div
+            key={index}
+          >
+            <NavLink 
+            to={`/${item.path}`} style={respNavLinkStyles}>
+              <ListItem key={index}>
                 <ListItemText>
                   <Typography
                     variant="h6"
@@ -141,7 +144,7 @@ function DrawerAppBar(props) {
             <Divider
               sx={{ width: "100%", backgroundColor: theme.palette.text.dark }}
             />
-          </>
+            </div>
         ))}
       </List>
     </Box>
@@ -229,9 +232,10 @@ function DrawerAppBar(props) {
                 justifyContent: "center",
               }}
             >
-              {navItems.map((item) => (
-                <>
-                  <NavLink to={`/${item.path}`} style={navLinkStyles}>
+              {navItems.map((item, index) => (
+                  <NavLink
+                    key={index}
+                   to={`/${item.path}`} style={navLinkStyles}>
                     <Typography
                       variant="h6"
                       sx={{lineHeight:'37px' }}
@@ -239,7 +243,6 @@ function DrawerAppBar(props) {
                       {item.name}
                     </Typography>
                   </NavLink>
-                </>
               ))}
               <Box sx={{ 
                 // border: '1px solid'+theme.palette.background.default, height:'37px'
@@ -285,12 +288,12 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
+// DrawerAppBar.propTypes = {
+//   /**
+//    * Injected by the documentation to work in an iframe.
+//    * You won't need it on your project.
+//    */
+//   window: PropTypes.func,
+// };
 
 export default DrawerAppBar;

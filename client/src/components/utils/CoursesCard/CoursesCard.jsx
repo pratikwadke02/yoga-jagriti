@@ -38,7 +38,7 @@ const ProgramCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={image} alt="software" heigh style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
+          <img src={image} alt="software" style={{height:'auto', width:'100%', maxHeight:'150px', minWidth:{xs:'220px',lg:'200px',xl:'320px'}}} />
         </Box>
         <Box
           sx={{

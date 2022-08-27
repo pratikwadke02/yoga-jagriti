@@ -949,28 +949,28 @@ const BillingInformation = () => {
                     type="text"
                     name="name"
                     id="name"
-                    class="form-control"
+                    className="form-control"
                     required
                     data-error="Please enter your name"
                     placeholder="First Name"
                     onChange={handleChange}
                     value={billingInfo.name}
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1}, mt:{xs:2, md:0}, mb:{xs:2, md:0} }}>
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    class="form-control"
+                    className="form-control"
                     required
                     data-error="Please enter your email"
                     placeholder="Last Name"
                     onChange={handleChange}
                     value={billingInfo.email}
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
               </Box>
             </Box>
             <Box
@@ -986,7 +986,7 @@ const BillingInformation = () => {
               <input
                   type="email"
                   name="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   required
                   data-error="Write your message"
@@ -994,27 +994,27 @@ const BillingInformation = () => {
                   onChange={handleChange}
                   value={billingInfo.message}
                 ></input>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1}, mr:{md:0}, mt:{xs:2, md:0}, mb:{xs:2, md:0} }}>
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    class="form-control"
+                    className="form-control"
                     required
                     data-error="Please enter your email"
                     placeholder="Phone"
                     onChange={handleChange}
                     value={billingInfo.email}
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
               </Box>
             </Box>
             <Box sx={{ width: "100%", mb:2}}>
                 <input
                   name="message"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   required
                   data-error="Write your message"
@@ -1022,7 +1022,7 @@ const BillingInformation = () => {
                   onChange={handleChange}
                   value={billingInfo.message}
                 ></input>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
             </Box>
             <Box
               sx={{
@@ -1037,7 +1037,7 @@ const BillingInformation = () => {
               <select
                       name="state"
                       id="state"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       data-error="Select a state"
                       placeholder="State"
                       aria-label="Default select example"
@@ -1049,13 +1049,13 @@ const BillingInformation = () => {
                         return <option value={item.state}>{item.state}</option>;
                       })}
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1}, mr:{md:0}, mt:{xs:0, md:0}, mb:{xs:0, md:0} }}>
               <select
                       name="district"
                       id="district"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       data-error="Select a district"
                       placeholder="District"
                       aria-label="Default select example"
@@ -1071,13 +1071,13 @@ const BillingInformation = () => {
                           });
                         })}
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
               </Box>
             </Box>
             <Box sx={{ width: "100%", mb:2}}>
                 <textarea
                   name="message"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   cols="30"
                   rows="5"
@@ -1088,12 +1088,12 @@ const BillingInformation = () => {
                   value={billingInfo.message}
                   style={{ minHeight: "70px" }}
                 ></textarea>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
             </Box>
             <Box sx={{ width: "100%", mb:2}}>
                 <textarea
                   name="message"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   cols="30"
                   rows="5"
@@ -1104,20 +1104,20 @@ const BillingInformation = () => {
                   value={billingInfo.message}
                   style={{ minHeight: "70px" }}
                 ></textarea>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
             </Box>
-            <div class="col-lg-12 col-md-12">
+            <div className="col-lg-12 col-md-12">
               <button
                 type="submit"
-                class="btn"
+                className="btn"
                 style={{ backgroundColor: theme.palette.background.main }}
               >
                 <Typography sx={{ color: theme.palette.secondary.main }}>
                   Send Message
                 </Typography>
               </button>
-              <div id="msgSubmit" class="h3 text-center hidden"></div>
-              <div class="clearfix"></div>
+              <div id="msgSubmit" className="h3 text-center hidden"></div>
+              <div className="clearfix"></div>
             </div>
         </form>
         </Box>

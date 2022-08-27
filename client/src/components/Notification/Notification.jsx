@@ -74,7 +74,9 @@ const Notification = () => {
           {
             notificationData.map((item, index) => {
               return (
-                <Box sx={{display:'flex', alignItems:'center', mr:10}}>
+                <Box 
+                key={index}
+                sx={{display:'flex', alignItems:'center', mr:10}}>
                   <Typography variant='h6' sx={{color:theme.palette.text.main, fontWeight:theme.typography.fontWeightMedium}}>
                     {item.title} For {item.course}
                   </Typography>

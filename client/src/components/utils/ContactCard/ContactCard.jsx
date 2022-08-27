@@ -7,8 +7,8 @@ const ContactCard = (props) => {
 
   return (
     <>
-      <div class="contact-info-box" style={{borderRadius:'5px'}}>
-        <div class="icon">
+      <div className="contact-info-box" style={{borderRadius:'5px'}}>
+        <div className="icon">
           {/* <i data-feather="mail"></i> */}
           {icon}
         </div>
@@ -16,7 +16,7 @@ const ContactCard = (props) => {
         <p>
           <a href="#">
             <span
-              class="__cf_email__"
+              className="__cf_email__"
               data-cfemail="2f4e4b4246416f5c5b4e5d5b5f014c4042"
             >
                 {email}
@@ -26,7 +26,7 @@ const ContactCard = (props) => {
         <p>
           <a href="#">
             <span
-              class="__cf_email__"
+              className="__cf_email__"
               data-cfemail="ee87808881ae9d9a8f9c9a9ec08d8183"
             >
               {phone}
@@ -36,7 +36,7 @@ const ContactCard = (props) => {
         <p>
           <a href="#">
             <span
-              class="__cf_email__"
+              className="__cf_email__"
               data-cfemail="ee87808881ae9d9a8f9c9a9ec08d8183"
             >
               {address}

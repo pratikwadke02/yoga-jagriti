@@ -225,6 +225,7 @@ const Footer = () => {
             {moreData.map((item, index) => {
               return (
                 <Typography
+                  key={index}
                   variant="h6"
                   sx={{ color: theme.palette.text.main }}
                 >
@@ -253,7 +254,9 @@ const Footer = () => {
             <Box sx={{mt:1}}>
             {SocialMedia.map((item, index) => {
               return (
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box
+                  key={index}
+                 sx={{ display: "flex", alignItems: "center" }}>
                   {item.icon}
                   <Typography
                     variant="h6"
@@ -301,7 +304,9 @@ const Footer = () => {
               </Typography>
               {SocialMedia.map((item, index) => {
                 return (
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box 
+                    key={index}
+                  sx={{ display: "flex", alignItems: "center" }}>
                     {item.icon}
                     <Typography
                       variant="h6"
@@ -333,6 +338,7 @@ const Footer = () => {
               {moreData.map((item, index) => {
                 return (
                   <Typography
+                    key={index}
                     variant="h6"
                     sx={{ color: theme.palette.text.main }}
                   >

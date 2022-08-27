@@ -25,6 +25,7 @@ const VideoCarousel = (props) => {
                             controls={true}
                             playing={true}
                             style={{margin:'auto', width:'100%'}}
+                            muted={true}
                         />
                         {/* <Carousel.Caption>
                             <h3>{video.title}</h3>

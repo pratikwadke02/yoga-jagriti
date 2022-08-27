@@ -97,8 +97,8 @@ const HeaderBanner = () => {
               {
                 productDataOne.map((product, index) => {
                   return (
-                    <>
                     <Link
+                key={index}
                 to={`/product/${product.id}`}
                 style={{ textDecoration: "none", marginRight: "40px" }}
               >
@@ -109,7 +109,6 @@ const HeaderBanner = () => {
                   discountPrice={product.discountPrice}
                 />
               </Link>
-                    </>
                   )
                 })
               }
@@ -153,8 +152,8 @@ const HeaderBanner = () => {
               {
                 productDataTwo.map((product, index) => {
                   return (
-                    <>
                     <Link
+                    key={index}
                 to={`/product/${product.id}`}
                 style={{ textDecoration: "none", marginRight: "40px" }}
               >
@@ -165,7 +164,6 @@ const HeaderBanner = () => {
                   discountPrice={product.discountPrice}
                 />
               </Link>
-                    </>
                   )
                 })
               }
@@ -213,8 +211,8 @@ const HeaderBanner = () => {
           </Link> */}
             {productsData.map((product, index) => {
               return (
-                <>
                   <Link
+                    key={index}
                     to={`/product/${product.id}`}
                     style={{ textDecoration: "none", marginRight: "40px" }}
                   >
@@ -225,7 +223,6 @@ const HeaderBanner = () => {
                       discountPrice={product.discountPrice}
                     />
                   </Link>
-                </>
               );
             })}
           </Box>

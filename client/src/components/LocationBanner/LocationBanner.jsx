@@ -8,10 +8,12 @@ const LocationBanner = () => {
 
   const locationDataOne = [
     {
+      id:1,
       head: 'Delhi',
       location: 'Delhi Centre: 13/A New Basti Devli, Khanpur, South Delhi, Delhi 110080'
     },
     {
+      id:2,
       head: 'Partapur, Bhogaon',
       location: 'Jagriti Yoga anda Naturopathy Sansthan Vill. Partapur, Bhogaon, distt Mainpuri UP'
     },
@@ -36,30 +38,17 @@ const LocationBanner = () => {
       <Box sx={{display:'flex', flexDirection:{xs:'column',md:'row', lg:'column',width:'100%', justifyContent:'center'}}}>
       <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:'center', mt:4, mr:{sm:0, lg:0}}}>
         {
-          locationDataOne.map((item, index)=> {
+          locationDataOne.map((item)=> {
             return (
-              <>
-              <Box sx={{ml:{xs:0, md:2}, mr:{xs:0, md:1}, mb:{xs:2, lg:0} }}>
+              <Box 
+              key={item.id}
+              sx={{ml:{xs:0, md:2}, mr:{xs:0, md:1}, mb:{xs:2, lg:0} }}>
                 <LocationCard head={item.head} location={item.location} />
               </Box>
-              </>
             )
           })
         }
       </Box>
-      {/* <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}, alignItems:'center', justifyContent:'center', mt:{xs:0, sm: 4}, mr:{sm:0, lg:0}}}>
-        {
-          locationDataTwo.map((item, index)=> {
-            return (
-              <>
-              <Box sx={{ml:{xs:0, md:2}, mr:{xs:0, md:1}, mb:{xs:2, lg:0}}}>
-                <LocationCard head={item.head} location={item.location} />
-              </Box>
-              </>
-            )
-          })
-        }
-      </Box> */}
       </Box>
     </Box>
     </>

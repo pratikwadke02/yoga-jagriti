@@ -81,28 +81,28 @@ const EnquiryForm = () => {
                     type="text"
                     name="name"
                     id="name"
-                    class="form-control"
+                    className="form-control"
                     required
                     data-error="Please enter your name"
                     placeholder="Name"
                     onChange={handleChange}
                     value={enquiryData.name}
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1}, mr:{md:1}, mt:{xs:2, md:0}, mb:{xs:2, md:0} }}>
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    class="form-control"
+                    className="form-control"
                     required
                     data-error="Please enter your email"
                     placeholder="Email"
                     onChange={handleChange}
                     value={enquiryData.email}
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1} }}>
                   <input
@@ -111,18 +111,18 @@ const EnquiryForm = () => {
                     id="phone_number"
                     required
                     data-error="Please enter your number"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Phone"
                     onChange={handleChange}
                     value={enquiryData.phone}
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
                 </Box>
             </Box>
             <Box sx={{ width: "100%", mb:2}}>
                 <textarea
                   name="message"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   cols="30"
                   rows="5"
@@ -133,20 +133,20 @@ const EnquiryForm = () => {
                   value={enquiryData.message}
                   style={{ minHeight: "70px" }}
                 ></textarea>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
             </Box>
-            <div class="col-lg-12 col-md-12">
+            <div className="col-lg-12 col-md-12">
               <button
                 type="submit"
-                class="btn"
+                className="btn"
                 style={{ backgroundColor: theme.palette.background.main }}
               >
                 <Typography sx={{ color: theme.palette.secondary.main }}>
                   Send Message
                 </Typography>
               </button>
-              <div id="msgSubmit" class="h3 text-center hidden"></div>
-              <div class="clearfix"></div>
+              <div id="msgSubmit" className="h3 text-center hidden"></div>
+              <div className="clearfix"></div>
             </div>
         </form>
       </Box>

@@ -41,7 +41,7 @@ const RegisterComponent = () => {
   return (
     <>
       <Box>
-        <div class="ptb-80">
+        <div className="ptb-80">
           <Box sx={{ width: "100%", m: "auto", textAlign: "center", mb: 5 }}>
             <Typography
               variant="h2"
@@ -53,53 +53,53 @@ const RegisterComponent = () => {
               REGISTER
             </Typography>
             <div
-              className="darkbar"
+              classNameName="darkbar"
               style={{ margin: "auto", marginTop: "20px" }}
             ></div>
           </Box>
-          <div class="container">
+          <div className="container">
             <div
-              class="auth-form"
+              className="auth-form"
               style={{ backgroundColor: theme.palette.background.default }}
             >
-              <div class="auth-head">
+              <div className="auth-head">
                 <a href="index.html">{/* <img src="assets/img/logo.png"> */}</a>
                 <p>Create a new account</p>
               </div>
               <form onSubmit={submitHandler}>
-                <div class="mb-3">
-                  <label class="form-label">E-mail</label>
+                <div className="mb-3">
+                  <label className="form-label">E-mail</label>
                   <input
                     name="email"
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     value={authInfo.email}
                     onChange={handleChange}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">Password</label>
+                <div className="mb-3">
+                  <label className="form-label">Password</label>
                   <input
                     name="password"
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     value={authInfo.password}
                     onChange={handleChange}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">Confirm Password</label>
+                <div className="mb-3">
+                  <label className="form-label">Confirm Password</label>
                   <input
                     name="confirmPassword"
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     value={authInfo.confirmPassword}
                     onChange={handleChange}
                   />
                 </div>
                 <button
                   type="submit"
-                  class="btn"
+                  className="btn"
                   style={{ backgroundColor: theme.palette.primary.main }}
                 >
                   <Typography sx={{ color: theme.palette.background.default }}>
@@ -107,7 +107,7 @@ const RegisterComponent = () => {
                   </Typography>
                 </button>
               </form>
-              <div class="foot">
+              <div className="foot">
                 <p>
                   Already have an account yet?
                   <Link to="/login" style={{ textDecoration: "none" }}>

@@ -39,7 +39,7 @@ const LoginComponent = () => {
   return (
     <>
       <Box sx={{}}>
-        <div class="ptb-80">
+        <div className="ptb-80">
           <Box sx={{ width: "100%", m: "auto", textAlign: "center", mb: 5 }}>
             <Typography
               variant="h2"
@@ -52,9 +52,9 @@ const LoginComponent = () => {
             </Typography>
           <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
           </Box>
-          <div class="container" >
-            <div class="auth-form" style={{backgroundColor:theme.palette.background.default}}>
-              <div class="auth-head">
+          <div className="container" >
+            <div className="auth-form" style={{backgroundColor:theme.palette.background.default}}>
+              <div className="auth-head">
                 {/* <a href="index.html">
                             <img src="assets/img/logo.png">
                         </a> */}
@@ -74,15 +74,15 @@ const LoginComponent = () => {
                 </p>
               </div>
               <form onSubmit={submitHandler}>
-                <div class="mb-3">
-                  <label class="form-label">E-mail</label>
-                  <input name="email" type="email" class="form-control" value={authInfo.email} onChange={handleChange} />
+                <div className="mb-3">
+                  <label className="form-label">E-mail</label>
+                  <input name="email" type="email" className="form-control" value={authInfo.email} onChange={handleChange} />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">Password</label>
-                  <input name="password" type="password" class="form-control" value={authInfo.password} onChange={handleChange} />
+                <div className="mb-3">
+                  <label className="form-label">Password</label>
+                  <input name="password" type="password" className="form-control" value={authInfo.password} onChange={handleChange} />
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <a
                     href="forgot-password.html"
                     style={{
@@ -95,7 +95,7 @@ const LoginComponent = () => {
                 </div>
                 <button
                   type="submit"
-                  class="btn"
+                  className="btn"
                   style={{ backgroundColor: theme.palette.primary.main }}
                 >
                   <Typography sx={{ color: theme.palette.background.default }}>
@@ -103,22 +103,22 @@ const LoginComponent = () => {
                   </Typography>
                 </button>
               </form>
-              <div class="foot">
+              <div className="foot">
                 <p>Or connect with</p>
                 <ul>
                   <li>
-                    <a href="#" class="linkedin" target="_blank">
+                    <a href="#" className="linkedin" target="_blank">
                       <Mail style={{ color: theme.palette.text.dark }} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="facebook" target="_blank">
+                    <a href="#" className="facebook" target="_blank">
                       {/* <i data-feather="facebook"></i> */}
                       <Facebook style={{ color: theme.palette.text.dark }} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="twitter" target="_blank">
+                    <a href="#" className="twitter" target="_blank">
                       <Twitter style={{ color: theme.palette.text.dark }} />
                     </a>
                   </li>

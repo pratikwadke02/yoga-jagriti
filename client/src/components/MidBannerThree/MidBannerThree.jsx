@@ -71,7 +71,9 @@ const MidBannerThree = () => {
                 {
                     benefitsData.map((item, index) => {
                         return (
-                            <Box sx={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'flex-start', mb:2}}>
+                            <Box 
+                            key={index}
+                            sx={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'flex-start', mb:2}}>
                                 <CheckIcon 
                                 fontSize='small'
                                 sx={{

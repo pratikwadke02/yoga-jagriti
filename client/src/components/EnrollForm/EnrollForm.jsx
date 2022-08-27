@@ -989,7 +989,7 @@ const ContactForm = () => {
         }}
       >
         <form id="contactForm" onSubmit={handleSubmit}>
-          <div class="row justify-content-center align-items-center">
+          <div className="row justify-content-center align-items-center">
             <Typography
               variant="h2"
               sx={{
@@ -1004,12 +1004,12 @@ const ContactForm = () => {
             <Typography variant="h6" sx={{ mb: 1 }}>
               Personal Details
             </Typography>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <select
                   name="title"
                   id="title"
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3"
                   required
                   data-error="Select a title"
                   placeholder="Title"
@@ -1022,61 +1022,61 @@ const ContactForm = () => {
                   <option value="Smt">Smt</option>
                   <option value="Ms">Ms</option>
                 </select>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="firstName"
                   id="first-name"
-                  class="form-control"
+                  className="form-control"
                   required
                   data-error="Please enter your name"
                   placeholder="First Name"
                   value={data.firstName}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="middleName"
                   id="middle-name"
-                  class="form-control"
+                  className="form-control"
                   data-error="Please enter your name"
                   placeholder="Middle Name"
                   value={data.middleName}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="lastName"
                   id="last-name"
-                  class="form-control"
+                  className="form-control"
                   data-error="Please enter your name"
                   placeholder="Last Name"
                   value={data.lastName}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <select
                   name="gender"
                   id="gender"
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3"
                   required
                   data-error="Select a gender"
                   placeholder="Gender"
@@ -1089,16 +1089,16 @@ const ContactForm = () => {
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
                 </select>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="date"
                   name="dob"
                   id="dob"
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3"
                   required
                   data-error="Select a gender"
                   placeholder="Date of Birth"
@@ -1106,15 +1106,15 @@ const ContactForm = () => {
                   value={data.dob}
                   onChange={handleChange}
                 ></input>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <select
                   name="country"
                   id="country"
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3"
                   required
                   data-error="Select a country"
                   placeholder="Country"
@@ -1124,92 +1124,92 @@ const ContactForm = () => {
                   <option selected>Select a country</option>
                   <option value="India">India</option>
                 </select>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="nationality"
                   id="nationality"
-                  class="form-control"
+                  className="form-control"
                   required
                   data-error="Please enter your nationality"
                   placeholder="Nationality"
                   value={data.nationality}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="fatherName"
                   id="father-name"
-                  class="form-control"
+                  className="form-control"
                   data-error="Please enter your father name"
                   placeholder="Father's Name"
                   value={data.fatherName}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="motherName"
                   id="mother-name"
-                  class="form-control"
+                  className="form-control"
                   required
                   data-error="Please enter your mother name"
                   placeholder="Mother's Name"
                   value={data.motherName}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="spouseName"
                   id="spouse-name"
-                  class="form-control"
+                  className="form-control"
                   data-error="Please enter your spouse name"
                   placeholder="Spouse's Name"
                   value={data.spouseName}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="spouseName"
                   id="spouse-name"
-                  class="form-control"
+                  className="form-control"
                   data-error="Please enter your spouse name"
                   placeholder="Spouse's Name"
                   value={data.courseName}
                   disabled
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <select
                   name="category"
                   id="category"
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3"
                   required
                   data-error="Select a category"
                   placeholder="Category"
@@ -1225,30 +1225,30 @@ const ContactForm = () => {
                   <option value="EWS">EWS</option>
                   <option value="Other">Other</option>
                 </select>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="text"
                   name="pwdCertificate"
                   id="pwd-certficate"
-                  class="form-control"
+                  className="form-control"
                   data-error="Please enter your pwd certificate"
                   placeholder="PwD Certificate"
                   value={data.pwdCertificate}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <select
                   name="idType"
                   id="photo-id"
-                  class="form-select form-select-lg mb-3"
+                  className="form-select form-select-lg mb-3"
                   required
                   data-error="Select a photo id"
                   placeholder="Photo Id"
@@ -1265,64 +1265,64 @@ const ContactForm = () => {
                   <option value="Driving license">Driving License</option>
                   <option value="Voter ID">voter ID</option>
                 </select>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="number"
                   name="idNumber"
                   id="id-number"
-                  class="form-control"
+                  className="form-control"
                   required
                   data-error="Please enter your id number"
                   placeholder="ID Number"
                   value={data.idNumber}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  class="form-control"
+                  className="form-control"
                   required
                   data-error="Please enter your email"
                   placeholder="Email"
                   value={data.email}
                   onChange={handleChange}
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            {/* <div class="col-lg-12 col-md-12">
-              <div class="form-group">
+            {/* <div className="col-lg-12 col-md-12">
+              <div className="form-group">
                 <input
                   type="file"
                   name="govt-photo-id"
                   id="govt-photo-id"
-                  class="form-choose"
+                  className="form-choose"
                   
                   data-error="Please upload your govt photo id"
                   placeholder="Govt Photo Id"
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div> */}
-            <div class="col-lg-6 col-md-12">
-              <div class="form-group">
+            <div className="col-lg-6 col-md-12">
+              <div className="form-group">
                 <input
                   type="number"
                   name="phone"
                   id="contact-number"
                   required
                   data-error="Please enter your number"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Contact Number"
                   value={data.phone}
                   onChange={handleChange}
@@ -1330,35 +1330,35 @@ const ContactForm = () => {
                 <Typography variant="h7" color="error">
                   Note: Please enter phone number with country code.
                 </Typography>
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div>
-            {/* <div class="col-lg-12 col-md-6">
-                <div class="form-group">
+            {/* <div className="col-lg-12 col-md-6">
+                <div className="form-group">
                   <input
                     type="text"
                     name="msg_subject"
                     id="msg_subject"
-                    class="form-control"
+                    className="form-control"
                     required
                     data-error="Please enter your subject"
                     placeholder="Subject"
                   />
-                  <div class="help-block with-errors"></div>
+                  <div className="help-block with-errors"></div>
                 </div>
               </div> */}
-            {/* <div class="col-lg-12 col-md-12">
-              <div class="form-group">
+            {/* <div className="col-lg-12 col-md-12">
+              <div className="form-group">
                 <input
                   type="file"
                   name="photo-id"
                   id="photo-id"
-                  class="form-choose"
+                  className="form-choose"
                   
                   data-error="Please upload your photo id"
                   placeholder="Photo Id"
                 />
-                <div class="help-block with-errors"></div>
+                <div className="help-block with-errors"></div>
               </div>
             </div> */}
             <Box sx={{ display: "flex",flexDirection:{xs:'column', md:'row'}, width: "100%" }}>
@@ -1366,11 +1366,11 @@ const ContactForm = () => {
                 <Typography variant="h6" sx={{ mb: 1 }}>
                   Correspondence Address
                 </Typography>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <textarea
                       name="address"
-                      class="form-control"
+                      className="form-control"
                       id="address"
                       cols="30"
                       rows="5"
@@ -1380,15 +1380,15 @@ const ContactForm = () => {
                       value={data.address}
                       onChange={handleChange}
                     ></textarea>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <select
                       name="state"
                       id="state"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       data-error="Select a state"
                       placeholder="State"
                       aria-label="Default select example"
@@ -1400,15 +1400,15 @@ const ContactForm = () => {
                         return <option value={item.state}>{item.state}</option>;
                       })}
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <select
                       name="district"
                       id="district"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       data-error="Select a district"
                       placeholder="District"
                       aria-label="Default select example"
@@ -1424,27 +1424,27 @@ const ContactForm = () => {
                           });
                         })}
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <input
                       type="number"
                       name="pincode"
                       id="pincode"
-                      class="form-control"
+                      className="form-control"
                       required
                       data-error="Please enter your pincode"
                       placeholder="Pincode"
                       value={data.pincode}
                       onChange={handleChange}
                     />
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <Box class="form-group" sx={{display:'flex', mt:4}}>
+                <div className="col-lg-12 col-md-12">
+                  <Box className="form-group" sx={{display:'flex', mt:4}}>
                     <input 
                       type="checkbox" 
                       name="addressCheck" 
@@ -1454,7 +1454,7 @@ const ContactForm = () => {
                       onChange={handleAddressChange}
                       />
                       <label for="addressCheck" style={{fontSize:'12px', marginLeft:'10px'}}>Same as permanent address</label>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </Box>
                 </div>
               </Box>
@@ -1462,11 +1462,11 @@ const ContactForm = () => {
                 <Typography variant="h6" sx={{ mb: 1 }}>
                   Permanent Address
                 </Typography>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <textarea
                       name="permanentAddress"
-                      class="form-control"
+                      className="form-control"
                       id="address"
                       cols="30"
                       rows="5"
@@ -1476,15 +1476,15 @@ const ContactForm = () => {
                       value={sameAddress ? data.address : data.permanentAddress}
                       onChange={handleChange}
                     ></textarea>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <select
                       name="permanentState"
                       id="state"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       data-error="Select a state"
                       placeholder="State"
                       aria-label="Default select example"
@@ -1496,15 +1496,15 @@ const ContactForm = () => {
                         return <option value={item.state}>{item.state}</option>;
                       })}
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <select
                       name="permanentDistrict"
                       id="district"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       data-error="Select a district"
                       placeholder="District"
                       aria-label="Default select example"
@@ -1520,31 +1520,31 @@ const ContactForm = () => {
                           });
                         })}
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <input
                       type="number"
                       name="permanentPincode"
                       id="pincode"
-                      class="form-control"
+                      className="form-control"
                       required
                       data-error="Please enter your pincode"
                       placeholder="Pincode"
                       value={sameAddress ? data.pincode : data.permanentPincode}
                       onChange={handleChange}
                     />
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
+                <div className="col-lg-12 col-md-12">
+                  <div className="form-group">
                     <select
                       name="permanentCountry"
                       id="country"
-                      class="form-select form-select-lg mb-3"
+                      className="form-select form-select-lg mb-3"
                       required
                       data-error="Select a country"
                       placeholder="Country"
@@ -1554,23 +1554,23 @@ const ContactForm = () => {
                       <option selected>Select a country</option>
                       <option value="India">India</option>
                     </select>
-                    <div class="help-block with-errors"></div>
+                    <div className="help-block with-errors"></div>
                   </div>
                 </div>
               </Box>
             </Box>
-            <div class="col-lg-12 col-md-12">
+            <div className="col-lg-12 col-md-12">
               <button
                 type="submit"
-                class="btn"
+                className="btn"
                 style={{ backgroundColor: theme.palette.primary.main }}
               >
                 <Typography sx={{ color: theme.palette.background.default }}>
                   Send Message
                 </Typography>
               </button>
-              <div id="msgSubmit" class="h3 text-center hidden"></div>
-              <div class="clearfix"></div>
+              <div id="msgSubmit" className="h3 text-center hidden"></div>
+              <div className="clearfix"></div>
             </div>
           </div>
         </form>
