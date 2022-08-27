@@ -26,30 +26,31 @@ const NavbarLogoSection = () => {
             }}>
          Jagriti Yoga & Naturopathy Sansthan
         </Typography>
-        <Box sx={{display:'flex', alignItems:'center', mt:1, mb:1}}>
-            <img src={images.ycb_nav_logo_one} alt="" 
+        <Box sx={{display:'flex', alignItems:'center', mt:1, mb:1, width:'100%', justifyContent:'center'}}>
+            <img src={images.ycb_logo} alt="" 
             style={{
 
                 height:'auto', width:'100%',
-                maxHeight:'40px',
-                maxWidth:'20px',
+                maxHeight:'80px',
+                maxWidth: '80px'
             }}
             />
         <Typography variant="h4" sx={{
             fontWeight:theme.typography.fontWeightmedium,
-            color:theme.palette.text.main,
+            color:theme.palette.primary.main,
             ml:2,
         }}>
             Yoga Certification Board
         </Typography>
         </Box>
+        <Box sx={{width:'100%', m:'auto', textAlign:'center'}}>
         <Typography variant="h6" sx={{
             fontWeight:theme.typography.fontWeightmedium,
             color:theme.palette.text.main,
         }}>
             Ministry of Ayush, Government of India
         </Typography>
-
+        </Box>
     </Box>
     </Box>
     </>

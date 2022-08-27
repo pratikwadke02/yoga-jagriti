@@ -34,19 +34,19 @@
     color: #6084a4;
   }
   
-  .contact-info-box p a:hover {
+  /* .contact-info-box p a:hover {
     color: #ae1555;
-  }
+  } */
   
-  .contact-info-box:hover {
+  /* .contact-info-box:hover {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
-  }
+  } */
   
-  .contact-info-box:hover .icon {
+  /* .contact-info-box:hover .icon {
     color: #ffffff;
     background: #ae1555;
-  }
+  } */
 /*   
   #map iframe {
     height: 500px;

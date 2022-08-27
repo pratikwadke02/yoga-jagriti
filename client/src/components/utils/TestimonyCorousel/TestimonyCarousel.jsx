@@ -22,7 +22,7 @@ const TestimonyCorousel = (props) => {
         return (
           <Carousel.Item key={index}>
             <Box sx={{display:'flex'}}>
-              <Box sx={{mr:1}}>
+              <Box sx={{mr:{xs:0, md:1}}}>
             <CommentCard
               key={index}
               name={testimony.name}

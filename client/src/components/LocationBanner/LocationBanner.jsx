@@ -8,41 +8,15 @@ const LocationBanner = () => {
 
   const locationDataOne = [
     {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
+      head: 'Delhi',
+      location: 'Delhi Centre: 13/A New Basti Devli, Khanpur, South Delhi, Delhi 110080'
     },
     {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
-    },
-    {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
-    },
-    {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
+      head: 'Partapur, Bhogaon',
+      location: 'Jagriti Yoga anda Naturopathy Sansthan Vill. Partapur, Bhogaon, distt Mainpuri UP'
     },
   ];
 
-  const locationDataTwo = [
-    {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
-    },
-    {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
-    },
-    {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
-    },
-    {
-      head: 'Location',
-      location: 'Location Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus placeat tempore fugit voluptate eos a tempora optio in exercitationem corrupti!'
-    },
-  ]
 
   return (
     <>
@@ -60,7 +34,7 @@ const LocationBanner = () => {
         <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
       </Box>
       <Box sx={{display:'flex', flexDirection:{xs:'column',md:'row', lg:'column',width:'100%', justifyContent:'center'}}}>
-      <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}, alignItems:'center', justifyContent:'center', mt:4, mr:{sm:0, lg:0}}}>
+      <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:'center', mt:4, mr:{sm:0, lg:0}}}>
         {
           locationDataOne.map((item, index)=> {
             return (
@@ -73,7 +47,7 @@ const LocationBanner = () => {
           })
         }
       </Box>
-      <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}, alignItems:'center', justifyContent:'center', mt:{xs:0, sm: 4}, mr:{sm:0, lg:0}}}>
+      {/* <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}, alignItems:'center', justifyContent:'center', mt:{xs:0, sm: 4}, mr:{sm:0, lg:0}}}>
         {
           locationDataTwo.map((item, index)=> {
             return (
@@ -85,7 +59,7 @@ const LocationBanner = () => {
             )
           })
         }
-      </Box>
+      </Box> */}
       </Box>
     </Box>
     </>
