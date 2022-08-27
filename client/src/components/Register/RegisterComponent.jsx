@@ -53,7 +53,7 @@ const RegisterComponent = () => {
               REGISTER
             </Typography>
             <div
-              classNameName="darkbar"
+              className="darkbar"
               style={{ margin: "auto", marginTop: "20px" }}
             ></div>
           </Box>
@@ -110,16 +110,9 @@ const RegisterComponent = () => {
               <div className="foot">
                 <p>
                   Already have an account yet?
-                  <Link to="/login" style={{ textDecoration: "none" }}>
-                    <a
-                      style={{
-                        textDecoration: "none",
-                        color: theme.palette.primary.main,
-                        marginLeft: 5,
-                      }}
-                    >
+                  <Link to="/login" style={{ textDecoration: "none", color: theme.palette.primary.main,
+                        marginLeft: 5, }}>
                       Login
-                    </a>
                   </Link>
                 </p>
               </div>

@@ -198,8 +198,9 @@ const Career = () => {
               <List disablePadding>
                 {careerOptionsOne.map((item, index) => {
                   return (
-                    <>
-                      <ListItem sx={{pl:0}}>
+                      <ListItem 
+                        key={index}
+                      sx={{pl:0}}>
                         <ListItemIcon
                           sx={{
                             border:
@@ -221,7 +222,6 @@ const Career = () => {
                           </Typography>
                         </ListItemText>
                       </ListItem>
-                    </>
                   );
                 })}
               </List>
@@ -230,8 +230,9 @@ const Career = () => {
               <List disablePadding>
                 {careerOptionsTwo.map((item, index) => {
                   return (
-                    <>
-                      <ListItem sx={{pl:0}}>
+                      <ListItem
+                        key={index}
+                       sx={{pl:0}}>
                         <ListItemIcon
                           sx={{
                             border:
@@ -253,7 +254,6 @@ const Career = () => {
                           </Typography>
                         </ListItemText>
                       </ListItem>
-                    </>
                   );
                 })}
               </List>
@@ -412,8 +412,8 @@ const Career = () => {
           >
             {jobsDataOne.map((item, index) => {
               return (
-                <>
                   <Box
+                  key={index}
                     sx={{
                       width: "100%",
                       backgroundColor: theme.palette.background.light,
@@ -455,7 +455,6 @@ const Career = () => {
                       {item.para_two}
                     </Typography>
                   </Box>
-                </>
               );
             })}
           </Box>
@@ -470,8 +469,8 @@ const Career = () => {
           >
             {jobsDataTwo.map((item, index) => {
               return (
-                <>
                   <Box
+                  key={index}
                     sx={{
                       width: "100%",
                       backgroundColor: theme.palette.background.light,
@@ -513,7 +512,6 @@ const Career = () => {
                       {item.para_two}
                     </Typography>
                   </Box>
-                </>
               );
             })}
           </Box>
@@ -528,8 +526,8 @@ const Career = () => {
           >
             {jobsDataThree.map((item, index) => {
               return (
-                <>
                   <Box
+                  key={index}
                     sx={{
                       width: "100%",
                       backgroundColor: theme.palette.background.light,
@@ -571,7 +569,6 @@ const Career = () => {
                       {item.para_two}
                     </Typography>
                   </Box>
-                </>
               );
             })}
           </Box>

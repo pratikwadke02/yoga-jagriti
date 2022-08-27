@@ -35,9 +35,7 @@ const Home = () => {
       <CoursesComponnent />
       <MidBannerOne />
       <HeaderBanner />
-      {/* <MidBannerTwo /> */}
       <MidBannerThree />
-      {/* <MidBannerFour /> */}
       <MidBannerFive />
       <EnquiryForm />
       <LocationBanner />

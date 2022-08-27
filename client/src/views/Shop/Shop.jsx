@@ -125,7 +125,7 @@ const Shop = () => {
               type="text"
               name="search"
               id="search"
-              class="form-control"
+              className="form-control"
               placeholder="Search"
               //   value={data.firstName}
               //   onChange={handleChange}
@@ -164,14 +164,14 @@ const Shop = () => {
               <Box sx={{ width: "100%", mt: 2 }}>
                 {categoryData.map((item, index) => {
                   return (
-                    <>
-                      <Box sx={{ width: "100%", mb: 2 }}>
+                      <Box 
+                      key={index}
+                      sx={{ width: "100%", mb: 2 }}>
                         <CategoryCard
                           category={item.category}
                           quantity={item.quantity}
                         />
                       </Box>
-                    </>
                   );
                 })}
               </Box>
@@ -251,7 +251,9 @@ const Shop = () => {
             <Grid container spacing={3}>
               {products.map((product, index) => {
                 return (
-                  <Grid item xs={12} sm={6} lg={4} key={index}>
+                  <Grid 
+                  key={index}
+                  item xs={12} sm={6} lg={4}>
                     <ShopCard
                       id={product.id}
                       name={product.name}

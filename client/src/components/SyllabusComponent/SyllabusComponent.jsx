@@ -58,7 +58,9 @@ const SyllabusComponent = () => {
                 syllabusData.map((item, index) => 
                 {
                     return (
-                        <Box sx={{display:'flex', justifyContent:'space-between', alignItems:'center', p:2, borderBottom:'1px solid'+theme.palette.text.light}}>
+                        <Box 
+                        key={index}
+                        sx={{display:'flex', justifyContent:'space-between', alignItems:'center', p:2, borderBottom:'1px solid'+theme.palette.text.light}}>
                             <Box sx={{display:'flex', alignItems:'center'}}>
                             <CheckIcon sx={{color:theme.palette.primary.main, border:
                               "1px solid" + theme.palette.background.main,

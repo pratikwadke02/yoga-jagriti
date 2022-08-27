@@ -120,7 +120,9 @@ const FaqComponent = () => {
           >
             {faqData.map((faq, index) => {
               return (
-                <Box className="accordion-item" sx={{marginBottom:'10px', border:'none', boxShadow:1, borderRadius:'5px' }}>
+                <Box 
+                key={index}
+                className="accordion-item" sx={{marginBottom:'10px', border:'none', boxShadow:1, borderRadius:'5px' }}>
                   <h2 className="accordion-header" 
 				  id={`flush-heading-${index}`}
 				  >

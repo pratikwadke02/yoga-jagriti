@@ -60,16 +60,9 @@ const LoginComponent = () => {
                         </a> */}
                 <p>
                   Don't have an account yet?
-                  <Link to="/register" style={{ textDecoration: "none" }}>
-                    <a
-                      style={{
-                        textDecoration: "none",
-                        color: theme.palette.primary.main,
-                        marginLeft: 5,
-                      }}
-                    >
+                  <Link to="/register" style={{ textDecoration: "none", color: theme.palette.primary.main,
+                        marginLeft: 5, }}>
                       Sign Up
-                    </a>
                   </Link>
                 </p>
               </div>

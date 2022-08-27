@@ -1017,7 +1017,7 @@ const ContactForm = () => {
                   value={data.title}
                   onChange={handleChange}
                 >
-                  <option selected>Select a title</option>
+                  <option value="" >Select a title</option>
                   <option value="Shri">Shri</option>
                   <option value="Smt">Smt</option>
                   <option value="Ms">Ms</option>
@@ -1084,7 +1084,7 @@ const ContactForm = () => {
                   value={data.gender}
                   onChange={handleChange}
                 >
-                  <option selected>Select Gender</option>
+                  <option value="" >Select Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
@@ -1121,7 +1121,7 @@ const ContactForm = () => {
                   value={data.country}
                   onChange={handleChange}
                 >
-                  <option selected>Select a country</option>
+                  <option value="" >Select a country</option>
                   <option value="India">India</option>
                 </select>
                 <div className="help-block with-errors"></div>
@@ -1217,7 +1217,7 @@ const ContactForm = () => {
                   value={data.category}
                   onChange={handleChange}
                 >
-                  <option selected>Select Category</option>
+                  <option value="" >Select Category</option>
                   <option value="General">General</option>
                   <option value="OBC">OBC</option>
                   <option value="SC">SC</option>
@@ -1256,7 +1256,7 @@ const ContactForm = () => {
                   value={data.idType}
                   onChange={handleChange}
                 >
-                  <option selected>Select ID</option>
+                  <option value="" >Select ID</option>
                   <option value="Passport">Passport</option>
                   <option value="Aadhar Card">Aadhar Card</option>
                   <option value="Govt. issued photo ID">
@@ -1395,9 +1395,9 @@ const ContactForm = () => {
                       value={data.state}
                       onChange={handleChange}
                     >
-                      <option selected>Select State</option>
+                      <option value="" >Select State</option>
                       {state.map((item, index) => {
-                        return <option value={item.state}>{item.state}</option>;
+                        return <option key={index} value={item.state}>{item.state}</option>;
                       })}
                     </select>
                     <div className="help-block with-errors"></div>
@@ -1415,12 +1415,12 @@ const ContactForm = () => {
                       value={data.district}
                       onChange={handleChange}
                     >
-                      <option selected>Select District</option>
+                      <option value="" >Select District</option>
                       {state
                         .filter((item) => item.state === data.state)
-                        .map((item, index) => {
+                        .map((item) => {
                           return item.districts.map((x, index) => {
-                            return <option value={x}>{x}</option>;
+                            return <option key={index} value={x}>{x}</option>;
                           });
                         })}
                     </select>
@@ -1453,7 +1453,7 @@ const ContactForm = () => {
                       checked={sameAddress}
                       onChange={handleAddressChange}
                       />
-                      <label for="addressCheck" style={{fontSize:'12px', marginLeft:'10px'}}>Same as permanent address</label>
+                      <label htmlFor="addressCheck" style={{fontSize:'12px', marginLeft:'10px'}}>Same as permanent address</label>
                     <div className="help-block with-errors"></div>
                   </Box>
                 </div>
@@ -1491,9 +1491,9 @@ const ContactForm = () => {
                       value={sameAddress ? data.state : data.permanentState}
                       onChange={handleChange}
                     >
-                      <option selected>Select State</option>
+                      <option value="" >Select State</option>
                       {state.map((item, index) => {
-                        return <option value={item.state}>{item.state}</option>;
+                        return <option key={index} value={item.state}>{item.state}</option>;
                       })}
                     </select>
                     <div className="help-block with-errors"></div>
@@ -1511,12 +1511,12 @@ const ContactForm = () => {
                       value={sameAddress ? data.district : data.permanentDistrict}
                       onChange={handleChange}
                     >
-                      <option selected>Select District</option>
+                      <option value="" >Select District</option>
                       {state
                         .filter((item) => item.state === data.state)
-                        .map((item, index) => {
+                        .map((item) => {
                           return item.districts.map((x, index) => {
-                            return <option value={x}>{x}</option>;
+                            return <option key={index} value={x}>{x}</option>;
                           });
                         })}
                     </select>
@@ -1551,7 +1551,7 @@ const ContactForm = () => {
                       value={sameAddress ? data.country : data.permanentCountry}
                       onChange={handleChange}
                     >
-                      <option selected>Select a country</option>
+                      <option value="" >Select a country</option>
                       <option value="India">India</option>
                     </select>
                     <div className="help-block with-errors"></div>

@@ -108,9 +108,9 @@ const CoursesComponnent = () => {
           {
             coursesData.map((course, index) => {
               return (
-                <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}} key={index}>
+                <div  style={{textDecoration:'none', marginRight:'40px'}} key={index}>
                   <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
-                </Link>
+                </div>
               )
             }
             )

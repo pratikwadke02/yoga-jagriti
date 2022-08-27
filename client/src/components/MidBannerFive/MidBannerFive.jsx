@@ -94,9 +94,9 @@ const MidBannerFive = () => {
         >
           <TestimonyCarousel testimonials={testimonials} />
         </Box>
-        <Box sx={{width:'100%', ml:{xs:0, lg:4}, mt:{xs:4, lg:0}}}>
+        {/* <Box sx={{width:'100%', ml:{xs:0, lg:4}, mt:{xs:4, lg:0}}}>
             <VideoCarousel videoData = {videoProps} />
-        </Box>
+        </Box> */}
         </Box>
         </Box>
       </Container>

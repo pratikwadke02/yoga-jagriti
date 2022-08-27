@@ -1044,9 +1044,9 @@ const BillingInformation = () => {
                       value={billingInfo.state}
                       onChange={handleChange}
                     >
-                      <option selected>Select State</option>
+                      <option value="">Select State</option>
                       {state.map((item, index) => {
-                        return <option value={item.state}>{item.state}</option>;
+                        return <option key={index} value={item.state}>{item.state}</option>;
                       })}
                     </select>
                     <div className="help-block with-errors"></div>
@@ -1062,12 +1062,12 @@ const BillingInformation = () => {
                       value={billingInfo.district}
                       onChange={handleChange}
                     >
-                      <option selected>Select District</option>
+                      <option value="">Select District</option>
                       {state
                         .filter((item) => item.state === billingInfo.state)
-                        .map((item, index) => {
+                        .map((item) => {
                           return item.districts.map((x, index) => {
-                            return <option value={x}>{x}</option>;
+                            return <option key={index} value={x}>{x}</option>;
                           });
                         })}
                     </select>
