@@ -19,12 +19,12 @@ const VideoCarousel = (props) => {
                 return (
                     <Carousel.Item key={video.id}>
                         <ReactPlayer 
-                            url={video.src} 
+                            url="https://www.youtube.com/watch?v=qeLnZIgt_JI"
                             width="fit-content"
                             pip={true}
                             controls={true}
                             playing={true}
-                            style={{margin:'auto'}}
+                            style={{margin:'auto', width:'100%'}}
                         />
                         {/* <Carousel.Caption>
                             <h3>{video.title}</h3>

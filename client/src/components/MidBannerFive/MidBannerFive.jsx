@@ -4,7 +4,7 @@ import StarIcon from "@mui/icons-material/Star";
 import { theme } from "../../theme";
 import CommentCard from "../utils/CommentCard/CommentCard";
 import { images } from "../../constants";
-import { videos } from '../../constants'
+// import { videos } from '../../constants'
 import VideoCarousel from "../utils/VideoCarousel/VideoCarousel";
 import TestimonyCarousel from "../utils/TestimonyCorousel/TestimonyCarousel";
 
@@ -37,12 +37,12 @@ const MidBannerFive = () => {
     {
         id: 1,
         title: "Video 1",
-        src: videos.vid_one,
+        // src: videos.vid_one,
     },
     {
         id: 2,
         title: "Video 2",
-        src: videos.vid_two,
+        // src: videos.vid_two,
     }
 ]
 
