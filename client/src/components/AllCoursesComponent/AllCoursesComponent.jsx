@@ -5,6 +5,7 @@ import {images} from '../../constants'
 import AllCoursesCard from '../utils/CoursesCard/AllCoursesCard'
 import { Link } from 'react-router-dom'
 import CoursesMenu from '../utils/CoursesMenu/CoursesMenu'
+import './AllCourses.css'
 
 const AllCoursesComponent = () => {
 

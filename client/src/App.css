@@ -36,3 +36,111 @@
     transform: rotate(360deg);
   }
 }
+
+
+.darkbar{
+  height: 5px;
+  width: 130px;
+  background: #ae155550;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 30px;
+}
+
+.darkbar::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2.7px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ae1555;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: MOVE-BG;
+            animation-name: MOVE-BG;  
+}
+
+@-webkit-keyframes MOVE-BG {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(88px);
+              transform: translateX(88px);
+    }
+  }
+  
+  @keyframes MOVE-BG {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(88px);
+              transform: translateX(88px);
+    }
+  }
+
+  .lightbar{
+    height: 5px;
+    width: 130px;
+    background: #faf6f262;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 30px;
+  }
+  
+  .lightbar::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -2.7px;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #faf6f2;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-name: MOVE-BG;
+              animation-name: MOVE-BG;  
+  }
+
+.darkbar{
+height: 5px;
+width: 130px;
+background: #ae155550;
+margin-top: 20px;
+position: relative;
+border-radius: 30px;
+}
+
+.darkbar::before{
+content: '';
+position: absolute;
+left: 0;
+top: -2.7px;
+height: 10px;
+width: 10px;
+border-radius: 50%;
+background: #ae1555;
+-webkit-animation-duration: 3s;
+        animation-duration: 3s;
+-webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+-webkit-animation-name: MOVE-BG;
+        animation-name: MOVE-BG;  
+}
+

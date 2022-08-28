@@ -2,6 +2,7 @@ import { Typography, Box } from '@mui/material'
 import React, {useState} from 'react'
 import {theme} from '../../theme'
 import axios from 'axios'
+import './BillingInformation.css'
 
 const BillingInformation = () => {
 

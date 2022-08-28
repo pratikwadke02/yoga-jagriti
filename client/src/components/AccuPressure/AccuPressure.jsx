@@ -3,6 +3,7 @@ import React from "react";
 import { theme } from "../../theme";
 import { images } from "../../constants";
 import PictureComponent from "../utils/Picture/PictureComponent";
+import './AccuPressure.css'
 
 const AccuPressure = () => {
   return (

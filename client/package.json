@@ -1,7 +1,6 @@
 {
   "name": "yoga-jagriti",
   "version": "0.1.0",
-  "homepage": "http://pratikwadke02.github.io/yoga-jagriti",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",

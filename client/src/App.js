@@ -27,7 +27,7 @@ function App() {
       <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/yoga-jagriti" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/career" element={<Career/>} />
         <Route path="/about" element={<About />} />

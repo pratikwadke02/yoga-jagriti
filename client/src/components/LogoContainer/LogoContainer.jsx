@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
+import './LogoContainer.css'
 
 const LogoContainer = () => {
   return (

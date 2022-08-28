@@ -4,6 +4,7 @@ import { theme } from "../../theme";
 import { images } from "../../constants";
 import { useState } from "react";
 import axios from 'axios';
+import './Enquiry.css'
 
 const EnquiryForm = () => {
   const [enquiryData, setEnquiryData] = useState({
