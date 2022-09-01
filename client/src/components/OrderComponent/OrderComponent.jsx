@@ -13,7 +13,7 @@ const OrderComponent = () => {
 
     useEffect(() => {
       const getCartData = async () => {
-        const {data} = await axios.post(`http://localhost:8080/api/yoga/getProduct`, productIdData)
+        const {data} = await axios.post(`http://localhost:5000/api/yoga/getProduct`, productIdData)
         setCartData(data)
       }
       getCartData()

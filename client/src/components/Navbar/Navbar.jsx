@@ -26,7 +26,7 @@ const drawerWidth = 240;
 const navItems = [
   {
     name: "Home",
-    path: "yoga-jagriti",
+    path: "",
   },
   {
     name: "About",

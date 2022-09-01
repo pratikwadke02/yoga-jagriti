@@ -23,7 +23,7 @@ const EnquiryForm = () => {
     e.preventDefault();
     try{
       await axios
-        .post('http://localhost:8080/api/yoga/addEnquiry', enquiryData)
+        .post('http://localhost:5000/api/yoga/addEnquiry', enquiryData)
         .then((res) => {
           console.log(res)
           }).catch((err) => {

@@ -903,7 +903,7 @@ const BillingInformation = () => {
         e.preventDefault();
         try{
           await axios
-            .post('http://localhost:8080/api/yoga/addEnquiry', billingInfo)
+            .post('http://localhost:5000/api/yoga/addEnquiry', billingInfo)
             .then((res) => {
               console.log(res)
               }).catch((err) => {
