@@ -20,6 +20,9 @@ import Shop from './views/Shop/Shop';
 import Cart from './views/Cart/Cart';
 import Checkout from './views/Checkout/Checkout';
 import AboutUs from './views/AboutUs/AboutUs';
+import PrivacyPolicy from './views/PrivacyPolicy/PrivacyPolicy';
+import TermsAndConditions from './views/TermsAndConditions/TermsAndConditions';
+import RefundPolicy from './views/RefundPolicy/RefundPolicy';
 
 function App() {
   return (
@@ -44,6 +47,9 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
       </Routes>
       <Footer />
       </BrowserRouter>
