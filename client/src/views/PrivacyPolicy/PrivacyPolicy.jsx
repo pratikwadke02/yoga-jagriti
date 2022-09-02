@@ -38,6 +38,13 @@ const PrivacyPolicy = () => {
           minHeight: "95vh",
         }}
       >
+        <Box
+        sx={{
+          width:'100%',
+          maxWidth:'1500px',
+          m:'auto',
+        }}
+        >
         <Box sx={{width:'100%', textAlign:'center'}}>
           <Typography
             variant="h2"
@@ -239,6 +246,7 @@ To ensure compliance with our policies, we restrict the use of third-party cooki
           >
 You may also change other setting related to Privacy and Security under the same section.
           </Typography>
+        </Box>
         </Box>
       </Container>
     </>

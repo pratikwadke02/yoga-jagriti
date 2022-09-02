@@ -21,6 +21,13 @@ const AboutUs = () => {
           minHeight: "95vh",
         }}
       >
+        <Box
+        sx={{
+          width:'100%',
+          maxWidth:'1500px',
+          m:'auto',
+        }}
+        >
         <Box sx={{width:'100%', textAlign:'center'}}>
           <Typography
             variant="h2"
@@ -97,6 +104,7 @@ const AboutUs = () => {
           >
             GSTIN
           </Typography>
+        </Box>
         </Box>
       </Container>
     </>
