@@ -38,16 +38,17 @@ AFFILIATED TO NCVT, GOVT OF INDIA, NEW DELHI and Naturopathy and yoga clinics at
 Delhi and in UP.
 It is registered under income tax act 80G and 12 A.
           </Typography>
-        </Box>
-        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
-        <Box sx={{zIndex:2,width:{xs:'160%'}}}>
-            <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
+          <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
             The Organisation is a non-profitable, non-political and non- religious body, set-up with
 the sole and bona-fide aim to develop and promote the knowledge, education and
 applications of Yoga and Naturopathy for the benefit of all sections of the society. A self-
 regulatory body Of Leading Yoga &amp; Naturopatyhic Institutions of India established in 5
 july, 2015.
             </Typography>
+        </Box>
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
+        <Box sx={{zIndex:2,width:{xs:'160%'}}}>
+            
             <Box sx={{display:{xs:'flex', md:'none'}, mt:4, mb:4, flexDirection:'row', justifyContent:'center'}}>
                 <PictureComponent image={images.team_three} size="small" color="dark" />
             </Box>

@@ -11,21 +11,21 @@ import TestimonyCarousel from "../utils/TestimonyCorousel/TestimonyCarousel";
 const MidBannerFive = () => {
   const testimonials = [
     {
-      name: "Amanda Kinedy",
+      name: "Aarav Kumar",
       role: "FINANCIAL ADVISOR",
       comment:
         " I appreciate your coaching center really good environment and excellent student training. You are continously handle student training wonderfully. Thanks for your great service.",
       rating: 5,
     },
     {
-      name: "Elena Blackwell",
+      name: "Abhishek Rao",
       role: "MANAGING DIRECTOR",
       comment:
         "I appreciate your coaching center really good environment and excellent student training. You are continously handle student training wonderfully. Thanks for your great service.",
       rating: 4,
     },
     {
-      name: "Amanda Kinedy",
+      name: "Mukti Arora",
       role: "FINANCIAL ADVISOR",
       comment:
         " I appreciate your coaching center really good environment and excellent student training. You are continously handle student training wonderfully. Thanks for your great service.",

@@ -54,20 +54,20 @@ const Shop = () => {
 
   const categoryData = [
     {
-      category: "Tshirt",
-      quantity: 50,
+      category: "Pure Ghee",
+      quantity: 35,
     },
     {
-      category: "Tshirt",
-      quantity: 50,
+      category: "Mustard Oil",
+      quantity: 70,
     },
     {
-      category: "Tshirt",
-      quantity: 50,
+      category: "Turmeric",
+      quantity: 150,
     },
     {
-      category: "Tshirt",
-      quantity: 50,
+      category: "Naturopathy Products",
+      quantity: 25,
     },
   ];
 

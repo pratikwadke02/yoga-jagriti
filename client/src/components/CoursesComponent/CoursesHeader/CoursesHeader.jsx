@@ -9,12 +9,12 @@ import { theme } from "../../../theme";
 const CoursesHeader = () => {
   const headerDataOne = [
     {
-      title: "19 Lac +",
+      title: "5000 +",
       subtitle: "Members",
       icon: <PeopleOutlineIcon color="primary" />,
     },
     {
-      title: "150 +",
+      title: "10 +",
       subtitle: "Courses",
       icon: <SubscriptionsOutlinedIcon color="primary" />,
     },
@@ -22,15 +22,16 @@ const CoursesHeader = () => {
 
   const headerDataTwo = [
     {
+      title: "100 +",
+      subtitle: "Jobs Placed",
+      icon: <InstallMobileOutlinedIcon color="primary" />,
+    },
+    {
       title: "4.7",
       subtitle: "Rating",
       icon: <StarBorderOutlinedIcon color="primary" />,
     },
-    {
-      title: "6 Lac +",
-      subtitle: "App Installs",
-      icon: <InstallMobileOutlinedIcon color="primary" />,
-    },
+    
   ];
 
   return (

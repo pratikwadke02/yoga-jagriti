@@ -26,7 +26,7 @@ const ContactComponent = () => {
     e.preventDefault();
     try{
       await axios
-        .post('http://localhost:8080/api/yoga/addResponse', contactData)
+        .post('http://localhost:5000/api/yoga/addResponse', contactData)
         .then((res) => {
           console.log(res)
           }).catch((err) => {

@@ -26,7 +26,7 @@ const TestimonyCorousel = (props) => {
             <CommentCard
               key={index}
               name={testimony.name}
-              role={testimony.role}
+              // role={testimony.role}
               comment={testimony.comment}
               rating={testimony.rating}
             />
@@ -35,7 +35,7 @@ const TestimonyCorousel = (props) => {
             <CommentCard
               key={index}
               name={testimony.name}
-              role={testimony.role}
+              // role={testimony.role}
               comment={testimony.comment}
               rating={testimony.rating}
             />
