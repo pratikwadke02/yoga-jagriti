@@ -15,7 +15,7 @@ const AllCourses = () => {
           backgroundImage: `url(${images.pattern_three})`,
           height: "100%",
           minHeight: {lg:"95vh"},
-          maxHeight: {xs:'100%', lg:'90vh'},
+          maxHeight: {xs:'100%'},
           pb:10,
         }}
       >

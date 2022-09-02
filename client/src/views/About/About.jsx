@@ -27,7 +27,7 @@ const About = () => {
         <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 ABOUT US
             </Typography>
-            {/* <div className="darkbar" style={{margin:'auto', marginTop:'20px'}} ></div> */}
+            <div className="darkbar" style={{margin:'auto', marginTop:'20px'}} ></div>
           <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'}}>
             JAGRITI YOGA AND NATUROPATHY SANSTHAN (JYANS) ESTABLISTED IN THE
             YEAR 2015 UNDER S.R.ACT. 1860. A MASTER FRANCHISEE OF THE ‘INDIAN

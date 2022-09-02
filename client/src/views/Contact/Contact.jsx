@@ -27,6 +27,9 @@ const Contact = () => {
                 CONTACT US
             </Typography>
         </Box>
+        <div className="darkbar"
+        style={{margin:'auto'}}
+        ></div>
         <Box sx={{display: "flex", flexDirection: {xs:'column', md:"row"}, justifyContent: "center", alignItems: "center", mr:{md:2}}}>
         <Box sx={{width:'100%', display:'flex', flexDirection:{xs:'column'}}}>
             <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}, justifyContent:'center'}}>

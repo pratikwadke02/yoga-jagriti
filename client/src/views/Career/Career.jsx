@@ -114,7 +114,7 @@ const Career = () => {
           >
             CAREER IN YOGA
           </Typography>
-          {/* <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div> */}
+          <div className="darkbar" style={{margin:'auto', marginTop:'20px'}}></div>
         </Box>
       </Container>
       <Container
