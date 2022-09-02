@@ -12,15 +12,23 @@ const Footer = () => {
   const moreData = [
     {
       title: "Privacy Policy",
+      path: "privacy-policy",
     },
     {
       title: "Terms & Conditions",
+      path: "terms-and-conditions",
     },
     {
-      title: "FAQ's",
+      title: "Refund Policy",
+      path: "refund-policy",
+    },
+    {
+      title: "About Us",
+      path: 'about-us'
     },
     {
       title: "Disclaimer",
+      path: "disclaimer",
     },
   ];
 
@@ -224,13 +232,18 @@ const Footer = () => {
             <Box sx={{mt:1}}>
             {moreData.map((item, index) => {
               return (
-                <Typography
+                <Link
                   key={index}
+                  to={item.path}
+                  style={{ textDecoration: "none" }}
+                >
+                <Typography
                   variant="h6"
                   sx={{ color: theme.palette.text.main }}
                 >
                   {item.title}
                 </Typography>
+                </Link>
               );
             })}
             </Box>

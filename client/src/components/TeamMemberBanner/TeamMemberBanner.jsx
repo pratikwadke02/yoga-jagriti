@@ -21,11 +21,6 @@ const TeamMemberBanner = () => {
       role: "YOGA TEACHER", 
       image: "team_three",
     },
-    {
-      name: "Elena Rusconi",
-      role: "YOGA TEACHER",
-      image: "team_four",
-    },
   ];
 
   return (

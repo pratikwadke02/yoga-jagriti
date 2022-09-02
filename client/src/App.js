@@ -19,6 +19,7 @@ import Syllabus from './views/Syllabus/Syllabus';
 import Shop from './views/Shop/Shop';
 import Cart from './views/Cart/Cart';
 import Checkout from './views/Checkout/Checkout';
+import AboutUs from './views/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
       <Footer />
       </BrowserRouter>

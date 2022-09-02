@@ -77,7 +77,7 @@ const Shop = () => {
     const getProductsData = async () => {
       const { data } = await axios.get(
         "http://localhost:5000/api/yoga/getAllProducts"
-      );
+      ); 
       setProducts(data);
       console.log(products);
     };
