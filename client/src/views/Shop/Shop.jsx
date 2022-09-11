@@ -5,6 +5,7 @@ import { theme } from "../../theme";
 import { images } from "../../constants";
 import ShopCard from "../../components/utils/ProductCard/ShopCard";
 import CategoryCard from "../../components/utils/CategoryCard/CategoryCard";
+import { useSelector } from "react-redux";
 
 const minDistance = 10;
 
@@ -71,18 +72,20 @@ const Shop = () => {
     },
   ];
 
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const getProductsData = async () => {
-      const { data } = await axios.get(
-        "http://localhost:5000/api/yoga/getAllProducts"
-      ); 
-      setProducts(data);
-      console.log(products);
-    };
-    getProductsData();
-  }, []);
+  // useEffect(() => {
+  //   const getProductsData = async () => {
+  //     const { data } = await axios.get(
+  //       "http://localhost:5000/api/yoga/getAllProducts"
+  //     ); 
+  //     setProducts(data);
+  //     console.log(products);
+  //   };
+  //   getProductsData();
+  // }, []);
+
+  const products = useSelector((state) => state.product.products);
 
   return (
     <>

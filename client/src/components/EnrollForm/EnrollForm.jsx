@@ -937,7 +937,7 @@ const ContactForm = () => {
     try {
       console.log(data);
       await axios
-        .post("http://localhost:5000/api/yoga/addStudent", data)
+        .post("http://yogajagriti.com:5000/api/yoga/addStudent", data)
         .then((res) => {
           console.log(res);
         })

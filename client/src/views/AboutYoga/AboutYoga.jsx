@@ -22,9 +22,9 @@ const AboutYoga = () => {
           pb:10,
         }}
       >
-        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
-        <Box sx={{zIndex:2,width:{xs:'160%'}}}>
-            <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
+        <Box sx={{width:{xs:'100%', md:'80%'}, m:'auto'}}>
+
+        <Typography variant="h2" sx={{m:'auto', fontWeight:theme.typography.fontWeightBold, color:theme.palette.primary.main}}>
                 ABOUT YOGA
             </Typography>
             <div className="darkbar"></div>
@@ -37,6 +37,11 @@ implies joining or integrating all aspects of the individual - body with mind an
 soul - to achieve a happy, balanced and useful life, and spiritually, uniting the individual with
 the supreme.
             </Typography>
+        </Box>
+        <Box sx={{zIndex:2, m:'auto',display:'flex', flexDirection:'row', width:{xs:'100%', md:'80%'}}}>
+          
+        <Box sx={{zIndex:2,width:{xs:'160%'}}}>
+            
             <Typography variant="h6" sx={{mt:2, textAlign:'justify', textJustify:'inter-word'  }}>
             Yoga, in general, is a spiritual practice or discipline that helps the individual unify his/her
 body, mind, and heart.

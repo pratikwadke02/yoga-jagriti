@@ -7,17 +7,17 @@ import {images} from '../../constants';
 const TeamMemberBanner = () => {
   const teamMembers = [
     {
-      name: "Amanda Rivera",
+      name: "Yukti Sharma",
       role: "YOGA TEACHER",
       image: "team_one",
     },
     {
-      name: "jasmin Narayan",
+      name: "Jasmin Narayan",
       role: "YOGA TEACHER",
       image: "team_two",
     },
     {
-      name: "Jennifer Winds",
+      name: "Shakti Mohan",
       role: "YOGA TEACHER", 
       image: "team_three",
     },
