@@ -76,12 +76,14 @@ export default function User() {
 
   useEffect(() => {
     const getProductsData = async () => {
-      const { data } = await axios.get('http://localhost:8080/api/yoga/getAllProducts');
+      const { data } = await axios.get('http://yogajagriti.com:5000/api/yoga/getAllProducts');
       setProducts(data);
       console.log(products);
     };
     getProductsData();
   }, []);
+
+  console.log(products);
 
   const [page, setPage] = useState(0);
 
@@ -174,7 +176,7 @@ export default function User() {
                 />
                 <TableBody>
                   {products.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((product) => {
-                    const { id, name, quantity, price, discountPrice, description } = product;
+                    const { id, name, stock, price, discountPrice, description } = product;
                     const isItemSelected = selected.indexOf(id) !== -1;
 
                     return (
@@ -196,7 +198,7 @@ export default function User() {
                             </Typography>
                           </Stack>
                         </TableCell>
-                        <TableCell align="left">{quantity}</TableCell>
+                        <TableCell align="left">{stock}</TableCell>
                         <TableCell align="left">{price}</TableCell>
                         <TableCell align="left">{discountPrice}</TableCell>
                         <TableCell align="left">

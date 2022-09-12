@@ -76,7 +76,7 @@ export default function User() {
 
   useEffect(() => {
     const getUserData = async () => {
-      const { data } = await axios.get('http://localhost:8080/api/yoga/getAllUsers');
+      const { data } = await axios.get('http://yogajagriti.com:5000/api/yoga/getAllUsers');
       setUsers(data);
       console.log(users);
     };

@@ -76,7 +76,7 @@ export default function Response() {
 
     useEffect(() => {
         const getResponseData = async () => {
-          const { data } = await axios.get('http://localhost:8080/api/yoga/getAllResponses');
+          const { data } = await axios.get('http://yogajagriti.com:5000/api/yoga/getAllResponses');
           setResponse(data);
           console.log(response);
         };
