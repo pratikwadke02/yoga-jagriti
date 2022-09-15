@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { images } from "../../../constants";
 import { theme } from "../../../theme";
+import { useDispatch } from "react-redux";
+import { Decrement, Increment } from "../../../actions/cart";
 
 const CartCard = (props) => {
   const { name, image, desc, price, quantity, discountPrice, id } = props;
+
+  const [qty, setQty] = useState(quantity);
+
+  const dispatch = useDispatch();
+
+  const handleIncrement = (id) => {
+    try {
+      dispatch(Increment(id));
+      setQty(qty + 1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDecrement = (id) => {
+    try {
+      dispatch(Decrement(id));
+      setQty(qty - 1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -12,14 +36,27 @@ const CartCard = (props) => {
         sx={{
           width: "100%",
           display: "flex",
-          flexDirection: {xs:'column', md:"row"},
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ display:'flex', flexDirection:{xs:'column', md:'row'}  }}>
-          <img src={images.product} alt="" style={{ borderRadius: "5px", height:'auto' }} />
-          <Box sx={{display:'flex', flexDirection:'column', ml:{xs:0, md:2}, mt:{xs:2, md:0}}}>
-          <Typography
+        <Box
+          sx={{ display: "flex", flexDirection: { xs: "column", md: "row" } }}
+        >
+          <img
+            src={images.product}
+            alt=""
+            style={{ borderRadius: "5px", height: "auto" }}
+          />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              ml: { xs: 0, md: 2 },
+              mt: { xs: 2, md: 0 },
+            }}
+          >
+            <Typography
               variant="h6"
               sx={{
                 color: theme.palette.primary.main,
@@ -28,14 +65,21 @@ const CartCard = (props) => {
             >
               {name}
             </Typography>
-            <Typography variant="h7" sx={{color:theme.palette.text.main, fontWeight: theme.typography.fontWeightMedium,mt:1 }}>
+            <Typography
+              variant="h7"
+              sx={{
+                color: theme.palette.text.main,
+                fontWeight: theme.typography.fontWeightMedium,
+                mt: 1,
+              }}
+            >
               {desc}
             </Typography>
           </Box>
         </Box>
         <Box
           sx={{
-            mt:{xs:1, md:0},
+            mt: { xs: 1, md: 0 },
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
@@ -57,47 +101,56 @@ const CartCard = (props) => {
           </Box>
           <Box>
             <Box
-          sx={{
-            mt:{xs:1, md:0},
-            width: "fit-content",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            border: "1px solid" + theme.palette.text.light,
-          }}
-        >
-          <Button
-            sx={{
-              minWidth:'20px',
-              borderRadius: "0px",
-              borderRight: "1px solid" + theme.palette.text.light,
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{ fontWeight: theme.typography.fontWeightBold }}
+              sx={{
+                mt: { xs: 1, md: 0 },
+                width: "fit-content",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                border: "1px solid" + theme.palette.text.light,
+              }}
             >
-              +
-            </Typography>
-          </Button>
-          <Typography variant="h6" sx={{ ml: 2, mr: 2 }}>
-            1
-          </Typography>
-          <Button
-            sx={{
-              minWidth:'20px',
-              borderRadius: "0px",
-              borderLeft: "1px solid" + theme.palette.text.light,
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{maxWidth:'10px', fontWeight: theme.typography.fontWeightBold }}
-            >
-              -
-            </Typography>
-          </Button>
-        </Box>
+              <Button
+                sx={{
+                  minWidth: "20px",
+                  borderRadius: "0px",
+                  borderRight: "1px solid" + theme.palette.text.light,
+                }}
+                onClick={() => {
+                  handleIncrement(id);
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  sx={{ fontWeight: theme.typography.fontWeightBold }}
+                >
+                  +
+                </Typography>
+              </Button>
+              <Typography variant="h6" sx={{ ml: 2, mr: 2 }}>
+                {qty}
+              </Typography>
+              <Button
+                sx={{
+                  minWidth: "20px",
+                  borderRadius: "0px",
+                  borderLeft: "1px solid" + theme.palette.text.light,
+                }}
+                onClick={() => {
+                  handleDecrement(id);
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  sx={{
+                    maxWidth: "10px",
+                    fontWeight: theme.typography.fontWeightBold,
+                  }}
+                >
+                  -
+                </Typography>
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Box>

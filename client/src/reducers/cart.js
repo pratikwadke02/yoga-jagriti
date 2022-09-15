@@ -5,6 +5,7 @@ const cartReducer = (state = { cart: [] }, action) => {
         case actionType.ADD_TO_CART:
             // console.log(state.cart)
             // console.log(state.cart.filter((item) => item.id == action.data.id)[0])
+            console.log(state.cart.filter((item) => item.id == action.data.id)[0])
             if(state.cart.filter((item) => item.id == action.data.id).length > 0){
                 state.cart.map((item, index) => {
                     if(item.id == action.data.id){
@@ -20,6 +21,25 @@ const cartReducer = (state = { cart: [] }, action) => {
             console.log("inside cart reducer");
             console.log(action.payload);
             return { ...state, cart: action.payload };
+        case actionType.INCREMENT:
+            console.log(action.id);
+            state.cart.map((item, index) => {
+                console.log(item.id);
+                if(item.id == action.id){
+                    item.quantity += 1;
+                    console.log(item.quantity);
+                }
+            })
+            return state;
+        case actionType.DECREMENT:
+            state.cart.map((item, index) => {
+                if(item.id == action.id){
+                    item.quantity -= 1;
+                }
+            })
+            return state;
+        case actionType.CLEAR_CART:
+            return { ...state, cart: [] };
         default:
             return state;
     }

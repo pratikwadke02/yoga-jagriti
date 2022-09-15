@@ -12,7 +12,7 @@ const CoursesMenu = (props) => {
     <>
       <Box
         sx={{
-          minWidth:'300px',
+          maxWidth:'300px',
           p: 2,
           width: "100%",
         }}

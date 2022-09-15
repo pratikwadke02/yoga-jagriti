@@ -7,4 +7,6 @@ export const GET_PRODUCT_BY_ID = 'GET_PRODUCT_BY_ID';
 
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const GET_CART = 'GET_CART';
-export const INC_QUANTITY = 'INCREASE_QUANTITY';
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const CLEAR_CART = 'CLEAR_CART';

@@ -11,13 +11,13 @@ const OrderComponent = () => {
 
     const productIdData  = (useSelector(state => state.cart.cart));
 
-    useEffect(() => {
-      const getCartData = async () => {
-        const {data} = await axios.post(`http://localhost:5000/api/yoga/getProduct`, productIdData)
-        setCartData(data)
-      }
-      getCartData()
-    } , [])
+    // useEffect(() => {
+    //   const getCartData = async () => {
+    //     const {data} = await axios.post(`http://yogajagriti:5000/api/yoga/getProduct`, productIdData)
+    //     setCartData(data)
+    //   }
+    //   getCartData()
+    // } , [])
     
 
   return (
@@ -28,7 +28,7 @@ const OrderComponent = () => {
         </Box>
         <Box sx={{mt:2, width:'100%'}}>
         {
-            cartData.map((item, index) => {
+            productIdData.map((item, index) => {
               return (
                 <>
                 <Box sx={{width:'100%',mb:4}}>

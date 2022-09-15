@@ -35,7 +35,7 @@ const Objectives = () => {
 
   return (
     <>
-      <Box sx={{ zIndex: 2, m: "auto", width: { xs: "100%", md: "80%" }, }}>
+      <Box sx={{ zIndex: 2, m: "auto", width: { xs: "100%", md: "80%" },mb:{xs:0, md:2} }}>
         <Typography
           variant="h2"
           sx={{

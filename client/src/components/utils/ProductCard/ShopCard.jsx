@@ -14,7 +14,16 @@ const ProgramCard = (props) => {
 
   const handleAddToCart = (id) => {
     try{
-      dispatch(addToCart(id));
+      const data = {
+        id: id,
+        quantity: 1,
+        name: name,
+        desc: desc,
+        price: price,
+        discountPrice: discountPrice,
+        image: image
+      }
+      dispatch(addToCart(data));
     }catch(error){
       console.log(error);
     }

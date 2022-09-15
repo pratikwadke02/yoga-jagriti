@@ -18,14 +18,7 @@ import { getAllProducts } from '../../actions/product'
 
 const Home = () => {
 
-  const dispatch = useDispatch();
-
-  useEffect (() => {
-    const getproductsData = async () => {
-      dispatch(getAllProducts());
-    }
-    getproductsData();
-  }, [dispatch]);
+  
 
   return (
     <>

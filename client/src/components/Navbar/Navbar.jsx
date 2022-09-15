@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useEffect} from "react";
 import {
   AppBar,
   Box,
@@ -21,6 +21,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link, NavLink } from "react-router-dom";
 import NavbarHeader from "./NavbarHeader/NavbarHeader";
 import NavbarLogoSection from "./NavbarLogoSection/NavbarLogoSection";
+import { useDispatch } from "react-redux";
+import { getAllProducts } from "../../actions/product";
 
 const drawerWidth = 240;
 const navItems = [
@@ -75,6 +77,15 @@ const navItems = [
 ];
 
 function DrawerAppBar(props) {
+  const dispatch = useDispatch();
+
+  useEffect (() => {
+    const getproductsData = async () => {
+      dispatch(getAllProducts());
+    }
+    getproductsData();
+  }, [dispatch]);
+
   const navLinkStyles = ({ isActive }) => {
     return {
       height: "37px",

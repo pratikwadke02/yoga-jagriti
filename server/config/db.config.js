@@ -1,8 +1,8 @@
 module.exports = {
-    host: 'yogajagriti.com',
-    user: 'jagritiyoga',
-    password: 'Tech2020',
-    database: 'jagritiyogadb',
+    host: 'localhost',
+    user: 'root',
+    password: 'pratik02',
+    database: 'yoga_jagriti',
     dialect: 'mysql',
     pool: {
         max: 5,

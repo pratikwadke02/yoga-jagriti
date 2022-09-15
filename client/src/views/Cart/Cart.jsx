@@ -14,34 +14,16 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   const getCartData = async () => {
-  //     const {data} = dispatch(getCart())
-  //   }
-  //   getCartData()
-  // } , [])
-
-  // console.log(cartData);
-
   const productIdData = useSelector((state) => state.cart.cart);
+  console.log(productIdData);
 
-  useEffect(() => {
-    const getCartData = async () => {
-      const { data } = await axios.post(
-        `http://localhost:5000/api/yoga/getProduct`,
-        productIdData
-      );
-      setCartData(data);
-    };
-    getCartData();
-  }, []);
 
   function getTotalPrice() {
     let totalPrice = 0;
     let totalDiscountPrice = 0;
-    cartData.map((item) => {
-      totalPrice += item.price * 1;
-      totalDiscountPrice += item.discountPrice * 1;
+    productIdData.map((item) => {
+      totalPrice += item.price * item.quantity;
+      totalDiscountPrice += item.discountPrice * item.quantity;
     });
     return { totalPrice, totalDiscountPrice };
   }
@@ -79,7 +61,7 @@ const Cart = () => {
           ></div>
         </Box>
 
-        {cartData.length === 0 ? (
+        {productIdData.length === 0 ? (
           <Box
             sx={{ width: "100%", m: "auto", textAlign: "center", pb: 2, mt: 10 }}
           >
