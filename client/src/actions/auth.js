@@ -21,3 +21,12 @@ export const register = (authInfo, router) => async(dispatch) => {
         console.log(error);
     }
 }
+
+export const logout = (router) => async(dispatch) => {
+    try{
+        dispatch({ type : AUTH, data : null });
+        router('/login');
+    }catch(error){
+        console.log(error);
+    }
+}
