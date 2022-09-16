@@ -44,6 +44,14 @@ const cartReducer = (state = { cart: [] , totalPrice: 0, discount: 0, discountPr
                 }
             })
             return state;
+        case actionType.DELETE:
+            state.cart.map((item, index) => {
+                if(item.id == action.id){
+                    state.totalPrice -= parseInt(item.price, 10) * item.quantity;
+                    state.discountPrice -= parseInt(item.discountPrice, 10) * item.quantity;
+                }
+            })
+            return { ...state, cart: state.cart.filter((item) => item.id !== action.id) };
         case actionType.CLEAR_CART:
             return { ...state, cart: [] };
         default:

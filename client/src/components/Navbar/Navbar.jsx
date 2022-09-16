@@ -12,6 +12,7 @@ import {
   ListItemText,
   IconButton,
   Button,
+  Badge,
 } from "@mui/material";
 import PropTypes from "prop-types";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -21,7 +22,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link, NavLink } from "react-router-dom";
 import NavbarHeader from "./NavbarHeader/NavbarHeader";
 import NavbarLogoSection from "./NavbarLogoSection/NavbarLogoSection";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../actions/product";
 
 const drawerWidth = 240;
@@ -70,13 +71,15 @@ const navItems = [
     name: "Shop",
     path: "shop",
   },
-  {
-    name: "Cart",
-    path: "cart",
-  },
+  // {
+  //   name: "Cart",
+  //   path: "cart",
+  // },
 ];
 
 function DrawerAppBar(props) {
+  const cartItems = useSelector((state) => state.cart.cart);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -98,6 +101,21 @@ function DrawerAppBar(props) {
       backgroundColor: isActive
         ? theme.palette.secondary.main
         : theme.palette.background.main,
+    };
+  };
+
+  const iconNavLinkStyles = ({ isActive }) => {
+    return {
+      height: "37px",
+      border: "1px solid" + theme.palette.background.default,
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      alignItems: "center",
+      textDecoration: "none",
+      color: isActive ? theme.palette.primary.main : theme.palette.text.default,
+      // backgroundColor: isActive
+      //   ? theme.palette.secondary.main
+      //   : theme.palette.background.main,
     };
   };
 
@@ -204,7 +222,9 @@ function DrawerAppBar(props) {
             >
               <MenuIcon color="secondary" />
             </IconButton>
-            <IconButton sx={{}}>
+            <NavLink to="/cart">
+            <IconButton sx={{mr:1}}>
+              <Badge badgeContent={cartItems.length} color="secondary">
               <ShoppingCartOutlinedIcon
                 fontSize="small"
                 sx={{
@@ -213,7 +233,9 @@ function DrawerAppBar(props) {
                   mr: { xs: 1, md: 0 },
                 }}
               />
+              </Badge>
             </IconButton>
+            </NavLink>
           </Box>
           <Box
             sx={{
@@ -246,6 +268,14 @@ function DrawerAppBar(props) {
                   </Typography>
                 </NavLink>
               ))}
+              <NavLink to="/cart" style={iconNavLinkStyles}>
+                <Badge badgeContent={cartItems.length} color="secondary">
+                  <ShoppingCartOutlinedIcon
+                    fontSize="small"
+                    sx={{ color: theme.palette.text.default, mt: 1 }}
+                  />
+                </Badge>
+              </NavLink>
               <Box
                 sx={
                   {

@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, ADD_TO_CART, CLEAR_CART } from "../constants/actionTypes";
+import { INCREMENT, DECREMENT, DELETE, ADD_TO_CART, CLEAR_CART } from "../constants/actionTypes";
 import * as api from '../api/index.js'
 
 export const addToCart = (data) => async(dispatch) => {
@@ -47,6 +47,19 @@ export const clearCart = () => async(dispatch) => {
         dispatch(
             {
                 type: CLEAR_CART
+            }
+        )
+    }catch(error){
+        console.log(error);
+    }
+}
+
+export const Delete = (id) => async(dispatch) => {
+    try{
+        dispatch(
+            {
+                type: DELETE,
+                id
             }
         )
     }catch(error){
