@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import {
   AppBar,
   Box,
@@ -46,22 +46,18 @@ const navItems = [
     name: "Syllabus",
     path: "syllabus",
   },
-  {
-    name: "Gallery",
-    path: "gallery",
-  },
-  {
-    name: "Shop",
-    path: "shop",
-  },
+  // {
+  //   name: "Gallery",
+  //   path: "gallery",
+  // },
   {
     name: "Career",
     path: "career",
   },
-  {
-    name: "Notice Board",
-    path: "notice-board",
-  },
+  // {
+  //   name: "Notice Board",
+  //   path: "notice-board",
+  // },
   {
     name: "Contact",
     path: "contact",
@@ -71,31 +67,37 @@ const navItems = [
     path: "faq",
   },
   {
+    name: "Shop",
+    path: "shop",
+  },
+  {
     name: "Cart",
     path: "cart",
-  }
+  },
 ];
 
 function DrawerAppBar(props) {
   const dispatch = useDispatch();
 
-  useEffect (() => {
+  useEffect(() => {
     const getproductsData = async () => {
       dispatch(getAllProducts());
-    }
+    };
     getproductsData();
   }, [dispatch]);
 
   const navLinkStyles = ({ isActive }) => {
     return {
       height: "37px",
-      border: "1px solid"+theme.palette.background.default,
+      border: "1px solid" + theme.palette.background.default,
       paddingLeft: "10px",
       paddingRight: "10px",
       alignItems: "center",
       textDecoration: "none",
       color: isActive ? theme.palette.primary.main : theme.palette.text.default,
-      backgroundColor: isActive ? theme.palette.secondary.main : theme.palette.background.main,
+      backgroundColor: isActive
+        ? theme.palette.secondary.main
+        : theme.palette.background.main,
     };
   };
 
@@ -136,11 +138,8 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item, index) => (
-          <div
-            key={index}
-          >
-            <NavLink 
-            to={`/${item.path}`} style={respNavLinkStyles}>
+          <div key={index}>
+            <NavLink to={`/${item.path}`} style={respNavLinkStyles}>
               <ListItem key={index}>
                 <ListItemText>
                   <Typography
@@ -155,7 +154,7 @@ function DrawerAppBar(props) {
             <Divider
               sx={{ width: "100%", backgroundColor: theme.palette.text.dark }}
             />
-            </div>
+          </div>
         ))}
       </List>
     </Box>
@@ -166,10 +165,7 @@ function DrawerAppBar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar
-        position="relative"
-        elevation={0}
-      >
+      <AppBar position="relative" elevation={0}>
         <Toolbar
           sx={{
             maxWidth: { xs: "100%" },
@@ -192,7 +188,7 @@ function DrawerAppBar(props) {
             sx={{
               backgroundColor: theme.palette.primary.main,
               mt: 2,
-              display: {xs:'flex', md:"none"},
+              display: { xs: "flex", md: "none" },
               flexDirection: "row",
               aligntItems: "center",
               width: "100%",
@@ -204,7 +200,7 @@ function DrawerAppBar(props) {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{display: { md: "none" }, ml:{xs:1, md:0} }}
+              sx={{ display: { md: "none" }, ml: { xs: 1, md: 0 } }}
             >
               <MenuIcon color="secondary" />
             </IconButton>
@@ -214,14 +210,14 @@ function DrawerAppBar(props) {
                 sx={{
                   color: theme.palette.text.default,
                   display: { xs: "block", md: "none" },
-                  mr: {xs:1, md:0},
+                  mr: { xs: 1, md: 0 },
                 }}
               />
             </IconButton>
           </Box>
           <Box
             sx={{
-              mt:2,
+              mt: 2,
               display: {
                 xs: "none",
                 md: "flex",
@@ -238,27 +234,26 @@ function DrawerAppBar(props) {
               sx={{
                 display: { xs: "none", md: "flex" },
                 width: "100%",
-                maxWidth: '1200px',
+                maxWidth: "1200px",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
               {navItems.map((item, index) => (
-                  <NavLink
-                    key={index}
-                   to={`/${item.path}`} style={navLinkStyles}>
-                    <Typography
-                      variant="h6"
-                      sx={{lineHeight:'37px' }}
-                    >
-                      {item.name}
-                    </Typography>
-                  </NavLink>
+                <NavLink key={index} to={`/${item.path}`} style={navLinkStyles}>
+                  <Typography variant="h6" sx={{ lineHeight: "37px" }}>
+                    {item.name}
+                  </Typography>
+                </NavLink>
               ))}
-              <Box sx={{ 
-                // border: '1px solid'+theme.palette.background.default, height:'37px'
-                }}>
-              {/* <NavLink to='/cart' style={navLinkStyles}>
+              <Box
+                sx={
+                  {
+                    // border: '1px solid'+theme.palette.background.default, height:'37px'
+                  }
+                }
+              >
+                {/* <NavLink to='/cart' style={navLinkStyles}>
             <IconButton>
               <ShoppingCartOutlinedIcon
                 fontSize="small"
@@ -269,7 +264,7 @@ function DrawerAppBar(props) {
               />
             </IconButton>
             </NavLink> */}
-            </Box>
+              </Box>
             </Box>
           </Box>
         </Toolbar>

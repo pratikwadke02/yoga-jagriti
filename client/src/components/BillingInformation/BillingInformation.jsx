@@ -911,15 +911,15 @@ const BillingInformation = () => {
       const handleSubmit = async(e) => {
         e.preventDefault();
         try{
-          await axios
-            .post('http://localhost:5000/api/yoga/addEnquiry', billingInfo)
+          const paymentLink = await axios
+            .post('http://localhost:5000/api/yoga/addBilling', billingInfo)
             .then((res) => {
-              console.log(res)
-              }).catch((err) => {
-                console.log(err)
-              });
-              
-          alert("Response sent successfully");
+              console.log(res);
+              return res;
+            });
+          console.log(paymentLink.data.cfOrder.paymentLink);
+          window.location.href = paymentLink.data.cfOrder.paymentLink;              
+          // alert("Response sent successfully");
         }catch(err){
           console.log(err)
         }

@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { Decrement, Increment } from "../../../actions/cart";
 
 const CartCard = (props) => {
-  const { name, image, desc, price, quantity, discountPrice, id } = props;
+  const { name, image, description, price, quantity, discountPrice, id } = props;
 
   const [qty, setQty] = useState(quantity);
 
@@ -73,7 +73,7 @@ const CartCard = (props) => {
                 mt: 1,
               }}
             >
-              {desc}
+              {description}
             </Typography>
           </Box>
         </Box>

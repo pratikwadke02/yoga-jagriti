@@ -27,7 +27,7 @@ module.exports = (app) => {
     router.get("/getAllProducts", product.findAll );
     router.get("/getProduct/:id", product.findProductById);
 
-    router.post("/addBilling", billing.create, payment.createOrder);
+    router.post("/addBilling", payment.createOrder);
 
     router.post("/addPayment", payment.createOrder);
 

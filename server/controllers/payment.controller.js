@@ -4,6 +4,7 @@ const CFEnvironment = require("cashfree-pg-sdk-nodejs").CFEnvironment;
 const CFHeader = require("cashfree-pg-sdk-nodejs").CFHeader;
 const CFCustomerDetails = require("cashfree-pg-sdk-nodejs").CFCustomerDetails;
 const CFOrderRequest = require("cashfree-pg-sdk-nodejs").CFOrderRequest;
+const CFOrderMeta = require("cashfree-pg-sdk-nodejs").CFOrderMeta;
 const db = require("../models");
 const Billing = db.billing;
 
@@ -21,16 +22,21 @@ var cfHeader = new CFHeader(
 
 exports.createOrder = async (req, res) => {
   var customerDetails = new CFCustomerDetails();
-  customerDetails.customerId = "some_random_id";
-  customerDetails.customerPhone = "9999999999";
-  customerDetails.customerEmail = "b.a@cashfree.com";
+  const billing = await Billing.create(req.body);
+  customerDetails.customerId = (billing.id).toString();
+  customerDetails.customerPhone = req.body.phone;
+  customerDetails.customerEmail = req.body.email;
   var d = {};
   d["order_tag_01"] = "TESTING IT";
+  var orderMeta = new CFOrderMeta();
+  orderMeta.returnUrl = `http://localhost:3000/shop?cf_id={order_id}&cf_token={order_token}`;
   var cFOrderRequest = new CFOrderRequest();
-  cFOrderRequest.orderAmount = 1;
+  cFOrderRequest.orderAmount = req.body.total;
   cFOrderRequest.orderCurrency = "INR";
   cFOrderRequest.customerDetails = customerDetails;
+  cFOrderRequest.orderMeta = orderMeta;
   cFOrderRequest.orderTags = d;
+  
   try {
     var apiInstance = new CFPaymentGateway();
 

@@ -79,7 +79,7 @@ const YourOrdersComponent = () => {
                 </Box>
                 <Box sx={{p:1}}>
                     <Typography variant='h6'>
-                    ₹{totalPrice}
+                    ₹{totalDiscountPrice}
                     </Typography>
                 </Box>
             </Box>
