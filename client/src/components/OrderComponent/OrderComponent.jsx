@@ -11,15 +11,6 @@ const OrderComponent = () => {
 
     const productIdData  = (useSelector(state => state.cart.cart));
 
-    // useEffect(() => {
-    //   const getCartData = async () => {
-    //     const {data} = await axios.post(`http://yogajagriti:5000/api/yoga/getProduct`, productIdData)
-    //     setCartData(data)
-    //   }
-    //   getCartData()
-    // } , [])
-    
-
   return (
     <>
     <Box sx={{display:'flex', flexDirection:'column', alignItems:'flex-start', width:'100%'}}>

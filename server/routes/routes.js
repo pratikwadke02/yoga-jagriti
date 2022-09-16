@@ -4,6 +4,8 @@ module.exports = (app) => {
     const enquiry = require('../controllers/enquiry.controller.js');
     const user = require('../controllers/user.controller.js');
     const product = require('../controllers/product.controller.js');
+    const billing = require('../controllers/billing.controller.js');
+    const payment = require('../controllers/payment.controller.js');
 
     const router = require('express').Router();
 
@@ -24,6 +26,10 @@ module.exports = (app) => {
     router.post("/addProduct", product.create);
     router.get("/getAllProducts", product.findAll );
     router.get("/getProduct/:id", product.findProductById);
+
+    router.post("/addBilling", billing.create, payment.createOrder);
+
+    router.post("/addPayment", payment.createOrder);
 
     app.use("/api/yoga", router);
 }

@@ -22,5 +22,6 @@ db.response = require('./response.model.js')(sequelize, Sequelize);
 db.enquiry = require('./enquiry.model.js')(sequelize, Sequelize);
 db.user = require('./user.model.js')(sequelize, Sequelize);
 db.product = require('./product.model.js')(sequelize, Sequelize);
+db.billing = require('./billing.model.js')(sequelize, Sequelize);
 
 module.exports = db;

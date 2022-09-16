@@ -3,8 +3,12 @@ import React, {useState} from 'react'
 import {theme} from '../../theme'
 import axios from 'axios'
 import './BillingInformation.css'
+import { useSelector } from 'react-redux'
 
 const BillingInformation = () => {
+
+    const discountPrice = (useSelector(state => state.cart.discountPrice));
+
 
     const state = [
         {
@@ -891,7 +895,12 @@ const BillingInformation = () => {
         lastName: "",
         email: "",
         phone: "",
+        country: "",
+        state: "",
+        district: "",
+        address: "",
         message: "",
+        total: discountPrice,
       });
     
       const handleChange = ({ currentTarget: input }) => {
@@ -909,12 +918,7 @@ const BillingInformation = () => {
               }).catch((err) => {
                 console.log(err)
               });
-              setBillingInfo({
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
+              
           alert("Response sent successfully");
         }catch(err){
           console.log(err)
@@ -948,28 +952,26 @@ const BillingInformation = () => {
               <Box sx={{ width: "100%", mr:{md:1} }}>
                   <input
                     type="text"
-                    name="name"
-                    id="name"
+                    name="firstName"
                     className="form-control"
                     required
                     data-error="Please enter your name"
                     placeholder="First Name"
                     onChange={handleChange}
-                    value={billingInfo.name}
+                    value={billingInfo.firstName}
                   />
                   <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1}, mt:{xs:2, md:0}, mb:{xs:2, md:0} }}>
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="text"
+                    name="lastName"
                     className="form-control"
                     required
                     data-error="Please enter your email"
                     placeholder="Last Name"
                     onChange={handleChange}
-                    value={billingInfo.email}
+                    value={billingInfo.lastName}
                   />
                   <div className="help-block with-errors"></div>
               </Box>
@@ -988,40 +990,37 @@ const BillingInformation = () => {
                   type="email"
                   name="email"
                   className="form-control"
-                  id="email"
                   required
                   data-error="Write your message"
                   placeholder="Email"
                   onChange={handleChange}
-                  value={billingInfo.message}
+                  value={billingInfo.email}
                 ></input>
                 <div className="help-block with-errors"></div>
               </Box>
               <Box sx={{ width: "100%", ml:{md:1}, mr:{md:0}, mt:{xs:2, md:0}, mb:{xs:2, md:0} }}>
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="number"
+                    name="phone"
                     className="form-control"
                     required
                     data-error="Please enter your email"
                     placeholder="Phone"
                     onChange={handleChange}
-                    value={billingInfo.email}
+                    value={billingInfo.phone}
                   />
                   <div className="help-block with-errors"></div>
               </Box>
             </Box>
             <Box sx={{ width: "100%", mb:2}}>
                 <input
-                  name="message"
+                  name="country"
                   className="form-control"
-                  id="message"
                   required
                   data-error="Write your message"
                   placeholder="Country"
                   onChange={handleChange}
-                  value={billingInfo.message}
+                  value={billingInfo.country}
                 ></input>
                 <div className="help-block with-errors"></div>
             </Box>
@@ -1037,7 +1036,6 @@ const BillingInformation = () => {
               <Box sx={{ width: "100%", mr:{md:1} }}>
               <select
                       name="state"
-                      id="state"
                       className="form-select form-select-lg mb-3"
                       data-error="Select a state"
                       placeholder="State"
@@ -1055,7 +1053,6 @@ const BillingInformation = () => {
               <Box sx={{ width: "100%", ml:{md:1}, mr:{md:0}, mt:{xs:0, md:0}, mb:{xs:0, md:0} }}>
               <select
                       name="district"
-                      id="district"
                       className="form-select form-select-lg mb-3"
                       data-error="Select a district"
                       placeholder="District"
@@ -1077,16 +1074,15 @@ const BillingInformation = () => {
             </Box>
             <Box sx={{ width: "100%", mb:2}}>
                 <textarea
-                  name="message"
+                  name="address"
                   className="form-control"
-                  id="message"
                   cols="30"
                   rows="5"
                   required
                   data-error="Write your message"
                   placeholder="Address"
                   onChange={handleChange}
-                  value={billingInfo.message}
+                  value={billingInfo.address}
                   style={{ minHeight: "70px" }}
                 ></textarea>
                 <div className="help-block with-errors"></div>
@@ -1095,7 +1091,6 @@ const BillingInformation = () => {
                 <textarea
                   name="message"
                   className="form-control"
-                  id="message"
                   cols="30"
                   rows="5"
                   required
@@ -1114,7 +1109,7 @@ const BillingInformation = () => {
                 style={{ backgroundColor: theme.palette.background.main }}
               >
                 <Typography sx={{ color: theme.palette.secondary.main }}>
-                  Send Message
+                  Proceed to Payment
                 </Typography>
               </button>
               <div id="msgSubmit" className="h3 text-center hidden"></div>

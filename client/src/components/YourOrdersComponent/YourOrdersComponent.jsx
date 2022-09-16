@@ -1,8 +1,18 @@
 import React from 'react'
 import {Box, Divider, Typography} from '@mui/material'
 import {theme} from '../../theme'
+import { useSelector } from 'react-redux'
 
 const YourOrdersComponent = () => {
+
+    const Orderdetails = (useSelector(state => state.cart));
+    console.log(Orderdetails)
+    const cartDetails = Orderdetails.cart
+    const totalPrice = Orderdetails.totalPrice
+    const totalDiscountPrice = Orderdetails.discountPrice
+
+
+
   return (
     <>
     <Box sx={{
@@ -59,7 +69,7 @@ const YourOrdersComponent = () => {
                 <Divider sx={{backgroundColor:theme.palette.text.dark}} />
                 <Box sx={{p:1}}>
                     <Typography variant='h6'>
-                    ₹999
+                    ₹{totalPrice}
                     </Typography>
                 </Box>
                 <Box sx={{p:1}}>
@@ -69,7 +79,7 @@ const YourOrdersComponent = () => {
                 </Box>
                 <Box sx={{p:1}}>
                     <Typography variant='h6'>
-                    ₹999
+                    ₹{totalPrice}
                     </Typography>
                 </Box>
             </Box>
