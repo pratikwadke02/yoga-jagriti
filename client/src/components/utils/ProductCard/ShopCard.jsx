@@ -1,12 +1,35 @@
 import { images } from "../../../constants";
-import { Box, Button, Container, Typography, IconButton } from "@mui/material";
+import { Box, Button, Container, Typography, IconButton, Modal } from "@mui/material";
 import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../actions/cart";
+import {Link} from 'react-router-dom'
+
+const style = {
+  position: 'absolute',
+  display:'flex',
+  flexDirection:'column',
+  alignItems:'center',
+
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  borderRadius: '4px',
+  boxShadow: 24,
+  p: 4,
+};
 
 const ProgramCard = (props) => {
+
+  const user = (JSON.parse(localStorage.getItem('profile'))).data;
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const {name, image, desc, price, quantity, discountPrice, id} = props;
 
@@ -23,7 +46,11 @@ const ProgramCard = (props) => {
         discountPrice: discountPrice,
         image: image
       }
-      dispatch(addToCart(data));
+      if(user){
+        dispatch(addToCart(data));
+      }else{
+        handleOpen();
+      }
     }catch(error){
       console.log(error);
     }
@@ -32,6 +59,23 @@ const ProgramCard = (props) => {
 
   return (
     <>
+     <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            U need to login first
+          </Typography>
+          <Link to="/login" style={{textDecoration:'none'}}>
+          <Button variant="contained" sx={{mt:2}}>
+            Login Now
+            </Button>
+          </Link>
+        </Box>
+      </Modal>
       <Box
         sx={{
           maxWidth:'400px',

@@ -5,6 +5,7 @@ import { theme } from "../../../theme";
 import CallIcon from "@mui/icons-material/Call";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../actions/auth";
+import { clearCart } from "../../../actions/cart";
 
 const NavbarHeader = () => {
   const user = (JSON.parse(localStorage.getItem("profile"))).data;
@@ -14,6 +15,7 @@ const NavbarHeader = () => {
 
   const handleLogout = () => {
     try {
+      dispatch(clearCart());
       dispatch(logout(navigate));
     } catch (error) {
       console.log(error);
