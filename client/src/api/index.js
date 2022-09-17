@@ -1,21 +1,26 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API = axios.create({ baseURL: 'http://yogajagriti.com:5000/api/yoga' });
+const API = axios.create({ baseURL: 
+    process.env.NODE_ENV === "production" ?
+    "api/yoga" : "http://localhost:5000/api/yoga" 
+});
 
-API.interceptors.request.use((req) => {
-    if(localStorage.getItem('profile')){
-        req.headers.Authorization = `Bearer $(JSON.parse(localStorage.getItem('profile')).token)`;
+API.interceptors.request.use(
+  (req) => {
+    if (localStorage.getItem("profile")) {
+      req.headers.Authorization = `Bearer $(JSON.parse(localStorage.getItem('profile')).token)`;
     }
     return req;
-} , (error) => {
+  },
+  (error) => {
     return Promise.reject(error);
-} );
+  }
+);
 
-export const login = (authInfo) => API.post('/login', authInfo);
-export const register = (authInfo) => API.post('/register', authInfo);
+export const login = (authInfo) => API.post("/login", authInfo);
+export const register = (authInfo) => API.post("/register", authInfo);
 
-
-export const getAllProducts = () => API.get('/getAllProducts');
+export const getAllProducts = () => API.get("/getAllProducts");
 export const getProductById = (id) => API.get(`/getProduct/${id}`);
 
 // export const getAllOrdersByUser = (userId) => API.get(`/getOrderByUser/${userId}`);

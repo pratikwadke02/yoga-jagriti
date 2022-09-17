@@ -22,7 +22,7 @@ app.use(express.static(__dirname + "/public"));
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Updated on 18-09-2022!');
 }
 );
 
