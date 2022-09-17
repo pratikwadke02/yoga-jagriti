@@ -23,6 +23,7 @@ import AboutUs from './views/AboutUs/AboutUs';
 import PrivacyPolicy from './views/PrivacyPolicy/PrivacyPolicy';
 import TermsAndConditions from './views/TermsAndConditions/TermsAndConditions';
 import RefundPolicy from './views/RefundPolicy/RefundPolicy';
+import Orders from './views/Orders/Orders';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
       <Footer />
       </BrowserRouter>

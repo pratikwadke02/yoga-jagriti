@@ -24,6 +24,7 @@ import NavbarHeader from "./NavbarHeader/NavbarHeader";
 import NavbarLogoSection from "./NavbarLogoSection/NavbarLogoSection";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../actions/product";
+import { getAllOrdersByUser } from "../../actions/order";
 
 const drawerWidth = 240;
 const navItems = [
@@ -71,6 +72,10 @@ const navItems = [
     name: "Shop",
     path: "shop",
   },
+  {
+    name: 'My Orders',
+    path: 'orders'
+  }
   // {
   //   name: "Cart",
   //   path: "cart",
@@ -78,6 +83,7 @@ const navItems = [
 ];
 
 function DrawerAppBar(props) {
+  const userId = (JSON.parse(localStorage.getItem("profile"))).data.id;
   const cartItems = useSelector((state) => state.cart.cart);
 
   const dispatch = useDispatch();
@@ -85,6 +91,7 @@ function DrawerAppBar(props) {
   useEffect(() => {
     const getproductsData = async () => {
       dispatch(getAllProducts());
+      dispatch(getAllOrdersByUser(userId));
     };
     getproductsData();
   }, [dispatch]);

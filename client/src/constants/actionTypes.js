@@ -11,3 +11,5 @@ export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const DELETE = 'DELETE';
 export const CLEAR_CART = 'CLEAR_CART';
+
+export const GET_ALL_ORDERS_BY_USER = 'GET_ALL_ORDERS_BY_USER';

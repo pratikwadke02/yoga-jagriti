@@ -11,13 +11,13 @@ const Billing = db.billing;
 var cfConfig = new CFConfig(
   CFEnvironment.SANDBOX,
   "2022-01-01",
-  "221667916798133b67cd0aeeee766122",
-  "8b207f5aa033b278560e99a8c9fb2d87e18c6f8d"
+  process.env.CASHFREE_APP_ID,
+  process.env.CASHFREE_SECRET_KEY
 );
 
 var cfHeader = new CFHeader(
-  "221667916798133b67cd0aeeee766122",
-  "8b207f5aa033b278560e99a8c9fb2d87e18c6f8d"
+  process.env.CASHFREE_APP_ID,
+  process.env.CASHFREE_SECRET_KEY
 );
 
 exports.createOrder = async (req, res) => {
