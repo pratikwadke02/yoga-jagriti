@@ -12,6 +12,14 @@ const BillingInformation = () => {
 
     const discountPrice = (useSelector(state => state.cart.discountPrice));
 
+    const cartItems = (useSelector(state => state.cart.cart));
+
+    const [order, setOrder] = useState({
+      products: cartItems,
+      total: discountPrice,
+      userId: user,
+    });
+
 
     const state = [
         {
@@ -915,6 +923,7 @@ const BillingInformation = () => {
       const handleSubmit = async(e) => {
         e.preventDefault();
         try{
+          await axios.post("http://localhost:5000/api/yoga/addOrder", order);
           const paymentLink = await axios
             .post('http://localhost:5000/api/yoga/addBilling', billingInfo)
             .then((res) => {

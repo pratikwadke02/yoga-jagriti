@@ -13,6 +13,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       orderStatus: {
         type: Sequelize.STRING,
+        defaultValue: "pending",
       },
     });
     return Order;
