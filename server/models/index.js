@@ -24,4 +24,7 @@ db.user = require('./user.model.js')(sequelize, Sequelize);
 db.product = require('./product.model.js')(sequelize, Sequelize);
 db.billing = require('./billing.model.js')(sequelize, Sequelize);
 
+db.user.hasMany(db.billing, { as: "billings" });
+db.billing.belongsTo(db.user, { foreignKey: "userId", as: "user" });
+
 module.exports = db;

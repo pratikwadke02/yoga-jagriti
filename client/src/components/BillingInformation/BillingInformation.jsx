@@ -7,6 +7,9 @@ import { useSelector } from 'react-redux'
 
 const BillingInformation = () => {
 
+    const user = (JSON.parse(localStorage.getItem('profile'))).data.id;
+    console.log(user);
+
     const discountPrice = (useSelector(state => state.cart.discountPrice));
 
 
@@ -901,6 +904,7 @@ const BillingInformation = () => {
         address: "",
         message: "",
         total: discountPrice,
+        userId: user
       });
     
       const handleChange = ({ currentTarget: input }) => {

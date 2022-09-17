@@ -23,7 +23,8 @@ var cfHeader = new CFHeader(
 exports.createOrder = async (req, res) => {
   var customerDetails = new CFCustomerDetails();
   const billing = await Billing.create(req.body);
-  customerDetails.customerId = (billing.id).toString();
+  customerDetails.customerId = (req.body.userId).toString();
+  customerDetails.customerName = req.body.firstName + " " + req.body.lastName;
   customerDetails.customerPhone = req.body.phone;
   customerDetails.customerEmail = req.body.email;
   var d = {};
