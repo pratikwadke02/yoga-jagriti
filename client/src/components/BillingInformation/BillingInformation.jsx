@@ -911,7 +911,7 @@ const BillingInformation = () => {
         district: "",
         address: "",
         message: "",
-        total: discountPrice,
+        total: 1,
         userId: user
       });
     
@@ -923,9 +923,9 @@ const BillingInformation = () => {
       const handleSubmit = async(e) => {
         e.preventDefault();
         try{
-          await axios.post("http://localhost:5000/api/yoga/addOrder", order);
+          await axios.post("https://yogajagriti.herokuapp.com/api/yoga/addOrder", order);
           const paymentLink = await axios
-            .post('http://localhost:5000/api/yoga/addBilling', billingInfo)
+            .post('https://yogajagriti.herokuapp.com/api/yoga/addBilling', billingInfo)
             .then((res) => {
               console.log(res);
               return res;

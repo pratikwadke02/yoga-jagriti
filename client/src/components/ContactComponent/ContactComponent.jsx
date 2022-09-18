@@ -26,7 +26,7 @@ const ContactComponent = () => {
     e.preventDefault();
     try{
       await axios
-        .post('http://yogajagriti.com:5000/api/yoga/addResponse', contactData)
+        .post('https://yogajagriti.herokuapp.com/api/yoga/addResponse', contactData)
         .then((res) => {
           console.log(res)
           }).catch((err) => {

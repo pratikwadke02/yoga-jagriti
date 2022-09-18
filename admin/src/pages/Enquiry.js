@@ -76,7 +76,7 @@ export default function Enquiry() {
 
     useEffect(() => {
         const getEnquiryData = async () => {
-          const { data } = await axios.get('http://yogajagriti.com:5000/api/yoga/getAllEnquiries');
+          const { data } = await axios.get('https://yogajagriti.herokuapp.com/api/yoga/getAllEnquiries');
           setEnquiry(data);
           console.log(enquiry);
         };

@@ -76,7 +76,7 @@ export default function User() {
 
   useEffect(() => {
     const getProductsData = async () => {
-      const { data } = await axios.get('http://yogajagriti.com:5000/api/yoga/getAllProducts');
+      const { data } = await axios.get('https://yogajagriti.herokuapp.com/api/yoga/getAllProducts');
       setProducts(data);
       console.log(products);
     };

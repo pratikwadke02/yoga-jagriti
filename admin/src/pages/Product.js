@@ -43,7 +43,7 @@ const Product = () => {
         try{
             console.log(product)
             await axios
-                .post("http://yogajagriti.com:5000/api/yoga/addProduct", product)
+                .post("https://yogajagriti.herokuapp.com/api/yoga/addProduct", product)
                 .then((res) => {
                     console.log(res);
                 })

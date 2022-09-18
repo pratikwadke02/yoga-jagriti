@@ -77,7 +77,7 @@ const Shop = () => {
   // useEffect(() => {
   //   const getProductsData = async () => {
   //     const { data } = await axios.get(
-  //       "http://localhost:5000/api/yoga/getAllProducts"
+  //       "https://yogajagriti.herokuapp.com/api/yoga/getAllProducts"
   //     ); 
   //     setProducts(data);
   //     console.log(products);

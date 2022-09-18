@@ -26,7 +26,7 @@ const StudentDetails = () => {
 
   useEffect(() => {
     const getStudentData = async () => {
-      const { data } = await axios.get(`http://yogajagriti.com:5000/api/yoga/getStudent/${id}`);
+      const { data } = await axios.get(`https://yogajagriti.herokuapp.com/api/yoga/getStudent/${id}`);
       setStudent(data);
       console.log(student);
     };
