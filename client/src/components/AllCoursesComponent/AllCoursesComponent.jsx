@@ -28,7 +28,7 @@ const AllCoursesComponent = () => {
           age: "18 or above",
           noOfSeats: "50",
           image: images.course_two,
-          paymentForm: 'https://payments.cashfree.com/forms/pstytcy'
+          paymentForm: 'https://payments.cashfree.com/forms/pesytcy'
       },
         
         {

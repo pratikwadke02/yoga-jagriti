@@ -15,7 +15,7 @@ const CoursesComponnent = () => {
 
   const coursesData  = [
     {
-      title: "High Sec. School Teacher Course",
+      title: "High Sec. School Yoga Teacher",
       fee: "25000",
       eligibility: "Graduation",
       duration: "Six months",
@@ -25,14 +25,14 @@ const CoursesComponnent = () => {
       paymentForm: 'https://payments.cashfree.com/forms/hssytcy'
     },
     {
-      title: "Primary School Teacher Course",
+      title: "Primary School Yoga Teacher",
       fee: "20000",
       eligibility: "10 + 2",
       duration: "Three months",
       age: "18 or above",
       noOfSeats: "50",
       image: images.course_two,
-      paymentForm: 'https://payments.cashfree.com/forms/pstytcy'
+      paymentForm: 'https://payments.cashfree.com/forms/pesytcy'
   },
     
     {
