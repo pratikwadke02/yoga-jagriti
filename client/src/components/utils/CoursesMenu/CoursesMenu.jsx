@@ -6,7 +6,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
 
 const CoursesMenu = (props) => {
-  const { name, image, eligibility, age, fee, seats, duration } = props;
+  const { name, image, eligibility, age, fee, seats, duration, paymentForm } = props;
 
   return (
     <>
@@ -85,7 +85,7 @@ const CoursesMenu = (props) => {
           }}
         >
           <Box sx={{ width: "100%", mt: 2 }}>
-            <Link to={`/course/${name}`} style={{ textDecoration: "none" }}>
+            <a href={paymentForm} style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 color="primary"
@@ -95,7 +95,7 @@ const CoursesMenu = (props) => {
                 Enroll Now
                 </Typography>
               </Button>
-            </Link>
+            </a>
           </Box>
         </Box>
       </Box>

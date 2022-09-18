@@ -18,6 +18,7 @@ const AllCoursesComponent = () => {
           age: "18 or above",
           noOfSeats: "50",
           image: images.course_one,
+          paymentForm: 'https://payments.cashfree.com/forms/hssytcy'
         },
         {
           title: "Primary/Elementary School Yoga Teacher Course",
@@ -27,6 +28,7 @@ const AllCoursesComponent = () => {
           age: "18 or above",
           noOfSeats: "50",
           image: images.course_two,
+          paymentForm: 'https://payments.cashfree.com/forms/pstytcy'
       },
         
         {
@@ -37,6 +39,7 @@ const AllCoursesComponent = () => {
           age: "18 or above",
           noOfSeats: "30",
           image: images.course_three,
+          paymentForm: 'https://payments.cashfree.com/forms/ywiy'
         },
       ]
 
@@ -49,6 +52,7 @@ const AllCoursesComponent = () => {
           age: "18 or above",
           noOfSeats: "20",
           image: images.course_four,
+          paymentForm: 'https://payments.cashfree.com/forms/ypiy'
         },
         {
             title: "Yoga Volunteer Course",
@@ -58,6 +62,7 @@ const AllCoursesComponent = () => {
             age: "No age limit",
             noOfSeats: "100",
             image: images.course_five,
+            paymentForm: 'https://payments.cashfree.com/forms/yvcy'
         },
         
     ];
@@ -82,10 +87,10 @@ const AllCoursesComponent = () => {
                 <Box to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px'}} key={index}>
                   <div className="dropend">
                   <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                  <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
+                  <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
                   <div className="dropdown-menu">
-                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image}/>
+                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
                   </div>
                 </Box>
@@ -101,10 +106,10 @@ const AllCoursesComponent = () => {
                 <Box to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px',m:'auto'}} key={index}>
                   <div className="dropend">
                   <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                  <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
+                  <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
                   <div className="dropdown-menu">
-                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image}/>
+                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
                   </div>
                 </Box>

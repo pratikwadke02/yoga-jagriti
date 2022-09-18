@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const ProgramCard = (props) => {
 
-  const {name, image, eligibility, age , fee, seats, duration, } = props;
+  const {name, image, eligibility, age , fee, seats, duration, paymentForm } = props;
 
   return (
     <>
@@ -105,13 +105,13 @@ const ProgramCard = (props) => {
             
             <Box sx={{display:'flex', flexDirection:'row', justifyContent:'flex-start', width:'100%'}}>
 <Box sx={{width:'100%', mt:1}}>
-              <Link to="/course" style={{textDecoration:'none'}}>
+              <a href={paymentForm} style={{textDecoration:'none'}}>
               <Button variant="contained" color="primary" sx={{width:'100%'}}>
                 <Typography variant="h6" sx={{color:theme.palette.text.default }}>
                 Enroll Now
                 </Typography>
               </Button>
-              </Link>
+              </a>
               </Box>
             </Box>  
           </Box>

@@ -5,6 +5,7 @@ import { theme } from "../../theme";
 import { images } from "../../constants";
 import './CoursesComponent.css'
 import CoursesCard from "../utils/CoursesCard/CoursesCard";
+import AllCoursesCard from "../utils/CoursesCard/AllCoursesCard";
 import { Link } from "react-router-dom";
 import CoursesHeader from "./CoursesHeader/CoursesHeader";
 import CoursesFooter from "./CoursesFooter/CoursesFooter";
@@ -14,23 +15,26 @@ const CoursesComponnent = () => {
 
   const coursesData  = [
     {
-      title: "Yoga Volunteer Course",
-      fee: "1500",
-      eligibility: "8th Pass",
-      duration: "One month",
-      age: "No age limit",
-      noOfSeats: "100",
-      image: images.course_five,
-  },
+      title: "High Sec. School Teacher Course",
+      fee: "25000",
+      eligibility: "Graduation",
+      duration: "Six months",
+      age: "18 or above",
+      noOfSeats: "50",
+      image: images.course_one,
+      paymentForm: 'https://payments.cashfree.com/forms/hssytcy'
+    },
     {
-      title: "Yoga Protocol Instructor",
-      fee: "7000",
-      eligibility: "10th",
+      title: "Primary School Teacher Course",
+      fee: "20000",
+      eligibility: "10 + 2",
       duration: "Three months",
       age: "18 or above",
-      noOfSeats: "20",
-      image: images.course_four,
-    },
+      noOfSeats: "50",
+      image: images.course_two,
+      paymentForm: 'https://payments.cashfree.com/forms/pstytcy'
+  },
+    
     {
       title: "Yoga Wellness Instructor",
       fee: "15000",
@@ -39,6 +43,7 @@ const CoursesComponnent = () => {
       age: "18 or above",
       noOfSeats: "30",
       image: images.course_three,
+      paymentForm: 'https://payments.cashfree.com/forms/ywiy'
     },
   ]
 
@@ -47,6 +52,7 @@ const CoursesComponnent = () => {
     <>
       <Container
         disableGutters
+        disablePadding
         sx={{
           pb:4,
           maxWidth: {xs:'100%'},
@@ -76,7 +82,7 @@ const CoursesComponnent = () => {
           </Button>
           </Link>
           </Box>
-        <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:5, justifyContent:'center',}}>
+        <Box  sx={{display:{xs:'none', md:'flex'}, flexDirection:'row', p:2, justifyContent:'center',}}>
           <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}}}>
           {
             coursesData.map((course, index) => {
@@ -84,10 +90,10 @@ const CoursesComponnent = () => {
                 <Box style={{textDecoration:'none', marginRight:'40px'}} key={index}>
                   <div className="dropend">
                   <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                  <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
+                  <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
                   <div className="dropdown-menu">
-                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image}/>
+                  <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
                   </div>
                 </Box>
@@ -97,9 +103,6 @@ const CoursesComponnent = () => {
           }
         </Box>
         <Box sx={{display:{xs:'none', lg:'flex'}, flexDirection:{xs:'column', md:'row'}}}>
-          {/* <Link to="/course" style={{textDecoration:'none', marginRight:'40px'}}>
-          <CoursesCard name="Course Name" desc="Course Details" price="9.99" enrolled="4242" favourites="5050"/>
-          </Link> */}
         </Box>
         </Box>
         </Box>
@@ -109,7 +112,7 @@ const CoursesComponnent = () => {
             coursesData.map((course, index) => {
               return (
                 <div  style={{textDecoration:'none', marginRight:'40px'}} key={index}>
-                  <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} />
+                  <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm} />
                 </div>
               )
             }
