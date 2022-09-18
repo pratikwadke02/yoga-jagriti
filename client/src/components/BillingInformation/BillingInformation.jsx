@@ -7,8 +7,8 @@ import { useSelector } from 'react-redux'
 
 const BillingInformation = () => {
 
-    const user = (JSON.parse(localStorage.getItem('profile'))).data.id;
-    console.log(user);
+    const user = (JSON.parse(localStorage.getItem('profile'))) ? JSON.parse(localStorage.getItem('profile')).data.id : null;
+    // console.log(user);
 
     const discountPrice = (useSelector(state => state.cart.discountPrice));
 

@@ -25,7 +25,7 @@ const style = {
 
 const ProgramCard = (props) => {
 
-  const user = (JSON.parse(localStorage.getItem('profile'))).data;
+  const user = (JSON.parse(localStorage.getItem('profile'))) ? JSON.parse(localStorage.getItem('profile')).data : null;
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
