@@ -8,7 +8,7 @@ import { logout } from "../../../actions/auth";
 import { clearCart } from "../../../actions/cart";
 
 const NavbarHeader = () => {
-  const user = (JSON.parse(localStorage.getItem("profile"))).data;
+  const user = ((JSON.parse(localStorage.getItem("profile"))) ? JSON.parse(localStorage.getItem("profile")).data : null);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
