@@ -85,14 +85,14 @@ const AllCoursesComponent = () => {
             coursesData.map((course, index) => {
               return (
                 <Box to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px'}} key={index}>
-                  <div className="dropend">
-                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  {/* <div className="dropend">
+                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false"> */}
                   <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
-                  </div>
+                  {/* </div>
                   <div className="dropdown-menu">
                   <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
-                  </div>
+                  </div> */}
                 </Box>
               )
             }
@@ -104,14 +104,14 @@ const AllCoursesComponent = () => {
             coursesData1.map((course, index) => {
               return (
                 <Box to="/course" style={{textDecoration:'none', marginRight:{md:'20px'}, marginBottom:'20px',m:'auto'}} key={index}>
-                  <div className="dropend">
-                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  {/* <div className="dropend">
+                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false"> */}
                   <AllCoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
-                  </div>
+                  {/* </div>
                   <div className="dropdown-menu">
                   <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
-                  </div>
+                  </div> */}
                 </Box>
               )
             }

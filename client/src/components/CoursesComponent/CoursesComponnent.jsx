@@ -88,14 +88,14 @@ const CoursesComponnent = () => {
             coursesData.map((course, index) => {
               return (
                 <Box style={{textDecoration:'none', marginRight:'40px'}} key={index}>
-                  <div className="dropend">
-                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  {/* <div className="dropend">
+                  <div className="dropdown" data-bs-toggle="dropdown" aria-expanded="false"> */}
                   <CoursesCard name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
-                  </div>
+                  {/* </div>
                   <div className="dropdown-menu">
                   <CoursesMenu name={course.title} eligibility={course.eligibility} fee={course.fee} seats={course.noOfSeats} age={course.age} duration={course.duration} image={course.image} paymentForm={course.paymentForm}/>
                   </div>
-                  </div>
+                  </div> */}
                 </Box>
               )
             }
