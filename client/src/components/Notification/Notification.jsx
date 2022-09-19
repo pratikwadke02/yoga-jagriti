@@ -1,6 +1,7 @@
 import React from 'react'
 import {Box, Typography} from '@mui/material'
 import { theme } from '../../theme'
+import { Link } from 'react-router-dom'
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import './Notification.css'
 
@@ -11,51 +12,61 @@ const Notification = () => {
       title: 'New Batch Started',
       course: 'Higher Sec. School Yoga Teacher Course',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/hssytcy'
     },
     {
       title: 'New Batch Started',
       course: 'Primary/Elementary School Yoga Teacher Course',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/pesytcy'
     },
     {
       title: 'New Batch Started',
       course: 'Yoga Wellness Instructor',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/ywiy'
     },
     {
       title: 'New Batch Started',
       course: 'Yoga Protocol Instructor',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/ypiy'
     },
     {
       title: 'New Batch Started',
       course: 'Yoga Volunteer Course',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/yvcy'
     },
     {
       title: 'New Batch Started',
       course: 'Higher Sec. School Yoga Teacher Course',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/hssytcy'
     },
     {
       title: 'New Batch Started',
       course: 'Primary/Elementary School Yoga Teacher Course',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/pesytcy'
     },
     {
       title: 'New Batch Started',
       course: 'Yoga Wellness Instructor',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/ywiy'
     },
     {
       title: 'New Batch Started',
       course: 'Yoga Protocol Instructor',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/ypiy'
     },
     {
       title: 'New Batch Started',
       course: 'Yoga Volunteer Course',
       description: 'Enroll Now',
+      paymentLink: 'https://payments.cashfree.com/forms/yvcy'
     },
   ]
 
@@ -74,6 +85,7 @@ const Notification = () => {
           {
             notificationData.map((item, index) => {
               return (
+                <a href={item.paymentLink} style={{textDecoration:'none'}}>
                 <Box 
                 key={index}
                 sx={{display:'flex', alignItems:'center', mr:10}}>
@@ -85,6 +97,7 @@ const Notification = () => {
                     {item.description}
                   </Typography>
                 </Box>
+                </a>
               )
             }
             )
