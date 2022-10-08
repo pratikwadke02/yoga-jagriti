@@ -83,7 +83,7 @@ const navItems = [
 ];
 
 function DrawerAppBar(props) {
-  const userId = (JSON.parse(localStorage.getItem("profile"))) ? (JSON.parse(localStorage.getItem("profile"))).data.id : null;
+  const userId = (JSON.parse(localStorage.getItem("profile"))) ? (JSON.parse(localStorage.getItem("profile"))).data : null;
   const cartItems = useSelector((state) => state.cart.cart);
 
   const dispatch = useDispatch();

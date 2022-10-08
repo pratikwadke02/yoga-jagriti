@@ -66,3 +66,19 @@ export const Delete = (id) => async(dispatch) => {
         console.log(error);
     }
 }
+
+export const BuyNow = (data, router) => async(dispatch) => {
+    try{
+        console.log(data);
+        dispatch(
+            {
+                type: ADD_TO_CART,
+                data
+            }
+        )
+        router('/cart');
+    }catch(error){
+        console.log(error);
+    }
+}
+    

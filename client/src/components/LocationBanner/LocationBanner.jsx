@@ -14,7 +14,7 @@ const LocationBanner = () => {
     },
     {
       id:2,
-      head: 'Partapur, Bhogaon',
+      head: 'Uttar Pradesh',
       location: 'Jagriti Yoga anda Naturopathy Sansthan Vill. Partapur, Bhogaon, distt Mainpuri UP'
     },
   ];

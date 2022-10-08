@@ -34,13 +34,13 @@ const Contact = () => {
         <Box sx={{width:'100%', display:'flex', flexDirection:{xs:'column'}}}>
             <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}, justifyContent:'center'}}>
             <Box sx={{width:'100%', mr:{xs:0, lg:2}}}>
-            <ContactCard title="Mail Here" email="xyz@gmail.com" icon={<Mail />} />
+            <ContactCard title="Mail Here" email="info@yogajagriti.com" icon={<Mail />} />
             </Box>
             <Box sx={{width:'100%', ml:{xs:0, lg:2}, mr:{xs:0, lg:2}}}>
-            <ContactCard title="Call Here" phone="+91 42424 42424" icon={<Phone />} />
+            <ContactCard title="Call Here" phone="+91 9310247223" icon={<Phone />} />
             </Box>
             <Box sx={{width:{xs:'100%'}, ml:{xs:0, lg:2}}}>
-                <ContactCard title="Visit Here" address="Mumbai, Maharashtra" icon={<MapPin />} />
+                <ContactCard title="Visit Here" address="Delhi" icon={<MapPin />} />
             </Box>
             </Box>
             <Box sx={{mt:{md:4},width:'100%',display:'flex', justifyContent:'center'}}>

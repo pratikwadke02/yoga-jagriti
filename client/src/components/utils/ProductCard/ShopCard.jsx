@@ -4,8 +4,8 @@ import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../actions/cart";
-import {Link} from 'react-router-dom'
+import { addToCart, BuyNow } from "../../../actions/cart";
+import {Link, useNavigate} from 'react-router-dom'
 
 const style = {
   position: 'absolute',
@@ -34,6 +34,7 @@ const ProgramCard = (props) => {
   const {name, image, desc, price, quantity, discountPrice, id} = props;
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddToCart = (id) => {
     try{
@@ -56,6 +57,27 @@ const ProgramCard = (props) => {
     }
   }
 
+  const handleBuyNow = (id) => {
+    try{
+      const data = {
+        id: id,
+        quantity: 1,
+        name: name,
+        desc: desc,
+        price: price,
+        discountPrice: discountPrice,
+        image: image
+      }
+      if(user){
+        dispatch(BuyNow(data, navigate));
+      }else{
+        handleOpen();
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
+
 
   return (
     <>
@@ -67,7 +89,7 @@ const ProgramCard = (props) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            U need to login first
+            You need to login first
           </Typography>
           <Link to="/login" style={{textDecoration:'none'}}>
           <Button variant="contained" sx={{mt:2}}>
@@ -90,6 +112,7 @@ const ProgramCard = (props) => {
           position: "relative",
         }}
       >
+        <Link to={`/product/${id}`} style={{textDecoration:'none'}}>
         <Box
           sx={{
             display: "flex",
@@ -100,6 +123,7 @@ const ProgramCard = (props) => {
         >
           <img src={images.product} alt="software" style={{height:'auto', width:'100%'}} />
         </Box>
+        </Link>
         <Box
           sx={{
             mt:1,
@@ -112,6 +136,7 @@ const ProgramCard = (props) => {
             textAlign: "center",
           }}
         >
+
           <Typography variant="h6" sx={{color:theme.palette.primary.main, fontWeight:theme.typography.fontWeightBold,  }}>
             {name}
           </Typography>
@@ -136,10 +161,11 @@ const ProgramCard = (props) => {
             <ShoppingCartOutlinedIcon fontSize="mdeium" sx={{color:theme.palette.primary.main, mr:1}} />
           </IconButton>
           <Button
+            onClick={()=>handleBuyNow(id)}
             variant="contained"
             sx={{ backgroundColor:theme.palette.primary.main, color: "#fff", maxWidth:'120px', width:'100%' }}
           >
-            <Typography variant="h6" sx={{ }}>BUY NOW</Typography>
+            <Typography variant="h6">BUY NOW</Typography>
           </Button>
           </Box>
         </Box>

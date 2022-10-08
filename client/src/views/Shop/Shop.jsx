@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { Container, Box, Typography, Grid, Slider, Button, Checkbox, FormControl, FormLabel, FormGroup, FormControlLabel, FormHelperText } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
@@ -146,7 +147,7 @@ const Shop = () => {
             mt: 3,
           }}
         >
-          <Box
+          {/* <Box
             sx={{
               width: "100%",
               minHeight: "95vh",
@@ -159,8 +160,8 @@ const Shop = () => {
               mr: 1,
               p: 1,
             }}
-          >
-            <Box sx={{ width: "100%" }}>
+          > */}
+            {/* <Box sx={{ width: "100%" }}>
               <Typography variant="h4" sx={{ color: theme.palette.text.main }}>
                 Category
               </Typography>
@@ -239,7 +240,7 @@ const Shop = () => {
 
               </Button>
             </Box>
-          </Box>
+          </Box> */}
 
           <Box
             sx={{
@@ -249,6 +250,7 @@ const Shop = () => {
               flexDirection: "column",
               ml: 1,
               alignItems: "center",
+              m:'auto'
             }}
           >
             <Grid container spacing={3}>
@@ -257,6 +259,7 @@ const Shop = () => {
                   <Grid 
                   key={index}
                   item xs={12} sm={6} lg={4}>
+                  
                     <ShopCard
                       id={product.id}
                       name={product.name}

@@ -6,6 +6,7 @@ import CallIcon from "@mui/icons-material/Call";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../actions/auth";
 import { clearCart } from "../../../actions/cart";
+import { images } from "../../../constants";
 
 const NavbarHeader = () => {
   const user = ((JSON.parse(localStorage.getItem("profile"))) ? JSON.parse(localStorage.getItem("profile")).data : null);
@@ -160,7 +161,7 @@ const NavbarHeader = () => {
           border: "1px solid" + theme.palette.background.default,
           pr: 2,
           pl: 2,
-          mr: { xs: 0, md: "80px" },
+          mr: { xs: 0, md: "40px" },
           height: "33px",
         }}
       >
@@ -188,6 +189,11 @@ const NavbarHeader = () => {
         >
           +919310247223
         </Typography>
+      </Box>
+      <Box sx={{display: {xs:'block'}, mr:2}}>
+        <a href="https://wa.me/+919310247223" target="_blank">
+        <img src={images.whatsapp} alt="" style={{maxHeight:'35px'}} />
+        </a>
       </Box>
     </Box>
   );

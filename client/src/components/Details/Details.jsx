@@ -4,7 +4,7 @@ import { theme } from "../../theme";
 
 const Details = (props) => {
 
-  const {name, desc, price, discountPrice} = props
+  const {name, desc, price, discountPrice, id} = props
 
   return (
     <Container
@@ -98,7 +98,9 @@ const Details = (props) => {
         <Box sx={{width:'100%', mt:2, display: "flex", flexDirection:'row', position:{xs:'fixed', sm:'relative'}, bottom:0, left:0 , p:{xs:0, sm:0} }}>
           <Button variant="contained" sx={{
             display:{xs:'none', sm:'block'},
-            backgroundColor:{xs:theme.palette.background.default, sm:theme.palette.primary.main}, height: "40px", width: {xs:"100%", md:"200px"},borderRadius:{xs:'0px', sm:'4px'}, mr:{xs:0, sm:2} }}>
+            backgroundColor:{xs:theme.palette.background.default, sm:theme.palette.primary.main}, height: "40px", width: {xs:"100%", md:"200px"},borderRadius:{xs:'0px', sm:'4px'}, mr:{xs:0, sm:2} }}
+            onClick
+            >
             <Typography
               variant="h6"
               sx={{color:{xs:theme.palette.primary.main, sm:theme.palette.background.default }, fontWeight: theme.typography.fontWeightBold }}
@@ -111,7 +113,9 @@ const Details = (props) => {
             height: "40px",
             width: '100%',
             borderRadius: {xs:'0px', sm:'4px'},
-
+            onClick: () => {
+              console.log("clicked");
+            },
           }}
           >
             <Typography

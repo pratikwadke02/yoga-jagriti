@@ -13,7 +13,7 @@ const Product = () => {
 
   const productId = (useParams()).id;
   const productsData = useSelector(state => state.product.products);
-  // console.log(productsData)
+  // console.log(productId)
   const productData = (productsData.filter((item) => item.id == productId))[0];
   // console.log(productData)
 
@@ -22,12 +22,8 @@ const Product = () => {
     <>
       <Container
         sx={{
-          position: "relative",
-        //   background: `url(${images.bg_pattern})`,
-        //   backgroundSize: "800px",
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundPosition: "center",
-          maxWidth: { xs: "1600px" },
+          backgroundImage: `url(${images.pattern_three})`,
+          maxWidth: { xs: "100%" },
           height: "100%",
           pb:3,
           pt: 5,
@@ -35,8 +31,6 @@ const Product = () => {
           flexDirection: { xs: "column" },
           justifyContent: "center",
         }}
-
-        className="product-container"
       >
         <Box sx={{ width: { xs: "100%" }, display: "flex", flexDirection: "column", maxWidth:'1100px' , justifyContent:'flex-start', m:'auto', mb:2,}}>
         <Typography variant="h2" sx={{fontWeight: "bold", color: theme.palette.primary.main}}>
@@ -50,7 +44,7 @@ const Product = () => {
           <Box
             sx={{ mt: { xs: 2, md: 0 }, ml: { xs: 0, md: 2 }, width: "100%" }}
           >
-            <Details name={productData.name} desc={productData.description} price={productData.price} discountPrice={productData.discountPrice} />
+            <Details id={productData.id} name={productData.name} desc={productData.description} price={productData.price} discountPrice={productData.discountPrice} />
           </Box>
         </Box>
         <Box sx={{zIndex:1, position: "relative", width: "100%", m: "auto" }}>

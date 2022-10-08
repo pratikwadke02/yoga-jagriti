@@ -1,15 +1,81 @@
 import { images } from "../../../constants";
-import { Box, Button, Container, Typography, IconButton } from "@mui/material";
+import { Box, Button, Container, Typography, IconButton, Modal } from "@mui/material";
 import React from "react";
 import {theme} from '../../../theme'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../actions/cart";
+import {Link} from 'react-router-dom'
+
+const style = {
+  position: 'absolute',
+  display:'flex',
+  flexDirection:'column',
+  alignItems:'center',
+
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  borderRadius: '4px',
+  boxShadow: 24,
+  p: 4,
+};
+
 
 const ProductCard = (props) => {
 
+  const user = JSON.parse(localStorage.getItem('profile'));
+
   const {name, image, desc, price, quantity, discountPrice} = props;
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const dispatch = useDispatch();
+  const handleAddToCart = (id) => {
+    try{
+      const data = {
+        id: id,
+        quantity: 1,
+        name: name,
+        desc: desc,
+        price: price,
+        discountPrice: discountPrice,
+        image: image
+      }
+      if(user){
+        dispatch(addToCart(data));
+      }else{
+        handleOpen();
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
 
   return (
     <>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            You need to login first
+          </Typography>
+          <Link to="/login" style={{textDecoration:'none'}}>
+          <Button variant="contained" sx={{mt:2}}>
+            Login Now
+            </Button>
+          </Link>
+        </Box>
+      </Modal>
       <Box
         sx={{
           mb:{xs:4, md:0},
