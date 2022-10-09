@@ -59,7 +59,7 @@ const Home = () => {
 
           </li>
           <li style={{ position:'relative',marginTop:'10px', marginBottom:'10px' }}>
-            <a href="/" style={{display:'block', width:'100%', height:'100%',}}>
+          <a href="https://wa.me/+919310247223" target="_blank" style={{display:'block', width:'100%', height:'100%',}}>
                 <WhatsAppIcon fontSize='large' color="primary" sx={{ backgroundColor:theme.palette.background.default, borderRadius:'5px'}} />
             </a>
 
