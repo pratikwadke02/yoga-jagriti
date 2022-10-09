@@ -101,7 +101,7 @@ const ProductCard = (props) => {
             justifyContent: "center",
           }}
         >
-          <img src={images.product} alt="software" style={{height:'auto', width:'100%'}} />
+          <img src={images.product_ghee} alt="software" style={{height:'auto', width:'100%'}} />
         </Box>
         <Box
           sx={{
@@ -119,7 +119,7 @@ const ProductCard = (props) => {
             {name}
           </Typography>
           <Typography sx={{ fontSize: "11px", color: "#5a6273", }}>
-            {desc}
+            {desc.slice(0, 25)}...
           </Typography>
         </Box>
         <Box

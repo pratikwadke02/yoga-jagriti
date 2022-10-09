@@ -23,7 +23,7 @@ const Display = () => {
         >
           <Box sx={{ mb:1   }}>
             <img
-              src={images.product}
+              src={images.product_ghee}
               alt=""
               height={80}
               style={{ borderRadius: "4px" }}
@@ -31,7 +31,7 @@ const Display = () => {
           </Box>
           <Box sx={{mb:1}}>
             <img
-              src={images.product}
+              src={images.product_ghee}
               alt=""
               height={80}
               style={{ borderRadius: "4px" }}
@@ -39,7 +39,7 @@ const Display = () => {
           </Box>
           <Box sx={{   mb:1 }}>
             <img
-              src={images.product}
+              src={images.product_ghee}
               alt=""
               height={80}
               style={{ borderRadius: "4px" }}
@@ -47,7 +47,7 @@ const Display = () => {
           </Box>
           <Box sx={{  mb:{xs:1, md:0}  }}>
             <img
-              src={images.product}
+              src={images.product_ghee}
               alt=""
               height={80}
               style={{ borderRadius: "4px" }}
@@ -57,7 +57,7 @@ const Display = () => {
         </Box>
         <Box>
           <img
-            src={images.product}
+            src={images.product_ghee}
             alt=""
             style={{
               width: "100%",

@@ -1,12 +1,102 @@
-import { Container, Box, Typography, Button } from "@mui/material";
+import { Container, Box, Typography, Button, Modal } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme";
+import { useNavigate, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { images} from "../../constants";
+import { addToCart, BuyNow } from "../../actions/cart";
+
+const style = {
+  position: 'absolute',
+  display:'flex',
+  flexDirection:'column',
+  alignItems:'center',
+
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  borderRadius: '4px',
+  boxShadow: 24,
+  p: 4,
+};
 
 const Details = (props) => {
 
   const {name, desc, price, discountPrice, id} = props
 
+  const user = (JSON.parse(localStorage.getItem('profile'))) ? JSON.parse(localStorage.getItem('profile')).data : null;
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleAddToCart = (id) => {
+    try{
+      const data = {
+        id: id,
+        quantity: 1,
+        name: name,
+        desc: desc,
+        price: price,
+        discountPrice: discountPrice,
+        image: images.product_ghee
+      }
+      if(user){
+        dispatch(addToCart(data));
+      }else{
+        handleOpen();
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
+
+  const handleBuyNow = (id) => {
+    try{
+      const data = {
+        id: id,
+        quantity: 1,
+        name: name,
+        desc: desc,
+        price: price,
+        discountPrice: discountPrice,
+        image: images.product_ghee
+      }
+      if(user){
+        dispatch(BuyNow(data, navigate));
+      }else{
+        handleOpen();
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
+
+
   return (
+    <>
+         <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            You need to login first
+          </Typography>
+          <Link to="/login" style={{textDecoration:'none'}}>
+          <Button variant="contained" sx={{mt:2}}>
+            Login Now
+            </Button>
+          </Link>
+        </Box>
+      </Modal>
     <Container
       sx={{
         display: "flex",
@@ -99,7 +189,7 @@ const Details = (props) => {
           <Button variant="contained" sx={{
             display:{xs:'none', sm:'block'},
             backgroundColor:{xs:theme.palette.background.default, sm:theme.palette.primary.main}, height: "40px", width: {xs:"100%", md:"200px"},borderRadius:{xs:'0px', sm:'4px'}, mr:{xs:0, sm:2} }}
-            onClick
+            onClick={() => handleAddToCart(id)}
             >
             <Typography
               variant="h6"
@@ -113,10 +203,8 @@ const Details = (props) => {
             height: "40px",
             width: '100%',
             borderRadius: {xs:'0px', sm:'4px'},
-            onClick: () => {
-              console.log("clicked");
-            },
           }}
+          onClick={() => handleAddToCart(id)}
           >
             <Typography
               variant="h6"
@@ -131,6 +219,7 @@ const Details = (props) => {
           <Button
             variant="contained"
             sx={{ height: "40px",borderRadius:{xs:'0px', sm:'4px'}, width: {xs:"100%", md:"200px"} }}
+            onClick={() => handleBuyNow(id)}
           >
             <Typography
               variant="h6"
@@ -142,6 +231,7 @@ const Details = (props) => {
         </Box>
       </Box>
     </Container>
+    </>
   );
 };
 

@@ -10,8 +10,8 @@ import { useSelector } from "react-redux";
 const HeaderBanner = () => {
   const productsData = useSelector((state) => state.product.products);
 
-  const productDataOne = productsData.slice(0,3);
-  const productDataTwo = productsData.slice(3,4);
+  const productDataOne = productsData.reverse().slice(0, 3);
+  const productDataTwo = productsData.reverse().slice(4, 5);
 
   const headBannerDataOne = [
     {
@@ -73,12 +73,14 @@ const HeaderBanner = () => {
               Our Natural Products
               <div className="lightbar"></div>
             </Typography>
+            <Link to="/shop" style={{ textDecoration: "none" }}>
             <Typography
               variant="h6"
-              sx={{ fontWeight: theme.typography.fontWeightBold }}
+              sx={{ fontWeight: theme.typography.fontWeightBold, color: theme.palette.text.default }}
             >
               See All
             </Typography>
+            </Link>
           </Box>
           <Box
             sx={{
@@ -95,7 +97,7 @@ const HeaderBanner = () => {
               }}
             >
               {
-                productDataOne.map((product, index) => {
+                [...productDataOne].map((product, index) => {
                   return (
                     <Link
                 key={index}
@@ -150,7 +152,7 @@ const HeaderBanner = () => {
               }}
             >
               {
-                productDataTwo.map((product, index) => {
+                [...productDataTwo].reverse().map((product, index) => {
                   return (
                     <Link
                     key={index}
@@ -209,7 +211,7 @@ const HeaderBanner = () => {
           <Link to="/products" style={{textDecoration:'none', marginRight:'40px'}}>
           <ProgramCard name="Product Name" desc="Product details" price="9.99"/>
           </Link> */}
-            {productsData.map((product, index) => {
+            {[...productsData].reverse().map((product, index) => {
               return (
                   <Link
                     key={index}

@@ -98,6 +98,20 @@ const MidBannerFive = () => {
             <VideoCarousel videoData = {videoProps} />
         </Box> */}
         </Box>
+        <Box sx={{display:'flex', mt:4}}>
+          <Box sx={{width:'100%', mr:{sm:1}}}>
+          <iframe style={{width:'100%', height:'100%', }} width="560" height="315" src="https://www.youtube.com/embed/dAqQqmaI9vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </Box>
+          <Box sx={{width:'100%', display:{xs:'none', sm:'block'}, ml:{sm:1}, mr:{md:1}}}>
+          <iframe style={{width:'100%', height:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/dAqQqmaI9vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </Box>
+          <Box sx={{width:'100%', display:{xs:'none', lg:'block'}, ml:1, mr:1}}>
+          <iframe style={{width:'100%', height:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/dAqQqmaI9vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </Box>
+          <Box sx={{width:'100%', display:{xs:'none', lg:'block'}, ml:1}}>
+          <iframe style={{width:'100%',display:{xs:'none', lg:'block'}, height:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/dAqQqmaI9vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </Box>
+        </Box>
         </Box>
       </Container>
     </>

@@ -254,7 +254,7 @@ const Shop = () => {
             }}
           >
             <Grid container spacing={3}>
-              {products.map((product, index) => {
+              {[...products].reverse().map((product, index) => {
                 return (
                   <Grid 
                   key={index}

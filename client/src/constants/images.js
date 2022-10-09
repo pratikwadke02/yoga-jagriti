@@ -51,6 +51,7 @@ import bottom_logo_five from '../assets/images/bottom_logo_five.jpg';
 import bottom_logo_six from '../assets/images/bottom_logo_six.jpg';
 import yoga_jagriti_logo_two from '../assets/images/yoga_jagriti_logo_two.png';
 import whatsapp from '../assets/images/whatsapp.webp';
+import product_ghee from '../assets/images/product_ghee.jpg';
 
 export default {
     slider_1,
@@ -105,5 +106,6 @@ export default {
     bottom_logo_five,
     bottom_logo_six,
     yoga_jagriti_logo_two,
-    whatsapp
+    whatsapp,
+    product_ghee
 }
