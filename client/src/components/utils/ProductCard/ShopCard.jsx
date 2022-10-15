@@ -47,11 +47,7 @@ const ProgramCard = (props) => {
         discountPrice: discountPrice,
         image: image
       }
-      if(user){
         dispatch(addToCart(data));
-      }else{
-        handleOpen();
-      }
     }catch(error){
       console.log(error);
     }
@@ -68,11 +64,7 @@ const ProgramCard = (props) => {
         discountPrice: discountPrice,
         image: image
       }
-      if(user){
         dispatch(BuyNow(data, navigate));
-      }else{
-        handleOpen();
-      }
     }catch(error){
       console.log(error);
     }

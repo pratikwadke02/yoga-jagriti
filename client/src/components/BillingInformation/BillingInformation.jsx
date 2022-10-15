@@ -1,9 +1,28 @@
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, Modal, Button } from '@mui/material'
 import React, {useState} from 'react'
 import {theme} from '../../theme'
 import axios from 'axios'
 import './BillingInformation.css'
 import { useSelector } from 'react-redux'
+import {Link, useNavigate} from 'react-router-dom'
+
+
+const style = {
+  position: 'absolute',
+  display:'flex',
+  flexDirection:'column',
+  alignItems:'center',
+
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  borderRadius: '4px',
+  boxShadow: 24,
+  p: 4,
+};
+
 
 const BillingInformation = () => {
 
@@ -20,6 +39,9 @@ const BillingInformation = () => {
       userId: user,
     });
 
+    const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
     const state = [
         {
@@ -923,7 +945,8 @@ const BillingInformation = () => {
       const handleSubmit = async(e) => {
         e.preventDefault();
         try{
-          await axios.post("https://yogajagriti.herokuapp.com/api/yoga/addOrder", order);
+          if(user){
+            await axios.post("https://yogajagriti.herokuapp.com/api/yoga/addOrder", order);
           const paymentLink = await axios
             .post('https://yogajagriti.herokuapp.com/api/yoga/addBilling', billingInfo)
             .then((res) => {
@@ -933,6 +956,10 @@ const BillingInformation = () => {
           console.log(paymentLink.data.cfOrder.paymentLink);
           window.location.href = paymentLink.data.cfOrder.paymentLink;              
           // alert("Response sent successfully");
+          }else{
+            handleOpen();
+          }
+          
         }catch(err){
           console.log(err)
         }
@@ -940,6 +967,23 @@ const BillingInformation = () => {
 
   return (
     <>
+    <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            You need to login first
+          </Typography>
+          <Link to="/login" style={{textDecoration:'none'}}>
+          <Button variant="contained" sx={{mt:2}}>
+            Login Now
+            </Button>
+          </Link>
+        </Box>
+      </Modal>
     <Box sx={{
         backgroundColor:theme.palette.background.default,
         p:2,

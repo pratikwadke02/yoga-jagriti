@@ -12,10 +12,16 @@ const Carousal = () => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={images.slider_1} className="d-block w-100" alt="..."/>
+      <img src={images.banner_one} className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src={images.slider_2} className="d-block w-100" alt="..."/>
+      <img src={images.banner_two} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={images.banner_three} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={images.banner_four} className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -31,4 +37,4 @@ const Carousal = () => {
   )
 }
 
-export default Carousal
+export default Carousal;

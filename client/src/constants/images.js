@@ -52,6 +52,11 @@ import bottom_logo_six from '../assets/images/bottom_logo_six.jpg';
 import yoga_jagriti_logo_two from '../assets/images/yoga_jagriti_logo_two.png';
 import whatsapp from '../assets/images/whatsapp.webp';
 import product_ghee from '../assets/images/product_ghee.jpg';
+import banner_one from '../assets/images/banner_one.jpg';
+import banner_two from '../assets/images/banner_two.jpg';
+import banner_three from '../assets/images/banner_three.jpg';
+import banner_four from '../assets/images/banner_four.jpg';
+import product_mustard_oil from '../assets/images/product_mustard_oil.jpg';
 
 export default {
     slider_1,
@@ -107,5 +112,10 @@ export default {
     bottom_logo_six,
     yoga_jagriti_logo_two,
     whatsapp,
-    product_ghee
+    product_ghee,
+    banner_one,
+    banner_two,
+    banner_three,
+    banner_four,
+    product_mustard_oil
 }
