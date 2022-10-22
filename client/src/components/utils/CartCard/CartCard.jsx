@@ -8,6 +8,8 @@ import { Decrement, Increment, Delete } from "../../../actions/cart";
 const CartCard = (props) => {
   const { name, image, desc, price, quantity, discountPrice, id } = props;
 
+  // const price = 2000
+  // const discountPrice = 1900
   const [qty, setQty] = useState(quantity);
 
   const dispatch = useDispatch();

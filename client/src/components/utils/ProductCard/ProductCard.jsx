@@ -28,8 +28,10 @@ const ProductCard = (props) => {
 
   const user = JSON.parse(localStorage.getItem('profile'));
 
-  const {name, image, desc, price, quantity, discountPrice} = props;
+  const {name, image, desc, quantity} = props;
 
+  const price = 2000
+  const discountPrice = 1900
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen(true);

@@ -31,7 +31,9 @@ const ProgramCard = (props) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const {name, image, desc, price, quantity, discountPrice, id} = props;
+  const {name, image, desc, quantity, id} = props;
+  const price = 2000
+  const discountPrice = 1900
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

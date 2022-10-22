@@ -2,6 +2,7 @@ import React from "react";
 import Details from "../../components/Details/Details";
 import Display from "../../components/Display/Display";
 import RelatedProducts from "../../components/RelatedProducts/RelatedProducts";
+import FaqProduct from '../../components/FaqProduct/FaqProduct'
 import { Box, Container, Typography } from "@mui/material";
 import { theme } from "../../theme";
 import { images } from "../../constants";
@@ -46,6 +47,9 @@ const Product = () => {
           >
             <Details id={productData.id} name={productData.name} desc={productData.description} price={productData.price} discountPrice={productData.discountPrice} />
           </Box>
+        </Box>
+        <Box sx={{zIndex:1, position: "relative", width: "100%", m: "auto" }}>
+          <FaqProduct />
         </Box>
         <Box sx={{zIndex:1, position: "relative", width: "100%", m: "auto" }}>
           <RelatedProducts />

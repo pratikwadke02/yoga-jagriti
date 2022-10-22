@@ -24,7 +24,14 @@ const style = {
 
 const Details = (props) => {
 
-  const {name, desc, price, discountPrice, id} = props
+  const {name, id} = props
+
+  const price = 2000;
+  const discountPrice = 1900;
+
+  const desc = "Our bilona churned Cow ghee is made from the milk of grass-fed Pahadi local (Desi) cows of Tehsil Nerwa,Distt Shimla,Himachal Pradesh. Made in small batches, the ghee has a fresh and   tempting flavour. Ghee is Prepared and collected by Women self help groups and from other Cow lovers of local villages Grass-fed Pahadi local (Desi) cow milk is used to make our bilona churned cow ghee from Tehsil Nerwa, Distt Shimla, Himachal Pradesh. The ghee is handmade in small batches, resulting in a wonderful taste. Ghee is Prepared and collected by Women self help groups and from other Cow lovers of local villages"
+
+  
 
   const user = (JSON.parse(localStorage.getItem('profile'))) ? JSON.parse(localStorage.getItem('profile')).data : null;
 

@@ -957,7 +957,7 @@ const BillingInformation = () => {
           window.location.href = paymentLink.data.cfOrder.paymentLink;              
           // alert("Response sent successfully");
           }else{
-            handleOpen();
+            handleOpen();  
           }
           
         }catch(err){
