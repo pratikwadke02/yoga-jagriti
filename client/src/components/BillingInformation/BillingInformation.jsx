@@ -933,7 +933,7 @@ const BillingInformation = () => {
         district: "",
         address: "",
         message: "",
-        total: 1,
+        total: discountPrice,
         userId: user
       });
     
@@ -947,6 +947,8 @@ const BillingInformation = () => {
         try{
           if(user){
             await axios.post("https://yogajagriti.herokuapp.com/api/yoga/addOrder", order);
+            console.log(order);
+          console.log(billingInfo);
           const paymentLink = await axios
             .post('https://yogajagriti.herokuapp.com/api/yoga/addBilling', billingInfo)
             .then((res) => {
